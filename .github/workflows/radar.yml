@@ -1,0 +1,65 @@
+# PC를 꺼도 돌아가는 경로 — GitHub Actions 무료 러너에서 주기 실행.
+# 공개 저장소라 Actions 사용량이 무료 한도에 잡히지 않는다.
+# 필요한 것: 저장소 Settings > Secrets and variables > Actions 에 SLACK_WEBHOOK_URL 등록.
+name: pump-radar
+
+on:
+  schedule:
+    - cron: "7 */2 * * *"      # 2시간마다 전체 스캔 (정각은 GitHub 혼잡으로 지연이 커서 7분에)
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "all / pump / trend / stock / test"
+        default: "all"
+
+concurrency:
+  group: pump-radar
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write        # 60일 비활성 방지용 빈 커밋
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - run: pip install requests
+
+      - name: 상태 복원 (가격 스냅샷 · 알림 쿨다운 기록)
+        uses: actions/cache@v4
+        with:
+          path: data
+          key: radar-state-${{ github.run_id }}
+          restore-keys: radar-state-
+
+      - name: 스캔 실행
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SLACK_WEBHOOK_TREND: ${{ secrets.SLACK_WEBHOOK_TREND }}
+          SLACK_WEBHOOK_PUMP: ${{ secrets.SLACK_WEBHOOK_PUMP }}
+          SLACK_WEBHOOK_STOCK: ${{ secrets.SLACK_WEBHOOK_STOCK }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          PYTHONUTF8: "1"
+        run: |
+          MODE="${{ github.event.inputs.mode }}"
+          [ -z "$MODE" ] && MODE="all"
+          echo "mode=$MODE"
+          python run_once.py "$MODE"
+
+      # 공개 저장소는 60일간 활동이 없으면 예약 실행이 자동으로 꺼진다 → 50일마다 빈 커밋
+      - name: 예약 실행 자동중지 방지
+        if: github.event_name == 'schedule'
+        run: |
+          last=$(git log -1 --format=%ct)
+          if [ $(( $(date +%s) - last )) -gt $(( 50 * 86400 )) ]; then
+            git config user.name "pump-radar-bot"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git commit --allow-empty -m "chore: keepalive"
+            git push
+          fi

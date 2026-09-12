@@ -1,0 +1,73 @@
+{
+  "_comment": "PUMP RADAR 설정. 값 바꾸고 저장하면 다음 사이클부터 적용됨.",
+
+  "scan": {
+    "interval_sec": 300,
+    "quiet_hours_kst": [],
+    "max_workers": 8
+  },
+
+  "btc_trend": {
+    "enabled": true,
+    "interval": "4h",
+    "bars": 180,
+    "universe_top_n": 250,
+    "min_quote_volume_usdt": 3000000,
+    "score_threshold": 65,
+    "max_alerts": 8,
+    "cooldown_min": 720,
+    "exclude_quote_stables": true
+  },
+
+  "pump_crypto": {
+    "enabled": true,
+    "min_quote_volume_usdt": 800000,
+    "chg_5m_pct": 3.0,
+    "chg_15m_pct": 5.0,
+    "chg_1h_pct": 8.0,
+    "chg_24h_pct_newcoin": 20.0,
+    "volume_surge_x": 3.0,
+    "candidate_pool": 40,
+    "max_alerts": 6,
+    "cooldown_min": 360,
+    "include_bitget_only": true,
+    "include_dumps": true,
+    "dump_pct": -8.0
+  },
+
+  "pump_stock": {
+    "enabled": true,
+    "us": {
+      "enabled": true,
+      "screeners": ["day_gainers", "small_cap_gainers", "most_actives"],
+      "min_change_pct": 8.0,
+      "min_price": 1.0,
+      "min_volume": 300000,
+      "max_alerts": 6
+    },
+    "kr": {
+      "enabled": true,
+      "min_change_pct": 8.0,
+      "min_trade_value_eok": 50,
+      "max_alerts": 6
+    },
+    "cooldown_min": 720
+  },
+
+  "reason": {
+    "news_lookback_hours": 24,
+    "use_llm": true,
+    "llm_model": "gemini-2.5-flash-lite"
+  },
+
+  "slack": {
+    "backend": "playwright",
+    "playwright": {
+      "workspace_url": "https://app.slack.com/client",
+      "channel": "#급등알림",
+      "channel_url": "",
+      "cdp_port": 9222,
+      "chrome_profile_dir": ""
+    }
+  }
+}

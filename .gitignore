@@ -1,0 +1,11 @@
+.env
+.env.local
+data/*.db
+data/*.db-wal
+data/*.db-shm
+data/outbox/
+data/watch.log
+data/cg_cache.json
+__pycache__/
+*.pyc
+.venv/
