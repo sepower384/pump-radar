@@ -45,6 +45,7 @@ jobs:
           SLACK_WEBHOOK_PUMP: ${{ secrets.SLACK_WEBHOOK_PUMP }}
           SLACK_WEBHOOK_STOCK: ${{ secrets.SLACK_WEBHOOK_STOCK }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          SLACK_BACKEND: webhook   # config 는 로컬용 playwright — 클라우드엔 크롬이 없다
           PYTHONUTF8: "1"
         run: |
           MODE="${{ github.event.inputs.mode }}"

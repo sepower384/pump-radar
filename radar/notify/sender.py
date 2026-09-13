@@ -4,7 +4,7 @@ from __future__ import annotations
 import time
 from pathlib import Path
 
-from ..config import CFG, DATA_DIR
+from ..config import CFG, DATA_DIR, env
 from . import slack_cdp, slack_playwright, slack_webhook
 
 OUTBOX: Path = DATA_DIR / "outbox"
@@ -19,7 +19,8 @@ def _archive(kind: str, text: str, note: str) -> None:
 
 def send(kind: str, text: str, blocks: list | None = None) -> str:
     """반환값: 실제로 사용한 백엔드 이름."""
-    backend = (CFG.get("slack.backend", "auto") or "auto").lower()
+    # 클라우드(Actions)는 로그인 크롬이 없으니 SLACK_BACKEND=webhook 으로 config 를 덮어쓴다
+    backend = (env("SLACK_BACKEND") or CFG.get("slack.backend", "auto") or "auto").lower()
     used = "none"
     errors: list[str] = []
 
@@ -35,7 +36,7 @@ def send(kind: str, text: str, blocks: list | None = None) -> str:
         try:
             if pw.get("channel_url"):
                 slack_cdp.post(pw["channel_url"], text,
-                               cdp=f"http://127.0.0.1:{int(pw.get('cdp_port', 9222))}")
+                               cdp=pw.get("cdp_url") or f"http://127.0.0.1:{int(pw.get('cdp_port', 9222))}")
             else:
                 slack_playwright.send(
                     text,

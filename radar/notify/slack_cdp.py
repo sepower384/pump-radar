@@ -1,5 +1,9 @@
 # -*- coding: utf-8 -*-
-"""로그인된 크롬(CDP)으로 슬랙 채널에 직접 입력 — 뉴스레이더/펌프레이더/마켓브리핑 공용 사본.
+"""로그인된 크롬으로 슬랙 채널에 직접 입력 — 뉴스레이더/펌프레이더/마켓브리핑 공용 사본.
+
+- 기본 경로는 Playwriter 확장 릴레이(ws://127.0.0.1:19988/cdp?extensionId=...):
+  평소 쓰는 크롬(이미 슬랙 로그인됨)에 붙는다. 릴레이는 C:\dev\slack-chrome\start_relay.vbs 가 띄운다.
+  http://127.0.0.1:9222 같은 일반 CDP 주소도 그대로 받는다.
 
 - 채널마다 새 탭을 열고 보내고 닫는다. 기존 슬랙 탭(사람이 보고 있는 화면)은 건드리지 않는다.
 - 세 봇이 같은 크롬을 같이 쓰므로 PC 전역 파일락으로 한 번에 하나씩만 보낸다.
@@ -7,6 +11,7 @@
 - 웹 입력창은 <url|라벨> 문법을 링크로 안 바꿔주므로 "라벨 url" 로 풀어서 친다.
 """
 import os
+import random
 import re
 import time
 
@@ -66,6 +71,14 @@ class _Lock:
         self.fh.close()
 
 
+def resolve_endpoint(cdp):
+    """Playwriter 릴레이는 연결마다 고유 clientId 가 필요하다: /cdp -> /cdp/<id>."""
+    m = re.match(r"^(wss?://[^/]+/cdp)/?(\?.*)?$", cdp or "")
+    if not m:
+        return cdp
+    return "%s/bot%d_%d%s" % (m.group(1), random.randint(1, 10 ** 9), int(time.time() * 1000), m.group(2) or "")
+
+
 def post(channel_url, text, cdp="http://127.0.0.1:9222"):
     """channel_url 예) https://app.slack.com/client/T0XXXX/C0XXXX"""
     if not (channel_url or "").strip():
@@ -75,22 +88,23 @@ def post(channel_url, text, cdp="http://127.0.0.1:9222"):
     text = desk_text(text)
     with _Lock(), sync_playwright() as p:
         try:
-            browser = p.chromium.connect_over_cdp(cdp, timeout=15000)
+            browser = p.chromium.connect_over_cdp(resolve_endpoint(cdp), timeout=15000)
         except Exception as e:
-            raise RuntimeError("크롬 CDP(%s) 연결 실패 — 슬랙용 크롬(ChromeRadar)이 꺼져 있음: %s" % (cdp, e))
+            raise RuntimeError("브라우저 연결 실패(%s) — 크롬이 꺼졌거나 Playwriter 릴레이/확장이 연결 안 됨: %s"
+                               % (cdp.split("?")[0], e))
         ctx = browser.contexts[0] if browser.contexts else browser.new_context()
         page = ctx.new_page()
         try:
             page.goto(channel_url, wait_until="domcontentloaded", timeout=90000)
             if "signin" in page.url or "workspace-signin" in page.url:
-                raise RuntimeError("슬랙 로그아웃 상태 — ChromeRadar 크롬에서 다시 로그인 필요")
+                raise RuntimeError("슬랙 로그아웃 상태 — 크롬에서 슬랙 다시 로그인 필요")
             try:
                 box = page.wait_for_selector(", ".join(INPUT_SELECTORS), state="visible", timeout=45000)
             except Exception:
                 box = None
             if box is None:
                 if "signin" in page.url:
-                    raise RuntimeError("슬랙 로그아웃 상태 — ChromeRadar 크롬에서 다시 로그인 필요")
+                    raise RuntimeError("슬랙 로그아웃 상태 — 크롬에서 슬랙 다시 로그인 필요")
                 raise RuntimeError("슬랙 입력창을 못 찾음 (채널 URL/권한 확인): %s" % page.url)
             page.wait_for_timeout(800)
             box.click()

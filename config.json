@@ -67,6 +67,7 @@
       "channel": "#급등알림",
       "channel_url": "",
       "cdp_port": 9222,
+      "cdp_url": "ws://127.0.0.1:19988/cdp?extensionId=install:Chrome:1bxcvq2dvu4d1",
       "chrome_profile_dir": ""
     }
   }
