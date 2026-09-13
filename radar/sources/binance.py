@@ -3,8 +3,20 @@ from __future__ import annotations
 
 from ..http import get_json, pmap
 
-SPOT = "https://api.binance.com"
-FUT = "https://fapi.binance.com"
+# api.binance.com 은 미국 IP 를 451 로 막는다 → GitHub Actions(미국 서버)에선 전멸.
+# data-api.binance.vision 은 바이낸스 공식 공개시세 미러라 지역 차단이 없다.
+SPOT_HOSTS = ("https://api.binance.com", "https://data-api.binance.vision")
+FUT = "https://fapi.binance.com"  # 선물은 미러가 없다 — 막히면 futures_context 가 빈 dict
+
+
+def _spot(path: str, **kw):
+    last: Exception | None = None
+    for host in SPOT_HOSTS:
+        try:
+            return get_json(f"{host}{path}", **kw)
+        except Exception as e:  # noqa: BLE001
+            last = e
+    raise last  # type: ignore[misc]
 
 STABLES = {
     "USDT", "USDC", "BUSD", "TUSD", "FDUSD", "DAI", "USDP", "UST", "USDD",
@@ -15,7 +27,7 @@ LEVERAGED_SUFFIX = ("UPUSDT", "DOWNUSDT", "BULLUSDT", "BEARUSDT")
 
 
 def ticker_24hr() -> list[dict]:
-    return get_json(f"{SPOT}/api/v3/ticker/24hr", timeout=25)
+    return _spot("/api/v3/ticker/24hr", timeout=25)
 
 
 def usdt_universe(tickers: list[dict], min_qvol: float) -> list[dict]:
@@ -44,8 +56,8 @@ def usdt_universe(tickers: list[dict], min_qvol: float) -> list[dict]:
 
 
 def klines(symbol: str, interval: str = "4h", limit: int = 180) -> list[list]:
-    return get_json(
-        f"{SPOT}/api/v3/klines",
+    return _spot(
+        "/api/v3/klines",
         params={"symbol": symbol, "interval": interval, "limit": limit},
         timeout=20,
     )
