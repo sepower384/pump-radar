@@ -9,11 +9,18 @@ SPOT_HOSTS = ("https://api.binance.com", "https://data-api.binance.vision")
 FUT = "https://fapi.binance.com"  # 선물은 미러가 없다 — 막히면 futures_context 가 빈 dict
 
 
+_good_host: str | None = None  # 한 번 통한 호스트를 기억 — 매 호출마다 451 재시도(sleep)로 수 분 날리지 않게
+
+
 def _spot(path: str, **kw):
+    global _good_host
+    hosts = [_good_host] + [h for h in SPOT_HOSTS if h != _good_host] if _good_host else list(SPOT_HOSTS)
     last: Exception | None = None
-    for host in SPOT_HOSTS:
+    for host in hosts:
         try:
-            return get_json(f"{host}{path}", **kw)
+            data = get_json(f"{host}{path}", **kw)
+            _good_host = host
+            return data
         except Exception as e:  # noqa: BLE001
             last = e
     raise last  # type: ignore[misc]
