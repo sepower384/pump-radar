@@ -4,8 +4,8 @@
 name: pump-radar
 
 on:
-  schedule:
-    - cron: "17 */2 * * *"     # 2시간마다 전체 스캔 (정각은 GitHub 혼잡으로 지연이 커서 17분에)
+  # 깃허브 schedule 은 붐비면 건너뛴다(24h 12회 중 1회만 돎, 2026-09-13 실측).
+  # 그래서 cron-job.org 가 2시간마다 17분(KST 짝수시)에 workflow_dispatch(mode=all) 로 깨운다.
   workflow_dispatch:
     inputs:
       mode:
