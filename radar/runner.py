@@ -1,6 +1,7 @@
 """한 사이클 실행 — 스캔 → 이유 추론 → 슬랙 전송."""
 from __future__ import annotations
 
+import re
 import time
 import traceback
 from datetime import datetime, timedelta, timezone
@@ -8,6 +9,7 @@ from datetime import datetime, timedelta, timezone
 from . import store
 from .config import CFG
 from .engine import btc_trend, pump, reason, stock_pump
+from .http import get_json
 from .notify import send
 from .sources import binance
 
@@ -55,12 +57,47 @@ def _blocks(header: str, body_lines: list[str], footer: str = "") -> list:
     return blocks
 
 
+CONF_KR = {"높음": "꽤 확실해요", "보통": "그럴듯해요", "낮음": "추정이에요"}
+
+
+def _why_header(rsn: dict, indent: str = "        ") -> list[str]:
+    if not rsn.get("evidence"):
+        return [f"{indent}🤔 *왜 올랐을까?* 아직 뚜렷한 뉴스나 이유를 못 찾았어요 — 이유 없는 급등은 더 조심하세요"]
+    conf = rsn.get("confidence") or ""
+    return [f"{indent}🤔 *왜 올랐을까?* (이유 확신도: {CONF_KR.get(conf, conf)})"]
+
+
+def _size_word(mcap: float) -> str:
+    if mcap <= 0:
+        return ""
+    b = mcap / 1e9
+    kind = "초소형주(변동 매우 큼)" if b < 0.3 else "소형주" if b < 2 else "중형주" if b < 10 else "대형주"
+    return f"회사 규모 ${b:.2f}B · {kind}"
+
+
+_HANGUL = re.compile(r"[가-힣]")
+_GTX = "https://translate.googleapis.com/translate_a/single"
+
+
+def _ko(text: str) -> str:
+    """영어 뉴스 제목 → 한국어 (구글 공개 번역, 키 불필요). 실패하면 원문."""
+    if not text or _HANGUL.search(text):
+        return text
+    try:
+        data = get_json(_GTX, params={"client": "gtx", "sl": "auto", "tl": "ko", "dt": "t", "q": text},
+                        timeout=10)
+        return "".join(seg[0] for seg in data[0] if seg and seg[0]).strip() or text
+    except Exception:  # noqa: BLE001
+        return text
+
+
 def _evidence_lines(rsn: dict, indent: str = "        ") -> list[str]:
     out = []
     for e in rsn["evidence"]:
-        txt = f"{indent}{e.get('icon', '•')} *{e['tag']}* — {e['text']}"
+        body = _ko(e["text"]) if e.get("icon") == "📰" else e["text"]
+        txt = f"{indent}{e.get('icon', '•')} *{e['tag']}* — {body}"
         if e.get("url"):
-            txt += f" <{e['url']}|↗>"
+            txt += f" <{e['url']}|기사 보기>"
         out.append(txt)
     return out
 
@@ -84,23 +121,23 @@ def run_btc_trend(con) -> dict:
         return {"count": len(top), "sent": False, "reason": "쿨다운"}
 
     lines: list[str] = [
-        "_비트코인 대비_ 우상향 중인 코인 (USDT 가격이 아니라 *코인/BTC 차트* 기준)", ""]
+        "*비트코인보다 더 잘 오르고 있는 코인*들이에요.",
+        "_비트코인이 오를 때 같이 더 많이 오르고, 빠질 때 덜 빠지는 '체력 좋은 코인'을 고른 거예요._", ""]
     for i, r in enumerate(top, 1):
-        new = " `NEW`" if r in fresh else ""
-        lines.append(
-            f"*{i}. {r['base']}*{new}  —  점수 *{r['score']:.0f}*/100\n"
-            f"        BTC대비 7일 `{r['rs7']:+.1f}%` · 30일 `{r['rs30']:+.1f}%` · "
-            f"일평균기울기 `{r['slope_daily_pct']:+.2f}%`\n"
-            f"        추세정합도 `{r['fit']:.2f}` · 30일고점대비 `{r['near_high'] * 100:.0f}%` · "
-            f"14일MDD `{r['mdd14']:.0f}%`\n"
-            f"        현재 {_price(r['price'])} · 24h {r['chg24']:+.1f}% · "
-            f"거래대금 {_fmt_qvol(r['qvol'])} · "
-            f"<https://www.binance.com/en/trade/{r['base']}_BTC|BTC페어 차트>")
+        new = " 🆕 새로 들어옴" if r in fresh else ""
+        fit = r["fit"]
+        shape = ("자로 그은 듯 꾸준히 오르는 모양" if fit >= 0.8 else
+                 "대체로 꾸준히 오르는 모양" if fit >= 0.6 else "오르긴 하는데 들쭉날쭉한 모양")
+        lines.append(f"*{i}. {r['base']}*{new}  —  종합점수 *{r['score']:.0f}점*/100")
+        lines.append(f"        👉 비트코인과 비교하면 한 달 동안 `{r['rs30']:+.1f}%`, 일주일 동안 `{r['rs7']:+.1f}%` 더 올랐어요")
+        lines.append(f"        👉 {shape}이고, 한 달 최고가의 {r['near_high'] * 100:.0f}% 위치까지 올라와 있어요")
+        lines.append(f"        👉 최근 2주 중 제일 크게 빠졌을 때가 {abs(r['mdd14']):.0f}%였어요 (작을수록 안정적)")
+        lines.append(f"        💵 지금 {_price(r['price'])} · 하루 {r['chg24']:+.1f}% · 하루 거래대금 ${_fmt_qvol(r['qvol'])} · "
+                     f"<https://www.binance.com/en/trade/{r['base']}_BTC|비트코인 기준 차트 보기>")
         lines.append("")
 
-    footer = (f"기준: {cfg.get('interval')}봉 {cfg.get('bars')}개 · "
-              f"유동성 상위 {cfg.get('universe_top_n')}종목 · 점수 {th:.0f}점 이상 · {now_kst()} KST\n"
-              "_점수는 BTC 대비 초과수익 + 추세 기울기/정합도 + 고점근접 + 정배열 − 변동성 페널티_")
+    footer = (f"{now_kst()} 기준 · 거래 많은 상위 {cfg.get('universe_top_n')}개 코인 중 {th:.0f}점 이상만\n"
+              "_점수 = 비트코인보다 더 오른 정도 + 꾸준함 + 고점 근처인지 − 출렁임. 매수 추천이 아니라 관찰 목록이에요._")
 
     text = f"📈 BTC 대비 우상향 코인 {len(top)}종목"
     backend = send("trend", text + "\n" + "\n".join(lines), _blocks("📈 BTC 대비 우상향 코인",
@@ -153,25 +190,29 @@ def run_pump_crypto(con, ctx: reason.MarketContext) -> dict:
         arrow = "🚀" if h.get("direction") == "up" else "🔻"
         ex = "비트겟" if h.get("market") == "bitget" else "바이낸스"
         chg_bits = []
-        for label, key in (("5분", "chg5m"), ("15분", "chg15m"), ("1시간", "chg1h"),
-                           ("24시간", "chg24h")):
+        for label, key in (("5분 만에", "chg5m"), ("15분 만에", "chg15m"), ("1시간 동안", "chg1h"),
+                           ("하루 동안", "chg24h")):
             v = h.get(key) or 0
             if abs(v) >= 0.5:
                 chg_bits.append(f"{label} `{v:+.1f}%`")
-        vol = f" · 거래량 *{h['vol_x']:.1f}배*" if (h.get("vol_x") or 0) >= 2 else ""
+        move = "올랐어요" if h.get("direction") == "up" else "빠졌어요"
+        vol = ""
+        if (h.get("vol_x") or 0) >= 2:
+            vol = f" 거래량도 평소의 *{h['vol_x']:.1f}배*로 사람들이 확 몰렸어요."
 
         lines.append(f"{arrow} *{h['base']}* — {it.get('llm') or rsn['headline']}")
-        lines.append(f"        {' · '.join(chg_bits)}{vol}")
-        lines.append(f"        {_price(h['price'])} · {ex} · 24h거래대금 {_fmt_qvol(h['qvol'])} "
-                     f"· 신뢰도 *{rsn['confidence']}*")
-        lines += _evidence_lines(rsn)
-        lines.append(f"        <https://www.binance.com/en/trade/{h['base']}_USDT|차트> · "
-                     f"<https://www.coingecko.com/en/search?query={h['base']}|코인게코>")
+        lines.append(f"        👉 {', '.join(chg_bits)} {move}.{vol}")
+        lines.append(f"        💵 지금 {_price(h['price'])} ({ex}) · 하루 거래대금 ${_fmt_qvol(h['qvol'])}")
+        lines += _why_header(rsn)
+        lines += _evidence_lines(rsn, indent="            ")
+        lines.append(f"        🔗 <https://www.binance.com/en/trade/{h['base']}_USDT|차트 보기> · "
+                     f"<https://www.coingecko.com/en/search?query={h['base']}|코인 정보>")
         lines.append("")
+    lines.append("_⚠️ 급등 직후 따라 사면 꼭대기에 물리기 쉬워요. 이유가 확실한 것 위주로 지켜보세요._")
 
     text = "🚨 코인 급등 감지 " + ", ".join(i["key"] for i in items)
     backend = send("pump", text + "\n" + "\n".join(lines),
-                   _blocks("🚨 코인 급등 감지", lines, f"{now_kst()} KST · 자동 스캔"))
+                   _blocks(f"🚨 지금 급하게 움직이는 코인 {len(items)}개", lines, f"{now_kst()} 기준 · 자동 스캔"))
     for h in fresh:
         store.mark_alerted(con, "pump", h["symbol"], str(h.get("chg15m")))
     return {"count": len(hits), "sent": True, "alerted": len(fresh), "backend": backend}
@@ -217,29 +258,36 @@ def run_pump_stock(con) -> dict:
         for r in rows:
             rsn = r["_rsn"]
             if r["market"] == "US":
-                head = (f"🚀 *{r['symbol']}* ({r.get('name', '')[:28]}) `{r['chg_eff']:+.1f}%`"
-                        f" · {r['session']}")
+                head = f"🚀 *{r.get('name', '')[:28] or r['symbol']}* ({r['symbol']}) `{r['chg_eff']:+.1f}%`"
+                when = {"프리마켓": "정규장 열리기 전(프리마켓)에", "애프터마켓": "장 마감 후(애프터마켓)에"}.get(
+                    r["session"], "오늘 정규장에서")
                 vx = r.get("vol_x") or 0
-                vol_txt = f"{r['volume'] / 1e6:.1f}M" + (f" ({vx:.1f}배)" if vx else "")
-                sub = (f"        ${r['price']:,.2f} · 거래량 {vol_txt} · "
-                       f"시총 ${(r.get('mcap') or 0) / 1e9:.2f}B")
-                link = f"        <{r['url']}|야후 차트>"
+                vol_txt = f" 거래량은 평소의 {vx:.1f}배예요." if vx >= 1.5 else ""
+                sub = [f"        👉 {when} {abs(r['chg_eff']):.1f}% 올랐어요.{vol_txt}",
+                       f"        💵 지금 ${r['price']:,.2f} · {_size_word(r.get('mcap') or 0)}"]
+                link = f"        🔗 <{r['url']}|차트·기업정보 보기>"
             else:
-                head = f"🚀 *{r['name']}* `{r['chg']:+.1f}%`"
-                sub = (f"        {r['price']:,.0f}원 · 거래대금 {r['trade_value_eok']:,.0f}억")
-                link = f"        <{r['url']}|네이버 금융>"
+                limit_up = r["chg"] >= 29.5
+                head = f"🚀 *{r['name']}* `{r['chg']:+.1f}%`" + (" 🔒상한가" if limit_up else "")
+                sub = [f"        👉 오늘 {r['chg']:.1f}% 올랐어요" +
+                       (" — 하루에 오를 수 있는 최대치(상한가)까지 갔어요." if limit_up else "."),
+                       f"        💵 지금 {r['price']:,.0f}원 · 오늘 거래된 돈 {r['trade_value_eok']:,.0f}억원"]
+                link = f"        🔗 <{r['url']}|네이버 금융에서 보기>"
             one = polished.get(r["symbol"])
             if one:
                 head += f"\n        💬 {one}"
             lines.append(head)
-            lines.append(sub)
-            lines += _evidence_lines(rsn)
+            lines += sub
+            ev = [e for e in rsn.get("evidence", []) if "상한가" not in e.get("tag", "")]
+            lines += _why_header({**rsn, "evidence": ev})
+            lines += _evidence_lines({**rsn, "evidence": ev}, indent="            ")
             lines.append(link)
             lines.append("")
+    lines.append("_⚠️ 급등한 종목은 다음 날 크게 되돌리는 경우도 많아요. 뉴스 내용을 먼저 확인하세요._")
 
     text = "📊 주식 급등 감지"
     backend = send("stock", text + "\n" + "\n".join(lines),
-                   _blocks("📊 주식 급등 감지", lines, f"{now_kst()} KST"))
+                   _blocks("📊 오늘 크게 오른 주식", lines, f"{now_kst()} 기준"))
     for label, rows in groups:
         for r in rows:
             store.mark_alerted(con, "stock", f"{r['market']}:{r['symbol']}", str(r.get("chg_eff")))

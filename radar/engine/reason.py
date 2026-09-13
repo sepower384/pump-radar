@@ -128,47 +128,47 @@ def explain_crypto(c: dict, ctx: MarketContext) -> dict:
         fr = (fut.get("funding") or 0) * 100
         if oi is not None and oi > 8 and up:
             ev.append({"w": 70, "tag": "선물 자금유입", "icon": "📈",
-                       "text": f"미결제약정 6h {oi:+.1f}% · 펀딩 {fr:+.3f}% → 신규 롱이 밀어올리는 중"})
+                       "text": f"선물시장(빚내서 거는 베팅)에 6시간 새 돈이 {oi:+.1f}% 늘었어요 → 오른다에 새로 거는 사람이 가격을 밀어올리는 중"})
         elif oi is not None and oi < -8 and up:
             ev.append({"w": 75, "tag": "숏스퀴즈 의심", "icon": "🔥",
-                       "text": f"가격은 오르는데 미결제약정 {oi:+.1f}% → 숏 청산 연쇄"})
+                       "text": f"가격은 오르는데 선물 베팅 규모는 {oi:+.1f}% 줄었어요 → 떨어진다에 걸었던 사람들이 강제로 되사면서(숏스퀴즈) 튀어오른 것"})
         elif fr > 0.05:
             ev.append({"w": 55, "tag": "롱 과열", "icon": "⚠️",
-                       "text": f"펀딩비 {fr:+.3f}% — 롱이 비용 내며 버티는 구간(되돌림 주의)"})
+                       "text": f"오른다에 건 사람이 너무 많아 수수료(펀딩비 {fr:+.3f}%)까지 내며 버티는 중 → 한 번에 되돌릴 수 있어요"})
 
     for th in ctx.themes.get(base, []):
         n = ctx.pumping_themes.get(th, 0)
         if n >= 2:
             ev.append({"w": 60, "tag": "테마 순환매", "icon": "🧩",
-                       "text": f"'{th}' 섹터에서 동시에 {n}종목 급등 — 개별 재료보다 섹터 자금"})
+                       "text": f"같은 '{th}' 분야 코인 {n}개가 동시에 올랐어요 → 이 코인만의 호재라기보다 그 분야 전체에 돈이 도는 중"})
             break
 
     kp = ctx.kimchi_premium(base, c["price"])
     if kp is not None and kp >= 2.5:
         ev.append({"w": 50, "tag": "국내 매수세", "icon": "🇰🇷",
-                   "text": f"업비트 김프 {kp:+.1f}% — 국내가 먼저 사들이는 중"})
+                   "text": f"업비트 가격이 해외보다 {kp:+.1f}% 비싸요(김치프리미엄) → 한국 사람들이 먼저 사들이는 중"})
     elif kp is not None and kp <= -2.5:
         ev.append({"w": 22, "tag": "역프", "icon": "🇰🇷",
-                   "text": f"업비트 대비 {kp:+.1f}% — 해외 주도(국내는 따라가는 중)"})
+                   "text": f"업비트 가격이 해외보다 {kp:+.1f}% 싸요 → 해외에서 먼저 올리고 한국은 따라가는 중"})
 
     if base in ctx.trending:
         ev.append({"w": 45, "tag": "검색 급증", "icon": "🔎",
-                   "text": "코인게코 트렌딩 진입 — 개인 관심 유입"})
+                   "text": "코인게코 인기 검색 순위에 올라왔어요 → 개인 투자자 관심이 몰리는 중"})
 
     if ctx.btc_chg24 >= 2 and abs(c.get("chg24h", 0)) < ctx.btc_chg24 * 2.5:
         ev.append({"w": 30, "tag": "시장 전체", "icon": "🌊",
-                   "text": f"BTC 24h {ctx.btc_chg24:+.1f}% — 시장 전반 상승분이 큼(개별 재료 약함)"})
+                   "text": f"비트코인도 하루 {ctx.btc_chg24:+.1f}% 올랐어요 → 이 코인만의 호재보다 시장 전체가 오른 영향이 커요"})
 
     vx = c.get("vol_x") or 0
     if vx >= 3:
         ev.append({"w": 35, "tag": "거래량 폭증", "icon": "📊",
-                   "text": f"최근 15분 거래대금이 평소의 {vx:.1f}배"})
+                   "text": f"최근 15분 동안 거래된 돈이 평소의 {vx:.1f}배예요 → 짧은 시간에 사람들이 몰렸어요"})
 
     ev.sort(key=lambda e: e["w"], reverse=True)
     top = ev[:4]
     if not top:
         top = [{"w": 0, "tag": "원인 미확인", "icon": "❓",
-                "text": "공개 뉴스·공지·파생 지표에 뚜렷한 재료 없음. 수급(세력) 주도 가능성."}]
+                "text": "뉴스·공지·선물 지표 어디에도 뚜렷한 이유가 없어요. 큰손(세력)이 끌어올렸을 가능성이 있어 특히 조심하세요."}]
 
     conf = "높음" if top[0]["w"] >= 80 else ("보통" if top[0]["w"] >= 55 else "낮음")
     return {"evidence": top, "confidence": conf, "name": name,
@@ -180,11 +180,11 @@ def _one_liner(c: dict, ev: list[dict], name: str) -> str:
     verb = "급등" if c.get("direction", "up") == "up" else "급락"
     mapping = {
         "거래소 상장": "거래소 상장 재료", "상장/공지": "거래소 상장/공지 재료",
-        "숏스퀴즈 의심": "숏스퀴즈", "선물 자금유입": "선물 자금 유입",
-        "테마 순환매": "섹터 순환매", "국내 매수세": "국내 매수세",
+        "숏스퀴즈 의심": "하락 베팅 강제청산", "선물 자금유입": "선물 베팅 돈 유입",
+        "테마 순환매": "같은 분야 동반 상승", "국내 매수세": "한국에서 먼저 매수",
         "시장 전체": "시장 전체 상승", "검색 급증": "관심 급증",
-        "거래량 폭증": "수급 주도", "롱 과열": "레버리지 과열",
-        "원인 미확인": "재료 불명 · 수급 주도 의심",
+        "거래량 폭증": "매수세 몰림", "롱 과열": "빚투 과열 주의",
+        "원인 미확인": "이유 불명 · 큰손 주도 의심",
     }
     return f"{name} {verb} — {mapping.get(tag, tag + ' 재료')}"
 
@@ -230,14 +230,14 @@ def explain_stock(s: dict, offline: bool = False) -> dict:
         vx = s.get("vol_x") or 0
         if vx >= 3:
             ev.append({"w": 50, "tag": "거래량 폭증", "icon": "📊",
-                       "text": f"평소(3개월 평균) 거래량의 {vx:.1f}배"})
+                       "text": f"거래량이 평소(3개월 평균)의 {vx:.1f}배예요 → 사람들이 확 몰렸어요"})
         mcap = s.get("mcap") or 0
         if 0 < mcap < 3e8 and (s.get("chg_eff") or 0) >= 15:
             ev.append({"w": 45, "tag": "초소형주", "icon": "🎢",
-                       "text": f"시총 ${mcap / 1e6:.0f}M — 스퀴즈성 급등 가능성"})
+                       "text": f"회사 규모(시총)가 ${mcap / 1e6:.0f}M으로 아주 작아요 → 적은 돈으로도 확 튀고, 확 빠질 수 있어요"})
         if s.get("session") in ("프리마켓", "애프터마켓"):
             ev.append({"w": 40, "tag": "시간외", "icon": "🌙",
-                       "text": f"{s['session']} 움직임 — 정규장 갭 여부 확인 필요"})
+                       "text": f"{s['session']} 거래라 참여자가 적어요 → 정규장에서도 이 가격이 유지되는지 봐야 해요"})
     else:
         seen = set()
         nm = s.get("name", "")
@@ -258,16 +258,16 @@ def explain_stock(s: dict, offline: bool = False) -> dict:
             if len(seen) >= 2:
                 break
         if s.get("limit_up") or s.get("chg", 0) >= 29:
-            ev.append({"w": 60, "tag": "상한가", "icon": "🚀", "text": "가격제한폭(+30%) 도달"})
+            ev.append({"w": 60, "tag": "상한가", "icon": "🚀", "text": "하루 최대 상승폭(+30%)까지 올랐어요"})
         tv = s.get("trade_value_eok") or 0
         if tv >= 500:
             ev.append({"w": 50, "tag": "거래대금 급증", "icon": "📊",
-                       "text": f"거래대금 {tv:,.0f}억 — 대형 수급 유입"})
+                       "text": f"오늘 {tv:,.0f}억원어치가 거래됐어요 → 큰돈이 들어왔다는 뜻이에요"})
 
     ev.sort(key=lambda e: e["w"], reverse=True)
     if not ev:
         ev = [{"w": 0, "tag": "원인 미확인", "icon": "❓",
-               "text": "공개 뉴스에 재료 없음 — 수급/테마 주도 가능성"}]
+               "text": "관련 뉴스를 못 찾았어요 → 테마로 묶여 오르거나 큰손이 끌어올렸을 수 있어요"}]
     conf = "높음" if ev[0]["w"] >= 80 else ("보통" if ev[0]["w"] >= 50 else "낮음")
     return {"evidence": ev[:3], "confidence": conf}
 
