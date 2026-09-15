@@ -102,9 +102,11 @@ def scan(cfg: dict, workers: int = 8) -> list[dict]:
     by_symbol = {t["symbol"]: t for t in uni}
     rows: list[dict] = []
     for sym, kl in kl_map.items():
-        r = score_series(ratio_series(binance.closes(kl), btc_closes), interval)
+        ratio = ratio_series(binance.closes(kl), btc_closes)
+        r = score_series(ratio, interval)
         if not r:
             continue
+        r["ratio_tail"] = ratio[-48:]  # 텔레그램 차트용 BTC 대비 비율 추이
         t = by_symbol[sym]
         r.update({
             "symbol": sym, "base": t["_base"], "price": t["_last"],

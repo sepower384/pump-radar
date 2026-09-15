@@ -45,6 +45,15 @@ jobs:
           SLACK_WEBHOOK_PUMP: ${{ secrets.SLACK_WEBHOOK_PUMP }}
           SLACK_WEBHOOK_STOCK: ${{ secrets.SLACK_WEBHOOK_STOCK }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          # 텔레그램 (없으면 조용히 건너뜀). 봇 토큰은 kind별 → 공용 순으로 찾는다
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_BOT_TOKEN_PUMP: ${{ secrets.TELEGRAM_BOT_TOKEN_PUMP }}
+          TELEGRAM_BOT_TOKEN_TREND: ${{ secrets.TELEGRAM_BOT_TOKEN_TREND }}
+          TELEGRAM_BOT_TOKEN_STOCK: ${{ secrets.TELEGRAM_BOT_TOKEN_STOCK }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_TOPIC_PUMP: ${{ secrets.TELEGRAM_TOPIC_PUMP }}
+          TELEGRAM_TOPIC_TREND: ${{ secrets.TELEGRAM_TOPIC_TREND }}
+          TELEGRAM_TOPIC_STOCK: ${{ secrets.TELEGRAM_TOPIC_STOCK }}
           SLACK_BACKEND: webhook   # config 는 로컬용 playwright — 클라우드엔 크롬이 없다
           PYTHONUTF8: "1"
         run: |

@@ -32,6 +32,27 @@ CREATE TABLE IF NOT EXISTS runs (
     ts     INTEGER PRIMARY KEY,
     note   TEXT
 );
+
+-- 주식 테마 관찰 콜 기록 (결과 추적·누적 적중률)
+CREATE TABLE IF NOT EXISTS calls (
+    id         INTEGER PRIMARY KEY AUTOINCREMENT,
+    ts         INTEGER NOT NULL,
+    market     TEXT    NOT NULL,
+    symbol     TEXT    NOT NULL,
+    name       TEXT,
+    theme      TEXT,
+    leader     TEXT,
+    ref_price  REAL    NOT NULL,
+    target_pct REAL    NOT NULL,
+    deadline   INTEGER NOT NULL,
+    status     TEXT    NOT NULL DEFAULT 'pending',
+    best_price REAL,
+    last_price REAL,
+    result_pct REAL,
+    resolved_ts INTEGER,
+    reported   INTEGER NOT NULL DEFAULT 0
+);
+CREATE INDEX IF NOT EXISTS calls_open ON calls(market, status);
 """
 
 
@@ -40,6 +61,60 @@ def connect() -> sqlite3.Connection:
     con.execute("PRAGMA journal_mode=WAL")
     con.executescript(_SCHEMA)
     return con
+
+
+# ─────────────── 관찰 콜 ───────────────
+def _dicts(cur: sqlite3.Cursor) -> list[dict]:
+    cols = [c[0] for c in cur.description]
+    return [dict(zip(cols, r)) for r in cur.fetchall()]
+
+
+def add_call(con: sqlite3.Connection, market: str, symbol: str, ref_price: float, target_pct: float,
+             deadline: float, name: str = "", theme: str = "", leader: str = "",
+             ts: float | None = None) -> int:
+    cur = con.execute(
+        "INSERT INTO calls(ts, market, symbol, name, theme, leader, ref_price, target_pct, deadline, best_price)"
+        " VALUES (?,?,?,?,?,?,?,?,?,?)",
+        (int(ts or time.time()), market, symbol, name, theme, leader, float(ref_price), float(target_pct),
+         int(deadline), float(ref_price)))
+    con.commit()
+    return int(cur.lastrowid)
+
+
+def open_calls(con: sqlite3.Connection, market: str) -> list[dict]:
+    return _dicts(con.execute(
+        "SELECT * FROM calls WHERE market=? AND status='pending' ORDER BY ts", (market,)))
+
+
+def update_call(con: sqlite3.Connection, call_id: int, *, status: str, result_pct: float | None,
+                best_price: float | None, last_price: float | None, now: float | None = None) -> None:
+    con.execute(
+        "UPDATE calls SET status=?, result_pct=?, best_price=?, last_price=?, resolved_ts=? WHERE id=?",
+        (status, result_pct, best_price, last_price,
+         None if status == "pending" else int(now or time.time()), call_id))
+    con.commit()
+
+
+def calls_for_report(con: sqlite3.Connection, market: str, limit: int = 8) -> list[dict]:
+    """아직 알리지 않은 판정 결과 + 진행 중인 콜 (최신순)."""
+    return _dicts(con.execute(
+        "SELECT * FROM calls WHERE market=? AND (status='pending' OR reported=0) "
+        "ORDER BY (status='pending'), ts DESC LIMIT ?", (market, limit)))
+
+
+def mark_reported(con: sqlite3.Connection, ids: list[int]) -> None:
+    if ids:
+        con.executemany("UPDATE calls SET reported=1 WHERE id=?", [(i,) for i in ids])
+        con.commit()
+
+
+def call_stats(con: sqlite3.Connection, market: str | None = None) -> dict:
+    where, args = ("WHERE market=?", (market,)) if market else ("", ())
+    rows = dict(con.execute(f"SELECT status, COUNT(*) FROM calls {where} GROUP BY status", args).fetchall())
+    hits, misses = int(rows.get("hit", 0)), int(rows.get("miss", 0))
+    resolved = hits + misses
+    return {"hits": hits, "misses": misses, "pending": int(rows.get("pending", 0)), "resolved": resolved,
+            "rate": (hits / resolved * 100) if resolved else 0.0}
 
 
 def save_snapshot(con: sqlite3.Connection, market: str,

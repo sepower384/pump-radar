@@ -1,11 +1,14 @@
-"""백엔드 선택 + 실패 시 폴백. 어떤 경우에도 알림을 '잃지는' 않는다(파일로 남김)."""
+"""백엔드 선택 + 실패 시 폴백. 어떤 경우에도 알림을 '잃지는' 않는다(파일로 남김).
+
+슬랙과 텔레그램은 서로 독립이다 — 한쪽 예외가 다른 쪽 전송을 막지 않는다.
+"""
 from __future__ import annotations
 
 import time
 from pathlib import Path
 
 from ..config import CFG, DATA_DIR, env
-from . import slack_cdp, slack_playwright, slack_webhook
+from . import slack_cdp, slack_playwright, slack_webhook, telegram
 
 OUTBOX: Path = DATA_DIR / "outbox"
 OUTBOX.mkdir(exist_ok=True)
@@ -17,8 +20,7 @@ def _archive(kind: str, text: str, note: str) -> None:
         f.write(f"\n\n---\n### [{time.strftime('%H:%M:%S')}] {kind} ({note})\n{text}\n")
 
 
-def send(kind: str, text: str, blocks: list | None = None) -> str:
-    """반환값: 실제로 사용한 백엔드 이름."""
+def _send_slack(kind: str, text: str, blocks: list | None) -> tuple[str, list[str]]:
     # 클라우드(Actions)는 로그인 크롬이 없으니 SLACK_BACKEND=webhook 으로 config 를 덮어쓴다
     backend = (env("SLACK_BACKEND") or CFG.get("slack.backend", "auto") or "auto").lower()
     used = "none"
@@ -47,6 +49,43 @@ def send(kind: str, text: str, blocks: list | None = None) -> str:
             used = "playwright"
         except Exception as e:  # noqa: BLE001
             errors.append(f"playwright: {e}")
+    return used, errors
 
+
+def send(kind: str, text: str, blocks: list | None = None) -> str:
+    """슬랙만 보내는 구 경로(연결 테스트용). 반환값: 실제로 사용한 백엔드 이름."""
+    used, errors = _send_slack(kind, text, blocks)
     _archive(kind, text, used if used != "none" else " / ".join(errors) or "미전송")
     return used
+
+
+def deliver(msg) -> dict:
+    """Msg 하나를 슬랙 + 텔레그램으로 동시 발송.
+
+    반환 {"slack": 백엔드, "telegram": {...}, "delivered": 둘 중 하나라도 성공}
+    호출부는 delivered 가 True 일 때만 쿨다운을 기록한다.
+    """
+    kind = msg.kind
+    text = msg.slack_text()
+    try:
+        slack_used, slack_errors = _send_slack(kind, text, msg.slack_blocks())
+    except Exception as e:  # noqa: BLE001 — 설정 오류 등 예상 밖 예외도 텔레그램을 막지 않게
+        slack_used, slack_errors = "none", [f"slack: {type(e).__name__}: {e}"]
+
+    try:
+        chunks = msg.telegram_chunks()
+        tg = telegram.send(kind, chunks, msg.photo, msg.caption)
+    except Exception as e:  # noqa: BLE001
+        chunks = []
+        tg = {"status": "error", "errors": [f"{type(e).__name__}: {e}"]}
+
+    delivered = slack_used != "none" or tg.get("status") in ("ok", "partial")
+    out: dict = {"slack": slack_used, "telegram": tg, "delivered": delivered}
+    if slack_errors:
+        out["slack_errors"] = slack_errors
+
+    slack_note = slack_used if slack_used != "none" else (" / ".join(slack_errors) or "미전송")
+    _archive(kind, text, f"slack={slack_note} · telegram={tg.get('status')}")
+    if chunks and tg.get("status") != "skipped":
+        _archive(kind + " telegram", "\n\n".join(chunks), f"{len(chunks)}개 · photo={tg.get('photo')}")
+    return out

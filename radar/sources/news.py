@@ -124,7 +124,7 @@ def kr_stock_headlines(code: str, limit: int = 3) -> list[dict]:
 # ── 구글 뉴스 RSS: 종목 단위 타깃 검색 (무료·무키). 급등 이유 적중률이 제일 높다 ──
 _JUNK = ("binance square", "community insights", "market sentiment", "'s insights",
          "price of ", "price prediction", "how to buy", "what is ", "perpetual chart",
-         "usdⓈ-margined", "spot |", "trade ", "mortgage rates", "best ", "top 10")
+         "usdⓈ-margined", "spot |", "trade ", "mortgage rates", "best ", "top 10", "competitors")
 
 _CRYPTO_CTX = ("코인", "가상자산", "암호화폐", "블록체인", "비트코인", "토큰", "상장", "에어드랍",
                "crypto", "token", "blockchain", "bitcoin", "listing", "defi", "airdrop",
@@ -132,8 +132,10 @@ _CRYPTO_CTX = ("코인", "가상자산", "암호화폐", "블록체인", "비트
 
 
 def google_news(query: str, lang: str = "ko", within_days: int = 2, limit: int = 3,
-                must: list[str] | None = None, context: list[str] | None = None) -> list[dict]:
-    """must: 제목에 반드시 하나는 들어가야 하는 단어. context: 주제 확인용 단어(오탐 제거)."""
+                must: list[str] | None = None, context: list[str] | None = None,
+                tickers: list[str] | None = None) -> list[dict]:
+    """must: 제목에 반드시 하나는 들어가야 하는 단어(대소문자 무시). tickers: 대문자 그대로 들어가야 하는 티커.
+    context: 주제 확인용 단어(오탐 제거). 판단은 매체명을 뗀 제목으로만 한다."""
     import urllib.parse as up
 
     q = up.quote(f"{query} when:{within_days}d")
@@ -150,14 +152,13 @@ def google_news(query: str, lang: str = "ko", within_days: int = 2, limit: int =
     seen: set[str] = set()
     for it in items:
         title = it["title"]
-        low = title.lower()
-        if any(j in low for j in _JUNK):
-            continue
-        if must and not any(m.lower() in low for m in must if m):
-            continue
-        if context and not any(c.lower() in low for c in context):
+        if any(j in title.lower() for j in _JUNK):
             continue
         core = re.sub(r"\s*-\s*[^-]{2,30}$", "", title).strip()  # 끝의 " - 매체명" 제거
+        # 관련성은 매체명을 뗀 제목으로만 판단한다
+        # (예전엔 'Bitcoin Sistemi' 같은 매체명이 문맥 단어로 잡혀 무관 기사가 통과했다)
+        if not title_matches(core, must=must, tickers=tickers, context=context):
+            continue
         if core in seen or len(core) < 8:
             continue
         seen.add(core)
@@ -169,13 +170,49 @@ def google_news(query: str, lang: str = "ko", within_days: int = 2, limit: int =
     return out
 
 
+def _has_word(text: str, w: str, prefix: bool = False) -> bool:
+    """영문은 단어 경계로(대소문자 무시), 한글은 부분일치. prefix=True 면 뒤쪽 경계는 보지 않는다."""
+    if not w:
+        return False
+    if w.isascii():
+        tail = "" if prefix else r"(?![A-Za-z0-9])"
+        return re.search(rf"(?<![A-Za-z0-9]){re.escape(w)}{tail}", text, re.I) is not None
+    return w in text
+
+
+def title_matches(title: str, must: list[str] | None = None, tickers: list[str] | None = None,
+                  context: list[str] | None = None) -> bool:
+    """must(이름·키워드, 대소문자 무시 단어) 또는 tickers(대문자 그대로, $접두 허용) 중 하나가 있어야 하고,
+    context 가 주어지면 그중 하나도 있어야 한다. POWER 티커가 'power' 단어에 걸리지 않게 티커는 대소문자 구분."""
+    if must or tickers:
+        ok = any(_has_word(title, m) for m in (must or []) if m) or any(
+            re.search(rf"(?<![A-Za-z0-9])\$?{re.escape(t)}(?![A-Za-z0-9])", title)
+            for t in (tickers or []) if t)
+        if not ok:
+            return False
+    if context and not any(_has_word(title, c, prefix=True) for c in context):
+        return False
+    return True
+
+
+_CO_SUFFIX = re.compile(r",?\s+(Inc\.?|Corp\.?|Corporation|Ltd\.?|Limited|Holdings?|PLC|plc|Co\.?|"
+                        r"N\.V\.|S\.A\.|Group|Technologies|Therapeutics)\b.*$")
+
+
+def company_core(company: str) -> str:
+    """'IonQ, Inc.' → 'IonQ'. 너무 짧으면 빈 문자열(오탐 방지)."""
+    core = _CO_SUFFIX.sub("", (company or "").strip()).strip(" ,.")
+    return core if len(core) >= 4 else ""
+
+
 def coin_news(symbol: str, name: str = "") -> list[dict]:
     """코인 급등 이유용 — 한국어 우선, 부족하면 영어. 주제 무관 기사는 걸러낸다."""
     label = name or symbol
-    must = [m for m in {symbol, name, label} if m and len(m) >= 2]
-    hits = google_news(f"{label} 코인", "ko", must=must, context=_CRYPTO_CTX)
+    must = [name] if name and len(name) >= 3 and name.upper() != symbol.upper() else []
+    tickers = [symbol.upper()] if len(symbol) >= 2 else []
+    hits = google_news(f"{label} 코인", "ko", must=must, tickers=tickers, context=_CRYPTO_CTX)
     if len(hits) < 2:
-        hits += google_news(f"{symbol} crypto", "en", limit=2, must=must, context=_CRYPTO_CTX)
+        hits += google_news(f"{symbol} crypto", "en", limit=2, must=must, tickers=tickers, context=_CRYPTO_CTX)
     seen: set[str] = set()
     out = []
     for h in hits:
@@ -191,5 +228,6 @@ def kr_stock_news(name: str) -> list[dict]:
 
 
 def us_stock_news(symbol: str, company: str = "") -> list[dict]:
-    must = [symbol] + ([company.split()[0]] if company else [])
-    return google_news(f"{company or symbol} stock", "en", must=must, limit=3)
+    core = company_core(company)
+    return google_news(f"{core or symbol} stock", "en", must=[core] if core else [],
+                       tickers=[symbol.upper()], limit=3)

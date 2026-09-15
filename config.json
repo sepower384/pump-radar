@@ -51,7 +51,22 @@
       "min_trade_value_eok": 50,
       "max_alerts": 6
     },
-    "cooldown_min": 720
+    "cooldown_min": 720,
+    "theme": {
+      "_comment": "테마 추적 + 관찰 콜. 적중 = 콜 이후 hit_window_trading_days 거래일 안에 기준가 대비 +hit_pct% 이상",
+      "max_themes": 2,
+      "follow_min_chg": 2.0,
+      "follow_min_vol_x": 1.5,
+      "overheat_ratio": 0.8,
+      "invalid_drop_pct": 5.0,
+      "hit_pct": 2.0,
+      "hit_window_trading_days": 1,
+      "us_call_sessions": ["정규장"],
+      "call_min_peer_chg": -1.0,
+      "call_min_vol_x": 1.0,
+      "call_min_co_move": 0.4,
+      "call_max_mcap_ratio": 20.0
+    }
   },
 
   "reason": {

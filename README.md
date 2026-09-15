@@ -60,8 +60,18 @@ pip install playwright
 | `python run_once.py pump` | 코인 급등만 |
 | `python run_once.py trend` | BTC 우상향만 |
 | `python run_once.py stock` | 주식 급등만 |
-| `python run_once.py test` | 슬랙 연결 테스트 |
-| `python tests\test_all.py` | 자체 검증 53개 |
+| `python run_once.py test` | 슬랙+텔레그램 연결 테스트 |
+| `python run_once.py preview-telegram` | 실제 데이터로 3종 메시지를 만들어 `data\outbox\preview_telegram_<kind>.html` 로만 저장 (전송·알림기록 없음) |
+| `python tests\test_all.py` | 자체 검증 (오프라인) |
+
+### 텔레그램 동시 발송 (슬랙과 병행)
+| 환경변수 | 내용 |
+|---|---|
+| `TELEGRAM_BOT_TOKEN_PUMP` / `_TREND` / `_STOCK` | kind별 전용 봇 토큰 (없으면 공용 `TELEGRAM_BOT_TOKEN`) |
+| `TELEGRAM_CHAT_ID` | 슈퍼그룹 id (`-100…`) |
+| `TELEGRAM_TOPIC_PUMP` / `_TREND` / `_STOCK` | 토픽 스레드 id |
+
+변수가 없으면 조용히 건너뛴다. 쿨다운은 슬랙·텔레그램 중 하나라도 성공하면 기록한다.
 | `python tests\test_all.py --live` | 실제 API까지 검증 |
 
 ### 창 없이 24시간 돌리기 (내 PC)

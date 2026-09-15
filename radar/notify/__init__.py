@@ -1,1 +1,1 @@
-from .sender import send  # noqa: F401
+from .sender import deliver, send  # noqa: F401

@@ -73,6 +73,7 @@ def collect_and_detect(con, cfg: dict, workers: int = 8) -> list[dict]:
         recent = sum(qv[-3:]) / 3
         base = sma(qv[:-3], 60) or 1e-9
         c["vol_x"] = round(recent / base, 1)
+        c["closes"] = binance.closes(kl)[-48:]  # 텔레그램 차트용 최근 4시간(5분봉)
         c["vol_sigma"] = round((recent - base) / (stdev(qv[:-3]) or 1e-9), 1)
         c["bar_high"] = max(float(r[2]) for r in kl[-12:])
         c["bar_low"] = min(float(r[3]) for r in kl[-12:])
