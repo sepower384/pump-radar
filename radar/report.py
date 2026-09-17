@@ -295,9 +295,12 @@ def insights(a: dict) -> list[str]:
     if len(rated) >= 2:
         best = max(rated, key=lambda g: g["avg_r24"])
         worst = min(rated, key=lambda g: g["avg_r24"])
-        if best["name"] != worst["name"]:
+        if best["name"] != worst["name"] and best["avg_r24"] >= 0:
             out.append(f"하루 뒤 성적은 <b>'{best['name']}'</b> 급등이 평균 {_fmt_pct(best['avg_r24'])}로 가장 좋았고, "
                        f"'{worst['name']}' 급등이 {_fmt_pct(worst['avg_r24'])}로 가장 나빴습니다.")
+        elif best["name"] != worst["name"]:
+            out.append(f"하루 뒤에는 모든 유형이 평균 마이너스였습니다. '{best['name']}'({_fmt_pct(best['avg_r24'])})이 "
+                       f"가장 덜 빠졌고, <b>'{worst['name']}'({_fmt_pct(worst['avg_r24'])})</b>이 가장 많이 빠졌습니다.")
     if (c["scored"] >= 5 and (c["success_rate"] or 0) >= 50 and (c["fade_rate"] or 0) >= 40):
         out.append("알림 뒤 한 번 더 튀는 경우가 많았지만 하루 뒤에는 크게 되밀린 경우도 많았습니다. "
                    "<b>짧게 튀고 빠지는 흐름</b>이 우세했던 기간입니다.")
@@ -554,7 +557,7 @@ def render_html(a: dict) -> str:
     note_since = ""
     if a.get("since") and a["since"] > p["start"]:
         note_since = f"기록은 {_kst(a['since']):%m월 %d일}부터 쌓였습니다. 그 이전 기간은 집계에 없습니다."
-    bullets = "".join(f"<li>{t}</li>" for t in insights(a))
+    bullets = "".join(f"<li>{t}</li>" for t in insights(a)[:8])  # 표지 한 장에 들어가게
 
     kpi_success = _fmt_pct(c["success_rate"], sign=False)
     cover = f"""
