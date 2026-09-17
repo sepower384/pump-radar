@@ -29,6 +29,8 @@ SEND_HOUR = 9           # KST 이 시각 이후 첫 실행에서 지난 기간 �
 SUCCESS_PCT = 5.0       # 알림 뒤 24시간 안에 +5% 이상 더 오르면 '추가 상승'
 FADE_PCT = -10.0        # 24시간 뒤 알림가 대비 -10% 이하면 '되밀림'
 OUT_DIR = DATA_DIR / "reports"
+# 기록이 기간의 이 비율 이상을 덮을 때만 정기 발송 (2026-09-13 기록 시작 → 9월 월간은 발송, 3분기는 건너뜀)
+MIN_COVERAGE = {"week": 0.85, "month": 0.5, "quarter": 0.5, "year": 0.25}
 
 WEEKDAY = "월화수목금토일"
 
@@ -114,6 +116,9 @@ def due(now: float | None = None) -> list[dict]:
             continue
         if first is None or first >= p["end"]:
             continue  # 기록이 시작되기 전 기간
+        cover = (p["end"] - max(first, p["start"])) / (p["end"] - p["start"])
+        if cover < MIN_COVERAGE[kind]:
+            continue  # 기록이 기간 일부만 덮으면 빈약한 보고서가 나가므로 건너뛴다(9/7~13 주간 사례)
         out.append(p)
     return out
 

@@ -69,6 +69,14 @@ def main() -> int:
         print(json.dumps(report.run_one(kind, at=at, send="--send" in rest, partial="--partial" in rest), ensure_ascii=False, indent=2))
         return 0
 
+    if arg == "tg-delete":  # 급등탐정 방에 잘못 나간 메시지 지우기: tg-delete <message_id>
+        from radar.notify import telegram
+        mid = int(sys.argv[2])
+        res = telegram._call(telegram.token_for("pump"), "deleteMessage",
+                             {"chat_id": telegram.chat_id("pump"), "message_id": mid})
+        print(json.dumps({"deleted": mid, "ok": res.get("ok")}, ensure_ascii=False))
+        return 0
+
     if arg == "pump-force":
         res = runner.cycle("pump", force=True)
         print(json.dumps(res, ensure_ascii=False, indent=2))

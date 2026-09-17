@@ -67,6 +67,12 @@ def test_history_and_due() -> None:
     (Path(os.environ["HISTORY_DIR"]) / "2026-09.jsonl").open("a", encoding="utf-8").write("{깨진 줄\n")
     check("깨진 줄은 건너뜀", len(history.load(0, t0 + 86400)) == 3)
 
+    # 실제처럼 기록이 9/15 부터면 38주(9/14~20)는 79%만 덮는다 → 발송 보류
+    check("기록이 주 일부만 덮으면 주간 보고서 보류",
+          "W-2026-38" not in [p["key"] for p in report.due(kst("2026-09-21 10:17").timestamp())])
+    history.log("trend", [{"symbol": "X"}], ts=kst("2026-09-13 18:00").timestamp())  # 기록 시작 = 9/13
+    check("9/13 시작이면 9/7~13 주간은 안 보냄(하루치 보고서 사고 방지)",
+          "W-2026-37" not in [p["key"] for p in report.due(kst("2026-09-14 10:17").timestamp())])
     early = kst("2026-09-21 08:30").timestamp()
     check("월요일 9시 전엔 주간 보고서 대기", not any(p["kind"] == "week" for p in report.due(early)))
     ready = [p["key"] for p in report.due(kst("2026-09-21 10:17").timestamp())]
@@ -74,8 +80,10 @@ def test_history_and_due() -> None:
     check("기록 시작 전 기간은 안 보냄", "M-2026-08" not in ready and "Y-2025" not in ready)
     history.mark_report_sent("W-2026-38", {"file": "x.pdf"})
     check("보낸 보고서는 다시 안 보냄", "W-2026-38" not in [p["key"] for p in report.due(kst("2026-09-21 12:17").timestamp())])
-    check("10월 1일엔 월간·분기 보고서",
-          {"M-2026-09", "Q-2026-3"} <= {p["key"] for p in report.due(kst("2026-10-01 10:17").timestamp())})
+    oct1 = {p["key"] for p in report.due(kst("2026-10-01 10:17").timestamp())}
+    check("10월 1일엔 9월 월간(기록 57%)", "M-2026-09" in oct1, str(oct1))
+    check("3분기는 기록이 19%뿐이라 건너뜀", "Q-2026-3" not in oct1)
+    check("2026 연간은 기록 30%라 발송", "Y-2026" in {p["key"] for p in report.due(kst("2027-01-01 10:17").timestamp())})
 
     # 관찰 콜 스냅샷
     import sqlite3
