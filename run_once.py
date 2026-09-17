@@ -49,7 +49,7 @@ def main() -> int:
 
     if arg == "backfill":
         from radar import backfill
-        print(json.dumps(backfill.run(), ensure_ascii=False, indent=2))
+        print(json.dumps(backfill.run(redo="--redo" in sys.argv), ensure_ascii=False, indent=2))
         return 0
 
     if arg in ("reports", "reports-due"):

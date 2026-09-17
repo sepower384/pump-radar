@@ -173,7 +173,11 @@ def _pct(a: int, b: int) -> float | None:
 
 def aggregate(period: dict, now: float | None = None, score: bool = True) -> dict:
     ev = history.load(period["start"], period["end"])
-    pumps = [e for e in ev if e["t"] == "pump"]
+    try:
+        skip = bitget.non_crypto_bases() | binance.STABLES
+    except Exception:  # noqa: BLE001
+        skip = set(binance.STABLES)
+    pumps = [e for e in ev if e["t"] == "pump" and str(e.get("base", "")).upper() not in skip]
     ups = [e for e in pumps if e.get("direction", "up") == "up"]
     downs = [e for e in pumps if e.get("direction") == "down"]
     if score:
@@ -353,7 +357,7 @@ def svg_hbars(rows: list[tuple[str, float, str]], width: int = 520, unit: str = 
     if not rows:
         return '<div class="empty">기록이 없습니다</div>'
     bh, gap = 18, 8
-    lw = max(70, min(120, 11 * max(len(r[0]) for r in rows) + 8))
+    lw = max(70, min(118, 11 * max(len(r[0]) for r in rows) + 8))
     mv = max_v or max(v for _, v, _ in rows) or 1
     h = len(rows) * (bh + gap)
     parts = [f'<svg viewBox="0 0 {width} {h}" width="100%" role="img">']
@@ -412,10 +416,10 @@ def svg_donut(pct: float | None, label: str, size: int = 150) -> str:
     circ = 2 * math.pi * r
     p = max(0.0, min(100.0, pct or 0))
     txt = "—" if pct is None else f"{pct:.0f}%"
+    arc = (f'<circle cx="{c}" cy="{c}" r="{r}" class="dfg" stroke-dasharray="{circ * p / 100:.1f} {circ:.1f}" '
+           f'transform="rotate(-90 {c} {c})"/>') if p > 0 else ""  # 0%·기록 없음이면 둥근 끝 점도 그리지 않는다
     return (f'<svg viewBox="0 0 {size} {size}" width="{size}" height="{size}" role="img">'
-            f'<circle cx="{c}" cy="{c}" r="{r}" class="dbg"/>'
-            f'<circle cx="{c}" cy="{c}" r="{r}" class="dfg" stroke-dasharray="{circ * p / 100:.1f} {circ:.1f}" '
-            f'transform="rotate(-90 {c} {c})"/>'
+            f'<circle cx="{c}" cy="{c}" r="{r}" class="dbg"/>{arc}'
             f'<text x="{c}" y="{c + 4}" text-anchor="middle" class="dnum">{txt}</text>'
             f'<text x="{c}" y="{c + 26}" text-anchor="middle" class="dlab">{_e(label)}</text></svg>')
 
@@ -444,6 +448,18 @@ def _money(v) -> str:
 
 def _flag(market) -> str:
     return "<span class='flag us'>US</span>" if market == "US" else "<span class='flag kr'>KR</span>"
+
+
+def _catalyst(e: dict, n: int) -> str:
+    """보여줄 재료 한 줄: 안내문('찾지 못했습니다')은 빼고, 번역 안 된 영어보다 한국어를 먼저."""
+    cats = [c for c in (e.get("catalyst") or []) if c and "찾지 못했" not in c]
+    cats.sort(key=lambda c: not any("가" <= ch <= "힣" for ch in c))
+    c = cats[0] if cats else ""
+    return c if len(c) <= n else c[: n - 1] + "…"
+
+
+def _short(s: str, n: int) -> str:
+    return s if len(s) <= n else s[: n - 1] + "…"
 
 
 def _cls(v) -> str:
@@ -627,13 +643,13 @@ def render_html(a: dict) -> str:
     # ── 4. 주식
     def market_block(mk: str, flag: str, name: str) -> str:
         m = s["markets"][mk]
-        bars = svg_hbars([(t, n, "") for t, n in m["themes"][:5]], unit="회", width=330)
+        bars = svg_hbars([(_short(t, 9), n, "") for t, n in m["themes"][:5]], unit="회", width=330)
         rows = []
         for e in m["leaders"][:5]:
             ld = e.get("leader") or {}
-            cat = (e.get("catalyst") or [""])[0]
+            cat = _catalyst(e, 34)
             rows.append(f"<tr><td><b>{_e(ld.get('name', ''))}</b><div class='muted'>{_e(e['theme'])} · "
-                        f"{_kst(e['ts']):%m.%d}</div><div class='muted'>{_e(cat[:34])}</div></td>"
+                        f"{_kst(e['ts']):%m.%d}</div><div class='muted'>{_e(cat)}</div></td>"
                         f"<td class='r up'>{_fmt_pct(ld.get('chg'))}</td></tr>")
         lt = "<table>" + "".join(rows) + "</table>" if rows else '<div class="empty">기록이 없습니다</div>'
         return (f'<div class="card"><div class="mk">{flag} {name} · 테마 알림 {m["n"]}건</div>'

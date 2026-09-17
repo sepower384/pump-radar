@@ -20,11 +20,11 @@ _COIN = re.compile(r"^(🚀|🔻) \*([A-Za-z0-9]+)\* — (.+)$")
 _CHG = re.compile(r"(5분 만에|15분 만에|1시간 동안|2시간 동안|하루 동안) `([+-]?[\d.]+)%`")
 _CHG_KEY = {"5분 만에": "chg5m", "15분 만에": "chg15m", "1시간 동안": "chg1h", "2시간 동안": "chg2h",
             "하루 동안": "chg24h"}
-_PRICE = re.compile(r"현재가 \$([\d.,]+) \((바이낸스|비트겟)\)")
+_PRICE = re.compile(r"(?:현재가|지금) \$([\d.,]+) \((바이낸스|비트겟)\)")
 _QVOL = re.compile(r"거래대금[^$]*\$([\d.]+)([KMB]?)")
 _VOLX = re.compile(r"평소의 \*([\d.]+)배\*")
 _CONF = re.compile(r"확신도: ([^)]+)\)")
-_EVID = re.compile(r"^\s*◦ \*([^*]+)\*")
+_EVID = re.compile(r"^\s+\S{1,3} \*([^*]+)\* [—(]")
 _MARKET = re.compile(r"^💹 (🇰🇷|🇺🇸)")
 _THEME = re.compile(r"^🧩 \*(.+?)\* 테마")
 _LEADER = re.compile(r"^👑 대장주.*?\*(.+?)\*(?: \(([A-Z0-9.\-]+)\))? `([+-]?[\d.]+)%`")
@@ -63,7 +63,7 @@ def parse_pump(text: str) -> list[dict]:
             cur["vol_x"] = float(m.group(1))
         if (m := _CONF.search(line)):
             cur["conf"] = m.group(1).strip()
-        if (m := _EVID.match(line)):
+        if (m := _EVID.match(line)) and "확신도" not in line:  # '🔎 *상승 이유* (확신도…' 머리줄 제외
             cur["tags"].append(m.group(1).strip())
     for c in out:
         c["tag"] = c["tags"][0] if c["tags"] else ""
@@ -96,7 +96,8 @@ def parse_stock(text: str) -> list[dict]:
         elif (m := _CALL.match(s)):
             cur["calls"].append(m.group(1).strip())
         elif (m := _CATALYST.match(line)):
-            cur["catalyst"].append(m.group(1).strip())
+            if "찾지 못했" not in m.group(1):  # '재료 뉴스 없음' 안내문은 재료가 아니다
+                cur["catalyst"].append(m.group(1).strip())
     return [c for c in out if c["leader"]]
 
 
@@ -107,7 +108,8 @@ def _delivered(note: str) -> bool:
     return "telegram=ok" in n or "webhook" in n or "playwright" in n or "cdp" in n
 
 
-def run(outbox: Path | None = None) -> dict:
+def run(outbox: Path | None = None, redo: bool = False) -> dict:
+    """redo=True: 완료 표시를 무시하고 다시 읽는다(형식 인식을 고친 뒤). 중복은 걸러진다."""
     box = outbox or OUTBOX
     marker = history.hist_dir() / "backfill.json"
     try:
@@ -120,7 +122,7 @@ def run(outbox: Path | None = None) -> dict:
     have = {(e["t"], e["ts"], e.get("base") or e.get("theme")) for e in existing}
     stats = {"files": 0, "pump": 0, "stock": 0, "skipped_files": 0}
     for p in sorted(box.glob("[0-9]" * 8 + ".md")):
-        if p.name in done:
+        if p.name in done and not redo:
             stats["skipped_files"] += 1
             continue
         day = datetime.strptime(p.stem, "%Y%m%d")

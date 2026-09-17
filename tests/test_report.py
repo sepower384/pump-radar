@@ -146,6 +146,19 @@ def test_backfill() -> None:
           and pumps[1]["market"] == "bitget" and pumps[1]["direction"] == "down")
     check("첫 근거 태그", pumps[0]["tag"] == "테마 순환매" and pumps[2]["tag"] == "원인 미확인")
     check("거래대금 단위", pumps[0]["qvol"] == 30e6 and pumps[2]["qvol"] == 900e3)
+    legacy = "\n".join([
+        "🚨 코인 급등 감지 SYN",
+        "🚀 *SYN* — SYN 급등 — 뉴스 재료",
+        "        👉 1시간 동안 `+12.0%`, 하루 동안 `+45.0%` 올랐어요. 거래량도 평소의 *5.1배*로 사람들이 확 몰렸어요.",
+        "        💵 지금 $0.2310 (바이낸스) · 하루 거래대금 $12M",
+        "        🔎 *왜 올랐나* (확신도: 근거가 꽤 확실해요)",
+        "            📰 *거래소 상장* — 업비트 원화마켓 상장 <https://x|기사 보기>",
+        "            📊 *거래량 폭증* — 평소의 5.1배",
+    ])
+    old_fmt = backfill.parse_pump(legacy)
+    check("9/13~16 옛 형식도 읽음", len(old_fmt) == 1 and old_fmt[0]["price"] == 0.231
+          and old_fmt[0]["chg24h"] == 45.0 and old_fmt[0]["tag"] == "거래소 상장" and old_fmt[0]["vol_x"] == 5.1,
+          str(old_fmt))
     st = backfill.parse_stock(msgs[2].slack_text())
     check("주식 테마 읽음", len(st) == 1 and st[0]["market"] == "KR" and st[0]["leader"]["name"] == "대장전자")
     check("2·3등 판정·콜", [p["verdict"] for p in st[0]["peers"]] == ["overheated", "lagging"]
