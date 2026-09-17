@@ -291,13 +291,16 @@ def insights(a: dict) -> list[str]:
     if c["scored"] >= 3:
         out.append(f"알림 뒤 24시간 안에 <b>+{SUCCESS_PCT:.0f}% 이상 더 오른 비율은 {c['success_rate']:.0f}%</b>, "
                    f"24시간 뒤 {abs(FADE_PCT):.0f}% 넘게 되밀린 비율은 {c['fade_rate']:.0f}%입니다.")
-    good = [g for g in c["groups"] if g["scored"] >= 3 and g["success"] is not None]
-    if len(good) >= 2:
-        best = max(good, key=lambda g: g["success"])
-        worst = min(good, key=lambda g: g["success"])
+    rated = [g for g in c["groups"] if g["scored"] >= 3 and g["avg_r24"] is not None]
+    if len(rated) >= 2:
+        best = max(rated, key=lambda g: g["avg_r24"])
+        worst = min(rated, key=lambda g: g["avg_r24"])
         if best["name"] != worst["name"]:
-            out.append(f"이유별로는 <b>'{best['name']}'</b> 급등의 추가 상승 비율이 {best['success']:.0f}%로 가장 높았고, "
-                       f"'{worst['name']}'은 {worst['success']:.0f}%로 가장 낮았습니다.")
+            out.append(f"하루 뒤 성적은 <b>'{best['name']}'</b> 급등이 평균 {_fmt_pct(best['avg_r24'])}로 가장 좋았고, "
+                       f"'{worst['name']}' 급등이 {_fmt_pct(worst['avg_r24'])}로 가장 나빴습니다.")
+    if (c["scored"] >= 5 and (c["success_rate"] or 0) >= 50 and (c["fade_rate"] or 0) >= 40):
+        out.append("알림 뒤 한 번 더 튀는 경우가 많았지만 하루 뒤에는 크게 되밀린 경우도 많았습니다. "
+                   "<b>짧게 튀고 빠지는 흐름</b>이 우세했던 기간입니다.")
     unk = next((g for g in c["groups"] if g["name"] == UNKNOWN and g["scored"] >= 3), None)
     if unk and unk["fade"] is not None:
         out.append(f"이유 없이 오른 급등은 {unk['fade']:.0f}%가 하루 만에 크게 되밀렸습니다. "
@@ -324,16 +327,22 @@ def watchlist(a: dict) -> list[str]:
     rep_coins = [f"{b}({n}회)" for b, n in c["repeat"] if n >= 2][:5]
     if rep_coins:
         out.append(f"<b>반복 급등 코인</b> · {', '.join(rep_coins)} — 여러 번 불붙은 코인은 재료가 이어지는지 확인해 볼 만합니다.")
-    good = sorted([g for g in c["groups"] if g["scored"] >= 3 and g["success"] is not None],
-                  key=lambda g: -g["success"])
+    rated = [g for g in c["groups"] if g["scored"] >= 3 and g["avg_r24"] is not None]
+    good = sorted([g for g in rated if g["avg_r24"] > -2 and (g["success"] or 0) >= 40], key=lambda g: -g["avg_r24"])
+    spiky = [g for g in rated if g not in good and (g["success"] or 0) >= 50 and g["avg_r24"] <= -2]
+    bad = [g for g in rated if g not in good and g not in spiky and g["avg_r24"] <= -2]
     if good:
         g = good[0]
         out.append(f"<b>성적이 좋았던 급등 유형</b> · '{g['name']}' (추가 상승 {g['success']:.0f}%, "
                    f"24시간 뒤 평균 {_fmt_pct(g['avg_r24'])}) — 같은 유형 알림을 우선해서 살펴보십시오.")
-    bad = [g for g in c["groups"] if g["scored"] >= 3 and (g["avg_r24"] or 0) < -2]
+    if spiky:
+        out.append("<b>짧게 튀고 빠진 유형</b> · " + ", ".join(
+            f"'{g['name']}'(한 번 더 오름 {g['success']:.0f}% · 24시간 뒤 평균 {_fmt_pct(g['avg_r24'])})" for g in spiky)
+            + " — 추가 상승이 나와도 오래 버티지 못했습니다. 들고 가기보다 짧게 보는 편이 맞아 보입니다.")
     if bad:
-        out.append("<b>조심할 급등 유형</b> · " + ", ".join(f"'{g['name']}'(24시간 뒤 평균 {_fmt_pct(g['avg_r24'])})" for g in bad)
-                   + " — 알림 직후 추격하면 물리기 쉬운 유형입니다.")
+        out.append("<b>조심할 급등 유형</b> · " + ", ".join(
+            f"'{g['name']}'(24시간 뒤 평균 {_fmt_pct(g['avg_r24'])})" for g in bad)
+            + " — 알림 직후 추격하면 물리기 쉬운 유형입니다.")
     if c["hours"]:
         top_h = sorted(c["hours"].items(), key=lambda kv: -kv[1])[:3]
         out.append("<b>급등이 몰린 시간대</b> · " + ", ".join(f"{int(h):02d}시" for h, _ in top_h)
@@ -524,7 +533,10 @@ tr { break-inside: avoid; }
 .flag { display: inline-block; font-size: 7.5pt; font-weight: 700; padding: .3mm 1.8mm; border-radius: 4px; color: #fff; vertical-align: 1px; }
 .flag.us { background: #2451B7; } .flag.kr { background: #C2412A; }
 .watch li { margin: 2mm 0; } .watch b { color: #1B2230; }
-.glossary dt { font-weight: 700; margin-top: 3mm; } .glossary dd { margin: .5mm 0 0; color: #4A5367; }
+.glossary { display: grid; grid-template-columns: 1fr 1fr; gap: 1mm 6mm; margin: 0; }
+.glossary div { break-inside: avoid; } .glossary dt { font-weight: 700; margin-top: 2mm; font-size: 9.5pt; }
+.glossary dd { margin: .5mm 0 0; color: #4A5367; font-size: 8.8pt; line-height: 1.45; }
+.disclaimer { position: absolute; left: 15mm; right: 15mm; bottom: 13mm; font-size: 8pt; color: #8A93A6; }
 """
 
 FONT = '<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">'
@@ -688,15 +700,15 @@ def render_html(a: dict) -> str:
   <h2 style="margin-top:8mm"><span class="num">05</span>리포트 읽는 법</h2>
   <p class="lead">숫자는 모두 실제로 보낸 알림과 이후 시세로 계산했습니다. 표본이 적은 칸은 참고만 하시는 것이 좋아 보입니다.</p>
   <div class="card"><dl class="glossary">
-    <dt>급등 포착</dt><dd>5분 +3% · 15분 +5% · 1시간 +8%, 거래량 3배, 또는 하루 +20% 이면서 최근 2시간에도 움직이는 코인을 잡습니다.</dd>
-    <dt>오른 이유 확인률</dt><dd>상장 공지, 뉴스, 선물 자금 유입, 테마 순환매 등 근거를 하나라도 찾은 비율입니다. 못 찾으면 '원인 미확인'(큰손 주도 의심)으로 분류합니다.</dd>
-    <dt>추가 상승 / 되밀림</dt><dd>알림가 대비 24시간 안에 +{SUCCESS_PCT:.0f}% 이상 더 오른 적이 있으면 추가 상승, 24시간 뒤 {FADE_PCT:.0f}% 이하면 되밀림입니다.</dd>
-    <dt>대장주 · 2·3등</dt><dd>같은 테마에서 가장 먼저, 가장 크게 오른 종목이 대장주입니다. 2·3등이 아직 덜 올랐으면 따라오는지 지켜봅니다.</dd>
-    <dt>관찰 콜</dt><dd>지금 사라는 신호가 아니라 앞으로 움직임을 지켜볼 종목 표시입니다. 1거래일 안에 +2%면 적중으로 기록하고, 틀린 콜도 모두 공개합니다.</dd>
+    <div><dt>급등 포착</dt><dd>5분 +3% · 15분 +5% · 1시간 +8%, 거래량 3배, 또는 하루 +20% 이면서 최근 2시간에도 움직이는 코인을 잡습니다.</dd></div>
+    <div><dt>오른 이유 확인률</dt><dd>상장 공지, 뉴스, 선물 자금 유입, 테마 순환매 등 근거를 하나라도 찾은 비율입니다. 못 찾으면 '원인 미확인'(큰손 주도 의심)으로 분류합니다.</dd></div>
+    <div><dt>추가 상승 / 되밀림</dt><dd>알림가 대비 24시간 안에 +{SUCCESS_PCT:.0f}% 이상 더 오른 적이 있으면 추가 상승, 24시간 뒤 {FADE_PCT:.0f}% 이하면 되밀림입니다.</dd></div>
+    <div><dt>대장주 · 2·3등</dt><dd>같은 테마에서 가장 먼저, 가장 크게 오른 종목이 대장주입니다. 2·3등이 아직 덜 올랐으면 따라오는지 지켜봅니다.</dd></div>
+    <div><dt>관찰 콜</dt><dd>지금 사라는 신호가 아니라 앞으로 움직임을 지켜볼 종목 표시입니다. 1거래일 안에 +2%면 적중으로 기록하고, 틀린 콜도 모두 공개합니다.</dd></div>
   </dl></div>
   <div class="callout" style="margin-top:6mm"><b>활용 팁</b> · 이유가 확인된 급등과 원인 미확인 급등의 성적 차이를 먼저 보십시오.
   이미 크게 오른 코인을 쫓기보다 이유가 뚜렷하고 되밀림이 적은 유형을 고르는 데 이 리포트를 쓰시는 것이 좋아 보입니다.</div>
-  <p class="muted" style="margin-top:4mm">⚠️ 이 리포트는 매수·매도 추천이 아니라 지난 알림의 기록과 통계입니다. 투자 판단과 책임은 본인에게 있습니다.
+  <p class="disclaimer">⚠️ 이 리포트는 매수·매도 추천이 아니라 지난 알림의 기록과 통계입니다. 투자 판단과 책임은 본인에게 있습니다.
   과거 성적이 미래 수익을 보장하지 않습니다.</p>
   {_foot(a, 5)}
 </section>"""

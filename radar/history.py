@@ -64,13 +64,17 @@ def load(start: float, end: float, kinds: tuple[str, ...] | None = None) -> list
 
 
 def first_ts() -> float | None:
-    files = sorted(hist_dir().glob("*.jsonl"))
-    for p in files:
+    """가장 이른 기록 시각. 과거분(backfill)은 나중에 덧붙으므로 첫 파일 전체에서 최솟값을 본다."""
+    for p in sorted(hist_dir().glob("*.jsonl")):
+        best = None
         for line in p.read_text(encoding="utf-8").splitlines():
             try:
-                return float(json.loads(line)["ts"])
-            except (ValueError, KeyError):
+                ts = float(json.loads(line)["ts"])
+            except (ValueError, KeyError, TypeError):
                 continue
+            best = ts if best is None else min(best, ts)
+        if best is not None:
+            return best
     return None
 
 
