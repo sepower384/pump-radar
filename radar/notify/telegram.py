@@ -4,6 +4,7 @@
   TELEGRAM_BOT_TOKEN_PUMP / _TREND / _STOCK  kind별 봇 토큰 (없으면 아래 공용 토큰)
   TELEGRAM_BOT_TOKEN                          공용 봇 토큰
   TELEGRAM_CHAT_ID                            슈퍼그룹 id (-100…)
+  TELEGRAM_CHAT_ID_PUMP / _TREND / _STOCK     kind별 전용 방(채널·그룹) id — 있으면 공용 CHAT_ID 대신
   TELEGRAM_TOPIC_PUMP / _TREND / _STOCK       토픽 스레드 id (없으면 일반 채팅으로)
 토큰이나 CHAT_ID 가 없으면 조용히 건너뛴다(status=skipped).
 """
@@ -23,6 +24,8 @@ GAP_SEC = 1.0         # 여러 메시지 사이 간격
 
 _TOKEN_ENV = {"pump": "TELEGRAM_BOT_TOKEN_PUMP", "trend": "TELEGRAM_BOT_TOKEN_TREND",
               "stock": "TELEGRAM_BOT_TOKEN_STOCK"}
+_CHAT_ENV = {"pump": "TELEGRAM_CHAT_ID_PUMP", "trend": "TELEGRAM_CHAT_ID_TREND",
+             "stock": "TELEGRAM_CHAT_ID_STOCK"}
 _TOPIC_ENV = {"pump": "TELEGRAM_TOPIC_PUMP", "trend": "TELEGRAM_TOPIC_TREND",
               "stock": "TELEGRAM_TOPIC_STOCK"}
 
@@ -162,11 +165,18 @@ def token_for(kind: str) -> str:
     return env(_TOKEN_ENV.get(kind, ""), "") or env("TELEGRAM_BOT_TOKEN", "")
 
 
-def chat_id() -> str:
-    return env("TELEGRAM_CHAT_ID", "")
+def chat_id(kind: str = "") -> str:
+    """kind 전용 방 우선, 없으면 공용 TELEGRAM_CHAT_ID."""
+    return env(_CHAT_ENV.get(kind, ""), "") or env("TELEGRAM_CHAT_ID", "")
+
+
+def _own_chat(kind: str) -> bool:
+    return bool(env(_CHAT_ENV.get(kind, ""), ""))
 
 
 def topic_for(kind: str) -> int | None:
+    if _own_chat(kind):   # 전용 방(채널 등)으로 보내면 공용 그룹의 토픽 id 는 의미가 없다
+        return None
     v = env(_TOPIC_ENV.get(kind, ""), "")
     try:
         return int(v) if v else None
@@ -175,7 +185,37 @@ def topic_for(kind: str) -> int | None:
 
 
 def available(kind: str = "") -> bool:
-    return bool(token_for(kind) and chat_id())
+    return bool(token_for(kind) and chat_id(kind))
+
+
+def list_chats(get=requests.get) -> dict:
+    """kind별 봇이 초대된 방(채널·그룹) id 찾기 — 봇을 방에 넣은 뒤 실행. 토큰은 출력하지 않는다."""
+    out: dict = {}
+    for kind in ("pump", "trend", "stock"):
+        token = token_for(kind)
+        if not token:
+            out[kind] = "토큰 없음"
+            continue
+        api = f"https://api.telegram.org/bot{token}/"
+        try:
+            get(api + "deleteWebhook", timeout=20)  # 웹훅이 있으면 getUpdates 가 막힌다
+            data = get(api + "getUpdates", timeout=20, params={
+                "allowed_updates": '["message","channel_post","my_chat_member"]'}).json()
+        except Exception as e:  # noqa: BLE001
+            out[kind] = _redact(f"조회 실패: {type(e).__name__}: {e}", token)
+            continue
+        seen: dict = {}
+        for u in data.get("result", []):
+            for k in ("my_chat_member", "channel_post", "message"):
+                if k in u:
+                    c = u[k]["chat"]
+                    st = (u[k].get("new_chat_member") or {}).get("status")
+                    prev = seen.get(str(c["id"]), {})
+                    seen[str(c["id"])] = {"type": c.get("type"),
+                                          "title": c.get("title") or c.get("username") or c.get("first_name"),
+                                          "status": st or prev.get("status", "")}
+        out[kind] = seen or "받은 기록 없음 — 방에서 봇을 뺐다가 다시 넣거나 방에 글 하나 올린 뒤 재실행"
+    return out
 
 
 # ─────────────────────────── 전송 ───────────────────────────
@@ -206,7 +246,7 @@ def _call(token: str, method: str, payload: dict, timeout: int = 20) -> dict:
 
 
 def _base(kind: str) -> dict:
-    p: dict = {"chat_id": chat_id()}
+    p: dict = {"chat_id": chat_id(kind)}
     t = topic_for(kind)
     if t is not None:
         p["message_thread_id"] = t

@@ -211,7 +211,8 @@ import re  # noqa: E402
 
 _TG_KEYS = ("TELEGRAM_BOT_TOKEN", "TELEGRAM_BOT_TOKEN_PUMP", "TELEGRAM_BOT_TOKEN_TREND",
             "TELEGRAM_BOT_TOKEN_STOCK", "TELEGRAM_CHAT_ID", "TELEGRAM_TOPIC_PUMP",
-            "TELEGRAM_TOPIC_TREND", "TELEGRAM_TOPIC_STOCK")
+            "TELEGRAM_TOPIC_TREND", "TELEGRAM_TOPIC_STOCK", "TELEGRAM_CHAT_ID_PUMP",
+            "TELEGRAM_CHAT_ID_TREND", "TELEGRAM_CHAT_ID_STOCK")
 
 
 class _EnvGuard:
@@ -306,6 +307,10 @@ def test_telegram_tokens() -> None:
         check("공용 없어도 전용만으로 사용", tg.available("pump") and not tg.available("stock"))
         os.environ["TELEGRAM_TOPIC_TREND"] = "42"
         check("토픽 id 정수", tg.topic_for("trend") == 42 and tg.topic_for("pump") is None)
+        os.environ["TELEGRAM_CHAT_ID_TREND"] = "-100999"
+        check("kind 전용 방 우선(trend)", tg.chat_id("trend") == "-100999" and tg.chat_id("pump") == "-100123")
+        check("전용 방이면 토픽 무시", tg.topic_for("trend") is None and "message_thread_id" not in tg._base("trend"))
+        check("전용 방 → payload chat_id", tg._base("trend")["chat_id"] == "-100999")
 
 
 class _Resp:

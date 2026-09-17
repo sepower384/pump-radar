@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
     inputs:
       mode:
-        description: "all / pump / trend / stock / test"
+        description: "all / pump / trend / stock / test / chats"
         default: "all"
 
 concurrency:
@@ -51,6 +51,10 @@ jobs:
           TELEGRAM_BOT_TOKEN_TREND: ${{ secrets.TELEGRAM_BOT_TOKEN_TREND }}
           TELEGRAM_BOT_TOKEN_STOCK: ${{ secrets.TELEGRAM_BOT_TOKEN_STOCK }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          # kind별 전용 방 (BTC차트 감별 → "알트코인 BTC차트 우상향 감별" 등). 없으면 공용 CHAT_ID
+          TELEGRAM_CHAT_ID_PUMP: ${{ secrets.TELEGRAM_CHAT_ID_PUMP }}
+          TELEGRAM_CHAT_ID_TREND: ${{ secrets.TELEGRAM_CHAT_ID_TREND }}
+          TELEGRAM_CHAT_ID_STOCK: ${{ secrets.TELEGRAM_CHAT_ID_STOCK }}
           TELEGRAM_TOPIC_PUMP: ${{ secrets.TELEGRAM_TOPIC_PUMP }}
           TELEGRAM_TOPIC_TREND: ${{ secrets.TELEGRAM_TOPIC_TREND }}
           TELEGRAM_TOPIC_STOCK: ${{ secrets.TELEGRAM_TOPIC_STOCK }}

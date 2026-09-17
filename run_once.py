@@ -4,6 +4,7 @@
     python run_once.py trend              # BTC 우상향만
     python run_once.py stock              # 주식 급등만
     python run_once.py test               # 슬랙+텔레그램 연결 테스트 메시지만 발사
+    python run_once.py chats              # 텔레그램 봇들이 초대된 방(채널·그룹) id 조회
     python run_once.py preview-telegram   # 실제 데이터로 3종 메시지를 만들어 파일로만 저장(전송·알림기록 없음)
 """
 from __future__ import annotations
@@ -29,6 +30,11 @@ def main() -> int:
         res = deliver(msg)
         print(json.dumps(res, ensure_ascii=False, indent=2))
         return 0 if res["delivered"] else 1
+
+    if arg == "chats":
+        from radar.notify import telegram
+        print(json.dumps(telegram.list_chats(), ensure_ascii=False, indent=2))
+        return 0
 
     if arg in ("preview-telegram", "preview"):
         from radar import preview
