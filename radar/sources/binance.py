@@ -29,6 +29,9 @@ STABLES = {
     "USDT", "USDC", "BUSD", "TUSD", "FDUSD", "DAI", "USDP", "UST", "USDD",
     "EUR", "TRY", "BRL", "ARS", "GBP", "AUD", "JPY", "RUB", "ZAR", "PLN",
     "USD1", "XUSD", "AEUR", "USDE",
+    # 달러·금 연동 토큰 — 가격이 거의 안 움직여 급등 후보가 아닌데 얇은 호가로 튀면 오탐이 난다
+    "RLUSD", "PYUSD", "USDS", "EURI", "BFUSD", "USDQ", "USDX", "FRAX", "LUSD", "GUSD", "USTC",
+    "XAUT", "PAXG",
 }
 LEVERAGED_SUFFIX = ("UPUSDT", "DOWNUSDT", "BULLUSDT", "BEARUSDT")
 

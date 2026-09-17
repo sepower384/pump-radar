@@ -12,7 +12,7 @@ import time
 import traceback
 from datetime import datetime, timedelta, timezone
 
-from . import markets, store
+from . import history, markets, store
 from .config import CFG
 from .engine import btc_trend, pump, reason, stock_pump, theme_follow
 from .http import get_json
@@ -95,6 +95,7 @@ def _evidence_lines(rsn: dict, translate: bool = True) -> list[str]:
 
 def _finish(kind: str, con, msg: Msg | None, marks: list[tuple[str, str]], info: dict) -> dict:
     """전송하고, 슬랙·텔레그램 둘 중 하나라도 성공했을 때만 쿨다운을 기록한다."""
+    events = info.pop("_events", None)
     if msg is None:
         return info
     res = deliver(msg)
@@ -105,6 +106,8 @@ def _finish(kind: str, con, msg: Msg | None, marks: list[tuple[str, str]], info:
         for key, payload in marks:
             store.mark_alerted(con, kind, key, payload)
         info["marked"] = len(marks)
+        if events:
+            info["logged"] = history.log(kind, events)
     else:
         info["marked"] = 0
         info["note"] = "슬랙·텔레그램 모두 실패 — 쿨다운 미기록(다음 사이클 재시도), 원문은 outbox 보관"
@@ -176,7 +179,10 @@ def compose_trend(con, respect_cooldown: bool = True, preview: bool = False
 
     msg = build_trend_msg(top, {r["symbol"] for r in fresh}, cfg, th)
     marks = [(r["symbol"], f"{r['score']}") for r in fresh]
-    info = {"count": len(top), "new": len(fresh)}
+    info = {"count": len(top), "new": len(fresh),
+            "_events": [{"symbol": r["symbol"], "base": r.get("base", ""), "price": r.get("price"),
+                         "score": r["score"], "rs7": r.get("rs7"), "rs30": r.get("rs30"), "new": True}
+                        for r in fresh]}
     if sample:
         info["sample"] = f"기준 {th:.0f}점 이상 코인이 없어 점수 상위 3개로 대체"
     return msg, marks, info
@@ -309,9 +315,22 @@ def compose_pump(con, ctx: reason.MarketContext, respect_cooldown: bool = True, 
     msg = build_pump_msg(items)
     marks = [(h["symbol"], str(h.get("chg15m"))) for h in fresh]
     info = {"count": len(hits), "alerted": len(fresh)}
+    if not sample:
+        info["_events"] = [_pump_event(it) for it in items]
     if sample:
         info["sample"] = "감지된 급등이 없어 24시간 상승률 상위 3개로 대체"
     return msg, marks, info
+
+
+def _pump_event(it: dict) -> dict:
+    h, rsn = it["raw"], it["reason"]
+    ev = rsn.get("evidence") or [{}]
+    return {k: h.get(k) for k in ("market", "symbol", "base", "price", "chg5m", "chg15m", "chg1h", "chg2h",
+                                  "chg24h", "qvol", "vol_x", "off_high", "direction")} | {
+        "tag": ev[0].get("tag", ""), "tags": [e.get("tag", "") for e in ev],
+        "conf": rsn.get("confidence", ""), "headline": it.get("llm") or rsn.get("headline", ""),
+        "news": next((e.get("text", "") for e in ev if e.get("url")), "")[:140],
+    }
 
 
 def run_pump_crypto(con, ctx: reason.MarketContext, respect_cooldown: bool = True) -> dict:
@@ -673,7 +692,14 @@ def compose_stock(con, respect_cooldown: bool = True, preview: bool = False) -> 
                     calls.append({"market": market, "symbol": p["symbol"], "name": p["name"],
                                   "theme": b["theme"]["name"], "leader": b["leader"]["name"],
                                   "ref_price": p["price"], "target_pct": s["hit_pct"], "deadline": deadline})
-        jobs.append({"market": market, "msg": msg, "marks": [(b["key"], f"{b['leader']['chg']}") for b in fresh],
+        events = [{"market": market, "theme": b["theme"]["name"],
+                   "leader": {k: b["leader"].get(k) for k in ("symbol", "name", "chg", "trade_value", "mcap")},
+                   "catalyst": [c.get("title", "") for c in (b["leader"].get("catalyst") or [])][:2],
+                   "peers": [{"symbol": p.get("symbol"), "name": p.get("name"), "chg": p.get("chg"),
+                              "verdict": p.get("verdict"), "blocker": p.get("blocker", "")} for p in b["peers"]],
+                   "calls": list(b["calls"]) if can_call else []}
+                  for b in fresh]
+        jobs.append({"market": market, "events": events, "msg": msg, "marks": [(b["key"], f"{b['leader']['chg']}") for b in fresh],
                      "calls": calls if (can_call or preview) else [],
                      "report_ids": [c["id"] for c in unreported]})
         minfo["calls"] = len(calls) if can_call else 0
@@ -684,7 +710,7 @@ def run_pump_stock(con) -> dict:
     jobs, info = compose_stock(con)
     sent = False
     for job in jobs:
-        res = _finish("stock", con, job["msg"], job["marks"], {})
+        res = _finish("stock", con, job["msg"], job["marks"], {"_events": job.get("events")})
         if res.get("sent"):
             sent = True
             for c in job["calls"]:
@@ -726,6 +752,7 @@ def cycle(only: str = "all", verbose: bool = True, force: bool = False) -> dict:
             if verbose:
                 traceback.print_exc()
 
+    history.dump_calls(con)
     out["elapsed"] = round(time.time() - t0, 1)
     con.close()
     return out

@@ -9,19 +9,39 @@ on:
   workflow_dispatch:
     inputs:
       mode:
-        description: "all / pump / pump-force(쿨다운 무시) / trend / stock / test / chats"
+        description: "all / pump / pump-force(쿨다운 무시) / trend / stock / test / chats / report week --partial / report week --at 2026-09-21 --send"
         default: "all"
 
 concurrency:
   group: pump-radar
   cancel-in-progress: false
 
+env:
+  MODE: ${{ github.event.inputs.mode || 'all' }}
+  PYTHONUTF8: "1"
+  # 보낸 알림의 영구 기록(보고서 원재료) — 저장소의 history 브랜치를 여기에 받아 쓴다
+  HISTORY_DIR: ${{ github.workspace }}/hist
+  GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+  # 텔레그램 (없으면 조용히 건너뜀). 봇 토큰은 kind별 → 공용 순으로 찾는다
+  TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+  TELEGRAM_BOT_TOKEN_PUMP: ${{ secrets.TELEGRAM_BOT_TOKEN_PUMP }}
+  TELEGRAM_BOT_TOKEN_TREND: ${{ secrets.TELEGRAM_BOT_TOKEN_TREND }}
+  TELEGRAM_BOT_TOKEN_STOCK: ${{ secrets.TELEGRAM_BOT_TOKEN_STOCK }}
+  TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+  # kind별 전용 방 (급등탐정 → "급등 자산 트렌드 스터디방" 등). 없으면 공용 CHAT_ID
+  TELEGRAM_CHAT_ID_PUMP: ${{ secrets.TELEGRAM_CHAT_ID_PUMP }}
+  TELEGRAM_CHAT_ID_TREND: ${{ secrets.TELEGRAM_CHAT_ID_TREND }}
+  TELEGRAM_CHAT_ID_STOCK: ${{ secrets.TELEGRAM_CHAT_ID_STOCK }}
+  TELEGRAM_TOPIC_PUMP: ${{ secrets.TELEGRAM_TOPIC_PUMP }}
+  TELEGRAM_TOPIC_TREND: ${{ secrets.TELEGRAM_TOPIC_TREND }}
+  TELEGRAM_TOPIC_STOCK: ${{ secrets.TELEGRAM_TOPIC_STOCK }}
+
 jobs:
   scan:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     permissions:
-      contents: write        # 60일 비활성 방지용 빈 커밋
+      contents: write        # history 브랜치 저장 + 60일 비활성 방지용 빈 커밋
     steps:
       - uses: actions/checkout@v4
 
@@ -38,33 +58,67 @@ jobs:
           key: radar-state-${{ github.run_id }}
           restore-keys: radar-state-
 
+      - name: 기록 브랜치 받기
+        run: |
+          git config --global user.name "pump-radar-bot"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          url="https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git"
+          if git ls-remote --exit-code --heads "$url" history >/dev/null 2>&1; then
+            git clone --quiet --depth 1 --branch history "$url" hist
+          else
+            mkdir -p hist && git -C hist init -q -b history && git -C hist remote add origin "$url"
+          fi
+
       - name: 스캔 실행
+        if: ${{ !startsWith(env.MODE, 'report') }}
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
           SLACK_WEBHOOK_TREND: ${{ secrets.SLACK_WEBHOOK_TREND }}
           SLACK_WEBHOOK_PUMP: ${{ secrets.SLACK_WEBHOOK_PUMP }}
           SLACK_WEBHOOK_STOCK: ${{ secrets.SLACK_WEBHOOK_STOCK }}
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          # 텔레그램 (없으면 조용히 건너뜀). 봇 토큰은 kind별 → 공용 순으로 찾는다
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_BOT_TOKEN_PUMP: ${{ secrets.TELEGRAM_BOT_TOKEN_PUMP }}
-          TELEGRAM_BOT_TOKEN_TREND: ${{ secrets.TELEGRAM_BOT_TOKEN_TREND }}
-          TELEGRAM_BOT_TOKEN_STOCK: ${{ secrets.TELEGRAM_BOT_TOKEN_STOCK }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-          # kind별 전용 방 (BTC차트 감별 → "알트코인 BTC차트 우상향 감별" 등). 없으면 공용 CHAT_ID
-          TELEGRAM_CHAT_ID_PUMP: ${{ secrets.TELEGRAM_CHAT_ID_PUMP }}
-          TELEGRAM_CHAT_ID_TREND: ${{ secrets.TELEGRAM_CHAT_ID_TREND }}
-          TELEGRAM_CHAT_ID_STOCK: ${{ secrets.TELEGRAM_CHAT_ID_STOCK }}
-          TELEGRAM_TOPIC_PUMP: ${{ secrets.TELEGRAM_TOPIC_PUMP }}
-          TELEGRAM_TOPIC_TREND: ${{ secrets.TELEGRAM_TOPIC_TREND }}
-          TELEGRAM_TOPIC_STOCK: ${{ secrets.TELEGRAM_TOPIC_STOCK }}
           SLACK_BACKEND: webhook   # config 는 로컬용 playwright — 클라우드엔 크롬이 없다
-          PYTHONUTF8: "1"
         run: |
-          MODE="${{ github.event.inputs.mode }}"
-          [ -z "$MODE" ] && MODE="all"
           echo "mode=$MODE"
-          python run_once.py "$MODE"
+          python run_once.py $MODE
+
+      - name: 과거 기록 채우기 (outbox → history, 이미 채운 날은 건너뜀)
+        if: always()
+        run: python run_once.py backfill || true
+
+      - name: 정기 보고서 (주간 월 9시 · 월간 1일 · 분기 · 연간)
+        if: always()
+        run: |
+          case "$MODE" in
+            report*) want="$MODE" ;;
+            *) due=$(python run_once.py reports-due); echo "$due"
+               case "$due" in DUE*) want="reports" ;; *) exit 0 ;; esac ;;
+          esac
+          sudo apt-get install -y -qq fonts-noto-cjk >/dev/null 2>&1 || true
+          pip install -q playwright
+          python -m playwright install --with-deps chromium >/dev/null
+          python run_once.py $want
+
+      - name: 보고서 PDF 보관
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: reports-${{ github.run_id }}
+          path: data/reports/*.pdf
+          if-no-files-found: ignore
+          retention-days: 30
+
+      - name: 기록 저장 (history 브랜치)
+        if: always()
+        run: |
+          cd hist
+          git add -A
+          git diff --cached --quiet && exit 0
+          git commit -qm "history $(date -u +%Y-%m-%dT%H:%MZ) ($MODE)"
+          for i in 1 2 3; do
+            git push -q origin history && exit 0
+            git pull -q --rebase origin history || true
+          done
+          exit 1
 
       # 공개 저장소는 60일간 활동이 없으면 예약 실행이 자동으로 꺼진다 → 50일마다 빈 커밋
       - name: 예약 실행 자동중지 방지
@@ -72,8 +126,6 @@ jobs:
         run: |
           last=$(git log -1 --format=%ct)
           if [ $(( $(date +%s) - last )) -gt $(( 50 * 86400 )) ]; then
-            git config user.name "pump-radar-bot"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git commit --allow-empty -m "chore: keepalive"
             git push
           fi

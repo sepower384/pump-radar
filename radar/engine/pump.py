@@ -136,7 +136,7 @@ def bitget_only(con, cfg: dict, binance_bases: set[str], workers: int = 8) -> li
 
     cands = []
     for r in rows:
-        if r["base"] in binance_bases or r["base"] in skip:
+        if r["base"] in binance_bases or r["base"] in skip or r["base"] in binance.STABLES:
             continue
         c15 = _chg(r["last"], prev15.get(r["symbol"], (0, 0))[0]) if r["symbol"] in prev15 else 0.0
         if c15 < th15 and r["chg24"] < th24:
