@@ -11,3 +11,5 @@ __pycache__/
 *.pyc
 .venv/
 history/
+data/reports/
+data/bitget_coins.json
