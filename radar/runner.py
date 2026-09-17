@@ -203,7 +203,7 @@ def build_pump_msg(items: list[dict], when: str = "", translate: bool = True) ->
         ex = "비트겟" if h.get("market") == "bitget" else "바이낸스"
         chg_bits = []
         for label, key in (("5분 만에", "chg5m"), ("15분 만에", "chg15m"), ("1시간 동안", "chg1h"),
-                           ("하루 동안", "chg24h")):
+                           ("2시간 동안", "chg2h"), ("하루 동안", "chg24h")):
             v = h.get(key) or 0
             if abs(v) >= 0.5:
                 chg_bits.append(f"{label} `{v:+.1f}%`")
@@ -217,7 +217,11 @@ def build_pump_msg(items: list[dict], when: str = "", translate: bool = True) ->
                 f"• 현재가 {_price(h['price'])} ({ex}) · 하루 거래대금 ${_fmt_qvol(h['qvol'])}"]
         unit += _why_header(rsn, up)
         unit += _evidence_lines(rsn, translate)
-        unit.append(f"• <https://www.binance.com/en/trade/{h['base']}_USDT|차트 보기> · "
+        if up and (h.get("off_high") or 0) <= -5:
+            unit.append(f"• 최근 고점보다 `{h['off_high']:.1f}%` 내려온 자리입니다. 급등 뒤 되밀리는 중일 수 있습니다.")
+        chart = (f"https://www.bitget.com/spot/{h['base']}USDT" if h.get("market") == "bitget"
+                 else f"https://www.binance.com/en/trade/{h['base']}_USDT")
+        unit.append(f"• <{chart}|차트 보기> · "
                     f"<https://www.coingecko.com/en/search?query={h['base']}|코인 정보>")
         units.append(unit)
     footer = ["_⚠️ 급등 직후에 따라 사면 꼭대기에 물리기 쉽습니다. 이유가 확실한 종목 위주로 지켜보시는 것이 좋아 보입니다._",
@@ -273,7 +277,7 @@ def compose_pump(con, ctx: reason.MarketContext, respect_cooldown: bool = True, 
         bases = {t["_base"] for t in binance.usdt_universe(binance.ticker_24hr(), 0)}
     except Exception:  # noqa: BLE001
         bases = set()
-    hits += pump.bitget_only(con, cfg, bases)
+    hits += pump.bitget_only(con, cfg, bases, workers=workers)
 
     cool = int(cfg.get("cooldown_min", 60))
     if respect_cooldown:

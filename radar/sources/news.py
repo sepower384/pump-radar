@@ -125,7 +125,10 @@ def kr_stock_headlines(code: str, limit: int = 3) -> list[dict]:
 # ── 구글 뉴스 RSS: 종목 단위 타깃 검색 (무료·무키). 급등 이유 적중률이 제일 높다 ──
 _JUNK = ("binance square", "community insights", "market sentiment", "'s insights",
          "price of ", "price prediction", "how to buy", "what is ", "perpetual chart",
-         "usdⓈ-margined", "spot |", "trade ", "mortgage rates", "best ", "top 10", "competitors")
+         "usdⓈ-margined", "spot |", "trade ", "mortgage rates", "best ", "top 10", "competitors",
+         # 급등 이유가 될 수 없는 해설·전망 기사 (예: 'AVA 코인 총정리…' 가 상승 근거로 붙던 문제)
+         "총정리", "코인이란", "란 무엇", "뜻과", "구매 방법", "사는 법", "시세 전망", "가격 전망", "가격 예측",
+         "explained", "beginner", "guide to", "forecast 20")
 
 _CRYPTO_CTX = ("코인", "가상자산", "암호화폐", "블록체인", "비트코인", "토큰", "상장", "에어드랍",
                "crypto", "token", "blockchain", "bitcoin", "listing", "defi", "airdrop",

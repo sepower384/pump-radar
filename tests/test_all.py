@@ -154,6 +154,43 @@ def test_filters() -> None:
 
 
 # ─────────────────────────── 이유 엔진 ───────────────────────────
+def test_pump_precision() -> None:
+    from radar.engine import pump
+    from radar.sources import bitget
+    from radar.runner import build_pump_msg
+    print("\n[급등 정밀도]")
+    cfg = {"recent_2h_pct": 4.0, "volume_surge_x": 3.0, "max_off_high_pct": -15.0}
+
+    def bars(closes, vols=None):
+        vols = vols or [1000.0] * len(closes)
+        return [[i, c, c * 1.001, c * 0.999, c, 0, 0, v] for i, (c, v) in enumerate(zip(closes, vols))]
+
+    flat_after_pump = bars([100.0] * 10 + [190.0] * 90)            # 하루 전 급등, 최근 2시간은 횡보
+    live = bars([100.0] * 70 + [100 + i for i in range(30)])        # 지금 오르는 중
+    faded = bars([100.0] * 40 + [200.0] * 30 + [150.0] * 30)        # 고점 대비 -25%
+    st_flat, st_live, st_faded = pump.bar_stats(flat_after_pump), pump.bar_stats(live), pump.bar_stats(faded)
+    check("봉 통계: 2시간 변동률", abs(st_live["chg2h"] - (129 / 105 - 1) * 100) < 0.01, str(st_live["chg2h"]))
+    check("하루 전 급등 후 식은 코인은 제외", not pump.still_moving({**st_flat}, cfg))
+    check("지금 오르는 코인은 통과", pump.still_moving({**st_live}, cfg))
+    check("고점에서 25% 밀린 코인은 제외", not pump.still_moving({**st_faded}, cfg), str(st_faded["off_high"]))
+    check("봉 데이터 없으면 제외", not pump.still_moving({}, cfg))
+    surge = bars([100.0] * 100, [1000.0] * 97 + [5000.0] * 3)
+    check("횡보여도 거래량 폭발이면 통과", pump.still_moving(pump.bar_stats(surge), cfg))
+    check("봉 30개 미만이면 빈 통계", pump.bar_stats(live[:20]) == {})
+
+    check("주식 토큰 판별 규칙", bool(bitget._NON_CRYPTO.search("rGNRC")) and bool(bitget._NON_CRYPTO.search("preSPCX"))
+          and not bitget._NON_CRYPTO.search("PEPE"))
+
+    raw = {"market": "bitget", "symbol": "BRUSDT", "base": "BR", "price": 0.6, "chg5m": 0, "chg15m": 0,
+           "chg1h": 3.0, "chg2h": 6.0, "chg24h": 140.0, "qvol": 5e6, "vol_x": 1.0, "off_high": -8.0,
+           "direction": "up"}
+    item = {"key": "BR", "raw": raw, "reason": {"headline": "이유 불명", "evidence": [], "confidence": "낮음"}}
+    txt = build_pump_msg([item]).slack_text()
+    check("비트겟 코인은 비트겟 차트 링크", "bitget.com/spot/BRUSDT" in txt and "binance.com/en/trade/BR_" not in txt)
+    check("2시간 변동 표시", "2시간 동안 `+6.0%`" in txt)
+    check("고점 대비 되밀림 경고", "최근 고점보다 `-8.0%`" in txt)
+
+
 def test_reason() -> None:
     print("\n[이유 추론]")
     ctx = reason.MarketContext()
@@ -730,6 +767,7 @@ def main() -> int:
     test_store()
     test_filters()
     test_reason()
+    test_pump_precision()
     test_telegram_convert()
     test_telegram_split()
     test_telegram_tokens()

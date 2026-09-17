@@ -10,11 +10,48 @@ import time
 
 from ..sources import binance, bitget
 from .. import store
+from ..http import pmap
 from .indicators import sma, stdev
 
 
 def _chg(now: float, then: float) -> float:
     return (now / then - 1) * 100 if then else 0.0
+
+
+def bar_stats(kl: list[list]) -> dict:
+    """5분봉(바이낸스·비트겟 공통: [ts, o, h, l, c, ...], 오래된 것 → 최신)으로
+    최근 1·2시간 변동률, 최근 고점 대비 위치, 거래량 배수를 구한다.
+    클라우드는 2시간마다 돌아 5·15·60분 전 스냅샷이 없으므로 이 값이 '지금 움직이는지'의 근거다."""
+    if not kl or len(kl) < 30:
+        return {}
+    cl = [float(r[4]) for r in kl]
+    hi = [float(r[2]) for r in kl]
+    qv = [float(r[7]) if len(r) > 7 else 0.0 for r in kl]
+    last = cl[-1]
+    base = sma(qv[:-3], 60) or 0.0
+    recent = sum(qv[-3:]) / 3
+    return {
+        "chg1h_k": round(_chg(last, cl[-13]), 2),
+        "chg2h": round(_chg(last, cl[-25]), 2),
+        "off_high": round(_chg(last, max(hi)), 2),   # 최근 약 8시간 고점 대비(음수 = 고점에서 밀림)
+        "vol_x": round(recent / base, 1) if base > 0 else 0.0,
+        "vol_sigma": round((recent - base) / (stdev(qv[:-3]) or 1e-9), 1) if base > 0 else 0.0,
+        "closes": cl[-48:],  # 텔레그램 차트용 최근 4시간
+        "bar_high": max(hi[-12:]),
+        "bar_low": min(float(r[3]) for r in kl[-12:]),
+    }
+
+
+def still_moving(c: dict, cfg: dict) -> bool:
+    """24시간 급등만으로 잡힌 후보가 '지금도' 살아 있는지.
+    하루 전에 오르고 이미 식은 코인이 2시간마다 반복해서 알림으로 나가던 문제를 막는다."""
+    if c.get("chg2h") is None:
+        return False  # 봉 데이터가 없으면 확인 불가 → 보내지 않는다
+    recent = float(cfg.get("recent_2h_pct", 4.0))
+    surge_x = float(cfg.get("volume_surge_x", 3.0))
+    if c["off_high"] < float(cfg.get("max_off_high_pct", -15.0)):
+        return False  # 고점에서 이미 크게 밀려 급등이 끝난 상태
+    return c["chg2h"] >= recent or c["chg1h_k"] >= recent * 0.75 or c.get("vol_x", 0) >= surge_x
 
 
 def collect_and_detect(con, cfg: dict, workers: int = 8) -> list[dict]:
@@ -62,57 +99,64 @@ def collect_and_detect(con, cfg: dict, workers: int = 8) -> list[dict]:
 
     # ── 거래량 서지 검증 ──
     kl_map = binance.klines_many([c["symbol"] for c in cands], "5m", 100, workers=workers)
-    out: list[dict] = []
+    confirmed: list[dict] = []
     for c in cands:
-        kl = kl_map.get(c["symbol"])
-        if not kl or len(kl) < 30:
-            c["vol_x"] = 0.0
-            out.append(c)
-            continue
-        qv = binance.quote_volumes(kl)
-        recent = sum(qv[-3:]) / 3
-        base = sma(qv[:-3], 60) or 1e-9
-        c["vol_x"] = round(recent / base, 1)
-        c["closes"] = binance.closes(kl)[-48:]  # 텔레그램 차트용 최근 4시간(5분봉)
-        c["vol_sigma"] = round((recent - base) / (stdev(qv[:-3]) or 1e-9), 1)
-        c["bar_high"] = max(float(r[2]) for r in kl[-12:])
-        c["bar_low"] = min(float(r[3]) for r in kl[-12:])
-        out.append(c)
-
-    confirmed = [c for c in out
-                 if c["vol_x"] >= surge_x or c["cold_start"] or abs(c["chg15m"]) >= th15 * 2]
-    confirmed.sort(key=lambda c: (c["vol_x"] * 0.5 + abs(c["chg15m"]) + abs(c["chg5m"]) * 2),
-                   reverse=True)
+        st = bar_stats(kl_map.get(c["symbol"]) or [])
+        c["vol_x"] = 0.0
+        c.update(st)
+        if st and not c["chg1h"]:
+            c["chg1h"] = st["chg1h_k"]
+        if c["cold_start"]:
+            ok = still_moving(c, cfg)
+        else:
+            ok = c["vol_x"] >= surge_x or abs(c["chg15m"]) >= th15 * 2
+        if ok:
+            confirmed.append(c)
+    confirmed.sort(key=lambda c: (c["vol_x"] * 0.5 + abs(c["chg15m"]) + abs(c["chg5m"]) * 2
+                                  + abs(c.get("chg2h") or 0) * 0.5), reverse=True)
     return confirmed
 
 
-def bitget_only(con, cfg: dict, binance_bases: set[str]) -> list[dict]:
-    """바이낸스에 없는 코인(신규 밈코인 등) 중 급등한 것."""
+def bitget_only(con, cfg: dict, binance_bases: set[str], workers: int = 8) -> list[dict]:
+    """바이낸스에 없는 코인(신규 밈코인 등) 중 지금 급등 중인 것. 주식 토큰(rNVDA 등)은 뺀다."""
     if not cfg.get("include_bitget_only", True):
         return []
     min_qvol = float(cfg.get("min_quote_volume_usdt", 800_000))
     th24 = float(cfg.get("chg_24h_pct_newcoin", 20.0))
+    th15 = float(cfg.get("chg_15m_pct", 5.0))
     try:
         rows = bitget.normalized(min_qvol)
     except Exception:  # noqa: BLE001
         return []
+    skip = bitget.non_crypto_bases()
 
     now_map = {r["symbol"]: (r["last"], r["qvol"]) for r in rows}
     prev15 = store.price_at(con, "bitget", 15, tolerance_min=10)
     store.save_snapshot(con, "bitget", [(s, p, q) for s, (p, q) in now_map.items()])
 
-    out = []
+    cands = []
     for r in rows:
-        if r["base"] in binance_bases:
+        if r["base"] in binance_bases or r["base"] in skip:
             continue
         c15 = _chg(r["last"], prev15.get(r["symbol"], (0, 0))[0]) if r["symbol"] in prev15 else 0.0
-        if c15 < float(cfg.get("chg_15m_pct", 5.0)) and r["chg24"] < th24:
+        if c15 < th15 and r["chg24"] < th24:
             continue
-        out.append({
+        cands.append({
             "market": "bitget", "symbol": r["symbol"], "base": r["base"], "price": r["last"],
             "chg5m": 0.0, "chg15m": round(c15, 2), "chg1h": 0.0,
             "chg24h": round(r["chg24"], 2), "qvol": r["qvol"], "vol_x": 0.0,
-            "direction": "up", "cold_start": False, "bitget_only": True,
+            "direction": "up", "cold_start": c15 < th15, "bitget_only": True,
         })
-    out.sort(key=lambda c: max(c["chg15m"], c["chg24h"] / 3), reverse=True)
+    cands.sort(key=lambda c: max(c["chg15m"], c["chg24h"] / 3), reverse=True)
+    cands = cands[:12]
+
+    kls = pmap(lambda sym: bitget.candles(sym, "5min", 100), [c["symbol"] for c in cands], workers=workers)
+    out = []
+    for c, kl in zip(cands, kls):
+        st = bar_stats(kl or [])
+        c.update(st)
+        if st:
+            c["chg1h"] = st["chg1h_k"]
+        if (not c["cold_start"] and st) or still_moving(c, cfg):
+            out.append(c)
     return out[:5]

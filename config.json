@@ -26,7 +26,7 @@
     "chg_15m_pct": 5.0,
     "chg_1h_pct": 8.0,
     "chg_24h_pct_newcoin": 20.0,
-    "volume_surge_x": 3.0,
+    "volume_surge_x": 3.0, "recent_2h_pct": 4.0, "max_off_high_pct": -15.0,
     "candidate_pool": 40,
     "max_alerts": 6,
     "cooldown_min": 360,
