@@ -310,8 +310,8 @@ def compose_pump(con, ctx: reason.MarketContext, respect_cooldown: bool = True, 
     return msg, marks, info
 
 
-def run_pump_crypto(con, ctx: reason.MarketContext) -> dict:
-    msg, marks, info = compose_pump(con, ctx)
+def run_pump_crypto(con, ctx: reason.MarketContext, respect_cooldown: bool = True) -> dict:
+    msg, marks, info = compose_pump(con, ctx, respect_cooldown=respect_cooldown)
     return _finish("pump", con, msg, marks, info)
 
 
@@ -694,7 +694,8 @@ def run_pump_stock(con) -> dict:
 
 # ─────────────────────────── 사이클 ───────────────────────────
 
-def cycle(only: str = "all", verbose: bool = True) -> dict:
+def cycle(only: str = "all", verbose: bool = True, force: bool = False) -> dict:
+    """force=True: 코인 급등 쿨다운을 무시하고 지금 감지된 것을 보낸다(수동 실행 전용)."""
     t0 = time.time()
     con = store.connect()
     store.prune(con, keep_hours=8)
@@ -708,7 +709,7 @@ def cycle(only: str = "all", verbose: bool = True) -> dict:
             ctx = reason.MarketContext()
 
     for name, fn in (
-        ("pump", lambda: run_pump_crypto(con, ctx)),
+        ("pump", lambda: run_pump_crypto(con, ctx, respect_cooldown=not force)),
         ("trend", lambda: run_btc_trend(con)),
         ("stock", lambda: run_pump_stock(con)),
     ):

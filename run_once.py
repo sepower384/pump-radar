@@ -4,6 +4,7 @@
     python run_once.py trend              # BTC 우상향만
     python run_once.py stock              # 주식 급등만
     python run_once.py test               # 슬랙+텔레그램 연결 테스트 메시지만 발사
+    python run_once.py pump-force         # 코인 급등 쿨다운 무시하고 지금 전송(수동 확인용)
     python run_once.py chats              # 텔레그램 봇들이 초대된 방(채널·그룹) id 조회
     python run_once.py preview-telegram   # 실제 데이터로 3종 메시지를 만들어 파일로만 저장(전송·알림기록 없음)
 """
@@ -40,6 +41,11 @@ def main() -> int:
         from radar import preview
         only = sys.argv[2].lower() if len(sys.argv) > 2 else "all"
         res = preview.run(only)
+        print(json.dumps(res, ensure_ascii=False, indent=2))
+        return 0
+
+    if arg == "pump-force":
+        res = runner.cycle("pump", force=True)
         print(json.dumps(res, ensure_ascii=False, indent=2))
         return 0
 

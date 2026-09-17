@@ -136,6 +136,15 @@ def test_filters() -> None:
     check("이름으로 매칭", len(news.match_symbol(hl, "SOL", "Solana")) == 1)
     check("짧은 티커는 $필요", len(news.match_symbol(hl, "SC", "Siacoin")) == 1)
     check("무관 코인은 0건", len(news.match_symbol(hl, "DOGE", "Dogecoin")) == 0)
+    common = [
+        {"title": "House panel approves crypto tax framework, one day after Clarity Act stumbles", "source": "X", "url": "", "ts": 0},
+        {"title": "Bitcoin's Coinbase premium sinks to one-month low", "source": "X", "url": "", "ts": 0},
+        {"title": "Near-term outlook for crypto dims", "source": "X", "url": "", "ts": 0},
+    ]
+    check("일반 단어 one 은 ONE 티커 아님 (ONE 오탐 사례)", len(news.match_symbol(common, "ONE", "Harmony")) == 0)
+    check("일반 단어 Near 는 NEAR 티커 아님", len(news.match_symbol(common, "NEAR", "")) == 0)
+    check("대문자 티커는 그대로 매칭",
+          len(news.match_symbol([{"title": "ONE and $NEAR rally", "source": "X", "url": "", "ts": 0}], "ONE")) == 1)
 
     print("\n[네이버 숫자 파싱]")
     check("콤마 제거", stocks._f("1,234") == 1234.0)
@@ -529,7 +538,7 @@ def _fake_theme_block():
          "why": "", "series": [round(i * 0.6 + (1.0 if i % 2 else 0.0), 2) for i in range(50)]},
         {"market": "KR", "symbol": "000002", "code": "000002", "name": "둘째소재", "price": 5000, "chg": 1.2,
          "trade_value": 300, "mcap": 2200, "vol_x": 1.1, "why": "양자암호 장비 개발.",
-         "series": [round(i * 0.02 + (0.0 if i % 2 else 0.3), 2) for i in range(50)]},
+         "series": [round(i * 0.02 + (0.3 if i % 2 else 0.0) + (0.4 if i % 3 == 0 else 0.0), 2) for i in range(50)]},
         {"market": "KR", "symbol": "000003", "code": "000003", "name": "셋째정보", "price": 8000, "chg": 27.0,
          "trade_value": 500, "mcap": 1500, "vol_x": 5.0, "why": "",
          "series": [round(i * 0.55 + (0.9 if i % 2 else 0.0), 2) for i in range(50)]},
@@ -608,8 +617,14 @@ def test_theme_logic() -> None:
     check("덩치 20배 넘게 크면 콜 제외",
           tf.call_blocker({**lead, "mcap": 1000}, big, "lagging", {"weak": False}, s0) == "대장주보다 덩치가 너무 큼")
     quiet = {"symbol": "Q", "chg": 0.5, "vol_x": 0.4, "co_move": 0.1}
-    check("거래량·장중 동조 근거 없으면 콜 제외",
-          tf.call_blocker(lead, quiet, "lagging", {"weak": False}, s0) == "거래량·장중 동조 근거 부족")
+    check("장중 동조 낮으면 콜 제외",
+          tf.call_blocker(lead, quiet, "lagging", {"weak": False}, s0) == "대장주와 장중 흐름이 따로 놂")
+    check("거래량 많아도 장중 동조 낮으면 콜 제외 (GEV 0.10 사례)",
+          not tf.should_call(lead, {**quiet, "vol_x": 1.7}, "lagging", {"weak": False}, s0))
+    check("동조율 모르면 거래량으로 판단 — 부족",
+          tf.call_blocker(lead, {**quiet, "co_move": None}, "lagging", {"weak": False}, s0) == "거래량·장중 동조 근거 부족")
+    check("동조율 모르면 거래량으로 판단 — 충분",
+          tf.should_call(lead, {**quiet, "co_move": None, "vol_x": 1.5}, "lagging", {"weak": False}, s0))
     check("거래량 적어도 장중 동조 높으면 콜", tf.should_call(lead, {**quiet, "co_move": 0.6}, "lagging", {"weak": False}, s0))
     check("판정 흐름 이탈(하락)",
           tf.call_blocker(lead, {"chg": -2, "vol_x": 3}, "lagging", {"weak": False}, s0) == "흐름 이탈(하락)")

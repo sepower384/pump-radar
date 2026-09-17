@@ -72,7 +72,8 @@ def match_symbol(headlines: list[dict], symbol: str, name: str = "") -> list[dic
     name_l = (name or "").lower()
     hits = []
     for h in headlines:
-        words = {w.upper() for w in _WORD.findall(h["title"])}
+        # 티커는 대소문자를 그대로 비교한다 — 'one day', 'Near' 같은 일반 단어가 ONE·NEAR 로 잡히지 않게
+        words = set(_WORD.findall(h["title"]))
         low = h["title"].lower()
         ok = False
         if len(sym) >= 3 and (sym in words or f"${sym}" in words):

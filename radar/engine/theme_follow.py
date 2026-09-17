@@ -25,8 +25,8 @@ DEFAULTS: dict = {
     "weak_breadth": 0.3,              # 테마 종목 중 오른 비율이 이보다 낮으면 힘이 약함
     "call_max_peer_chg_ratio": 0.5,   # '따라가는 중'이라도 대장의 절반 이하만 올랐으면 콜 대상
     "call_min_peer_chg": -1.0,        # 테마가 오르는데 이보다 더 빠진 종목은 흐름 이탈로 보고 콜하지 않음
-    "call_min_vol_x": 1.0,            # 콜 근거: 거래량이 최소한 평소 수준은 되거나
-    "call_min_co_move": 0.4,          #          장중 흐름이 대장주와 이만큼은 같이 움직여야 한다
+    "call_min_vol_x": 1.0,            # 동조율을 못 구할 때의 콜 근거: 거래량이 최소한 평소 수준은 돼야 한다
+    "call_min_co_move": 0.4,          # 동조율을 구했으면 장중 흐름이 대장주와 반드시 이만큼은 같이 움직여야 한다
     "call_max_mcap_ratio": 20.0,      # 대장주보다 덩치가 20배 넘게 큰 종목은 같은 재료로 움직이기 어려워 제외
     "invalid_drop_pct": 5.0,          # 대장주가 고점 대비 이만큼 밀리면 콜 무효
     "hit_pct": 2.0,                   # 적중 기준: 기준가 대비 +2%
@@ -165,7 +165,11 @@ def call_blocker(leader: dict, peer: dict, v: str, mom: dict, s: dict) -> str:
     if lm and pm and pm / lm > s["call_max_mcap_ratio"]:
         return "대장주보다 덩치가 너무 큼"
     co = peer.get("co_move")
-    if float(peer.get("vol_x") or 0) < s["call_min_vol_x"] and (co is None or co < s["call_min_co_move"]):
+    # 장중 동조율을 계산할 수 있으면 반드시 기준을 넘어야 한다 — 메시지의 '연결고리'가 이 수치에 기대기 때문.
+    # (예전엔 거래량만 넘으면 동조율 0.10 종목에도 콜이 나갔다)
+    if co is not None and co < s["call_min_co_move"]:
+        return "대장주와 장중 흐름이 따로 놂"
+    if co is None and float(peer.get("vol_x") or 0) < s["call_min_vol_x"]:
         return "거래량·장중 동조 근거 부족"
     return ""
 

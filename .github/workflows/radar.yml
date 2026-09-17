@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
     inputs:
       mode:
-        description: "all / pump / trend / stock / test / chats"
+        description: "all / pump / pump-force(쿨다운 무시) / trend / stock / test / chats"
         default: "all"
 
 concurrency:
