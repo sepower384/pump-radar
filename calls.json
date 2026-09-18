@@ -106,5 +106,23 @@
 "result_pct": 5.86,
 "resolved_ts": 1789658339,
 "reported": 1
+},
+{
+"id": 8,
+"ts": 1789694344,
+"market": "KR",
+"symbol": "001440",
+"name": "대한전선",
+"theme": "전선",
+"leader": "가온전선",
+"ref_price": 31150.0,
+"target_pct": 2.0,
+"deadline": 1789972200,
+"status": "pending",
+"best_price": 31150.0,
+"last_price": null,
+"result_pct": null,
+"resolved_ts": null,
+"reported": 0
 }
 ]
