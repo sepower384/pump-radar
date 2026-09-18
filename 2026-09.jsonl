@@ -178,3 +178,7 @@
 {"t": "trend", "ts": 1789766347, "symbol": "NEARUSDT", "base": "NEAR", "price": 3.678, "score": 92.3, "rs7": 48.1, "rs30": 82.6, "new": true}
 {"t": "trend", "ts": 1789766347, "symbol": "ZECUSDT", "base": "ZEC", "price": 1492.67, "score": 86.8, "rs7": 22.0, "rs30": 129.8, "new": true}
 {"t": "trend", "ts": 1789766347, "symbol": "GUSDT", "base": "G", "price": 0.00767, "score": 84.6, "rs7": 97.9, "rs30": 61.9, "new": true}
+{"t": "pump", "ts": 1789773596, "market": "binance", "symbol": "FUSDT", "base": "F", "price": 0.00543, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 1.44, "chg2h": 19.52, "chg24h": 70.01, "qvol": 17834058.600167, "vol_x": 1.2, "off_high": -4.77, "direction": "up", "tag": "원인 미확인", "tags": ["원인 미확인"], "conf": "낮음", "headline": "F 급등 — 이유 불명 · 큰손 주도 의심", "news": ""}
+{"t": "pump", "ts": 1789773596, "market": "binance", "symbol": "RAYUSDT", "base": "RAY", "price": 1.7601, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 0.63, "chg2h": 1.09, "chg24h": 20.46, "qvol": 16360510.26884, "vol_x": 8.0, "off_high": -3.84, "direction": "up", "tag": "거래량 폭증", "tags": ["거래량 폭증"], "conf": "낮음", "headline": "Raydium 급등 — 매수세 몰림", "news": ""}
+{"t": "trend", "ts": 1789773602, "symbol": "ZENUSDT", "base": "ZEN", "price": 8.471, "score": 84.1, "rs7": 24.0, "rs30": 72.1, "new": true}
+{"t": "trend", "ts": 1789773602, "symbol": "ARBUSDT", "base": "ARB", "price": 0.2216, "score": 83.9, "rs7": 51.2, "rs30": 116.2, "new": true}
