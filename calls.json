@@ -124,5 +124,23 @@
 "result_pct": 1.61,
 "resolved_ts": null,
 "reported": 0
+},
+{
+"id": 9,
+"ts": 1789744740,
+"market": "US",
+"symbol": "MARA",
+"name": "MARA Holdings, Inc.",
+"theme": "크립토 관련주",
+"leader": "Strategy Inc",
+"ref_price": 12.686,
+"target_pct": 2.0,
+"deadline": 1790020800,
+"status": "pending",
+"best_price": 12.686,
+"last_price": null,
+"result_pct": null,
+"resolved_ts": null,
+"reported": 0
 }
 ]
