@@ -136,11 +136,11 @@
 "ref_price": 12.686,
 "target_pct": 2.0,
 "deadline": 1790020800,
-"status": "pending",
-"best_price": 12.894,
-"last_price": 12.894,
-"result_pct": 1.64,
-"resolved_ts": null,
-"reported": 0
+"status": "hit",
+"best_price": 13.235,
+"last_price": 13.235,
+"result_pct": 4.33,
+"resolved_ts": 1789759134,
+"reported": 1
 }
 ]

@@ -168,3 +168,5 @@
 {"t": "trend", "ts": 1789751971, "symbol": "UNIUSDT", "base": "UNI", "price": 8.853, "score": 90.3, "rs7": 39.2, "rs30": 108.8, "new": true}
 {"t": "trend", "ts": 1789751971, "symbol": "ONEUSDT", "base": "ONE", "price": 0.001848, "score": 85.3, "rs7": 166.1, "rs30": 116.8, "new": true}
 {"t": "trend", "ts": 1789751971, "symbol": "PENDLEUSDT", "base": "PENDLE", "price": 2.595, "score": 83.1, "rs7": 23.2, "rs30": 53.3, "new": true}
+{"t": "pump", "ts": 1789759132, "market": "binance", "symbol": "ZKUSDT", "base": "ZK", "price": 0.01108, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 6.75, "chg2h": 7.27, "chg24h": 22.43, "qvol": 4588428.005306, "vol_x": 7.4, "off_high": -1.07, "direction": "up", "tag": "거래량 폭증", "tags": ["거래량 폭증"], "conf": "낮음", "headline": "ZKsync 급등 — 매수세 몰림", "news": ""}
+{"t": "pump", "ts": 1789759132, "market": "binance", "symbol": "ARUSDT", "base": "AR", "price": 3.46, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 3.5, "chg2h": 8.09, "chg24h": 32.67, "qvol": 8874308.8232, "vol_x": 3.0, "off_high": -0.69, "direction": "up", "tag": "거래량 폭증", "tags": ["거래량 폭증"], "conf": "낮음", "headline": "Arweave 급등 — 매수세 몰림", "news": ""}
