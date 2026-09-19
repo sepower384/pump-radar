@@ -1,0 +1,1766 @@
+{
+"coin|binance|POWRUSDT|1789296347": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "POWRUSDT",
+"name": "POWR",
+"ts": 1789296347.0,
+"price": 0.0743,
+"note": "원인 미확인",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -14.67,
+"hi": 1.35,
+"lo": -23.42
+},
+"h72": {
+"r": -17.5,
+"hi": 1.35,
+"lo": -23.42
+}
+},
+"cur": -13.59,
+"cur_ts": 1789848000,
+"hi": 1.35,
+"lo": -23.42,
+"checked": 1789845547,
+"done": false
+},
+"coin|binance|STEEMUSDT|1789296347": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "STEEMUSDT",
+"name": "STEEM",
+"ts": 1789296347.0,
+"price": 0.08114,
+"note": "원인 미확인",
+"repeats": 2,
+"res": {
+"h24": {
+"r": -24.38,
+"hi": -2.46,
+"lo": -30.03
+},
+"h72": {
+"r": -30.17,
+"hi": -2.46,
+"lo": -34.88
+}
+},
+"cur": -28.22,
+"cur_ts": 1789848000,
+"hi": -2.46,
+"lo": -35.65,
+"checked": 1789845547,
+"done": false
+},
+"coin|binance|VTHOUSDT|1789296347": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "VTHOUSDT",
+"name": "VTHO",
+"ts": 1789296347.0,
+"price": 0.000939,
+"note": "뉴스",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -20.87,
+"hi": -0.11,
+"lo": -24.92
+},
+"h72": {
+"r": -25.35,
+"hi": -0.11,
+"lo": -36.95
+}
+},
+"cur": -25.24,
+"cur_ts": 1789848000,
+"hi": -0.11,
+"lo": -36.95,
+"checked": 1789845547,
+"done": false
+},
+"coin|bitget|RDLLLUSDT|1789296347": {
+"asset": "coin",
+"kind": "pump",
+"market": "bitget",
+"symbol": "RDLLLUSDT",
+"name": "RDLLL",
+"ts": 1789296347.0,
+"price": 37.15,
+"note": "원인 미확인",
+"repeats": 2,
+"res": {
+"h24": {
+"r": -7.75,
+"hi": -2.64,
+"lo": -8.29
+},
+"h72": {
+"r": -4.2,
+"hi": -0.97,
+"lo": -15.83
+}
+},
+"cur": -0.4,
+"cur_ts": 1789776000,
+"hi": 9.8,
+"lo": -15.83,
+"checked": 1789845547,
+"done": false
+},
+"coin|bitget|FLOCKUSDT|1789296347": {
+"asset": "coin",
+"kind": "pump",
+"market": "bitget",
+"symbol": "FLOCKUSDT",
+"name": "FLOCK",
+"ts": 1789296347.0,
+"price": 0.07974,
+"note": "뉴스",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -15.63,
+"hi": 12.88,
+"lo": -16.9
+},
+"h72": {
+"r": -18.84,
+"hi": 12.88,
+"lo": -19.79
+}
+},
+"cur": -2.8,
+"cur_ts": 1789844400,
+"hi": 12.88,
+"lo": -22.13,
+"checked": 1789845547,
+"done": false
+},
+"coin|binance|CVCUSDT|1789309088": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "CVCUSDT",
+"name": "CVC",
+"ts": 1789309088.0,
+"price": 0.04315,
+"note": "뉴스",
+"repeats": 3,
+"res": {
+"h24": {
+"r": -26.81,
+"hi": -1.02,
+"lo": -31.96
+},
+"h72": {
+"r": -39.03,
+"hi": -1.02,
+"lo": -39.35
+}
+},
+"cur": -36.2,
+"cur_ts": 1789848000,
+"hi": -1.02,
+"lo": -41.25,
+"checked": 1789845547,
+"done": false
+},
+"coin|bitget|BTWUSDT|1789309088": {
+"asset": "coin",
+"kind": "pump",
+"market": "bitget",
+"symbol": "BTWUSDT",
+"name": "BTW",
+"ts": 1789309088.0,
+"price": 0.69024,
+"note": "네트워크 업그레이드",
+"repeats": 3,
+"res": {
+"h24": {
+"r": 1.33,
+"hi": 15.18,
+"lo": -21.44
+},
+"h72": {
+"r": 10.39,
+"hi": 15.18,
+"lo": -21.44
+}
+},
+"cur": -16.87,
+"cur_ts": 1789844400,
+"hi": 15.18,
+"lo": -21.44,
+"checked": 1789845547,
+"done": false
+},
+"coin|binance|LSKUSDT|1789327197": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "LSKUSDT",
+"name": "LSK",
+"ts": 1789327197.0,
+"price": 0.9185,
+"note": "뉴스",
+"repeats": 5,
+"res": {
+"h24": {
+"r": -51.66,
+"hi": 26.87,
+"lo": -56.37
+},
+"h72": {
+"r": -19.76,
+"hi": 26.87,
+"lo": -62.85
+}
+},
+"cur": -55.09,
+"cur_ts": 1789848000,
+"hi": 26.87,
+"lo": -62.85,
+"checked": 1789845547,
+"done": false
+},
+"coin|binance|REZUSDT|1789327197": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "REZUSDT",
+"name": "REZ",
+"ts": 1789327197.0,
+"price": 0.00498,
+"note": "원인 미확인",
+"repeats": 3,
+"res": {
+"h24": {
+"r": -18.07,
+"hi": 1.16,
+"lo": -19.86
+},
+"h72": {
+"r": -30.34,
+"hi": 1.16,
+"lo": -32.53
+}
+},
+"cur": -25.98,
+"cur_ts": 1789848000,
+"hi": 1.16,
+"lo": -32.53,
+"checked": 1789845547,
+"done": false
+},
+"coin|binance|FILUSDT|1789327197": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "FILUSDT",
+"name": "FIL",
+"ts": 1789327197.0,
+"price": 0.993,
+"note": "뉴스",
+"repeats": 4,
+"res": {
+"h24": {
+"r": -3.38,
+"hi": 4.7,
+"lo": -5.86
+},
+"h72": {
+"r": -21.54,
+"hi": 4.7,
+"lo": -23.9
+}
+},
+"cur": 4.85,
+"cur_ts": 1789848000,
+"hi": 14.22,
+"lo": -23.9,
+"checked": 1789845547,
+"done": false
+},
+"coin|bitget|DEBITUSDT|1789327197": {
+"asset": "coin",
+"kind": "pump",
+"market": "bitget",
+"symbol": "DEBITUSDT",
+"name": "DEBIT",
+"ts": 1789327197.0,
+"price": 3.296,
+"note": "원인 미확인",
+"repeats": 5,
+"res": {
+"h24": {
+"r": -15.05,
+"hi": 32.15,
+"lo": -16.43
+},
+"h72": {
+"r": -20.78,
+"hi": 32.15,
+"lo": -35.7
+}
+},
+"cur": -28.89,
+"cur_ts": 1789844400,
+"hi": 32.15,
+"lo": -35.7,
+"checked": 1789845547,
+"done": false
+},
+"coin|bitget|POWERUSDT|1789327197": {
+"asset": "coin",
+"kind": "pump",
+"market": "bitget",
+"symbol": "POWERUSDT",
+"name": "POWER",
+"ts": 1789327197.0,
+"price": 0.11574,
+"note": "뉴스",
+"repeats": 6,
+"res": {
+"h24": {
+"r": 13.21,
+"hi": 24.06,
+"lo": -7.42
+},
+"h72": {
+"r": 8.66,
+"hi": 86.75,
+"lo": -7.42
+}
+},
+"cur": 10.03,
+"cur_ts": 1789844400,
+"hi": 86.75,
+"lo": -7.42,
+"checked": 1789845547,
+"done": false
+},
+"coin|binance|ARKUSDT|1789348745": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "ARKUSDT",
+"name": "ARK",
+"ts": 1789348745.0,
+"price": 0.1649,
+"note": "뉴스",
+"repeats": 2,
+"res": {
+"h24": {
+"r": 2.37,
+"hi": 29.96,
+"lo": -5.58
+},
+"h72": {
+"r": -9.95,
+"hi": 29.96,
+"lo": -14.86
+}
+},
+"cur": -6.06,
+"cur_ts": 1789848000,
+"hi": 29.96,
+"lo": -18.98,
+"checked": 1789845547,
+"done": false
+},
+"coin|bitget|AINUSDT|1789370322": {
+"asset": "coin",
+"kind": "pump",
+"market": "bitget",
+"symbol": "AINUSDT",
+"name": "AIN",
+"ts": 1789370322.0,
+"price": 0.10529,
+"note": "원인 미확인",
+"repeats": 6,
+"res": {
+"h24": {
+"r": 49.96,
+"hi": 63.59,
+"lo": -19.23
+},
+"h72": {
+"r": -77.28,
+"hi": 104.81,
+"lo": -82.0
+}
+},
+"cur": -80.4,
+"cur_ts": 1789844400,
+"hi": 104.81,
+"lo": -82.0,
+"checked": 1789845547,
+"done": false
+},
+"coin|binance|TUSDT|1789384750": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "TUSDT",
+"name": "T",
+"ts": 1789384750.0,
+"price": 0.00591,
+"note": "원인 미확인",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -20.3,
+"hi": -3.38,
+"lo": -21.32
+},
+"h72": {
+"r": -25.21,
+"hi": -3.38,
+"lo": -27.75
+}
+},
+"cur": -18.1,
+"cur_ts": 1789848000,
+"hi": -3.38,
+"lo": -27.75,
+"checked": 1789845547,
+"done": false
+},
+"coin|bitget|BRUSDT|1789384750": {
+"asset": "coin",
+"kind": "pump",
+"market": "bitget",
+"symbol": "BRUSDT",
+"name": "BR",
+"ts": 1789384750.0,
+"price": 0.4849,
+"note": "규제/소송",
+"repeats": 10,
+"res": {
+"h24": {
+"r": -40.17,
+"hi": 17.55,
+"lo": -41.41
+},
+"h72": {
+"r": 29.76,
+"hi": 43.72,
+"lo": -57.35
+}
+},
+"cur": 144.01,
+"cur_ts": 1789844400,
+"hi": 153.12,
+"lo": -57.35,
+"checked": 1789845547,
+"done": false
+},
+"coin|binance|QKCUSDT|1789391926": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "QKCUSDT",
+"name": "QKC",
+"ts": 1789391926.0,
+"price": 0.00319,
+"note": "역프",
+"repeats": 2,
+"res": {
+"h24": {
+"r": -21.57,
+"hi": -9.44,
+"lo": -24.11
+},
+"h72": {
+"r": -24.08,
+"hi": -9.44,
+"lo": -26.99
+}
+},
+"cur": -13.73,
+"cur_ts": 1789848000,
+"hi": 10.88,
+"lo": -27.87,
+"checked": 1789845547,
+"done": false
+},
+"coin|bitget|CNPYUSDT|1789399123": {
+"asset": "coin",
+"kind": "pump",
+"market": "bitget",
+"symbol": "CNPYUSDT",
+"name": "CNPY",
+"ts": 1789399123.0,
+"price": 0.26758,
+"note": "원인 미확인",
+"repeats": 8,
+"res": {
+"h24": {
+"r": 28.26,
+"hi": 31.15,
+"lo": -1.87
+},
+"h72": {
+"r": 45.96,
+"hi": 57.9,
+"lo": -1.87
+}
+},
+"cur": 61.39,
+"cur_ts": 1789844400,
+"hi": 154.82,
+"lo": -1.87,
+"checked": 1789845547,
+"done": false
+},
+"coin|bitget|CPOOLUSDT|1789420744": {
+"asset": "coin",
+"kind": "pump",
+"market": "bitget",
+"symbol": "CPOOLUSDT",
+"name": "CPOOL",
+"ts": 1789420744.0,
+"price": 0.02921,
+"note": "원인 미확인",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -22.6,
+"hi": 3.05,
+"lo": -23.93
+},
+"h72": {
+"r": -22.94,
+"hi": 3.05,
+"lo": -24.68
+}
+},
+"cur": -11.4,
+"cur_ts": 1789844400,
+"hi": 9.31,
+"lo": -24.68,
+"checked": 1789845547,
+"done": false
+},
+"coin|bitget|RCRCAUSDT|1789420744": {
+"asset": "coin",
+"kind": "pump",
+"market": "bitget",
+"symbol": "RCRCAUSDT",
+"name": "RCRCA",
+"ts": 1789420744.0,
+"price": 25.78,
+"note": "원인 미확인",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -24.4,
+"hi": -2.99,
+"lo": -26.26
+},
+"h72": {
+"r": -25.68,
+"hi": -2.99,
+"lo": -37.35
+}
+},
+"cur": -14.39,
+"cur_ts": 1789776000,
+"hi": -2.99,
+"lo": -37.35,
+"checked": 1789845547,
+"done": false
+},
+"coin|bitget|CYSUSDT|1789427925": {
+"asset": "coin",
+"kind": "pump",
+"market": "bitget",
+"symbol": "CYSUSDT",
+"name": "CYS",
+"ts": 1789427925.0,
+"price": 0.15531,
+"note": "원인 미확인",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -16.37,
+"hi": 2.71,
+"lo": -19.72
+},
+"h72": {
+"r": -10.93,
+"hi": 2.71,
+"lo": -19.72
+}
+},
+"cur": -4.66,
+"cur_ts": 1789844400,
+"hi": 2.71,
+"lo": -19.72,
+"checked": 1789845547,
+"done": false
+},
+"coin|binance|ASTRUSDT|1789442344": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "ASTRUSDT",
+"name": "ASTR",
+"ts": 1789442344.0,
+"price": 0.00771,
+"note": "국내 매수세",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -15.27,
+"hi": -0.26,
+"lo": -17.06
+},
+"h72": {
+"r": -17.55,
+"hi": -0.26,
+"lo": -20.57
+}
+},
+"cur": -12.44,
+"cur_ts": 1789848000,
+"hi": -0.26,
+"lo": -20.57,
+"checked": 1789845547,
+"done": false
+},
+"coin|binance|SAGAUSDT|1789471168": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "SAGAUSDT",
+"name": "SAGA",
+"ts": 1789471168.0,
+"price": 0.02092,
+"note": "뉴스",
+"repeats": 9,
+"res": {
+"h24": {
+"r": -2.58,
+"hi": 21.75,
+"lo": -10.52
+},
+"h72": {
+"r": -0.48,
+"hi": 21.75,
+"lo": -10.52
+}
+},
+"cur": 20.46,
+"cur_ts": 1789848000,
+"hi": 43.4,
+"lo": -10.52,
+"checked": 1789845547,
+"done": false
+},
+"coin|bitget|PONSUSDT|1789478322": {
+"asset": "coin",
+"kind": "pump",
+"market": "bitget",
+"symbol": "PONSUSDT",
+"name": "PONS",
+"ts": 1789478322.0,
+"price": 0.6907,
+"note": "뉴스",
+"repeats": 2,
+"res": {
+"h24": {
+"r": -16.79,
+"hi": 0.88,
+"lo": -17.79
+},
+"h72": {
+"r": 4.16,
+"hi": 12.35,
+"lo": -20.6
+}
+},
+"cur": -15.93,
+"cur_ts": 1789844400,
+"hi": 12.35,
+"lo": -20.6,
+"checked": 1789845547,
+"done": false
+},
+"coin|bitget|IDOLUSDT|1789492721": {
+"asset": "coin",
+"kind": "pump",
+"market": "bitget",
+"symbol": "IDOLUSDT",
+"name": "IDOL",
+"ts": 1789492721.0,
+"price": 0.012,
+"note": "원인 미확인",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -23.08,
+"hi": 0.58,
+"lo": -24.33
+},
+"h72": {
+"r": -6.5,
+"hi": 0.58,
+"lo": -24.33
+}
+},
+"cur": -5.08,
+"cur_ts": 1789844400,
+"hi": 0.58,
+"lo": -24.33,
+"checked": 1789845547,
+"done": false
+},
+"stock|US|QRVO|1789492778": {
+"asset": "stock",
+"kind": "stock",
+"market": "US",
+"symbol": "QRVO",
+"name": "Qorvo, Inc.",
+"ts": 1789492778.0,
+"price": 117.02,
+"note": "AI 반도체 관찰 콜",
+"repeats": 1,
+"res": {
+"h24": {
+"r": 0.89,
+"hi": 1.23,
+"lo": -7.61
+},
+"h72": {
+"r": 2.13,
+"hi": 2.32,
+"lo": -7.61
+}
+},
+"cur": 0.14,
+"cur_ts": 1789761600,
+"hi": 3.2,
+"lo": -7.61,
+"checked": 1789845547,
+"done": false
+},
+"coin|bitget|RFFIVUSDT|1789521535": {
+"asset": "coin",
+"kind": "pump",
+"market": "bitget",
+"symbol": "RFFIVUSDT",
+"name": "RFFIV",
+"ts": 1789521535.0,
+"price": 432.17,
+"note": "원인 미확인",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -1.99,
+"hi": 0.77,
+"lo": -3.11
+},
+"h72": {
+"r": -0.03,
+"hi": 1.77,
+"lo": -3.11
+}
+},
+"cur": -0.03,
+"cur_ts": 1789776000,
+"hi": 1.77,
+"lo": -3.11,
+"checked": 1789845547,
+"done": false
+},
+"stock|KR|069540|1789521547": {
+"asset": "stock",
+"kind": "stock",
+"market": "KR",
+"symbol": "069540",
+"name": "빛과전자",
+"ts": 1789521547.0,
+"price": 4630.0,
+"note": "통신장비 관찰 콜",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -4.43,
+"hi": 3.67,
+"lo": -11.45
+},
+"h72": {
+"r": -11.45,
+"hi": 3.67,
+"lo": -13.07
+}
+},
+"cur": -11.45,
+"cur_ts": 1789713000,
+"hi": 3.67,
+"lo": -13.07,
+"checked": 1789845547,
+"done": false
+},
+"stock|KR|218410|1789521547": {
+"asset": "stock",
+"kind": "stock",
+"market": "KR",
+"symbol": "218410",
+"name": "RFHIC",
+"ts": 1789521547.0,
+"price": 52300.0,
+"note": "통신장비 관찰 콜",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -0.38,
+"hi": 3.44,
+"lo": -2.1
+},
+"h72": {
+"r": 17.21,
+"hi": 20.27,
+"lo": -2.1
+}
+},
+"cur": 17.21,
+"cur_ts": 1789713000,
+"hi": 20.27,
+"lo": -2.1,
+"checked": 1789845547,
+"done": false
+},
+"coin|binance|SYNUSDT|1789528725": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "SYNUSDT",
+"name": "SYN",
+"ts": 1789528725.0,
+"price": 0.10037,
+"note": "원인 미확인",
+"repeats": 12,
+"res": {
+"h24": {
+"r": 61.7,
+"hi": 117.2,
+"lo": 0.21
+},
+"h72": {
+"r": 117.36,
+"hi": 136.92,
+"lo": 0.21
+}
+},
+"cur": 142.58,
+"cur_ts": 1789848000,
+"hi": 175.94,
+"lo": 0.21,
+"checked": 1789845547,
+"done": false
+},
+"stock|KR|417200|1789535959": {
+"asset": "stock",
+"kind": "stock",
+"market": "KR",
+"symbol": "417200",
+"name": "LS머트리얼즈",
+"ts": 1789535959.0,
+"price": 12540.0,
+"note": "고체산화물 연료전지(SOFC) 관찰 콜",
+"repeats": 1,
+"res": {
+"h24": {
+"r": 1.52,
+"hi": 11.0,
+"lo": -3.11
+},
+"h72": {
+"r": 9.49,
+"hi": 12.84,
+"lo": -4.23
+}
+},
+"cur": 9.49,
+"cur_ts": 1789713000,
+"hi": 12.84,
+"lo": -4.23,
+"checked": 1789845547,
+"done": false
+},
+"coin|binance|ARBUSDT|1789564794": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "ARBUSDT",
+"name": "ARB",
+"ts": 1789564794.0,
+"price": 0.1724,
+"note": "뉴스",
+"repeats": 6,
+"res": {
+"h24": {
+"r": -5.16,
+"hi": 0.75,
+"lo": -10.56
+},
+"h72": {
+"r": 22.22,
+"hi": 33.41,
+"lo": -10.56
+}
+},
+"cur": 19.14,
+"cur_ts": 1789848000,
+"hi": 33.41,
+"lo": -10.56,
+"checked": 1789845547,
+"done": false
+},
+"coin|bitget|DGAIUSDT|1789571973": {
+"asset": "coin",
+"kind": "pump",
+"market": "bitget",
+"symbol": "DGAIUSDT",
+"name": "DGAI",
+"ts": 1789571973.0,
+"price": 0.93375,
+"note": "거래소 상장",
+"repeats": 3,
+"res": {
+"h24": {
+"r": -0.69,
+"hi": 5.55,
+"lo": -11.76
+},
+"h72": {
+"r": 3.97,
+"hi": 5.55,
+"lo": -11.76
+}
+},
+"cur": 3.37,
+"cur_ts": 1789844400,
+"hi": 5.55,
+"lo": -11.76,
+"checked": 1789845547,
+"done": false
+},
+"coin|binance|HEIUSDT|1789579129": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "HEIUSDT",
+"name": "HEI",
+"ts": 1789579129.0,
+"price": 0.1466,
+"note": "원인 미확인",
+"repeats": 2,
+"res": {
+"h24": {
+"r": -13.03,
+"hi": 3.55,
+"lo": -17.74
+},
+"h72": {
+"r": 8.25,
+"hi": 29.33,
+"lo": -17.74
+}
+},
+"cur": 9.0,
+"cur_ts": 1789848000,
+"hi": 29.33,
+"lo": -17.74,
+"checked": 1789845547,
+"done": false
+},
+"stock|US|NVDA|1789579168": {
+"asset": "stock",
+"kind": "stock",
+"market": "US",
+"symbol": "NVDA",
+"name": "NVIDIA Corporation",
+"ts": 1789579168.0,
+"price": 215.61,
+"note": "AI 반도체 관찰 콜",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -0.79,
+"hi": 0.53,
+"lo": -1.44
+},
+"h72": {
+"r": 3.09,
+"hi": 3.3,
+"lo": -1.44
+}
+},
+"cur": 3.09,
+"cur_ts": 1789761600,
+"hi": 3.3,
+"lo": -1.44,
+"checked": 1789845547,
+"done": false
+},
+"stock|US|GEV|1789586335": {
+"asset": "stock",
+"kind": "stock",
+"market": "US",
+"symbol": "GEV",
+"name": "GE Vernova Inc.",
+"ts": 1789586335.0,
+"price": 917.545,
+"note": "전력 인프라 관찰 콜",
+"repeats": 1,
+"res": {
+"h24": {
+"r": 0.82,
+"hi": 2.18,
+"lo": -2.89
+},
+"h72": {
+"r": 2.48,
+"hi": 5.86,
+"lo": -2.89
+}
+},
+"cur": 2.48,
+"cur_ts": 1789761600,
+"hi": 5.86,
+"lo": -2.89,
+"checked": 1789845547,
+"done": false
+},
+"coin|bitget|RGNRCUSDT|1789593550": {
+"asset": "coin",
+"kind": "pump",
+"market": "bitget",
+"symbol": "RGNRCUSDT",
+"name": "RGNRC",
+"ts": 1789593550.0,
+"price": 238.69,
+"note": "원인 미확인",
+"repeats": 3,
+"res": {
+"h24": {
+"r": -12.86,
+"hi": 5.47,
+"lo": -15.26
+}
+},
+"cur": -12.63,
+"cur_ts": 1789776000,
+"hi": 5.47,
+"lo": -15.55,
+"checked": 1789845547,
+"done": false
+},
+"coin|binance|ONEUSDT|1789607982": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "ONEUSDT",
+"name": "ONE",
+"ts": 1789607982.0,
+"price": 0.00101,
+"note": "뉴스",
+"repeats": 12,
+"res": {
+"h24": {
+"r": 75.94,
+"hi": 136.63,
+"lo": 0.99
+}
+},
+"cur": 320.89,
+"cur_ts": 1789848000,
+"hi": 332.57,
+"lo": 0.99,
+"checked": 1789845547,
+"done": false
+},
+"coin|binance|ZECUSDT|1789607982": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "ZECUSDT",
+"name": "ZEC",
+"ts": 1789607982.0,
+"price": 1349.37,
+"note": "뉴스",
+"repeats": 5,
+"res": {
+"h24": {
+"r": 8.52,
+"hi": 11.85,
+"lo": -1.65
+}
+},
+"cur": 9.63,
+"cur_ts": 1789848000,
+"hi": 18.23,
+"lo": -1.65,
+"checked": 1789845547,
+"done": false
+},
+"coin|binance|IOSTUSDT|1789615129": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "IOSTUSDT",
+"name": "IOST",
+"ts": 1789615129.0,
+"price": 0.0009,
+"note": "원인 미확인",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -8.78,
+"hi": 0.0,
+"lo": -13.33
+}
+},
+"cur": -8.11,
+"cur_ts": 1789848000,
+"hi": 0.0,
+"lo": -13.33,
+"checked": 1789845547,
+"done": false
+},
+"coin|binance|AVAUSDT|1789622326": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "AVAUSDT",
+"name": "AVA",
+"ts": 1789622326.0,
+"price": 0.1954,
+"note": "거래소 상장",
+"repeats": 5,
+"res": {
+"h24": {
+"r": 33.67,
+"hi": 69.91,
+"lo": 14.94
+}
+},
+"cur": 11.72,
+"cur_ts": 1789848000,
+"hi": 69.91,
+"lo": 10.64,
+"checked": 1789845547,
+"done": false
+},
+"coin|bitget|UAIUSDT|1789643928": {
+"asset": "coin",
+"kind": "pump",
+"market": "bitget",
+"symbol": "UAIUSDT",
+"name": "UAI",
+"ts": 1789643928.0,
+"price": 0.40024,
+"note": "원인 미확인",
+"repeats": 1,
+"res": {
+"h24": {
+"r": 3.82,
+"hi": 8.51,
+"lo": -4.22
+}
+},
+"cur": -1.75,
+"cur_ts": 1789844400,
+"hi": 8.51,
+"lo": -4.89,
+"checked": 1789845547,
+"done": false
+},
+"coin|binance|GENIUSUSDT|1789651131": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "GENIUSUSDT",
+"name": "GENIUS",
+"ts": 1789651131.0,
+"price": 0.3888,
+"note": "뉴스",
+"repeats": 2,
+"res": {
+"h24": {
+"r": -15.64,
+"hi": 7.95,
+"lo": -18.78
+}
+},
+"cur": -11.19,
+"cur_ts": 1789848000,
+"hi": 7.95,
+"lo": -19.42,
+"checked": 1789845547,
+"done": false
+},
+"coin|binance|CAKEUSDT|1789651137": {
+"asset": "coin",
+"kind": "trend",
+"market": "binance",
+"symbol": "CAKEUSDT",
+"name": "CAKE",
+"ts": 1789651137.0,
+"price": 2.395,
+"note": "우상향 점수 65.3",
+"repeats": 1,
+"res": {
+"h24": {
+"r": 2.88,
+"hi": 6.81,
+"lo": -1.09
+}
+},
+"cur": -0.46,
+"cur_ts": 1789848000,
+"hi": 6.81,
+"lo": -1.09,
+"checked": 1789845547,
+"done": false
+},
+"coin|binance|PENDLEUSDT|1789658339": {
+"asset": "coin",
+"kind": "trend",
+"market": "binance",
+"symbol": "PENDLEUSDT",
+"name": "PENDLE",
+"ts": 1789658339.0,
+"price": 2.325,
+"note": "우상향 점수 79.6",
+"repeats": 4,
+"res": {
+"h24": {
+"r": 12.13,
+"hi": 16.99,
+"lo": -1.33
+}
+},
+"cur": 13.81,
+"cur_ts": 1789848000,
+"hi": 19.96,
+"lo": -1.33,
+"checked": 1789845547,
+"done": false
+},
+"coin|binance|UNIUSDT|1789658339": {
+"asset": "coin",
+"kind": "trend",
+"market": "binance",
+"symbol": "UNIUSDT",
+"name": "UNI",
+"ts": 1789658339.0,
+"price": 7.189,
+"note": "우상향 점수 78.6",
+"repeats": 6,
+"res": {
+"h24": {
+"r": 21.51,
+"hi": 31.31,
+"lo": -1.08
+}
+},
+"cur": 19.93,
+"cur_ts": 1789848000,
+"hi": 32.13,
+"lo": -1.08,
+"checked": 1789845547,
+"done": false
+},
+"coin|binance|KSMUSDT|1789665586": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "KSMUSDT",
+"name": "KSM",
+"ts": 1789665586.0,
+"price": 4.83,
+"note": "뉴스",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -8.28,
+"hi": -2.9,
+"lo": -13.66
+}
+},
+"cur": -7.25,
+"cur_ts": 1789848000,
+"hi": -2.9,
+"lo": -13.66,
+"checked": 1789845547,
+"done": false
+},
+"coin|binance|NEARUSDT|1789665586": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "NEARUSDT",
+"name": "NEAR",
+"ts": 1789665586.0,
+"price": 3.012,
+"note": "에어드랍",
+"repeats": 7,
+"res": {
+"h24": {
+"r": 23.97,
+"hi": 26.06,
+"lo": -1.76
+}
+},
+"cur": 15.17,
+"cur_ts": 1789848000,
+"hi": 29.95,
+"lo": -1.76,
+"checked": 1789845547,
+"done": false
+},
+"coin|binance|COTIUSDT|1789672741": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "COTIUSDT",
+"name": "COTI",
+"ts": 1789672741.0,
+"price": 0.0219,
+"note": "뉴스",
+"repeats": 2,
+"res": {
+"h24": {
+"r": -6.53,
+"hi": 22.15,
+"lo": -7.76
+}
+},
+"cur": -11.74,
+"cur_ts": 1789848000,
+"hi": 22.15,
+"lo": -12.47,
+"checked": 1789845547,
+"done": false
+},
+"coin|binance|MARSCOINUSDT|1789672741": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "MARSCOINUSDT",
+"name": "MARSCOIN",
+"ts": 1789672741.0,
+"price": 0.1196,
+"note": "원인 미확인",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -6.94,
+"hi": 4.01,
+"lo": -12.79
+}
+},
+"cur": -18.98,
+"cur_ts": 1789848000,
+"hi": 4.01,
+"lo": -19.15,
+"checked": 1789845547,
+"done": false
+},
+"coin|bitget|CROSSUSDT|1789672741": {
+"asset": "coin",
+"kind": "pump",
+"market": "bitget",
+"symbol": "CROSSUSDT",
+"name": "CROSS",
+"ts": 1789672741.0,
+"price": 0.16821,
+"note": "원인 미확인",
+"repeats": 2,
+"res": {
+"h24": {
+"r": -21.03,
+"hi": 11.17,
+"lo": -23.8
+}
+},
+"cur": -7.22,
+"cur_ts": 1789844400,
+"hi": 11.17,
+"lo": -23.8,
+"checked": 1789845547,
+"done": false
+},
+"coin|bitget|MCATUSDT|1789687173": {
+"asset": "coin",
+"kind": "pump",
+"market": "bitget",
+"symbol": "MCATUSDT",
+"name": "MCAT",
+"ts": 1789687173.0,
+"price": 0.66221,
+"note": "뉴스",
+"repeats": 1,
+"res": {
+"h24": {
+"r": 29.3,
+"hi": 51.01,
+"lo": -1.29
+}
+},
+"cur": 26.06,
+"cur_ts": 1789844400,
+"hi": 84.01,
+"lo": -1.29,
+"checked": 1789845547,
+"done": false
+},
+"stock|KR|001440|1789694344": {
+"asset": "stock",
+"kind": "stock",
+"market": "KR",
+"symbol": "001440",
+"name": "대한전선",
+"ts": 1789694344.0,
+"price": 31150.0,
+"note": "전선 관찰 콜",
+"repeats": 1,
+"res": {
+"h24": {
+"r": 1.61,
+"hi": 3.21,
+"lo": -8.35
+}
+},
+"cur": 1.61,
+"cur_ts": 1789713000,
+"hi": 3.21,
+"lo": -8.35,
+"checked": 1789845547,
+"done": false
+},
+"coin|binance|APTUSDT|1789701627": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "APTUSDT",
+"name": "APT",
+"ts": 1789701627.0,
+"price": 0.681,
+"note": "뉴스",
+"repeats": 2,
+"res": {
+"h24": {
+"r": 12.48,
+"hi": 13.95,
+"lo": -3.82
+}
+},
+"cur": 8.08,
+"cur_ts": 1789848000,
+"hi": 14.98,
+"lo": -3.82,
+"checked": 1789845547,
+"done": false
+},
+"coin|binance|BNCBUSDT|1789708753": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "BNCBUSDT",
+"name": "BNCB",
+"ts": 1789708753.0,
+"price": 6.24,
+"note": "뉴스",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -1.6,
+"hi": 5.61,
+"lo": -7.85
+}
+},
+"cur": 0.96,
+"cur_ts": 1789848000,
+"hi": 5.61,
+"lo": -7.85,
+"checked": 1789845547,
+"done": false
+},
+"coin|binance|METUSDT|1789708753": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "METUSDT",
+"name": "MET",
+"ts": 1789708753.0,
+"price": 0.2493,
+"note": "원인 미확인",
+"repeats": 1,
+"res": {
+"h24": {
+"r": 6.74,
+"hi": 9.03,
+"lo": -2.65
+}
+},
+"cur": 2.69,
+"cur_ts": 1789848000,
+"hi": 11.27,
+"lo": -2.65,
+"checked": 1789845547,
+"done": false
+},
+"coin|binance|GUSDT|1789715934": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "GUSDT",
+"name": "G",
+"ts": 1789715934.0,
+"price": 0.00632,
+"note": "뉴스",
+"repeats": 6,
+"res": {
+"h24": {
+"r": 19.94,
+"hi": 61.23,
+"lo": 5.38
+}
+},
+"cur": 55.85,
+"cur_ts": 1789848000,
+"hi": 96.04,
+"lo": 5.38,
+"checked": 1789845547,
+"done": false
+},
+"coin|binance|MUBARAKUSDT|1789715934": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "MUBARAKUSDT",
+"name": "MUBARAK",
+"ts": 1789715934.0,
+"price": 0.03535,
+"note": "거래량 폭증",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -9.5,
+"hi": -2.97,
+"lo": -10.75
+}
+},
+"cur": -9.73,
+"cur_ts": 1789848000,
+"hi": -2.97,
+"lo": -10.75,
+"checked": 1789845547,
+"done": false
+},
+"coin|binance|STRKUSDT|1789723138": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "STRKUSDT",
+"name": "STRK",
+"ts": 1789723138.0,
+"price": 0.03561,
+"note": "뉴스",
+"repeats": 3,
+"res": {
+"h24": {
+"r": 19.26,
+"hi": 30.33,
+"lo": -7.3
+}
+},
+"cur": 17.64,
+"cur_ts": 1789848000,
+"hi": 34.96,
+"lo": -7.3,
+"checked": 1789845547,
+"done": false
+},
+"coin|binance|RAYUSDT|1789723138": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "RAYUSDT",
+"name": "RAY",
+"ts": 1789723138.0,
+"price": 1.8465,
+"note": "뉴스",
+"repeats": 2,
+"res": {
+"h24": {
+"r": 1.99,
+"hi": 2.29,
+"lo": -10.74
+}
+},
+"cur": -8.69,
+"cur_ts": 1789848000,
+"hi": 4.29,
+"lo": -10.74,
+"checked": 1789845547,
+"done": false
+},
+"coin|bitget|MYXUSDT|1789737536": {
+"asset": "coin",
+"kind": "pump",
+"market": "bitget",
+"symbol": "MYXUSDT",
+"name": "MYX",
+"ts": 1789737536.0,
+"price": 0.0845,
+"note": "뉴스",
+"repeats": 2,
+"res": {
+"h24": {
+"r": 5.21,
+"hi": 34.91,
+"lo": -14.08
+}
+},
+"cur": 5.21,
+"cur_ts": 1789844400,
+"hi": 34.91,
+"lo": -14.08,
+"checked": 1789845547,
+"done": false
+},
+"coin|binance|FUSDT|1789744730": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "FUSDT",
+"name": "F",
+"ts": 1789744730.0,
+"price": 0.004862,
+"note": "뉴스",
+"repeats": 2,
+"res": {
+"h24": {
+"r": -15.06,
+"hi": 17.28,
+"lo": -15.75
+}
+},
+"cur": -14.19,
+"cur_ts": 1789848000,
+"hi": 17.28,
+"lo": -16.76,
+"checked": 1789845547,
+"done": false
+},
+"stock|US|MARA|1789744740": {
+"asset": "stock",
+"kind": "stock",
+"market": "US",
+"symbol": "MARA",
+"name": "MARA Holdings, Inc.",
+"ts": 1789744740.0,
+"price": 12.686,
+"note": "크립토 관련주 관찰 콜",
+"repeats": 1,
+"res": {
+"h24": {
+"r": 4.37,
+"hi": 5.0,
+"lo": -5.01
+}
+},
+"cur": 4.37,
+"cur_ts": 1789761600,
+"hi": 5.0,
+"lo": -5.01,
+"checked": 1789845547,
+"done": false
+},
+"coin|binance|AUSDT|1789751961": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "AUSDT",
+"name": "A",
+"ts": 1789751961.0,
+"price": 0.093,
+"note": "원인 미확인",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -3.66,
+"hi": 0.11,
+"lo": -6.02
+}
+},
+"cur": -3.23,
+"cur_ts": 1789848000,
+"hi": 0.11,
+"lo": -6.02,
+"checked": 1789845547,
+"done": false
+},
+"coin|binance|ZKUSDT|1789759132": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "ZKUSDT",
+"name": "ZK",
+"ts": 1789759132.0,
+"price": 0.01108,
+"note": "거래량 폭증",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -0.45,
+"hi": 4.33,
+"lo": -2.98
+}
+},
+"cur": -0.9,
+"cur_ts": 1789848000,
+"hi": 4.33,
+"lo": -2.98,
+"checked": 1789845547,
+"done": false
+},
+"coin|binance|ARUSDT|1789759132": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "ARUSDT",
+"name": "AR",
+"ts": 1789759132.0,
+"price": 3.46,
+"note": "거래량 폭증",
+"repeats": 3,
+"res": {
+"h24": {
+"r": 26.07,
+"hi": 43.03,
+"lo": -0.23
+}
+},
+"cur": 24.16,
+"cur_ts": 1789848000,
+"hi": 43.03,
+"lo": -0.23,
+"checked": 1789845547,
+"done": false
+}
+}
