@@ -202,15 +202,17 @@ python run_once.py followup --force   # 오늘 이미 보냈어도 지금 다시
 1. 만족도 5점 — "지난 한 달, 포착과 성적표가 투자 판단에 도움이 됐나요?"
 2. 복수 선택 — "다음 달에 가장 보고 싶은 것" (성적표 상세 / 이유 심층 / 알림 줄이기·늘리기 / 주식·코인 비중 / 용어 설명 …)
 
-- 투표 집계는 매 실행마다 `getUpdates`로 받아 `history/survey.json`에 저장하고, 다음 달 조사 메시지와
-  월간 PDF에 「이 방 만족도 조사 결과」로 요약한다(만족도 5점 평균 자동 계산).
+- **결과는 방에 발표하지 않는다.** 투표 집계는 매 실행마다 `getUpdates`로 받아 `history/survey.json`에 저장하고,
+  새 집계가 들어오면 `TELEGRAM_ADMIN_CHAT_ID`(운영자)에게만 요약을 보낸다. 조사 안내 메시지에도, PDF 보고서에도 점수는 안 들어간다.
+- 텔레그램 투표는 누른 사람에게 현재 집계가 보인다(끄는 설정이 없다). 그래서 `survey.remove_after_days`(기본 3일)이
+  지나면 투표를 닫고 메시지를 지워 숫자가 방에 남지 않게 한다. `0`이면 안 지운다.
 - 자유 서술 피드백은 **봇에게 1:1 메시지**로 받는다. 원문은 **공개 저장소에 남기지 않는다** —
   `TELEGRAM_ADMIN_CHAT_ID`로 바로 전달하고, 기록에는 건수만 남긴다(원문은 `history/private/`, git 제외).
 
 ```bash
 python run_once.py survey             # 기한이면 조사 발송 + 응답·피드백 수집
 python run_once.py survey --force     # 지금 바로 조사 올리기
-python run_once.py survey-results     # 지금까지 모인 결과
+python run_once.py survey-results     # 지금까지 모인 결과 (운영자 전용, 방에는 안 나감)
 ```
 
 ## 5. 알아둘 것
