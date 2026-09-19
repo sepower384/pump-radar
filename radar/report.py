@@ -17,7 +17,7 @@ from collections import Counter, defaultdict
 from datetime import datetime, timedelta
 from pathlib import Path
 
-from . import followup, history, survey
+from . import followup, history, survey  # survey 는 운영자 조회용(보고서엔 안 실린다)
 from .config import DATA_DIR
 from .history import KST
 from .http import get_json, pmap
@@ -177,7 +177,8 @@ def _pct(a: int, b: int) -> float | None:
 
 
 def survey_block(period: dict) -> dict:
-    """기간 안에 발표된 만족도 조사 결과(있을 때만)."""
+    """만족도 조사 집계 — **보고서에는 넣지 않는다**(2026-09-20 강회장 지시: 방에 발표 금지).
+    운영자가 `run_once.py survey-results` 로 볼 때만 쓴다."""
     st = survey.state()
     out = []
     for m in sorted(st.get("results") or {}):
@@ -286,7 +287,6 @@ def aggregate(period: dict, now: float | None = None, score: bool = True) -> dic
             "stock": followup.summary(start=period["start"], end=period["end"], cache=fu_cache, asset="stock"),
             "horizons": [{"h": h, "label": followup.hlabel(h)} for h in followup.horizons()],
         },
-        "survey": survey_block(period),
         "coin": {
             "alerts": len(pumps), "ups": len(ups), "downs": len(downs),
             "coins": len({e["base"] for e in pumps}),
@@ -787,24 +787,11 @@ def render_html(a: dict) -> str:
 </section>"""
 
     watch = "".join(f"<li>{t}</li>" for t in watchlist(a))
-    sv = a.get("survey") or {}
-    sv_block = ""
-    if sv.get("months"):
-        items = []
-        for m in sv["months"]:
-            body = "".join(f"<li>{_e(l.replace('*', ''))}</li>" for l in m["lines"])
-            items.append(f"<div><dt>{_e(m['month'])} 조사</dt><dd><ul class='watch'>{body}</ul></dd></div>")
-        extra = (f" · 1:1로 받은 의견 {sv['feedback_n']}건은 따로 읽고 반영합니다"
-                 if sv.get("feedback_n") else "")
-        sv_block = (f'<div class="card" style="margin-top:6mm"><h3 style="margin-top:0">📮 이 방 만족도 조사 결과</h3>'
-                    f'<dl class="glossary">{"".join(items)}</dl>'
-                    f'<div class="muted">매달 1일 방에 올린 익명 투표 집계입니다{_e(extra)}.</div></div>')
     page5 = f"""
 <section class="page">
   <h2><span class="num">05</span>다음 기간에 지켜볼 것</h2>
   <p class="lead">이번 기록에서 반복해서 나온 신호를 모았습니다. 다음 알림을 읽을 때 기준으로 쓰시면 좋아 보입니다.</p>
   <div class="card"><ul class="watch">{watch}</ul></div>
-  {sv_block}
   <h2 style="margin-top:8mm"><span class="num">06</span>리포트 읽는 법</h2>
   <p class="lead">숫자는 모두 실제로 보낸 알림과 이후 시세로 계산했습니다. 표본이 적은 칸은 참고만 하시는 것이 좋아 보입니다.</p>
   <div class="card"><dl class="glossary">

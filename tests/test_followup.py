@@ -13,6 +13,7 @@ sys.path.insert(0, str(ROOT))
 os.environ["HISTORY_DIR"] = tempfile.mkdtemp()
 
 from radar import followup, history, survey  # noqa: E402
+from radar.notify import telegram as telegram_mod  # noqa: E402
 from radar.history import KST  # noqa: E402
 
 PASS = FAIL = 0
@@ -228,8 +229,27 @@ def test_survey_results() -> None:
 
     msg = survey.intro_msg("pump", ts("2026-11-01 10:00"), st2)
     text = msg.slack_text()
-    check("다음 조사 안내에 지난 결과", "지난 조사 결과" in text and "4.3점" in text, text[:300])
+    check("조사 결과는 방에 발표하지 않음", "4.3점" not in text and "지난 조사 결과" not in text, text[:300])
     check("자유 피드백 안내 포함", "1:1" in text and "공개되지 않습니다" in text)
+    check("집계는 운영자 조회용으로만 남음", any("4.3점" in l for l in survey.summary_lines("2026-09", st2)))
+
+    # 투표 메시지는 며칠 뒤 방에서 치운다(집계가 방에 남지 않게)
+    calls: list = []
+    survey._orig_call = getattr(telegram_mod, "_call", None)
+    telegram_mod._call = lambda token, method, payload, timeout=20: calls.append((method, payload)) or {"ok": True}
+    telegram_mod.chat_id = lambda kind="": "-100123"
+    telegram_mod.token_for = lambda kind: "T"
+    check("발송 직후엔 안 지움", survey.sweep(now=ts("2026-10-02 12:00"))["removed"] == 0 and not calls)
+    st3 = survey.state()
+    st3["sent"]["2026-09"]["polls"] = [{"name": "satisfaction", "poll_id": "p1", "message_id": 77},
+                                       {"name": "wish", "poll_id": "p2", "message_id": 78}]
+    survey.save_state(st3)
+    res = survey.sweep(now=ts("2026-10-05 12:00"))
+    check("3일 지나면 투표를 닫고 지움", res["removed"] == 2
+          and [m for m, _ in calls] == ["stopPoll", "deleteMessage"] * 2, str(calls))
+    check("한 번 치운 조사는 다시 안 건드림", survey.sweep(now=ts("2026-10-09 12:00"))["removed"] == 0)
+    if survey._orig_call:
+        telegram_mod._call = survey._orig_call
 
     polls = json.loads(json.dumps(survey.POLLS))  # 구조만 검사
     check("투표는 2~12개 보기", all(2 <= len(spec["opts"]) <= 12 for _, spec in polls))
@@ -263,12 +283,12 @@ def test_report_hook() -> None:
                                                 cache=cache, asset="stock"),
                       "horizons": [{"h": h, "label": followup.hlabel(h)} for h in followup.horizons()]},
          "survey": {"months": [{"month": "2026-09", "lines": ["• 만족도 *4.3점* / 5점 (응답 10명)"],
-                                "score": 4.3}], "feedback_n": 1}}
+                                "score": 4.3}], "feedback_n": 1}}   # 보고서엔 실리지 않아야 한다
     html_text = report.render_html(a)
     check("보고서에 추적 페이지", "첫 포착 이후, 그래서 얼마나 갔나" in html_text)
     check("구간 표가 들어감", "1일 뒤" in html_text and "7일 뒤" in html_text)
     check("주식 추적 블록", "관찰 콜) 첫 포착" in html_text)
-    check("만족도 결과 카드", "만족도 조사 결과" in html_text and "4.3점" in html_text)
+    check("만족도 결과는 보고서에 안 실림", "만족도 조사" not in html_text and "4.3점" not in html_text)
     check("페이지 번호 6쪽까지", ">6</span>" in html_text)
     cap = report.caption(a)
     check("캡션에 추적 한 줄", "첫 포착 이후" in cap, cap[:200])

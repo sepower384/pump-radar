@@ -2,11 +2,13 @@
 
 - 매달 1일 KST 10시(설정 가능) 이후 첫 실행에서 방에 텔레그램 투표 2개를 올린다.
     1) 만족도 5점  2) 다음 달에 보고 싶은 것(복수 선택)
-  투표는 익명이고, 결과 집계는 방에 그대로 보이므로 history 에 그대로 보관한다.
+  투표는 익명이다. **결과는 방에 발표하지 않는다**(2026-09-20 강회장 지시) — 집계는 운영자에게만 간다.
+  텔레그램 투표는 누른 사람에게 현재 집계가 보이므로, remove_after_days(기본 3일) 뒤 투표를 닫고 지운다.
 - 자유 서술 피드백은 봇에게 1:1 메시지로 받는다. **내용은 공개 저장소에 남기지 않는다** —
   운영자 채팅(TELEGRAM_ADMIN_CHAT_ID)으로 그때그때 넘기고, 기록에는 건수만 남긴다.
   로컬 실행이면 원문이 history/private/ 아래에만 남는다(git 에서 제외).
-- 지난달 결과는 다음 달 조사 메시지와 월간 보고서에 요약으로 붙는다.
+- 집계는 history/survey.json 에 쌓이고, 새 집계가 들어오면 운영자 채팅으로만 요약을 보낸다.
+  방에 나가는 메시지(조사 안내·PDF 보고서)에는 점수도 표도 넣지 않는다.
 
     python run_once.py survey             # 기한이면 조사 발송 + 응답 수집
     python run_once.py survey --force     # 지금 바로 조사 발송(수동)
@@ -128,21 +130,19 @@ def bot_link(kind: str, st: dict | None = None) -> str:
 
 
 def intro_msg(kind: str, now: float, st: dict) -> Msg:
+    """조사 결과(점수·집계)는 방에 발표하지 않는다 — 운영자만 본다(2026-09-20 강회장 지시)."""
     mk = month_key(now)
     link = bot_link(kind, st)
-    prev = last_results(st, before=mk)
     target = f"{int(mk.split('-')[1])}월" if "-" in mk else "지난달"
     units = [[f"*{target} 한 달, 이 방 어떠셨습니까?* 한 달에 한 번, 1일에만 여쭤봅니다.",
               "_바로 아래 투표 두 개만 눌러주시면 됩니다. 익명이고 30초면 끝납니다._"]]
-    if prev:
-        units.append(["📋 *지난 조사 결과*"] + prev)
     tail = ["✍️ *하고 싶은 말은 자유롭게*",
             "투표에 없는 의견·불만·아이디어는 " +
             (f"<{link}|봇에게 1:1 메시지>로 보내주세요." if link else "봇에게 1:1 메시지로 보내주세요.") +
             " 운영자에게 그대로 전달되고, 방에는 공개되지 않습니다."]
     units.append(tail)
     return Msg(kind, "한 달에 한 번, 만족도 조사", units,
-               ["_받은 의견은 다음 달 알림 기준과 보고서에 반영하고, 무엇을 바꿨는지 알려드립니다._"],
+               ["_받은 의견은 다음 달 알림 기준과 보고서에 반영합니다._"],
                summary="📮 이 방 만족도 조사 (매달 1일)")
 
 
@@ -234,6 +234,41 @@ def _forward(kind: str, text: str, who: str, now: float) -> bool:
         return False
 
 
+def sweep(now: float | None = None) -> dict:
+    """투표 메시지를 며칠 뒤 방에서 치운다.
+
+    텔레그램 투표는 누른 사람에게 현재 집계가 그대로 보인다(막을 수 있는 설정이 없다).
+    결과를 방에 남겨두지 않기 위해, 며칠 지나면 투표를 닫고 메시지를 지운다.
+    집계는 이미 history/survey.json 에 들어와 있고 운영자에게만 간다.
+    survey.remove_after_days = 0 이면 그대로 둔다.
+    """
+    days = float(CFG.get("survey.remove_after_days", 3))
+    now = now or time.time()
+    st = state()
+    removed = 0
+    if days <= 0:
+        return {"removed": 0, "reason": "remove_after_days=0"}
+    for mk, info in (st.get("sent") or {}).items():
+        if info.get("removed") or now - float(info.get("at") or 0) < days * 86400:
+            continue
+        kind = info.get("kind") or (kinds()[0] if kinds() else "pump")
+        ok = True
+        for p in info.get("polls") or []:
+            mid = p.get("message_id")
+            if not mid:
+                continue
+            for method in ("stopPoll", "deleteMessage"):   # 닫고 → 지운다
+                try:
+                    telegram._call(telegram.token_for(kind), method,
+                                   {"chat_id": telegram.chat_id(kind), "message_id": mid})
+                except Exception:  # noqa: BLE001 — 이미 지웠거나 권한이 없으면 넘어간다
+                    ok = ok and method != "deleteMessage"
+            removed += 1
+        info["removed"] = int(now) if ok else info.get("removed")
+    save_state(st)
+    return {"removed": removed}
+
+
 def collect(now: float | None = None) -> dict:
     """투표 집계와 1:1 피드백을 가져온다. 텔레그램은 업데이트를 24시간만 보관하므로 매 실행마다 부른다."""
     now = now or time.time()
@@ -241,6 +276,7 @@ def collect(now: float | None = None) -> dict:
     out: dict = {}
     for kind in kinds():
         got = {"polls": 0, "feedback": 0, "forwarded": 0}
+        changed: set[str] = set()
         offs = (st.get("offset") or {}).get(kind)
         for u in _updates(kind, offs):
             st.setdefault("offset", {})[kind] = u["update_id"] + 1
@@ -253,6 +289,8 @@ def collect(now: float | None = None) -> dict:
                         "opts": [{"text": o.get("text", ""), "votes": o.get("voter_count", 0)}
                                  for o in poll.get("options") or []], "at": int(now)}
                     got["polls"] += 1
+            if poll and poll.get("id") and _poll_month(st, poll["id"]):
+                changed.add(_poll_month(st, poll["id"]))
             m = u.get("message") or {}
             text = (m.get("text") or m.get("caption") or "").strip()
             if text and (m.get("chat") or {}).get("type") == "private" and not text.startswith("/"):
@@ -263,9 +301,28 @@ def collect(now: float | None = None) -> dict:
                     got["forwarded"] += 1
                 _save_feedback(kind, who, text, now)
                 st["feedback_n"] = int(st.get("feedback_n") or 0) + 1
+        for mk in sorted(changed):   # 결과는 방이 아니라 운영자에게만
+            got["reported"] = _report_admin(kind, mk, st, now) or got.get("reported", False)
         out[kind] = got
     save_state(st)
     return out
+
+
+def _report_admin(kind: str, month: str, st: dict, now: float) -> bool:
+    """만족도 집계를 운영자 채팅으로만 보낸다(방에는 발표하지 않는다)."""
+    admin = env("TELEGRAM_ADMIN_CHAT_ID", "")
+    lines = summary_lines(month, st)
+    if not admin or not lines:
+        return False
+    head = f"<b>📊 {month} 만족도 조사 집계</b> (방에는 나가지 않습니다)"
+    body = "\n".join([head] + [telegram.to_html(l) for l in lines])
+    try:
+        telegram._call(telegram.token_for(kind), "sendMessage",
+                       {"chat_id": admin, "text": body, "parse_mode": "HTML",
+                        "disable_web_page_preview": True})
+        return True
+    except Exception:  # noqa: BLE001
+        return False
 
 
 def _save_feedback(kind: str, who: str, text: str, now: float) -> None:
@@ -318,6 +375,7 @@ def summary_lines(month: str, st: dict | None = None) -> list[str]:
 
 
 def last_results(st: dict, before: str = "") -> list[str]:
+    """운영자 보고·수동 조회용. 방에 나가는 메시지에는 쓰지 않는다."""
     months = sorted(m for m in (st.get("results") or {}) if not before or m < before)
     if not months:
         return []
@@ -330,7 +388,7 @@ def tick(now: float | None = None, send_now: bool = True, force: bool = False) -
     if not enabled():
         return {"status": "disabled"}
     now = now or time.time()
-    out: dict = {"collected": collect(now)}
+    out: dict = {"collected": collect(now), "sweep": sweep(now)}
     if force or due(now):
         out["sent"] = send(now) if send_now else {"status": "dry"}
     return out
