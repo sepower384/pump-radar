@@ -17,7 +17,7 @@ from collections import Counter, defaultdict
 from datetime import datetime, timedelta
 from pathlib import Path
 
-from . import followup, history, survey  # survey 는 운영자 조회용(보고서엔 안 실린다)
+from . import followup, history
 from .config import DATA_DIR
 from .history import KST
 from .http import get_json, pmap
@@ -174,25 +174,6 @@ def score_outcomes(events: list[dict], now: float | None = None, workers: int = 
 # ─────────────────────────── 집계 ───────────────────────────
 def _pct(a: int, b: int) -> float | None:
     return round(a / b * 100, 1) if b else None
-
-
-def survey_block(period: dict) -> dict:
-    """만족도 조사 집계 — **보고서에는 넣지 않는다**(2026-09-20 강회장 지시: 방에 발표 금지).
-    운영자가 `run_once.py survey-results` 로 볼 때만 쓴다."""
-    st = survey.state()
-    out = []
-    for m in sorted(st.get("results") or {}):
-        try:
-            sent = float(((st.get("sent") or {}).get(m) or {}).get("at") or 0)
-        except (TypeError, ValueError):
-            sent = 0
-        if sent and not (period["start"] <= sent < period["end"]):
-            continue
-        lines = survey.summary_lines(m, st)
-        if lines:
-            out.append({"month": m, "lines": lines,
-                        "score": survey.score((st["results"][m] or {}).get("satisfaction") or {})})
-    return {"months": out, "feedback_n": int(st.get("feedback_n") or 0)}
 
 
 def aggregate(period: dict, now: float | None = None, score: bool = True) -> dict:

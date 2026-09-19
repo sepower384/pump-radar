@@ -7,8 +7,8 @@
     python run_once.py backfill           # outbox 원문으로 보고서용 과거 기록 채우기
     python run_once.py followup           # 첫 포착 이후 추적 갱신 + (기한이면) 성적표 발송
     python run_once.py followup --dry     # 추적만 갱신하고 전송은 안 함
-    python run_once.py survey             # 만족도 조사(매달 1일) 발송 + 응답·피드백 수집
-    python run_once.py survey-results     # 지금까지 모인 만족도·요청 결과 출력
+    python run_once.py survey             # 매달 1일 의견 요청 발송 + 봇으로 온 의견 수집
+    python run_once.py survey-results     # 지금까지 받은 의견 요약(운영자용)
     python run_once.py reports            # 기한이 된 주간·월간·분기·연간 보고서 PDF 발송
     python run_once.py report week --at 2026-09-21 [--send]   # 특정 기간 보고서 수동 생성
     python run_once.py pump-force         # 코인 급등 쿨다운 무시하고 지금 전송(수동 확인용)
@@ -67,7 +67,7 @@ def main() -> int:
         if arg == "survey-collect":
             res = survey.collect()
         elif arg == "survey-results":
-            res = {m: {"요약": survey.summary_lines(m), **r} for m, r in survey.results().items()}
+            res = survey.results()
         else:
             res = survey.tick(send_now="--dry" not in sys.argv, force="--force" in sys.argv)
         print(json.dumps(res, ensure_ascii=False, indent=2))

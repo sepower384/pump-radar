@@ -195,24 +195,24 @@ python run_once.py followup --dry     # 갱신만(전송 없음)
 python run_once.py followup --force   # 오늘 이미 보냈어도 지금 다시
 ```
 
-## 4-3. 만족도 조사 (`survey`) — 매달 1일
+## 4-3. 한 달에 한 번, 의견 받기 (`survey`)
 
-매달 **1일 10시(KST)** 이후 첫 실행에서 스터디방에 텔레그램 **익명 투표 2개**를 올린다.
+매달 **1일 10시(KST)** 이후 첫 실행에서 `survey.kinds`의 각 방(기본 급등탐정·BTC차트·주식급등판)에
+**안내 한 통**만 올린다. 투표도, 양식도, 결과 공개도 없다.
 
-1. 만족도 5점 — "지난 한 달, 포착과 성적표가 투자 판단에 도움이 됐나요?"
-2. 복수 선택 — "다음 달에 가장 보고 싶은 것" (성적표 상세 / 이유 심층 / 알림 줄이기·늘리기 / 주식·코인 비중 / 용어 설명 …)
+> *9월 한 달, 이 방 어떠셨습니까?*
+> 고칠 점이 있으면 이 봇에게 1:1 메시지로 한 줄만 보내주시면 됩니다.
+> 보내주신 내용은 운영자만 보고, 방에는 공개하지 않습니다.
 
-- **결과는 방에 발표하지 않는다.** 투표 집계는 매 실행마다 `getUpdates`로 받아 `history/survey.json`에 저장하고,
-  새 집계가 들어오면 `TELEGRAM_ADMIN_CHAT_ID`(운영자)에게만 요약을 보낸다. 조사 안내 메시지에도, PDF 보고서에도 점수는 안 들어간다.
-- 텔레그램 투표는 누른 사람에게 현재 집계가 보인다(끄는 설정이 없다). 그래서 `survey.remove_after_days`(기본 3일)이
-  지나면 투표를 닫고 메시지를 지워 숫자가 방에 남지 않게 한다. `0`이면 안 지운다.
-- 자유 서술 피드백은 **봇에게 1:1 메시지**로 받는다. 원문은 **공개 저장소에 남기지 않는다** —
-  `TELEGRAM_ADMIN_CHAT_ID`로 바로 전달하고, 기록에는 건수만 남긴다(원문은 `history/private/`, git 제외).
+- 답장(봇 1:1 메시지)은 **매 실행마다** `getUpdates`로 받아 `TELEGRAM_ADMIN_CHAT_ID`(운영자)에게 그대로 넘긴다.
+  안내를 보낸 달이 아니어도, 언제 온 의견이든 다 받는다.
+- 원문은 **공개 저장소에 남기지 않는다** — `history/survey.json`에는 건수·월별 집계만, 원문은 `history/private/`(git 제외).
+- 방에 나가는 것은 이 안내 한 통뿐이다. 점수·집계는 안내 메시지에도 PDF 보고서에도 들어가지 않는다.
 
 ```bash
-python run_once.py survey             # 기한이면 조사 발송 + 응답·피드백 수집
-python run_once.py survey --force     # 지금 바로 조사 올리기
-python run_once.py survey-results     # 지금까지 모인 결과 (운영자 전용, 방에는 안 나감)
+python run_once.py survey             # 기한이면 안내 발송 + 의견 수집
+python run_once.py survey --force     # 지금 바로 안내 올리기
+python run_once.py survey-results     # 받은 의견 요약 (운영자 전용, 방에는 안 나감)
 ```
 
 ## 5. 알아둘 것

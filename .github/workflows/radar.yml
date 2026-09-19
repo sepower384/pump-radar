@@ -97,7 +97,7 @@ jobs:
           SLACK_BACKEND: webhook
         run: python run_once.py followup || true
 
-      - name: 만족도 조사 (매달 1일 10시) · 투표·피드백 수집
+      - name: 의견 받기 (매달 1일 10시 안내) · 봇 1:1 의견 수집
         if: ${{ always() && !startsWith(env.MODE, 'report') }}
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}

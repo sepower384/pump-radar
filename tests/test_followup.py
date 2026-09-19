@@ -1,7 +1,6 @@
 """첫 포착 이후 추적 · 만족도 조사 테스트 (네트워크 없음). python tests/test_followup.py"""
 from __future__ import annotations
 
-import json
 import os
 import sys
 import tempfile
@@ -13,7 +12,6 @@ sys.path.insert(0, str(ROOT))
 os.environ["HISTORY_DIR"] = tempfile.mkdtemp()
 
 from radar import followup, history, survey  # noqa: E402
-from radar.notify import telegram as telegram_mod  # noqa: E402
 from radar.history import KST  # noqa: E402
 
 PASS = FAIL = 0
@@ -189,72 +187,46 @@ def test_survey_schedule() -> None:
 
 
 def test_survey_results() -> None:
-    print("\n[조사 결과 집계]")
-    st = {"sent": {"2026-09": {"at": ts("2026-10-01 10:00"), "kind": "pump", "polls": [
-        {"name": "satisfaction", "poll_id": "p1"}, {"name": "wish", "poll_id": "p2"}]}}}
-    survey.save_state(st)
+    print("\n[의견 받기 — 투표 없음]")
+    survey.save_state({})
     updates = [
-        {"update_id": 11, "poll": {"id": "p1", "question": survey.SATISFACTION["q"], "total_voter_count": 10,
-                                   "options": [{"text": "아주 도움이 됐습니다", "voter_count": 5},
-                                               {"text": "도움이 된 편입니다", "voter_count": 3},
-                                               {"text": "보통입니다", "voter_count": 2},
-                                               {"text": "기대에 못 미칩니다", "voter_count": 0},
-                                               {"text": "거의 도움이 안 됐습니다", "voter_count": 0}]}},
-        {"update_id": 12, "poll": {"id": "p2", "question": survey.WISH["q"], "total_voter_count": 7,
-                                   "options": [{"text": "포착 이후 성적표를 더 자세히", "voter_count": 6},
-                                               {"text": "급등 이유를 더 깊게", "voter_count": 4}]}},
         {"update_id": 13, "message": {"chat": {"type": "private"}, "from": {"username": "kang"},
                                       "text": "알림이 밤에 너무 많아요"}},
         {"update_id": 14, "message": {"chat": {"type": "supergroup"}, "from": {"first_name": "누구"},
                                       "text": "방에 올린 글은 수집 대상 아님"}},
+        {"update_id": 15, "message": {"chat": {"type": "private"}, "from": {"first_name": "손님"},
+                                      "text": "/start"}},
     ]
-    survey._updates = lambda kind, offset: updates if not offset else []
-    survey._forward = lambda kind, text, who, now: False
+    # 방마다 봇이 다르다 — 급등탐정 봇에만 의견이 왔다고 본다
+    survey._updates = lambda kind, offset: (updates if kind == "pump" and not offset else [])
+    forwarded: list = []
+    survey._forward = lambda kind, text, who, now: (forwarded.append((kind, who, text)), True)[1]
     got = survey.collect(now=ts("2026-10-03 12:00"))
-    check("투표 2개 집계", got["pump"]["polls"] == 2, str(got))
-    check("1:1 메시지만 피드백으로 수집", got["pump"]["feedback"] == 1, str(got))
+    check("1:1 메시지만 의견으로 수집", got["pump"]["feedback"] == 1, str(got))
+    check("운영자에게 그대로 전달", forwarded == [("pump", "@kang", "알림이 밤에 너무 많아요")], str(forwarded))
+    check("다른 방 봇에 온 게 없으면 0건", got["trend"]["feedback"] == 0 and got["stock"]["feedback"] == 0)
+    check("명령어(/start)는 의견이 아님", got["pump"]["feedback"] == 1)
 
     st2 = survey.state()
-    check("offset 을 저장해 같은 응답을 두 번 안 읽음", st2["offset"]["pump"] == 15, str(st2.get("offset")))
-    check("만족도 평균 계산", survey.score(st2["results"]["2026-09"]["satisfaction"]) == 4.3,
-          str(survey.score(st2["results"]["2026-09"]["satisfaction"])))
-    lines = survey.summary_lines("2026-09", st2)
-    check("요약 문장", any("4.3점" in l for l in lines) and any("성적표를 더 자세히" in l for l in lines), str(lines))
-    check("피드백 원문은 공개 기록이 아니라 private 폴더에",
+    check("offset 을 저장해 같은 의견을 두 번 안 읽음", st2["offset"]["pump"] == 16, str(st2.get("offset")))
+    check("의견 원문은 공개 기록이 아니라 private 폴더에",
           (Path(os.environ["HISTORY_DIR"]) / "private" / "feedback.jsonl").exists()
           and "알림이 밤에" not in (Path(os.environ["HISTORY_DIR"]) / "survey.json").read_text(encoding="utf-8"))
     check("private 폴더는 git 에서 제외",
           "private/" in (Path(os.environ["HISTORY_DIR"]) / ".gitignore").read_text(encoding="utf-8"))
-    check("피드백 건수는 기록", st2.get("feedback_n") == 1)
+    check("건수·월별 집계만 기록", st2.get("feedback_n") == 1 and st2["feedback_by_month"]["2026-10"] == 1)
+    check("운영자 조회에는 원문이 보임",
+          any("알림이 밤에" in (f.get("text") or "") for f in survey.results()["최근 의견"]))
 
-    msg = survey.intro_msg("pump", ts("2026-11-01 10:00"), st2)
+    msg = survey.ask_msg("pump", ts("2026-11-01 10:00"), st2)
     text = msg.slack_text()
-    check("조사 결과는 방에 발표하지 않음", "4.3점" not in text and "지난 조사 결과" not in text, text[:300])
-    check("자유 피드백 안내 포함", "1:1" in text and "공개되지 않습니다" in text)
-    check("집계는 운영자 조회용으로만 남음", any("4.3점" in l for l in survey.summary_lines("2026-09", st2)))
-
-    # 투표 메시지는 며칠 뒤 방에서 치운다(집계가 방에 남지 않게)
-    calls: list = []
-    survey._orig_call = getattr(telegram_mod, "_call", None)
-    telegram_mod._call = lambda token, method, payload, timeout=20: calls.append((method, payload)) or {"ok": True}
-    telegram_mod.chat_id = lambda kind="": "-100123"
-    telegram_mod.token_for = lambda kind: "T"
-    check("발송 직후엔 안 지움", survey.sweep(now=ts("2026-10-02 12:00"))["removed"] == 0 and not calls)
-    st3 = survey.state()
-    st3["sent"]["2026-09"]["polls"] = [{"name": "satisfaction", "poll_id": "p1", "message_id": 77},
-                                       {"name": "wish", "poll_id": "p2", "message_id": 78}]
-    survey.save_state(st3)
-    res = survey.sweep(now=ts("2026-10-05 12:00"))
-    check("3일 지나면 투표를 닫고 지움", res["removed"] == 2
-          and [m for m, _ in calls] == ["stopPoll", "deleteMessage"] * 2, str(calls))
-    check("한 번 치운 조사는 다시 안 건드림", survey.sweep(now=ts("2026-10-09 12:00"))["removed"] == 0)
-    if survey._orig_call:
-        telegram_mod._call = survey._orig_call
-
-    polls = json.loads(json.dumps(survey.POLLS))  # 구조만 검사
-    check("투표는 2~12개 보기", all(2 <= len(spec["opts"]) <= 12 for _, spec in polls))
-    check("보기 길이 100자 이내", all(len(o) <= 100 for _, spec in polls for o in spec["opts"]))
-    check("질문 300자 이내", all(len(spec["q"]) <= 300 for _, spec in polls))
+    check("방에는 안내 한 통만 — 투표 없음", "투표" in text and "투표도 양식도 없습니다" in text, text[:300])
+    check("점수·집계는 방에 안 나감", "점" not in text.replace("한 줄", "") or "4.3" not in text)
+    check("1:1로 보내라는 안내", "1:1" in text and "공개하지 않습니다" in text)
+    check("대상 달을 물어봄", "10월 한 달" in text, text[:120])
+    check("텔레그램 분할 4096 이하", all(len(c) <= 4096 for c in msg.telegram_chunks()))
+    check("투표 기능은 코드에서 사라짐",
+          not hasattr(survey, "POLLS") and not hasattr(survey, "sweep") and not hasattr(survey, "_send_poll"))
 
 
 def test_report_hook() -> None:

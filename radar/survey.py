@@ -1,19 +1,17 @@
-"""매달 1일 만족도 조사 + 피드백 수렴.
+"""매달 1일 의견 받기 — 투표 없이, 봇 1:1 메시지로만.
 
-- 매달 1일 KST 10시(설정 가능) 이후 첫 실행에서 방에 텔레그램 투표 2개를 올린다.
-    1) 만족도 5점  2) 다음 달에 보고 싶은 것(복수 선택)
-  투표는 익명이다. **결과는 방에 발표하지 않는다**(2026-09-20 강회장 지시) — 집계는 운영자에게만 간다.
-  텔레그램 투표는 누른 사람에게 현재 집계가 보이므로, remove_after_days(기본 3일) 뒤 투표를 닫고 지운다.
-- 자유 서술 피드백은 봇에게 1:1 메시지로 받는다. **내용은 공개 저장소에 남기지 않는다** —
-  운영자 채팅(TELEGRAM_ADMIN_CHAT_ID)으로 그때그때 넘기고, 기록에는 건수만 남긴다.
-  로컬 실행이면 원문이 history/private/ 아래에만 남는다(git 에서 제외).
-- 집계는 history/survey.json 에 쌓이고, 새 집계가 들어오면 운영자 채팅으로만 요약을 보낸다.
-  방에 나가는 메시지(조사 안내·PDF 보고서)에는 점수도 표도 넣지 않는다.
+강회장 지시(2026-09-20): 투표는 번거롭고, 결과가 방에 걸리는 것도 원치 않는다.
+그래서 방에는 **"하고 싶은 말 있으면 봇으로 한 줄 보내주세요"** 안내 한 통만 올린다.
 
-    python run_once.py survey             # 기한이면 조사 발송 + 응답 수집
-    python run_once.py survey --force     # 지금 바로 조사 발송(수동)
-    python run_once.py survey-collect     # 응답만 수집
-    python run_once.py survey-results     # 지금까지 모인 결과 출력
+- 매달 1일 KST 10시 이후 첫 실행에서 `survey.kinds` 의 각 방에 안내 한 통.
+- 답장(봇 1:1 메시지)은 **매 실행마다** 받아 운영자(`TELEGRAM_ADMIN_CHAT_ID`)에게 그대로 넘긴다.
+  조사 기간이 아니어도 언제 온 의견이든 다 받는다.
+- 내용은 **공개 저장소에 남기지 않는다**. 기록에는 건수만 남고, 원문은 `history/private/`(git 제외).
+
+    python run_once.py survey             # 기한이면 안내 발송 + 의견 수집
+    python run_once.py survey --force     # 지금 바로 안내 올리기
+    python run_once.py survey-collect     # 의견만 수집
+    python run_once.py survey-results     # 지금까지 받은 의견 요약(운영자용, 방에는 안 나감)
 """
 from __future__ import annotations
 
@@ -29,21 +27,11 @@ from .notify import deliver, telegram
 from .notify.message import Msg
 
 SEND_HOUR = 10          # KST. 이 시각 이후 첫 실행에서 보낸다
-SATISFACTION = {
-    "q": "지난 한 달, 이 방의 포착과 성적표가 투자 판단에 도움이 됐나요?",
-    "opts": ["아주 도움이 됐습니다", "도움이 된 편입니다", "보통입니다",
-             "기대에 못 미칩니다", "거의 도움이 안 됐습니다"],
-    "multi": False,
-    "score": [5, 4, 3, 2, 1],
+ASK = {
+    "pump": "어떤 코인을 더 보고 싶은지, 알림이 많은지 적은지",
+    "trend": "어떤 코인을 더 보고 싶은지, 점수 기준이 헐거운지 빡빡한지",
+    "stock": "어떤 테마·종목을 더 보고 싶은지, 관찰 콜이 도움이 되는지",
 }
-WISH = {
-    "q": "다음 달에 가장 보고 싶은 것을 골라주세요 (여러 개 선택 가능)",
-    "opts": ["포착 이후 성적표를 더 자세히", "급등 이유를 더 깊게", "알림을 줄이고 확실한 것만",
-             "알림을 더 자주", "주식·테마 비중 늘리기", "코인 비중 늘리기",
-             "용어·기초 설명 추가", "지금 이대로가 좋습니다"],
-    "multi": True,
-}
-POLLS = [("satisfaction", SATISFACTION), ("wish", WISH)]
 
 
 # ─────────────────────────── 설정·저장소 ───────────────────────────
@@ -94,13 +82,12 @@ def _private_dir():
 
 
 def month_key(now: float) -> str:
-    """조사가 묻는 대상 = 지난달."""
+    """안내가 묻는 대상 = 지난달."""
     d = datetime.fromtimestamp(now, KST).replace(day=1)
-    prev = d - timedelta(days=1)
-    return f"{prev:%Y-%m}"
+    return f"{d - timedelta(days=1):%Y-%m}"
 
 
-# ─────────────────────────── 발송 ───────────────────────────
+# ─────────────────────────── 안내 발송 ───────────────────────────
 def due(now: float | None = None, st: dict | None = None) -> bool:
     if not enabled() or not kinds():
         return False
@@ -112,7 +99,7 @@ def due(now: float | None = None, st: dict | None = None) -> bool:
 
 
 def bot_link(kind: str, st: dict | None = None) -> str:
-    """자유 피드백을 받을 봇 1:1 링크. 실패하면 빈 문자열(안내 문구에서 빠진다)."""
+    """의견을 받을 봇 1:1 링크. 못 가져오면 빈 문자열(안내 문구에서 빠진다)."""
     st = state() if st is None else st
     cached = (st.get("bot") or {}).get(kind)
     if cached:
@@ -129,66 +116,45 @@ def bot_link(kind: str, st: dict | None = None) -> str:
     return st["bot"][kind]
 
 
-def intro_msg(kind: str, now: float, st: dict) -> Msg:
-    """조사 결과(점수·집계)는 방에 발표하지 않는다 — 운영자만 본다(2026-09-20 강회장 지시)."""
+def ask_msg(kind: str, now: float, st: dict) -> Msg:
+    """방에 올라가는 안내 한 통. 투표도, 점수 공개도 없다."""
     mk = month_key(now)
-    link = bot_link(kind, st)
     target = f"{int(mk.split('-')[1])}월" if "-" in mk else "지난달"
-    units = [[f"*{target} 한 달, 이 방 어떠셨습니까?* 한 달에 한 번, 1일에만 여쭤봅니다.",
-              "_바로 아래 투표 두 개만 눌러주시면 됩니다. 익명이고 30초면 끝납니다._"]]
-    tail = ["✍️ *하고 싶은 말은 자유롭게*",
-            "투표에 없는 의견·불만·아이디어는 " +
-            (f"<{link}|봇에게 1:1 메시지>로 보내주세요." if link else "봇에게 1:1 메시지로 보내주세요.") +
-            " 운영자에게 그대로 전달되고, 방에는 공개되지 않습니다."]
-    units.append(tail)
-    return Msg(kind, "한 달에 한 번, 만족도 조사", units,
+    link = bot_link(kind, st)
+    where = f"<{link}|이 봇에게 1:1 메시지>" if link else "이 봇에게 1:1 메시지"
+    units = [
+        [f"*{target} 한 달, 이 방 어떠셨습니까?*",
+         f"고칠 점이 있으면 {where}로 한 줄만 보내주시면 됩니다. 투표도 양식도 없습니다."],
+        [f"_예를 들면 — {ASK.get(kind, '무엇이 도움이 됐고 무엇이 불편했는지')} 같은 것입니다._",
+         "_보내주신 내용은 운영자만 보고, 방에는 공개하지 않습니다._"],
+    ]
+    return Msg(kind, "한 달에 한 번, 의견 받는 날", units,
                ["_받은 의견은 다음 달 알림 기준과 보고서에 반영합니다._"],
-               summary="📮 이 방 만족도 조사 (매달 1일)")
-
-
-def _send_poll(kind: str, spec: dict) -> dict:
-    payload = {**telegram._base(kind), "question": spec["q"][:300],
-               "options": json.dumps([{"text": o[:100]} for o in spec["opts"]], ensure_ascii=False),
-               "is_anonymous": True, "allows_multiple_answers": bool(spec.get("multi"))}
-    try:
-        return telegram._call(telegram.token_for(kind), "sendPoll", payload)
-    except telegram.TelegramError:
-        # 구버전 Bot API 는 옵션이 문자열 배열이다
-        payload["options"] = json.dumps([o[:100] for o in spec["opts"]], ensure_ascii=False)
-        return telegram._call(telegram.token_for(kind), "sendPoll", payload)
+               summary="📮 한 달에 한 번, 의견 받는 날")
 
 
 def send(now: float | None = None, kind: str = "") -> dict:
     now = now or time.time()
     st = state()
     out: dict = {}
+    mk = month_key(now)
+    done = []
     for k in ([kind] if kind else kinds()):
         if not telegram.available(k):
             out[k] = {"status": "skipped", "reason": "텔레그램 토큰/CHAT_ID 미설정"}
             continue
-        res = deliver(intro_msg(k, now, st))
-        polls = []
-        for name, spec in POLLS:
-            try:
-                r = _send_poll(k, spec)
-                p = (r.get("result") or {}).get("poll") or {}
-                polls.append({"name": name, "poll_id": p.get("id"),
-                              "message_id": (r.get("result") or {}).get("message_id"),
-                              "opts": spec["opts"]})
-                time.sleep(telegram.GAP_SEC)
-            except Exception as e:  # noqa: BLE001
-                polls.append({"name": name, "error": str(e)})
-        mk = month_key(now)
-        st.setdefault("sent", {})[mk] = {"at": int(now), "kind": k, "polls": polls,
-                                         "intro": res.get("delivered")}
-        out[k] = {"status": "ok" if any(p.get("poll_id") for p in polls) else "error",
-                  "month": mk, "polls": [p.get("name") for p in polls if p.get("poll_id")],
-                  "errors": [p["error"] for p in polls if p.get("error")] or None}
+        res = deliver(ask_msg(k, now, st))
+        out[k] = {"status": "ok" if res.get("delivered") else "error",
+                  "month": mk, "telegram": res.get("telegram")}
+        if res.get("delivered"):
+            done.append(k)
+    if done:
+        st.setdefault("sent", {})[mk] = {"at": int(now), "kinds": done}
     save_state(st)
     return out
 
 
-# ─────────────────────────── 응답 수집 ───────────────────────────
+# ─────────────────────────── 의견 수집 ───────────────────────────
 def _updates(kind: str, offset: int | None) -> list[dict]:
     token = telegram.token_for(kind)
     if not token:
@@ -196,7 +162,7 @@ def _updates(kind: str, offset: int | None) -> list[dict]:
     api = f"https://api.telegram.org/bot{token}/"
     try:
         requests.get(api + "deleteWebhook", timeout=15)   # 웹훅이 걸려 있으면 getUpdates 가 막힌다
-        params = {"timeout": 0, "allowed_updates": '["poll","message"]'}
+        params = {"timeout": 0, "allowed_updates": '["message"]'}
         if offset:
             params["offset"] = offset
         return (requests.get(api + "getUpdates", params=params, timeout=25).json().get("result") or [])
@@ -204,118 +170,13 @@ def _updates(kind: str, offset: int | None) -> list[dict]:
         return []
 
 
-def _poll_month(st: dict, poll_id: str) -> str:
-    for mk, info in (st.get("sent") or {}).items():
-        if any(p.get("poll_id") == poll_id for p in info.get("polls") or []):
-            return mk
-    return ""
-
-
-def _poll_name(st: dict, poll_id: str) -> str:
-    for info in (st.get("sent") or {}).values():
-        for p in info.get("polls") or []:
-            if p.get("poll_id") == poll_id:
-                return p.get("name", "")
-    return ""
-
-
 def _forward(kind: str, text: str, who: str, now: float) -> bool:
     admin = env("TELEGRAM_ADMIN_CHAT_ID", "")
     if not admin:
         return False
-    body = (f"<b>📩 스터디방 피드백</b>\n{telegram.to_html(who)} · "
-            f"{datetime.fromtimestamp(now, KST):%m/%d %H:%M}\n\n{telegram.to_html(text[:3000])}")
-    try:
-        telegram._call(telegram.token_for(kind), "sendMessage",
-                       {"chat_id": admin, "text": body, "parse_mode": "HTML",
-                        "disable_web_page_preview": True})
-        return True
-    except Exception:  # noqa: BLE001
-        return False
-
-
-def sweep(now: float | None = None) -> dict:
-    """투표 메시지를 며칠 뒤 방에서 치운다.
-
-    텔레그램 투표는 누른 사람에게 현재 집계가 그대로 보인다(막을 수 있는 설정이 없다).
-    결과를 방에 남겨두지 않기 위해, 며칠 지나면 투표를 닫고 메시지를 지운다.
-    집계는 이미 history/survey.json 에 들어와 있고 운영자에게만 간다.
-    survey.remove_after_days = 0 이면 그대로 둔다.
-    """
-    days = float(CFG.get("survey.remove_after_days", 3))
-    now = now or time.time()
-    st = state()
-    removed = 0
-    if days <= 0:
-        return {"removed": 0, "reason": "remove_after_days=0"}
-    for mk, info in (st.get("sent") or {}).items():
-        if info.get("removed") or now - float(info.get("at") or 0) < days * 86400:
-            continue
-        kind = info.get("kind") or (kinds()[0] if kinds() else "pump")
-        ok = True
-        for p in info.get("polls") or []:
-            mid = p.get("message_id")
-            if not mid:
-                continue
-            for method in ("stopPoll", "deleteMessage"):   # 닫고 → 지운다
-                try:
-                    telegram._call(telegram.token_for(kind), method,
-                                   {"chat_id": telegram.chat_id(kind), "message_id": mid})
-                except Exception:  # noqa: BLE001 — 이미 지웠거나 권한이 없으면 넘어간다
-                    ok = ok and method != "deleteMessage"
-            removed += 1
-        info["removed"] = int(now) if ok else info.get("removed")
-    save_state(st)
-    return {"removed": removed}
-
-
-def collect(now: float | None = None) -> dict:
-    """투표 집계와 1:1 피드백을 가져온다. 텔레그램은 업데이트를 24시간만 보관하므로 매 실행마다 부른다."""
-    now = now or time.time()
-    st = state()
-    out: dict = {}
-    for kind in kinds():
-        got = {"polls": 0, "feedback": 0, "forwarded": 0}
-        changed: set[str] = set()
-        offs = (st.get("offset") or {}).get(kind)
-        for u in _updates(kind, offs):
-            st.setdefault("offset", {})[kind] = u["update_id"] + 1
-            poll = u.get("poll")
-            if poll and poll.get("id"):
-                mk, name = _poll_month(st, poll["id"]), _poll_name(st, poll["id"])
-                if mk:
-                    st.setdefault("results", {}).setdefault(mk, {})[name or poll["id"]] = {
-                        "q": poll.get("question", ""), "total": poll.get("total_voter_count", 0),
-                        "opts": [{"text": o.get("text", ""), "votes": o.get("voter_count", 0)}
-                                 for o in poll.get("options") or []], "at": int(now)}
-                    got["polls"] += 1
-            if poll and poll.get("id") and _poll_month(st, poll["id"]):
-                changed.add(_poll_month(st, poll["id"]))
-            m = u.get("message") or {}
-            text = (m.get("text") or m.get("caption") or "").strip()
-            if text and (m.get("chat") or {}).get("type") == "private" and not text.startswith("/"):
-                frm = m.get("from") or {}
-                who = f"@{frm['username']}" if frm.get("username") else (frm.get("first_name") or "익명")
-                got["feedback"] += 1
-                if _forward(kind, text, who, now):
-                    got["forwarded"] += 1
-                _save_feedback(kind, who, text, now)
-                st["feedback_n"] = int(st.get("feedback_n") or 0) + 1
-        for mk in sorted(changed):   # 결과는 방이 아니라 운영자에게만
-            got["reported"] = _report_admin(kind, mk, st, now) or got.get("reported", False)
-        out[kind] = got
-    save_state(st)
-    return out
-
-
-def _report_admin(kind: str, month: str, st: dict, now: float) -> bool:
-    """만족도 집계를 운영자 채팅으로만 보낸다(방에는 발표하지 않는다)."""
-    admin = env("TELEGRAM_ADMIN_CHAT_ID", "")
-    lines = summary_lines(month, st)
-    if not admin or not lines:
-        return False
-    head = f"<b>📊 {month} 만족도 조사 집계</b> (방에는 나가지 않습니다)"
-    body = "\n".join([head] + [telegram.to_html(l) for l in lines])
+    when = f"{datetime.fromtimestamp(now, KST):%m/%d %H:%M}"
+    body = "\n".join([f"<b>📩 의견이 왔습니다 ({telegram.to_html(kind)})</b>",
+                      f"{telegram.to_html(who)} · {when}", "", telegram.to_html(text[:3000])])
     try:
         telegram._call(telegram.token_for(kind), "sendMessage",
                        {"chat_id": admin, "text": body, "parse_mode": "HTML",
@@ -335,52 +196,60 @@ def _save_feedback(kind: str, who: str, text: str, now: float) -> None:
         pass
 
 
-# ─────────────────────────── 결과 ───────────────────────────
-def score(res: dict) -> float | None:
-    """만족도 5점 평균."""
-    opts = res.get("opts") or []
-    pts = SATISFACTION["score"]
-    tot = sum(o["votes"] for o in opts)
-    if not tot or len(opts) != len(pts):
-        return None
-    return round(sum(o["votes"] * p for o, p in zip(opts, pts)) / tot, 2)
-
-
-def results(month: str = "", st: dict | None = None) -> dict:
-    st = st if st is not None else state()
-    all_res = st.get("results") or {}
-    if month:
-        return all_res.get(month) or {}
-    return all_res
-
-
-def summary_lines(month: str, st: dict | None = None) -> list[str]:
-    r = results(month, st)
-    if not r:
-        return []
-    out = []
-    sat = r.get("satisfaction")
-    if sat:
-        s = score(sat)
-        top = max(sat["opts"], key=lambda o: o["votes"]) if sat["opts"] else None
-        out.append(f"• 만족도 *{s if s is not None else '—'}점* / 5점 (응답 {sat['total']}명"
-                   + (f" · 가장 많은 답 '{top['text']}'" if top and top["votes"] else "") + ")")
-    wish = r.get("wish")
-    if wish and wish["opts"]:
-        top3 = sorted(wish["opts"], key=lambda o: -o["votes"])[:3]
-        picks = " · ".join(f"{o['text']} {o['votes']}표" for o in top3 if o["votes"])
-        if picks:
-            out.append(f"• 가장 원하는 것: {picks}")
+def collect(now: float | None = None) -> dict:
+    """봇에게 온 1:1 메시지를 가져와 운영자에게 넘긴다. 텔레그램은 24시간만 보관하므로 매 실행마다."""
+    now = now or time.time()
+    st = state()
+    out: dict = {}
+    seen: set[str] = set()
+    for kind in kinds():
+        got = {"feedback": 0, "forwarded": 0}
+        token = telegram.token_for(kind)
+        if token and token in seen:   # 두 방이 같은 봇을 쓰면(주식=급등탐정) 한 번만 읽는다
+            out[kind] = {"shared_bot": True, **got}
+            continue
+        seen.add(token)
+        for u in _updates(kind, (st.get("offset") or {}).get(kind)):
+            st.setdefault("offset", {})[kind] = u["update_id"] + 1
+            m = u.get("message") or {}
+            text = (m.get("text") or m.get("caption") or "").strip()
+            if not text or (m.get("chat") or {}).get("type") != "private" or text.startswith("/"):
+                continue
+            frm = m.get("from") or {}
+            who = f"@{frm['username']}" if frm.get("username") else (frm.get("first_name") or "익명")
+            got["feedback"] += 1
+            if _forward(kind, text, who, now):
+                got["forwarded"] += 1
+            _save_feedback(kind, who, text, now)
+            st["feedback_n"] = int(st.get("feedback_n") or 0) + 1
+            mk = f"{datetime.fromtimestamp(now, KST):%Y-%m}"
+            by = st.setdefault("feedback_by_month", {})
+            by[mk] = int(by.get(mk) or 0) + 1
+        out[kind] = got
+    save_state(st)
     return out
 
 
-def last_results(st: dict, before: str = "") -> list[str]:
-    """운영자 보고·수동 조회용. 방에 나가는 메시지에는 쓰지 않는다."""
-    months = sorted(m for m in (st.get("results") or {}) if not before or m < before)
-    if not months:
+# ─────────────────────────── 조회(운영자용) ───────────────────────────
+def recent(n: int = 10) -> list[dict]:
+    """최근 받은 의견 원문 — private 폴더에 있을 때만. 방에는 절대 안 나간다."""
+    try:
+        lines = (_private_dir() / "feedback.jsonl").read_text(encoding="utf-8").splitlines()
+    except Exception:  # noqa: BLE001
         return []
-    lines = summary_lines(months[-1], st)
-    return ([f"• 대상 기간: {months[-1]}"] + lines) if lines else []
+    out = []
+    for line in lines[-n:]:
+        try:
+            out.append(json.loads(line))
+        except ValueError:
+            continue
+    return out
+
+
+def results(st: dict | None = None) -> dict:
+    st = st if st is not None else state()
+    return {"보낸 안내": st.get("sent") or {}, "받은 의견": int(st.get("feedback_n") or 0),
+            "월별 건수": st.get("feedback_by_month") or {}, "최근 의견": recent(10)}
 
 
 # ─────────────────────────── 실행 ───────────────────────────
@@ -388,7 +257,7 @@ def tick(now: float | None = None, send_now: bool = True, force: bool = False) -
     if not enabled():
         return {"status": "disabled"}
     now = now or time.time()
-    out: dict = {"collected": collect(now), "sweep": sweep(now)}
+    out: dict = {"collected": collect(now)}
     if force or due(now):
         out["sent"] = send(now) if send_now else {"status": "dry"}
     return out

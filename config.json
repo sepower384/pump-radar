@@ -86,13 +86,12 @@
   },
 
   "survey": {
-    "_comment": "만족도 조사 — 매달 1일 10시(KST) 텔레그램 투표 2개. 결과는 방에 발표하지 않고 운영자에게만 간다",
-    "_comment2": "remove_after_days: 텔레그램 투표는 누른 사람에게 집계가 보이므로, 이 일수가 지나면 투표를 닫고 지운다(0=안 지움)",
+    "_comment": "매달 1일 10시(KST) '의견 있으면 봇으로 한 줄 주세요' 안내 한 통. 투표 없음, 결과 공개 없음",
+    "_comment2": "답장은 봇 1:1로 받아 TELEGRAM_ADMIN_CHAT_ID(운영자)로만 전달한다. kinds = 안내를 올릴 방",
     "enabled": true,
     "day": 1,
     "hour_kst": 10,
-    "remove_after_days": 3,
-    "kinds": ["pump"]
+    "kinds": ["pump", "trend", "stock"]
   },
 
   "reason": {
