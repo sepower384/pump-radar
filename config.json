@@ -69,6 +69,27 @@
     }
   },
 
+  "followup": {
+    "_comment": "첫 포착 이후 추적. 같은 자산이 dedupe_days 안에 다시 잡히면 첫 포착 기록에 합친다(회차만 +1)",
+    "enabled": true,
+    "horizons_h": [24, 72, 168, 720],
+    "dedupe_days": 30,
+    "digest": {
+      "enabled": true,
+      "hour_kst": 9,
+      "kinds": ["pump", "trend", "stock"],
+      "max_rows": 6
+    }
+  },
+
+  "survey": {
+    "_comment": "만족도 조사 — 매달 1일 10시(KST) 텔레그램 투표 2개. 자유 피드백은 봇 1:1(원문은 공개기록에 안 남김)",
+    "enabled": true,
+    "day": 1,
+    "hour_kst": 10,
+    "kinds": ["pump"]
+  },
+
   "reason": {
     "news_lookback_hours": 24,
     "use_llm": true,

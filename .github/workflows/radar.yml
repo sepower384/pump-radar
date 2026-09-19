@@ -35,6 +35,8 @@ env:
   TELEGRAM_TOPIC_PUMP: ${{ secrets.TELEGRAM_TOPIC_PUMP }}
   TELEGRAM_TOPIC_TREND: ${{ secrets.TELEGRAM_TOPIC_TREND }}
   TELEGRAM_TOPIC_STOCK: ${{ secrets.TELEGRAM_TOPIC_STOCK }}
+  # 만족도 조사의 자유 피드백을 넘길 운영자 채팅(없으면 전달 안 하고 건수만 기록)
+  TELEGRAM_ADMIN_CHAT_ID: ${{ secrets.TELEGRAM_ADMIN_CHAT_ID }}
 
 jobs:
   scan:
@@ -84,6 +86,24 @@ jobs:
       - name: 과거 기록 채우기 (outbox → history, 이미 채운 날은 건너뜀)
         if: always()
         run: python run_once.py backfill || true
+
+      - name: 첫 포착 이후 추적 (구간 채점 · 하루 1회 09시 성적표)
+        if: ${{ always() && !startsWith(env.MODE, 'report') }}
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SLACK_WEBHOOK_TREND: ${{ secrets.SLACK_WEBHOOK_TREND }}
+          SLACK_WEBHOOK_PUMP: ${{ secrets.SLACK_WEBHOOK_PUMP }}
+          SLACK_WEBHOOK_STOCK: ${{ secrets.SLACK_WEBHOOK_STOCK }}
+          SLACK_BACKEND: webhook
+        run: python run_once.py followup || true
+
+      - name: 만족도 조사 (매달 1일 10시) · 투표·피드백 수집
+        if: ${{ always() && !startsWith(env.MODE, 'report') }}
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SLACK_WEBHOOK_PUMP: ${{ secrets.SLACK_WEBHOOK_PUMP }}
+          SLACK_BACKEND: webhook
+        run: python run_once.py survey || true
 
       - name: 정기 보고서 (주간 월 9시 · 월간 1일 · 분기 · 연간)
         if: always()

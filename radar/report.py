@@ -17,7 +17,7 @@ from collections import Counter, defaultdict
 from datetime import datetime, timedelta
 from pathlib import Path
 
-from . import history
+from . import followup, history, survey
 from .config import DATA_DIR
 from .history import KST
 from .http import get_json, pmap
@@ -176,6 +176,24 @@ def _pct(a: int, b: int) -> float | None:
     return round(a / b * 100, 1) if b else None
 
 
+def survey_block(period: dict) -> dict:
+    """기간 안에 발표된 만족도 조사 결과(있을 때만)."""
+    st = survey.state()
+    out = []
+    for m in sorted(st.get("results") or {}):
+        try:
+            sent = float(((st.get("sent") or {}).get(m) or {}).get("at") or 0)
+        except (TypeError, ValueError):
+            sent = 0
+        if sent and not (period["start"] <= sent < period["end"]):
+            continue
+        lines = survey.summary_lines(m, st)
+        if lines:
+            out.append({"month": m, "lines": lines,
+                        "score": survey.score((st["results"][m] or {}).get("satisfaction") or {})})
+    return {"months": out, "feedback_n": int(st.get("feedback_n") or 0)}
+
+
 def aggregate(period: dict, now: float | None = None, score: bool = True) -> dict:
     ev = history.load(period["start"], period["end"])
     try:
@@ -258,10 +276,17 @@ def aggregate(period: dict, now: float | None = None, score: bool = True) -> dic
     done = [c for c in calls if c.get("status") in ("hit", "miss")]
     hits = [c for c in done if c["status"] == "hit"]
 
+    fu_cache = followup.load_cache()
     return {
         "period": period,
         "generated": time.time(),
         "since": history.first_ts(),
+        "followup": {
+            "coin": followup.summary(start=period["start"], end=period["end"], cache=fu_cache, asset="coin"),
+            "stock": followup.summary(start=period["start"], end=period["end"], cache=fu_cache, asset="stock"),
+            "horizons": [{"h": h, "label": followup.hlabel(h)} for h in followup.horizons()],
+        },
+        "survey": survey_block(period),
         "coin": {
             "alerts": len(pumps), "ups": len(ups), "downs": len(downs),
             "coins": len({e["base"] for e in pumps}),
@@ -296,6 +321,13 @@ def insights(a: dict) -> list[str]:
     if c["scored"] >= 3:
         out.append(f"알림 뒤 24시간 안에 <b>+{SUCCESS_PCT:.0f}% 이상 더 오른 비율은 {c['success_rate']:.0f}%</b>, "
                    f"24시간 뒤 {abs(FADE_PCT):.0f}% 넘게 되밀린 비율은 {c['fade_rate']:.0f}%입니다.")
+    fu = [x for x in (((a.get("followup") or {}).get("coin") or {}).get("stats") or []) if x.get("n", 0) >= 3]
+    if fu:
+        head = fu[0]
+        tail = fu[-1]
+        out.append(f"처음 포착한 가격에서 <b>{head['label']} 뒤 평균 {head['avg']:+.1f}%</b>"
+                   + (f", <b>{tail['label']} 뒤 평균 {tail['avg']:+.1f}%</b>" if tail is not head else "")
+                   + f"였고, 구간 안 최고가는 평균 {head['avg_hi']:+.1f}%까지 올랐습니다.")
     rated = [g for g in c["groups"] if g["scored"] >= 3 and g["avg_r24"] is not None]
     if len(rated) >= 2:
         best = max(rated, key=lambda g: g["avg_r24"])
@@ -660,7 +692,62 @@ def render_html(a: dict) -> str:
   {_foot(a, 3)}
 </section>"""
 
-    # ── 4. 주식
+
+    # ── 4. 첫 포착 이후 추적
+    fu = a.get("followup") or {}
+
+    def fu_table(part: dict) -> str:
+        rows = []
+        for st_ in part.get("stats") or []:
+            if not st_.get("n"):
+                continue
+            rows.append(f"<tr><td><b>{_e(st_['label'])} 뒤</b></td><td class='r'>{st_['n']}</td>"
+                        f"<td class='r {_cls(st_['avg'])}'>{_fmt_pct(st_['avg'])}</td>"
+                        f"<td class='r {_cls(st_['med'])}'>{_fmt_pct(st_['med'])}</td>"
+                        f"<td class='r'>{st_['win']}%</td>"
+                        f"<td class='r up'>{_fmt_pct(st_['avg_hi'])}</td>"
+                        f"<td class='r down'>{_fmt_pct(st_['avg_lo'])}</td></tr>")
+        if not rows:
+            return '<div class="empty">아직 구간이 끝난 포착이 없습니다</div>'
+        return ("<table><tr><th>구간</th><th class='r'>채점</th><th class='r'>평균</th><th class='r'>중간값</th>"
+                "<th class='r'>오른 비율</th><th class='r'>구간 최고 평균</th><th class='r'>구간 최저 평균</th></tr>"
+                + "".join(rows) + "</table>")
+
+    def fu_list(rows: list, key: str, head: str) -> str:
+        if not rows:
+            return '<div class="empty">기록이 없습니다</div>'
+        out = []
+        for r in rows[:6]:
+            d = _kst(r.get("ts", 0))
+            rep = f" · 재포착 {r['repeats']}회" if r.get("repeats", 1) >= 2 else ""
+            out.append(f"<tr><td><b>{_e(r.get('name', ''))}</b><div class='muted'>{d:%m.%d} 첫 포착"
+                       f"{_e(rep)}</div></td><td class='r {_cls(r.get(key))}'>{_fmt_pct(r.get(key))}</td>"
+                       f"<td class='r muted'>{_fmt_pct(r.get('cur'))}</td></tr>")
+        return (f"<table><tr><th>자산</th><th class='r'>{head}</th><th class='r'>최근</th></tr>"
+                + "".join(out) + "</table>")
+
+    coin_fu, stock_fu = fu.get("coin") or {}, fu.get("stock") or {}
+    hs_txt = " · ".join(h["label"] for h in (fu.get("horizons") or []))
+    stock_fu_block = (f'<div class="card"><h3 style="margin-top:0">주식(대장주 · 관찰 콜) 첫 포착 '
+                      f'{stock_fu.get("n", 0)}건</h3>{fu_table(stock_fu)}</div>'
+                      if stock_fu.get("scored") else "")
+    page_fu = f"""
+<section class="page">
+  <h2><span class="num">03</span>첫 포착 이후, 그래서 얼마나 갔나</h2>
+  <p class="lead">같은 자산이 여러 번 잡혀도 기준은 <b>맨 처음 알린 그 가격</b>입니다. 거기서 {_e(hs_txt)} 뒤 가격을 계속 따라갑니다.
+  코인은 1시간봉, 주식은 일봉 종가로 쟀고, 이 기간에 <b>처음</b> 포착한 코인 {coin_fu.get("n", 0)}건 · 주식 {stock_fu.get("n", 0)}건이 대상입니다.</p>
+  <div class="card"><h3 style="margin-top:0">코인 첫 포착 {coin_fu.get("n", 0)}건의 구간별 성적</h3>{fu_table(coin_fu)}</div>
+  <div class="grid2">
+    <div class="card"><h3 style="margin-top:0">🟢 첫 포착 뒤 가장 크게 간 것</h3>{fu_list(coin_fu.get("best") or [], "hi", "추적 중 최고")}</div>
+    <div class="card"><h3 style="margin-top:0">🔴 첫 포착 뒤 가장 밀린 것</h3>{fu_list(coin_fu.get("worst") or [], "lo", "추적 중 최저")}</div>
+  </div>
+  {stock_fu_block}
+  <div class="callout"><b>읽는 법</b> · '오른 비율'은 그 구간이 끝난 시점에 포착가보다 위에 있던 비율입니다.
+  구간 최고 평균이 높은데 평균이 낮으면, 먹을 구간은 있었지만 들고 있으면 돌려주는 유형이라는 뜻입니다.</div>
+  {_foot(a, 4)}
+</section>"""
+
+    # ── 5. 주식
     def market_block(mk: str, flag: str, name: str) -> str:
         m = s["markets"][mk]
         bars = svg_hbars([(_short(t, 9), n, "") for t, n in m["themes"][:5]], unit="회", width=330)
@@ -687,7 +774,7 @@ def render_html(a: dict) -> str:
               + "</table>") if crow else '<div class="empty">이 기간에 낸 관찰 콜이 없습니다</div>'
     page4 = f"""
 <section class="page">
-  <h2><span class="num">03</span>미국·한국 주식 테마</h2>
+  <h2><span class="num">04</span>미국·한국 주식 테마</h2>
   <p class="lead">그날 돈이 몰린 테마의 대장주와, 뒤따라올 2·3등을 추적한 기록입니다.</p>
   <div class="grid2">{market_block("US", _flag("US"), "미국")}{market_block("KR", _flag("KR"), "한국")}</div>
   <div class="card"><div class="grid2" style="grid-template-columns: 170px 1fr; align-items:center">
@@ -696,33 +783,47 @@ def render_html(a: dict) -> str:
     <div><h3 style="margin-top:0">관찰 콜 성적</h3>{ctable}
       <div class="muted" style="margin-top:2mm">적중: 콜 이후 1거래일 안에 기준가 대비 +2% 이상</div></div>
   </div></div>
-  {_foot(a, 4)}
+  {_foot(a, 5)}
 </section>"""
 
     watch = "".join(f"<li>{t}</li>" for t in watchlist(a))
+    sv = a.get("survey") or {}
+    sv_block = ""
+    if sv.get("months"):
+        items = []
+        for m in sv["months"]:
+            body = "".join(f"<li>{_e(l.replace('*', ''))}</li>" for l in m["lines"])
+            items.append(f"<div><dt>{_e(m['month'])} 조사</dt><dd><ul class='watch'>{body}</ul></dd></div>")
+        extra = (f" · 1:1로 받은 의견 {sv['feedback_n']}건은 따로 읽고 반영합니다"
+                 if sv.get("feedback_n") else "")
+        sv_block = (f'<div class="card" style="margin-top:6mm"><h3 style="margin-top:0">📮 이 방 만족도 조사 결과</h3>'
+                    f'<dl class="glossary">{"".join(items)}</dl>'
+                    f'<div class="muted">매달 1일 방에 올린 익명 투표 집계입니다{_e(extra)}.</div></div>')
     page5 = f"""
 <section class="page">
-  <h2><span class="num">04</span>다음 기간에 지켜볼 것</h2>
+  <h2><span class="num">05</span>다음 기간에 지켜볼 것</h2>
   <p class="lead">이번 기록에서 반복해서 나온 신호를 모았습니다. 다음 알림을 읽을 때 기준으로 쓰시면 좋아 보입니다.</p>
   <div class="card"><ul class="watch">{watch}</ul></div>
-  <h2 style="margin-top:8mm"><span class="num">05</span>리포트 읽는 법</h2>
+  {sv_block}
+  <h2 style="margin-top:8mm"><span class="num">06</span>리포트 읽는 법</h2>
   <p class="lead">숫자는 모두 실제로 보낸 알림과 이후 시세로 계산했습니다. 표본이 적은 칸은 참고만 하시는 것이 좋아 보입니다.</p>
   <div class="card"><dl class="glossary">
     <div><dt>급등 포착</dt><dd>5분 +3% · 15분 +5% · 1시간 +8%, 거래량 3배, 또는 하루 +20% 이면서 최근 2시간에도 움직이는 코인을 잡습니다.</dd></div>
     <div><dt>오른 이유 확인률</dt><dd>상장 공지, 뉴스, 선물 자금 유입, 테마 순환매 등 근거를 하나라도 찾은 비율입니다. 못 찾으면 '원인 미확인'(큰손 주도 의심)으로 분류합니다.</dd></div>
     <div><dt>추가 상승 / 되밀림</dt><dd>알림가 대비 24시간 안에 +{SUCCESS_PCT:.0f}% 이상 더 오른 적이 있으면 추가 상승, 24시간 뒤 {FADE_PCT:.0f}% 이하면 되밀림입니다.</dd></div>
     <div><dt>대장주 · 2·3등</dt><dd>같은 테마에서 가장 먼저, 가장 크게 오른 종목이 대장주입니다. 2·3등이 아직 덜 올랐으면 따라오는지 지켜봅니다.</dd></div>
+    <div><dt>첫 포착 이후 추적</dt><dd>같은 자산이 여러 번 잡혀도 맨 처음 알린 가격을 기준으로 1일·3일·7일·30일 뒤를 계속 따라갑니다. 재포착은 회차로만 기록합니다.</dd></div>
     <div><dt>관찰 콜</dt><dd>지금 사라는 신호가 아니라 앞으로 움직임을 지켜볼 종목 표시입니다. 1거래일 안에 +2%면 적중으로 기록하고, 틀린 콜도 모두 공개합니다.</dd></div>
   </dl></div>
   <div class="callout" style="margin-top:6mm"><b>활용 팁</b> · 이유가 확인된 급등과 원인 미확인 급등의 성적 차이를 먼저 보십시오.
   이미 크게 오른 코인을 쫓기보다 이유가 뚜렷하고 되밀림이 적은 유형을 고르는 데 이 리포트를 쓰시는 것이 좋아 보입니다.</div>
   <p class="disclaimer">⚠️ 이 리포트는 매수·매도 추천이 아니라 지난 알림의 기록과 통계입니다. 투자 판단과 책임은 본인에게 있습니다.
   과거 성적이 미래 수익을 보장하지 않습니다.</p>
-  {_foot(a, 5)}
+  {_foot(a, 6)}
 </section>"""
 
     return (f'<!doctype html><html lang="ko"><head><meta charset="utf-8"><title>급등탐정 {kind} 리포트</title>'
-            f'{FONT}<style>{CSS}</style></head><body>{cover}{page2}{page3}{page4}{page5}</body></html>')
+            f'{FONT}<style>{CSS}</style></head><body>{cover}{page2}{page3}{page_fu}{page4}{page5}</body></html>')
 
 
 # ─────────────────────────── PDF · 전송 ───────────────────────────
@@ -750,6 +851,15 @@ def file_name(a: dict) -> str:
     return f"급등탐정_{KIND_KO[p['kind']]}리포트_{p['key'][2:]}.pdf"
 
 
+def _fu_caption(a: dict) -> str:
+    """첫 포착 이후 추적 한 줄 — 가장 긴 구간까지 채점된 것 위주로."""
+    st = [x for x in (((a.get("followup") or {}).get("coin") or {}).get("stats") or []) if x.get("n")]
+    if not st:
+        return ""
+    part = " · ".join(f"{x['label']} {_fmt_pct(x['avg'])}(오른 비율 {x['win']}%)" for x in st[:3])
+    return f"📊 첫 포착 이후 {part}"
+
+
 def caption(a: dict) -> str:
     p, c, s = a["period"], a["coin"], a["stock"]
     lines = [f"<b>📑 세력의 급등탐정 · {KIND_KO[p['kind']]} 리포트</b>", html.escape(p["label"]), "",
@@ -757,6 +867,9 @@ def caption(a: dict) -> str:
     if c["scored"]:
         lines.append(f"🟢 알림 뒤 24시간 +{SUCCESS_PCT:.0f}% 추가 상승 {_fmt_pct(c['success_rate'], sign=False)} "
                      f"(채점 {c['scored']}건)")
+    fu_line = _fu_caption(a)
+    if fu_line:
+        lines.append(fu_line)
     if s["calls_done"]:
         lines.append(f"📣 주식 관찰 콜 적중률 {_fmt_pct(s['hit_rate'], sign=False)} ({s['calls_hit']}/{s['calls_done']})")
     lines += ["", "이유별 성적표, 가장 크게 오른 코인, 미국·한국 테마 흐름을 PDF에 정리했습니다.",

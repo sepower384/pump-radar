@@ -693,7 +693,7 @@ def compose_stock(con, respect_cooldown: bool = True, preview: bool = False) -> 
                                   "theme": b["theme"]["name"], "leader": b["leader"]["name"],
                                   "ref_price": p["price"], "target_pct": s["hit_pct"], "deadline": deadline})
         events = [{"market": market, "theme": b["theme"]["name"],
-                   "leader": {k: b["leader"].get(k) for k in ("symbol", "name", "chg", "trade_value", "mcap")},
+                   "leader": {k: b["leader"].get(k) for k in ("symbol", "name", "chg", "price", "trade_value", "mcap")},
                    "catalyst": [c.get("title", "") for c in (b["leader"].get("catalyst") or [])][:2],
                    "peers": [{"symbol": p.get("symbol"), "name": p.get("name"), "chg": p.get("chg"),
                               "verdict": p.get("verdict"), "blocker": p.get("blocker", "")} for p in b["peers"]],
