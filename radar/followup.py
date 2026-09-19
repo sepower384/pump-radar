@@ -371,15 +371,15 @@ def _when(ts: float) -> str:
     return datetime.fromtimestamp(ts, KST).strftime("%m/%d %H:%M")
 
 
-def matured_since(rows: list[dict], since: float, now: float) -> list[tuple[dict, int]]:
-    """직전 성적표 이후에 새로 확정된 (기록, 구간시간) 목록."""
+def matured_since(rows: list[dict], since: float, now: float) -> list[tuple[dict, list[int]]]:
+    """직전 성적표 이후에 새로 확정된 (기록, 구간들). 한 자산이 두 구간을 한꺼번에 넘겼으면 한 줄로 묶는다."""
     out = []
     for r in rows:
-        for h in horizons():
-            end = r.get("ts", 0) + h * 3600
-            if since < end <= now and (r.get("res") or {}).get(hkey(h)):
-                out.append((r, h))
-    out.sort(key=lambda x: -abs(x[0]["res"][hkey(x[1])]["r"]))
+        hs = [h for h in horizons()
+              if since < r.get("ts", 0) + h * 3600 <= now and (r.get("res") or {}).get(hkey(h))]
+        if hs:
+            out.append((r, hs))
+    out.sort(key=lambda x: -abs(x[0]["res"][hkey(x[1][-1])]["r"]))
     return out
 
 
@@ -389,7 +389,8 @@ def digest_msg(kind: str, now: float, since: float, cache: dict | None = None) -
     if not rows:
         return None
     limit = int(CFG.get("followup.digest.max_rows", 6))
-    fresh = matured_since(rows, since, now)[:limit]
+    all_fresh = matured_since(rows, since, now)
+    fresh = all_fresh[:limit]
     live = [r for r in rows if now - r.get("ts", 0) <= hs[-1] * 3600 and _num(r.get("cur"))]
     live.sort(key=lambda r: -(r.get("cur") or 0))
     st = stats(rows)
@@ -403,13 +404,19 @@ def digest_msg(kind: str, now: float, since: float, cache: dict | None = None) -
     units: list[list[str]] = [intro]
 
     if fresh:
-        blk = [f"🆕 *새로 성적이 나온 {len(fresh)}건*"]
-        for r, h in fresh:
-            o = r["res"][hkey(h)]
-            blk.append(f"• *{r['name']}* — 포착가 {_px(r)} 대비 *{hlabel(h)} 뒤 {_pct(o['r'])}* "
-                       f"(그사이 최고 {_pct(o['hi'])} · 최저 {_pct(o['lo'])})")
+        blk = [f"🆕 *지난 성적표 이후 성적이 확정된 {len(all_fresh)}건* (변동이 큰 순서)"]
+        for r, hs in fresh:
+            last = r["res"][hkey(hs[-1])]
+            grade = " · ".join(f"{hlabel(h)} {_pct(r['res'][hkey(h)]['r'])}" for h in hs)
+            blk.append(f"• *{r['name']}* — 포착가 {_px(r)} → *{grade}* "
+                       f"(그사이 최고 {_pct(last['hi'])} · 최저 {_pct(last['lo'])})")
             blk.append(f"   ◦ {_when(r['ts'])} 포착" + (f" · {r['note']}" if r.get("note") else "")
                        + (f" · 재포착 {r['repeats']}회" if r.get("repeats", 1) >= 2 else ""))
+        rest = all_fresh[limit:]
+        if rest:
+            vals = [r["res"][hkey(hs[-1])]["r"] for r, hs in rest]
+            blk.append(f"_나머지 {len(rest)}건은 평균 {sum(vals) / len(vals):+.1f}%, "
+                       f"그중 {sum(v > 0 for v in vals)}건이 플러스였습니다._")
         units.append(blk)
 
     if live:
@@ -444,13 +451,25 @@ def digest_msg(kind: str, now: float, since: float, cache: dict | None = None) -
 
 
 # ─────────────────────────── 실행 ───────────────────────────
+def digest_period(now: float) -> str:
+    """성적표 한 번을 가리키는 키. 주 1회면 '2026-W38', 매일이면 날짜."""
+    k = datetime.fromtimestamp(now, KST)
+    if str(CFG.get("followup.digest.every", "week")).lower().startswith("w"):
+        iso = k.isocalendar()
+        return f"{iso[0]}-W{iso[1]:02d}"
+    return f"{k:%Y-%m-%d}"
+
+
 def digest_due(kind: str, now: float, st: dict | None = None) -> bool:
+    """주 1회(기본 월요일 09시 KST) 또는 매일. 매일 보내면 틀린 날이 매일 드러나 방이 지친다."""
     if not CFG.get("followup.digest.enabled", True) or kind not in digest_kinds():
         return False
     k = datetime.fromtimestamp(now, KST)
     if k.hour < int(CFG.get("followup.digest.hour_kst", 9)):
         return False
-    return ((st if st is not None else state()).get("digest") or {}).get(kind) != f"{k:%Y-%m-%d}"
+    if str(CFG.get("followup.digest.every", "week")).lower().startswith("w")             and k.weekday() != int(CFG.get("followup.digest.weekday", 0)):
+        return False
+    return ((st if st is not None else state()).get("digest") or {}).get(kind) != digest_period(now)
 
 
 def tick(now: float | None = None, send: bool = True, force: bool = False) -> dict:
@@ -461,7 +480,7 @@ def tick(now: float | None = None, send: bool = True, force: bool = False) -> di
     st = state()
     kinds = [k for k in digest_kinds() if force or digest_due(k, now, st)]
     out: dict = {"refresh": refresh(now, live=bool(kinds)), "digest": {}}
-    day = f"{datetime.fromtimestamp(now, KST):%Y-%m-%d}"
+    day = digest_period(now)
     cache = load_cache()
     for kind in kinds:
         since = float((st.get("last") or {}).get(kind) or (now - 86400))

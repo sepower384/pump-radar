@@ -144,7 +144,7 @@ def test_digest() -> None:
     msg = followup.digest_msg("pump", now, since=now - 30 * HOUR, cache=cache)
     text = msg.slack_text()
     check("급등 방 성적표엔 급등 포착만", "AAA" in text and "BBB" in text and "CCC" not in text)
-    check("새로 확정된 구간을 앞에 알림", "1일 뒤 +12.0%" in text, text[:400])
+    check("새로 확정된 구간을 앞에 알림", "1일 +12.0%" in text and "성적이 확정된" in text, text[:400])
     check("포착가·최고·최저를 같이 보여줌", "최고 +30.0%" in text and "포착가" in text)
     check("재포착 회차 표시", "재포착 2회" in text)
     check("진행 중인 것의 현재 수익률", "+25.0%" in text and "포착 2일째" in text)
@@ -158,17 +158,21 @@ def test_digest() -> None:
 
     fresh = followup.matured_since(list(cache.values()), since=now - 30 * HOUR, now=now)
     check("직전 성적표 이후 확정분만 '새 성적'", [r[0]["name"] for r in fresh] == ["AAA", "CCC"], str(fresh))
+    check("한 자산이 두 구간을 넘겼으면 한 줄로 묶음", all(isinstance(hs, list) for _, hs in fresh))
     check("이미 알린 구간은 다시 안 넣음", not followup.matured_since(list(cache.values()), t0 + 25 * HOUR, now))
 
 
 def test_digest_schedule() -> None:
-    print("\n[성적표 발송 시점]")
+    print("\n[성적표 발송 시점 — 주 1회 월요일]")
     st: dict = {}
-    check("9시 전엔 대기", not followup.digest_due("pump", ts("2026-09-12 08:30"), st))
-    check("9시 지나면 발송", followup.digest_due("pump", ts("2026-09-12 09:10"), st))
-    st = {"digest": {"pump": "2026-09-12"}}
-    check("하루 한 번만", not followup.digest_due("pump", ts("2026-09-12 21:00"), st))
-    check("다음 날 다시", followup.digest_due("pump", ts("2026-09-13 09:10"), st))
+    check("월요일 9시 전엔 대기", not followup.digest_due("pump", ts("2026-09-21 08:30"), st))
+    check("월요일 9시 지나면 발송", followup.digest_due("pump", ts("2026-09-21 09:10"), st))
+    check("월요일이 아니면 안 보냄", not followup.digest_due("pump", ts("2026-09-23 09:10"), st))
+    week = followup.digest_period(ts("2026-09-21 09:10"))
+    check("주 단위 키", week == "2026-W39", week)
+    st = {"digest": {"pump": week}}
+    check("그 주엔 한 번만", not followup.digest_due("pump", ts("2026-09-21 21:00"), st))
+    check("다음 주 월요일에 다시", followup.digest_due("pump", ts("2026-09-28 09:10"), st))
 
 
 # ─────────────────────────── 만족도 조사 ───────────────────────────

@@ -75,7 +75,10 @@
     "horizons_h": [24, 72, 168, 720],
     "dedupe_days": 30,
     "digest": {
+      "_comment": "every: week=주1회(weekday 0=월) / day=매일. 매일 보내면 틀린 날이 매일 드러나 방이 지친다",
       "enabled": true,
+      "every": "week",
+      "weekday": 0,
       "hour_kst": 9,
       "kinds": ["pump", "trend", "stock"],
       "max_rows": 6
