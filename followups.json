@@ -1064,7 +1064,7 @@
 "cur_ts": 1789776000,
 "hi": 5.47,
 "lo": -15.55,
-"checked": 1789845547,
+"checked": 1789859943,
 "done": false
 },
 "coin|binance|ONEUSDT|1789607982": {
@@ -1100,7 +1100,7 @@
 "ts": 1789607982.0,
 "price": 1349.37,
 "note": "뉴스",
-"repeats": 5,
+"repeats": 6,
 "res": {
 "h24": {
 "r": 8.52,
@@ -1316,7 +1316,7 @@
 "ts": 1789665586.0,
 "price": 3.012,
 "note": "에어드랍",
-"repeats": 7,
+"repeats": 8,
 "res": {
 "h24": {
 "r": 23.97,
@@ -1532,7 +1532,7 @@
 "ts": 1789715934.0,
 "price": 0.00632,
 "note": "뉴스",
-"repeats": 6,
+"repeats": 7,
 "res": {
 "h24": {
 "r": 19.94,
@@ -1761,6 +1761,102 @@
 "hi": 43.03,
 "lo": -0.23,
 "checked": 1789845547,
+"done": false
+},
+"coin|binance|CHIPUSDT|1789766341": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "CHIPUSDT",
+"name": "CHIP",
+"ts": 1789766341.0,
+"price": 0.04606,
+"note": "뉴스",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -6.56,
+"hi": 3.41,
+"lo": -6.69
+}
+},
+"cur": -4.71,
+"cur_ts": 1789862400,
+"hi": 3.41,
+"lo": -7.9,
+"checked": 1789859943,
+"done": false
+},
+"coin|binance|SNXXBUSDT|1789766341": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "SNXXBUSDT",
+"name": "SNXXB",
+"ts": 1789766341.0,
+"price": 18.05,
+"note": "원인 미확인",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -1.22,
+"hi": 0.33,
+"lo": -2.05
+}
+},
+"cur": -1.22,
+"cur_ts": 1789862400,
+"hi": 0.33,
+"lo": -2.05,
+"checked": 1789859943,
+"done": false
+},
+"coin|binance|ZAMAUSDT|1789766341": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "ZAMAUSDT",
+"name": "ZAMA",
+"ts": 1789766341.0,
+"price": 0.06197,
+"note": "원인 미확인",
+"repeats": 4,
+"res": {
+"h24": {
+"r": 31.53,
+"hi": 49.67,
+"lo": -5.79
+}
+},
+"cur": 33.26,
+"cur_ts": 1789862400,
+"hi": 49.67,
+"lo": -5.79,
+"checked": 1789859943,
+"done": false
+},
+"coin|bitget|MAGMAUSDT|1789766341": {
+"asset": "coin",
+"kind": "pump",
+"market": "bitget",
+"symbol": "MAGMAUSDT",
+"name": "MAGMA",
+"ts": 1789766341.0,
+"price": 0.26555,
+"note": "거래량 폭증",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -12.77,
+"hi": 2.08,
+"lo": -13.11
+}
+},
+"cur": -12.08,
+"cur_ts": 1789858800,
+"hi": 2.08,
+"lo": -14.5,
+"checked": 1789859943,
 "done": false
 }
 }
