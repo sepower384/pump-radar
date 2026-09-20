@@ -251,3 +251,7 @@
 {"t": "trend", "ts": 1789903135, "symbol": "ONEUSDT", "base": "ONE", "price": 0.004277, "score": 96.3, "rs7": 491.0, "rs30": 391.3, "new": true}
 {"t": "trend", "ts": 1789903135, "symbol": "SAGAUSDT", "base": "SAGA", "price": 0.02911, "score": 95.6, "rs7": 59.9, "rs30": 79.9, "new": true}
 {"t": "trend", "ts": 1789903135, "symbol": "UNIUSDT", "base": "UNI", "price": 8.74, "score": 93.1, "rs7": 33.3, "rs30": 112.0, "new": true}
+{"t": "trend", "ts": 1789910365, "symbol": "NEARUSDT", "base": "NEAR", "price": 3.708, "score": 95.8, "rs7": 55.3, "rs30": 89.5, "new": true}
+{"t": "trend", "ts": 1789910365, "symbol": "STRKUSDT", "base": "STRK", "price": 0.04718, "score": 92.3, "rs7": 58.5, "rs30": 65.3, "new": true}
+{"t": "trend", "ts": 1789910365, "symbol": "ENAUSDT", "base": "ENA", "price": 0.2043, "score": 91.2, "rs7": 41.2, "rs30": 43.0, "new": true}
+{"t": "trend", "ts": 1789910365, "symbol": "ZECUSDT", "base": "ZEC", "price": 1457.45, "score": 88.6, "rs7": 28.4, "rs30": 104.9, "new": true}
