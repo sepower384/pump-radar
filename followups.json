@@ -849,7 +849,7 @@
 "ts": 1789528725.0,
 "price": 0.10037,
 "note": "원인 미확인",
-"repeats": 12,
+"repeats": 13,
 "res": {
 "h24": {
 "r": 61.7,
@@ -1064,7 +1064,7 @@
 "cur_ts": 1789776000,
 "hi": 5.47,
 "lo": -15.55,
-"checked": 1789881548,
+"checked": 1789888773,
 "done": false
 },
 "coin|binance|ONEUSDT|1789607982": {
@@ -1840,7 +1840,7 @@
 "ts": 1789766341.0,
 "price": 0.06197,
 "note": "원인 미확인",
-"repeats": 4,
+"repeats": 6,
 "res": {
 "h24": {
 "r": 31.53,
@@ -1949,6 +1949,30 @@
 "hi": 24.0,
 "lo": -3.11,
 "checked": 1789881548,
+"done": false
+},
+"coin|binance|INJUSDT|1789802357": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "INJUSDT",
+"name": "INJ",
+"ts": 1789802357.0,
+"price": 7.542,
+"note": "ETF",
+"repeats": 2,
+"res": {
+"h24": {
+"r": 1.29,
+"hi": 10.7,
+"lo": -2.57
+}
+},
+"cur": 1.78,
+"cur_ts": 1789891200,
+"hi": 10.7,
+"lo": -2.57,
+"checked": 1789888773,
 "done": false
 }
 }
