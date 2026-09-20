@@ -1064,7 +1064,7 @@
 "cur_ts": 1789776000,
 "hi": 5.47,
 "lo": -15.55,
-"checked": 1789859943,
+"checked": 1789867144,
 "done": false
 },
 "coin|binance|ONEUSDT|1789607982": {
@@ -1532,7 +1532,7 @@
 "ts": 1789715934.0,
 "price": 0.00632,
 "note": "뉴스",
-"repeats": 7,
+"repeats": 8,
 "res": {
 "h24": {
 "r": 19.94,
@@ -1580,7 +1580,7 @@
 "ts": 1789723138.0,
 "price": 0.03561,
 "note": "뉴스",
-"repeats": 3,
+"repeats": 4,
 "res": {
 "h24": {
 "r": 19.26,
@@ -1857,6 +1857,54 @@
 "hi": 2.08,
 "lo": -14.5,
 "checked": 1789859943,
+"done": false
+},
+"coin|binance|ZENUSDT|1789773602": {
+"asset": "coin",
+"kind": "trend",
+"market": "binance",
+"symbol": "ZENUSDT",
+"name": "ZEN",
+"ts": 1789773602.0,
+"price": 8.471,
+"note": "우상향 점수 84.1",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -8.89,
+"hi": -0.63,
+"lo": -10.46
+}
+},
+"cur": -7.96,
+"cur_ts": 1789869600,
+"hi": -0.63,
+"lo": -10.46,
+"checked": 1789867144,
+"done": false
+},
+"coin|binance|SUSDT|1789780744": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "SUSDT",
+"name": "S",
+"ts": 1789780744.0,
+"price": 0.03306,
+"note": "거래량 폭증",
+"repeats": 1,
+"res": {
+"h24": {
+"r": 0.27,
+"hi": 4.48,
+"lo": -3.9
+}
+},
+"cur": -0.21,
+"cur_ts": 1789869600,
+"hi": 4.48,
+"lo": -3.9,
+"checked": 1789867144,
 "done": false
 }
 }
