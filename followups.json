@@ -1064,7 +1064,7 @@
 "cur_ts": 1789776000,
 "hi": 5.47,
 "lo": -15.55,
-"checked": 1789874334,
+"checked": 1789881548,
 "done": false
 },
 "coin|binance|ONEUSDT|1789607982": {
@@ -1169,13 +1169,18 @@
 "r": 33.67,
 "hi": 69.91,
 "lo": 14.94
+},
+"h72": {
+"r": 23.23,
+"hi": 69.91,
+"lo": 10.64
 }
 },
-"cur": 11.72,
-"cur_ts": 1789848000,
+"cur": 22.36,
+"cur_ts": 1789884000,
 "hi": 69.91,
 "lo": 10.64,
-"checked": 1789845547,
+"checked": 1789881548,
 "done": false
 },
 "coin|bitget|UAIUSDT|1789643928": {
@@ -1920,6 +1925,30 @@
 "hi": 4.48,
 "lo": -3.9,
 "checked": 1789867144,
+"done": false
+},
+"coin|binance|XTZUSDT|1789787973": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "XTZUSDT",
+"name": "XTZ",
+"ts": 1789787973.0,
+"price": 0.3246,
+"note": "뉴스",
+"repeats": 2,
+"res": {
+"h24": {
+"r": 4.41,
+"hi": 24.0,
+"lo": -3.11
+}
+},
+"cur": 5.67,
+"cur_ts": 1789884000,
+"hi": 24.0,
+"lo": -3.11,
+"checked": 1789881548,
 "done": false
 }
 }
