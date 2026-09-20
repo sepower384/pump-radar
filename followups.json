@@ -127,7 +127,7 @@
 "cur_ts": 1789776000,
 "hi": 9.8,
 "lo": -15.83,
-"checked": 1789939137,
+"checked": 1789946337,
 "done": false
 },
 "coin|bitget|FLOCKUSDT|1789296347": {
@@ -701,7 +701,7 @@
 "ts": 1789471168.0,
 "price": 0.02092,
 "note": "뉴스",
-"repeats": 12,
+"repeats": 13,
 "res": {
 "h24": {
 "r": -2.58,
@@ -962,7 +962,7 @@
 "ts": 1789564794.0,
 "price": 0.1724,
 "note": "뉴스",
-"repeats": 6,
+"repeats": 7,
 "res": {
 "h24": {
 "r": -5.16,
@@ -1119,7 +1119,7 @@
 "cur_ts": 1789776000,
 "hi": 5.47,
 "lo": -15.55,
-"checked": 1789939137,
+"checked": 1789946337,
 "done": false
 },
 "coin|binance|ONEUSDT|1789607982": {
@@ -2246,6 +2246,30 @@
 "hi": 1.72,
 "lo": -10.78,
 "checked": 1789939137,
+"done": false
+},
+"coin|binance|AVAXUSDT|1789859936": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "AVAXUSDT",
+"name": "AVAX",
+"ts": 1789859936.0,
+"price": 9.918,
+"note": "뉴스",
+"repeats": 2,
+"res": {
+"h24": {
+"r": 13.49,
+"hi": 15.69,
+"lo": -4.86
+}
+},
+"cur": 14.36,
+"cur_ts": 1789948800,
+"hi": 15.69,
+"lo": -4.86,
+"checked": 1789946337,
 "done": false
 }
 }
