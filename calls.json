@@ -142,5 +142,23 @@
 "result_pct": 4.33,
 "resolved_ts": 1789759134,
 "reported": 1
+},
+{
+"id": 10,
+"ts": 1789967948,
+"market": "KR",
+"symbol": "240810",
+"name": "원익IPS",
+"theme": "반도체 장비",
+"leader": "SFA반도체",
+"ref_price": 128800.0,
+"target_pct": 2.0,
+"deadline": 1790058600,
+"status": "pending",
+"best_price": 128800.0,
+"last_price": null,
+"result_pct": null,
+"resolved_ts": null,
+"reported": 0
 }
 ]
