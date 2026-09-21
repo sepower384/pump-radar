@@ -8,5 +8,15 @@
    "status": "ok",
    "message_id": 10
   }
+ },
+ "W-2026-38": {
+  "at": 1789953607,
+  "file": "급등탐정_주간리포트_2026-38.pdf",
+  "ups": 166,
+  "scored": 157,
+  "telegram": {
+   "status": "ok",
+   "message_id": 107
+  }
  }
 }
