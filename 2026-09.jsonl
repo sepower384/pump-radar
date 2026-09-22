@@ -377,3 +377,4 @@
 {"t": "trend", "ts": 1790104778, "symbol": "NEARUSDT", "base": "NEAR", "price": 4.374, "score": 92.2, "rs7": 64.7, "rs30": 94.9, "new": true}
 {"t": "trend", "ts": 1790104778, "symbol": "SAGAUSDT", "base": "SAGA", "price": 0.03764, "score": 89.5, "rs7": 38.2, "rs30": 122.3, "new": true}
 {"t": "trend", "ts": 1790104778, "symbol": "ZAMAUSDT", "base": "ZAMA", "price": 0.09008, "score": 84.7, "rs7": 69.6, "rs30": 41.3, "new": true}
+{"t": "trend", "ts": 1790111943, "symbol": "STXUSDT", "base": "STX", "price": 0.3372, "score": 85.9, "rs7": 25.8, "rs30": 33.7, "new": true}

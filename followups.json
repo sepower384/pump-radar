@@ -123,11 +123,11 @@
 "lo": -15.83
 }
 },
-"cur": -6.46,
-"cur_ts": 1790092800,
+"cur": -8.18,
+"cur_ts": 1790107200,
 "hi": 9.8,
 "lo": -15.83,
-"checked": 1790104781,
+"checked": 1790111948,
 "done": false
 },
 "coin|bitget|FLOCKUSDT|1789296347": {
@@ -1185,11 +1185,11 @@
 "lo": -15.26
 }
 },
-"cur": -13.42,
-"cur_ts": 1790103600,
+"cur": -13.45,
+"cur_ts": 1790110800,
 "hi": 5.47,
 "lo": -15.67,
-"checked": 1790104781,
+"checked": 1790111948,
 "done": false
 },
 "coin|binance|ONEUSDT|1789607982": {
@@ -2454,13 +2454,18 @@
 "r": -8.41,
 "hi": 1.72,
 "lo": -10.78
+},
+"h72": {
+"r": -9.91,
+"hi": 1.72,
+"lo": -17.03
 }
 },
-"cur": -8.84,
-"cur_ts": 1789941600,
+"cur": -10.34,
+"cur_ts": 1790114400,
 "hi": 1.72,
-"lo": -10.78,
-"checked": 1789939137,
+"lo": -17.03,
+"checked": 1790111948,
 "done": false
 },
 "coin|binance|AVAXUSDT|1789859936": {
@@ -3205,6 +3210,54 @@
 "hi": 16.85,
 "lo": -16.43,
 "checked": 1790097550,
+"done": false
+},
+"coin|bitget|ZETAUSDT|1790018382": {
+"asset": "coin",
+"kind": "pump",
+"market": "bitget",
+"symbol": "ZETAUSDT",
+"name": "ZETA",
+"ts": 1790018382.0,
+"price": 0.06178,
+"note": "뉴스",
+"repeats": 2,
+"res": {
+"h24": {
+"r": -10.7,
+"hi": 10.57,
+"lo": -12.92
+}
+},
+"cur": -10.2,
+"cur_ts": 1790110800,
+"hi": 10.57,
+"lo": -12.92,
+"checked": 1790111948,
+"done": false
+},
+"stock|US|ARM|1790018417": {
+"asset": "stock",
+"kind": "stock",
+"market": "US",
+"symbol": "ARM",
+"name": "Arm Holdings plc",
+"ts": 1790018417.0,
+"price": 321.41,
+"note": "AI 반도체 대장주",
+"repeats": 2,
+"res": {
+"h24": {
+"r": 0.46,
+"hi": 0.86,
+"lo": -8.81
+}
+},
+"cur": 3.67,
+"cur_ts": 1790107200,
+"hi": 4.12,
+"lo": -8.81,
+"checked": 1790111948,
 "done": false
 }
 }
