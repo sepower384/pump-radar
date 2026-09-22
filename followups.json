@@ -127,7 +127,7 @@
 "cur_ts": 1790035200,
 "hi": 9.8,
 "lo": -15.83,
-"checked": 1790039950,
+"checked": 1790047175,
 "done": false
 },
 "coin|bitget|FLOCKUSDT|1789296347": {
@@ -728,13 +728,18 @@
 "r": -17.55,
 "hi": -0.26,
 "lo": -20.57
+},
+"h168": {
+"r": -9.33,
+"hi": -0.26,
+"lo": -20.57
 }
 },
-"cur": -12.45,
-"cur_ts": 1789956000,
+"cur": -9.52,
+"cur_ts": 1790049600,
 "hi": -0.26,
 "lo": -20.57,
-"checked": 1789953558,
+"checked": 1790047175,
 "done": false
 },
 "coin|binance|SAGAUSDT|1789471168": {
@@ -1160,11 +1165,11 @@
 "lo": -15.26
 }
 },
-"cur": -13.8,
-"cur_ts": 1790038800,
+"cur": -13.76,
+"cur_ts": 1790046000,
 "hi": 5.47,
 "lo": -15.55,
-"checked": 1790039950,
+"checked": 1790047175,
 "done": false
 },
 "coin|binance|ONEUSDT|1789607982": {
@@ -1176,7 +1181,7 @@
 "ts": 1789607982.0,
 "price": 0.00101,
 "note": "뉴스",
-"repeats": 18,
+"repeats": 19,
 "res": {
 "h24": {
 "r": 75.94,
@@ -1408,7 +1413,7 @@
 "ts": 1789658339.0,
 "price": 7.189,
 "note": "우상향 점수 78.6",
-"repeats": 10,
+"repeats": 11,
 "res": {
 "h24": {
 "r": 21.51,
@@ -1756,7 +1761,7 @@
 "ts": 1789715934.0,
 "price": 0.03535,
 "note": "거래량 폭증",
-"repeats": 2,
+"repeats": 3,
 "res": {
 "h24": {
 "r": -9.5,
@@ -2197,13 +2202,18 @@
 "r": 4.41,
 "hi": 24.0,
 "lo": -3.11
+},
+"h72": {
+"r": 4.9,
+"hi": 24.0,
+"lo": -3.11
 }
 },
-"cur": 8.13,
-"cur_ts": 1789956000,
+"cur": 4.99,
+"cur_ts": 1790049600,
 "hi": 24.0,
 "lo": -3.11,
-"checked": 1789953558,
+"checked": 1790047175,
 "done": false
 },
 "coin|binance|INJUSDT|1789802357": {
@@ -2624,12 +2634,18 @@
 "price": 10650.0,
 "note": "시스템반도체 대장주",
 "repeats": 2,
-"res": {},
-"cur": 0.0,
-"cur_ts": 1789972200,
-"hi": 1.22,
+"res": {
+"h24": {
+"r": -0.38,
+"hi": 4.04,
+"lo": -15.4
+}
+},
+"cur": -0.47,
+"cur_ts": 1790058600,
+"hi": 4.79,
 "lo": -15.4,
-"checked": 1789953558,
+"checked": 1790047175,
 "done": false
 },
 "stock|KR|067310|1789953558": {
@@ -2642,12 +2658,18 @@
 "price": 44950.0,
 "note": "반도체 재료/부품 대장주",
 "repeats": 1,
-"res": {},
-"cur": 0.0,
-"cur_ts": 1789972200,
+"res": {
+"h24": {
+"r": 0.44,
 "hi": 1.0,
+"lo": -13.68
+}
+},
+"cur": 4.23,
+"cur_ts": 1790058600,
+"hi": 6.45,
 "lo": -13.68,
-"checked": 1789953558,
+"checked": 1790047175,
 "done": false
 },
 "coin|binance|CFGUSDT|1789953541": {
@@ -2672,6 +2694,78 @@
 "hi": -3.92,
 "lo": -10.24,
 "checked": 1790039950,
+"done": false
+},
+"coin|binance|FTTUSDT|1789960759": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "FTTUSDT",
+"name": "FTT",
+"ts": 1789960759.0,
+"price": 0.3016,
+"note": "원인 미확인",
+"repeats": 2,
+"res": {
+"h24": {
+"r": -13.86,
+"hi": 6.76,
+"lo": -14.52
+}
+},
+"cur": -13.83,
+"cur_ts": 1790049600,
+"hi": 6.76,
+"lo": -15.05,
+"checked": 1790047175,
+"done": false
+},
+"coin|binance|KMNOUSDT|1789960759": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "KMNOUSDT",
+"name": "KMNO",
+"ts": 1789960759.0,
+"price": 0.0342,
+"note": "거래량 폭증",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -1.78,
+"hi": 9.27,
+"lo": -6.17
+}
+},
+"cur": -1.99,
+"cur_ts": 1790049600,
+"hi": 9.27,
+"lo": -6.17,
+"checked": 1790047175,
+"done": false
+},
+"coin|binance|MINAUSDT|1789960759": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "MINAUSDT",
+"name": "MINA",
+"ts": 1789960759.0,
+"price": 0.125,
+"note": "원인 미확인",
+"repeats": 3,
+"res": {
+"h24": {
+"r": 2.32,
+"hi": 9.04,
+"lo": -4.16
+}
+},
+"cur": 2.4,
+"cur_ts": 1790049600,
+"hi": 9.04,
+"lo": -4.16,
+"checked": 1790047175,
 "done": false
 }
 }
