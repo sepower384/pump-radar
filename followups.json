@@ -127,7 +127,7 @@
 "cur_ts": 1790064000,
 "hi": 9.8,
 "lo": -15.83,
-"checked": 1790068776,
+"checked": 1790075943,
 "done": false
 },
 "coin|bitget|FLOCKUSDT|1789296347": {
@@ -1165,11 +1165,11 @@
 "lo": -15.26
 }
 },
-"cur": -14.22,
-"cur_ts": 1790067600,
+"cur": -13.99,
+"cur_ts": 1790074800,
 "hi": 5.47,
 "lo": -15.55,
-"checked": 1790068776,
+"checked": 1790075943,
 "done": false
 },
 "coin|binance|ONEUSDT|1789607982": {
@@ -1761,7 +1761,7 @@
 "ts": 1789715934.0,
 "price": 0.03535,
 "note": "거래량 폭증",
-"repeats": 4,
+"repeats": 5,
 "res": {
 "h24": {
 "r": -9.5,
@@ -2347,13 +2347,18 @@
 "r": 6.12,
 "hi": 20.5,
 "lo": -3.74
+},
+"h72": {
+"r": 40.26,
+"hi": 51.72,
+"lo": -3.74
 }
 },
-"cur": -0.56,
-"cur_ts": 1789912800,
-"hi": 20.5,
+"cur": 35.92,
+"cur_ts": 1790078400,
+"hi": 51.72,
 "lo": -3.74,
-"checked": 1789910367,
+"checked": 1790075943,
 "done": false
 },
 "coin|binance|BANKUSDT|1789838402": {
@@ -2773,7 +2778,7 @@
 "ts": 1789960759.0,
 "price": 0.125,
 "note": "원인 미확인",
-"repeats": 3,
+"repeats": 4,
 "res": {
 "h24": {
 "r": 2.32,
@@ -2882,6 +2887,54 @@
 "hi": 8.09,
 "lo": -2.37,
 "checked": 1790068776,
+"done": false
+},
+"coin|binance|SEIUSDT|1789989536": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "SEIUSDT",
+"name": "SEI",
+"ts": 1789989536.0,
+"price": 0.06356,
+"note": "뉴스",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -4.23,
+"hi": -1.15,
+"lo": -9.02
+}
+},
+"cur": -3.67,
+"cur_ts": 1790078400,
+"hi": -1.15,
+"lo": -9.02,
+"checked": 1790075943,
+"done": false
+},
+"coin|binance|CETUSUSDT|1789989536": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "CETUSUSDT",
+"name": "CETUS",
+"ts": 1789989536.0,
+"price": 0.02855,
+"note": "원인 미확인",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -7.78,
+"hi": 4.48,
+"lo": -7.99
+}
+},
+"cur": -7.64,
+"cur_ts": 1790078400,
+"hi": 4.48,
+"lo": -8.58,
+"checked": 1790075943,
 "done": false
 }
 }
