@@ -123,11 +123,11 @@
 "lo": -15.83
 }
 },
-"cur": 0.13,
-"cur_ts": 1790064000,
+"cur": -0.03,
+"cur_ts": 1790078400,
 "hi": 9.8,
 "lo": -15.83,
-"checked": 1790075943,
+"checked": 1790083155,
 "done": false
 },
 "coin|bitget|FLOCKUSDT|1789296347": {
@@ -762,13 +762,18 @@
 "r": -0.48,
 "hi": 21.75,
 "lo": -10.52
+},
+"h168": {
+"r": 86.62,
+"hi": 114.72,
+"lo": -10.52
 }
 },
-"cur": 83.51,
-"cur_ts": 1789956000,
-"hi": 96.7,
+"cur": 85.47,
+"cur_ts": 1790085600,
+"hi": 114.72,
 "lo": -10.52,
-"checked": 1789953558,
+"checked": 1790083155,
 "done": false
 },
 "coin|bitget|PONSUSDT|1789478322": {
@@ -791,13 +796,18 @@
 "r": 4.16,
 "hi": 12.35,
 "lo": -20.6
+},
+"h168": {
+"r": -8.37,
+"hi": 12.35,
+"lo": -20.6
 }
 },
-"cur": -11.97,
-"cur_ts": 1789952400,
+"cur": -8.37,
+"cur_ts": 1790082000,
 "hi": 12.35,
 "lo": -20.6,
-"checked": 1789953558,
+"checked": 1790083155,
 "done": false
 },
 "coin|bitget|IDOLUSDT|1789492721": {
@@ -1165,11 +1175,11 @@
 "lo": -15.26
 }
 },
-"cur": -13.99,
-"cur_ts": 1790074800,
+"cur": -14.11,
+"cur_ts": 1790082000,
 "hi": 5.47,
 "lo": -15.55,
-"checked": 1790075943,
+"checked": 1790083155,
 "done": false
 },
 "coin|binance|ONEUSDT|1789607982": {
@@ -1529,7 +1539,7 @@
 "ts": 1789672741.0,
 "price": 0.1196,
 "note": "원인 미확인",
-"repeats": 1,
+"repeats": 2,
 "res": {
 "h24": {
 "r": -6.94,
@@ -2167,7 +2177,7 @@
 "ts": 1789780744.0,
 "price": 0.03306,
 "note": "거래량 폭증",
-"repeats": 2,
+"repeats": 3,
 "res": {
 "h24": {
 "r": 0.27,
@@ -2634,7 +2644,7 @@
 "ts": 1789939129.0,
 "price": 0.06189,
 "note": "원인 미확인",
-"repeats": 3,
+"repeats": 5,
 "res": {
 "h24": {
 "r": 9.97,
@@ -2935,6 +2945,102 @@
 "hi": 4.48,
 "lo": -8.58,
 "checked": 1790075943,
+"done": false
+},
+"coin|binance|PROVEUSDT|1789996734": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "PROVEUSDT",
+"name": "PROVE",
+"ts": 1789996734.0,
+"price": 0.2752,
+"note": "거래량 폭증",
+"repeats": 2,
+"res": {
+"h24": {
+"r": -17.66,
+"hi": 3.42,
+"lo": -18.5
+}
+},
+"cur": -17.51,
+"cur_ts": 1790085600,
+"hi": 3.42,
+"lo": -18.5,
+"checked": 1790083155,
+"done": false
+},
+"coin|binance|DUSKUSDT|1789996734": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "DUSKUSDT",
+"name": "DUSK",
+"ts": 1789996734.0,
+"price": 0.0886,
+"note": "원인 미확인",
+"repeats": 1,
+"res": {
+"h24": {
+"r": 0.79,
+"hi": 1.02,
+"lo": -5.76
+}
+},
+"cur": 0.11,
+"cur_ts": 1790085600,
+"hi": 1.02,
+"lo": -5.76,
+"checked": 1790083155,
+"done": false
+},
+"coin|binance|ARKMUSDT|1789996734": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "ARKMUSDT",
+"name": "ARKM",
+"ts": 1789996734.0,
+"price": 0.1306,
+"note": "원인 미확인",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -0.23,
+"hi": 0.84,
+"lo": -6.58
+}
+},
+"cur": 1.23,
+"cur_ts": 1790085600,
+"hi": 1.3,
+"lo": -6.58,
+"checked": 1790083155,
+"done": false
+},
+"stock|US|MSTR|1789996748": {
+"asset": "stock",
+"kind": "stock",
+"market": "US",
+"symbol": "MSTR",
+"name": "Strategy Inc",
+"ts": 1789996748.0,
+"price": 153.92,
+"note": "크립토 관련주 대장주",
+"repeats": 1,
+"res": {
+"h24": {
+"r": 9.47,
+"hi": 10.14,
+"lo": 6.87
+}
+},
+"cur": 9.47,
+"cur_ts": 1790020800,
+"hi": 10.14,
+"lo": 6.87,
+"checked": 1790083155,
 "done": false
 }
 }
