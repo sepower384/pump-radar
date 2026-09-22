@@ -160,5 +160,23 @@
 "result_pct": 4.74,
 "resolved_ts": 1790039938,
 "reported": 1
+},
+{
+"id": 11,
+"ts": 1790054344,
+"market": "KR",
+"symbol": "001440",
+"name": "대한전선",
+"theme": "원자력발전",
+"leader": "삼미금속",
+"ref_price": 31550.0,
+"target_pct": 2.0,
+"deadline": 1790145000,
+"status": "pending",
+"best_price": 31550.0,
+"last_price": null,
+"result_pct": null,
+"resolved_ts": null,
+"reported": 0
 }
 ]
