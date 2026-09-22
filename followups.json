@@ -127,7 +127,7 @@
 "cur_ts": 1790107200,
 "hi": 9.8,
 "lo": -15.83,
-"checked": 1790111948,
+"checked": 1790119133,
 "done": false
 },
 "coin|bitget|FLOCKUSDT|1789296347": {
@@ -1185,11 +1185,11 @@
 "lo": -15.26
 }
 },
-"cur": -13.45,
-"cur_ts": 1790110800,
+"cur": -13.4,
+"cur_ts": 1790118000,
 "hi": 5.47,
 "lo": -15.67,
-"checked": 1790111948,
+"checked": 1790119133,
 "done": false
 },
 "coin|binance|ONEUSDT|1789607982": {
