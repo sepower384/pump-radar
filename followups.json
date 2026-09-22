@@ -127,7 +127,7 @@
 "cur_ts": 1790078400,
 "hi": 9.8,
 "lo": -15.83,
-"checked": 1790083155,
+"checked": 1790090348,
 "done": false
 },
 "coin|bitget|FLOCKUSDT|1789296347": {
@@ -139,7 +139,7 @@
 "ts": 1789296347.0,
 "price": 0.07974,
 "note": "뉴스",
-"repeats": 1,
+"repeats": 2,
 "res": {
 "h24": {
 "r": -15.63,
@@ -1175,11 +1175,11 @@
 "lo": -15.26
 }
 },
-"cur": -14.11,
-"cur_ts": 1790082000,
+"cur": -13.55,
+"cur_ts": 1790089200,
 "hi": 5.47,
-"lo": -15.55,
-"checked": 1790083155,
+"lo": -15.67,
+"checked": 1790090348,
 "done": false
 },
 "coin|binance|ONEUSDT|1789607982": {
@@ -2788,7 +2788,7 @@
 "ts": 1789960759.0,
 "price": 0.125,
 "note": "원인 미확인",
-"repeats": 4,
+"repeats": 5,
 "res": {
 "h24": {
 "r": 2.32,
@@ -3041,6 +3041,54 @@
 "hi": 10.14,
 "lo": 6.87,
 "checked": 1790083155,
+"done": false
+},
+"coin|binance|PEPEUSDT|1790003938": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "PEPEUSDT",
+"name": "PEPE",
+"ts": 1790003938.0,
+"price": 4.75e-06,
+"note": "뉴스",
+"repeats": 2,
+"res": {
+"h24": {
+"r": 3.16,
+"hi": 12.84,
+"lo": -1.05
+}
+},
+"cur": 2.53,
+"cur_ts": 1790092800,
+"hi": 12.84,
+"lo": -1.05,
+"checked": 1790090348,
+"done": false
+},
+"coin|binance|WIFUSDT|1790003938": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "WIFUSDT",
+"name": "WIF",
+"ts": 1790003938.0,
+"price": 0.2426,
+"note": "뉴스",
+"repeats": 2,
+"res": {
+"h24": {
+"r": 7.13,
+"hi": 15.46,
+"lo": -5.32
+}
+},
+"cur": 6.47,
+"cur_ts": 1790092800,
+"hi": 15.46,
+"lo": -5.32,
+"checked": 1790090348,
 "done": false
 }
 }
