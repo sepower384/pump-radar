@@ -123,11 +123,11 @@
 "lo": -15.83
 }
 },
-"cur": -0.03,
-"cur_ts": 1790078400,
+"cur": -6.46,
+"cur_ts": 1790092800,
 "hi": 9.8,
 "lo": -15.83,
-"checked": 1790090348,
+"checked": 1790097550,
 "done": false
 },
 "coin|bitget|FLOCKUSDT|1789296347": {
@@ -830,13 +830,18 @@
 "r": -6.5,
 "hi": 0.58,
 "lo": -24.33
+},
+"h168": {
+"r": 3.92,
+"hi": 6.0,
+"lo": -24.33
 }
 },
-"cur": -2.75,
-"cur_ts": 1789952400,
-"hi": 0.58,
+"cur": 3.92,
+"cur_ts": 1790096400,
+"hi": 6.0,
 "lo": -24.33,
-"checked": 1789953558,
+"checked": 1790097550,
 "done": false
 },
 "stock|US|QRVO|1789492778": {
@@ -1175,11 +1180,11 @@
 "lo": -15.26
 }
 },
-"cur": -13.55,
-"cur_ts": 1790089200,
+"cur": -13.24,
+"cur_ts": 1790096400,
 "hi": 5.47,
 "lo": -15.67,
-"checked": 1790090348,
+"checked": 1790097550,
 "done": false
 },
 "coin|binance|ONEUSDT|1789607982": {
@@ -1423,7 +1428,7 @@
 "ts": 1789658339.0,
 "price": 7.189,
 "note": "우상향 점수 78.6",
-"repeats": 11,
+"repeats": 12,
 "res": {
 "h24": {
 "r": 21.51,
@@ -1597,7 +1602,7 @@
 "ts": 1789687173.0,
 "price": 0.66221,
 "note": "뉴스",
-"repeats": 2,
+"repeats": 3,
 "res": {
 "h24": {
 "r": 29.3,
@@ -1771,7 +1776,7 @@
 "ts": 1789715934.0,
 "price": 0.03535,
 "note": "거래량 폭증",
-"repeats": 5,
+"repeats": 6,
 "res": {
 "h24": {
 "r": -9.5,
@@ -3089,6 +3094,102 @@
 "hi": 15.46,
 "lo": -5.32,
 "checked": 1790090348,
+"done": false
+},
+"stock|US|MX|1790003956": {
+"asset": "stock",
+"kind": "stock",
+"market": "US",
+"symbol": "MX",
+"name": "Magnachip Semiconductor Corp",
+"ts": 1790003956.0,
+"price": 3.258,
+"note": "AI 반도체 대장주",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -1.78,
+"hi": 7.12,
+"lo": -5.16
+}
+},
+"cur": -3.31,
+"cur_ts": 1790107200,
+"hi": 7.12,
+"lo": -6.11,
+"checked": 1790097550,
+"done": false
+},
+"stock|US|YSS|1790003956": {
+"asset": "stock",
+"kind": "stock",
+"market": "US",
+"symbol": "YSS",
+"name": "York Space Systems Inc.",
+"ts": 1790003956.0,
+"price": 9.55,
+"note": "드론·방산 대장주",
+"repeats": 2,
+"res": {
+"h24": {
+"r": 2.2,
+"hi": 4.5,
+"lo": -9.01
+}
+},
+"cur": 2.62,
+"cur_ts": 1790107200,
+"hi": 5.01,
+"lo": -9.01,
+"checked": 1790097550,
+"done": false
+},
+"coin|binance|FORMUSDT|1790011133": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "FORMUSDT",
+"name": "FORM",
+"ts": 1790011133.0,
+"price": 0.3757,
+"note": "원인 미확인",
+"repeats": 3,
+"res": {
+"h24": {
+"r": -17.25,
+"hi": -0.93,
+"lo": -20.79
+}
+},
+"cur": -18.29,
+"cur_ts": 1790100000,
+"hi": -0.93,
+"lo": -20.79,
+"checked": 1790097550,
+"done": false
+},
+"stock|US|EAF|1790011146": {
+"asset": "stock",
+"kind": "stock",
+"market": "US",
+"symbol": "EAF",
+"name": "GrafTech International Ltd.",
+"ts": 1790011146.0,
+"price": 9.645,
+"note": "전력 인프라 대장주",
+"repeats": 2,
+"res": {
+"h24": {
+"r": -2.95,
+"hi": 0.98,
+"lo": -16.43
+}
+},
+"cur": 16.28,
+"cur_ts": 1790107200,
+"hi": 16.85,
+"lo": -16.43,
+"checked": 1790097550,
 "done": false
 }
 }
