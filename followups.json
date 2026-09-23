@@ -127,7 +127,7 @@
 "cur_ts": 1790150400,
 "hi": 9.8,
 "lo": -15.83,
-"checked": 1790155199,
+"checked": 1790162356,
 "done": false
 },
 "coin|bitget|FLOCKUSDT|1789296347": {
@@ -1210,11 +1210,11 @@
 "lo": -15.26
 }
 },
-"cur": -13.44,
-"cur_ts": 1790154000,
+"cur": -13.28,
+"cur_ts": 1790161200,
 "hi": 5.47,
 "lo": -15.67,
-"checked": 1790155199,
+"checked": 1790162356,
 "done": false
 },
 "coin|binance|ONEUSDT|1789607982": {
@@ -3481,6 +3481,30 @@
 "hi": 8.46,
 "lo": -7.69,
 "checked": 1790147958,
+"done": false
+},
+"coin|binance|BTTCUSDT|1790075934": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "BTTCUSDT",
+"name": "BTTC",
+"ts": 1790075934.0,
+"price": 4.3e-07,
+"note": "거래량 폭증",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -11.63,
+"hi": -2.33,
+"lo": -13.95
+}
+},
+"cur": -9.3,
+"cur_ts": 1790164800,
+"hi": -2.33,
+"lo": -13.95,
+"checked": 1790162356,
 "done": false
 }
 }
