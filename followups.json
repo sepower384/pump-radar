@@ -127,7 +127,7 @@
 "cur_ts": 1790179200,
 "hi": 9.8,
 "lo": -15.83,
-"checked": 1790183934,
+"checked": 1790191143,
 "done": false
 },
 "coin|bitget|FLOCKUSDT|1789296347": {
@@ -1170,13 +1170,18 @@
 "r": 3.09,
 "hi": 3.3,
 "lo": -1.44
+},
+"h168": {
+"r": 5.46,
+"hi": 5.98,
+"lo": -1.44
 }
 },
-"cur": 3.09,
-"cur_ts": 1789761600,
-"hi": 3.3,
+"cur": 4.56,
+"cur_ts": 1790193600,
+"hi": 6.19,
 "lo": -1.44,
-"checked": 1789953558,
+"checked": 1790191143,
 "done": false
 },
 "stock|US|GEV|1789586335": {
@@ -1199,13 +1204,18 @@
 "r": 2.48,
 "hi": 5.86,
 "lo": -2.89
+},
+"h168": {
+"r": 3.13,
+"hi": 5.86,
+"lo": -2.89
 }
 },
-"cur": 2.48,
-"cur_ts": 1789761600,
+"cur": 3.37,
+"cur_ts": 1790193600,
 "hi": 5.86,
 "lo": -2.89,
-"checked": 1789953558,
+"checked": 1790191143,
 "done": false
 },
 "coin|bitget|RGNRCUSDT|1789593550": {
@@ -1225,11 +1235,11 @@
 "lo": -15.26
 }
 },
-"cur": -14.64,
-"cur_ts": 1790182800,
+"cur": -15.42,
+"cur_ts": 1790190000,
 "hi": 5.47,
 "lo": -15.67,
-"checked": 1790183934,
+"checked": 1790191143,
 "done": false
 },
 "coin|binance|ONEUSDT|1789607982": {
@@ -2697,13 +2707,18 @@
 "r": -10.36,
 "hi": -5.58,
 "lo": -13.35
+},
+"h72": {
+"r": -13.55,
+"hi": -5.58,
+"lo": -15.34
 }
 },
-"cur": -10.16,
-"cur_ts": 1790020800,
+"cur": -13.75,
+"cur_ts": 1790193600,
 "hi": -5.58,
-"lo": -13.35,
-"checked": 1790018417,
+"lo": -15.34,
+"checked": 1790191143,
 "done": false
 },
 "coin|binance|FFUSDT|1789939129": {
@@ -3581,11 +3596,59 @@
 "note": "비만치료제 대장주",
 "repeats": 2,
 "res": {},
-"cur": 5.72,
+"cur": 12.83,
 "cur_ts": 1790193600,
 "hi": 14.41,
 "lo": 0.52,
-"checked": 1790183934,
+"checked": 1790191143,
+"done": false
+},
+"coin|binance|CHRUSDT|1790097536": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "CHRUSDT",
+"name": "CHR",
+"ts": 1790097536.0,
+"price": 0.02529,
+"note": "원인 미확인",
+"repeats": 2,
+"res": {
+"h24": {
+"r": -20.48,
+"hi": -1.23,
+"lo": -24.56
+}
+},
+"cur": -21.19,
+"cur_ts": 1790193600,
+"hi": -1.23,
+"lo": -24.56,
+"checked": 1790191143,
+"done": false
+},
+"coin|binance|ZROUSDT|1790097536": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "ZROUSDT",
+"name": "ZRO",
+"ts": 1790097536.0,
+"price": 1.439,
+"note": "뉴스",
+"repeats": 2,
+"res": {
+"h24": {
+"r": 1.6,
+"hi": 8.83,
+"lo": -7.99
+}
+},
+"cur": 6.53,
+"cur_ts": 1790193600,
+"hi": 8.83,
+"lo": -7.99,
+"checked": 1790191143,
 "done": false
 }
 }

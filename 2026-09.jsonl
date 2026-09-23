@@ -412,3 +412,4 @@
 {"t": "trend", "ts": 1790176744, "symbol": "MINAUSDT", "base": "MINA", "price": 0.1462, "score": 91.4, "rs7": 55.0, "rs30": 130.4, "new": true}
 {"t": "trend", "ts": 1790176744, "symbol": "NILUSDT", "base": "NIL", "price": 0.09678, "score": 90.1, "rs7": 118.6, "rs30": 103.9, "new": true}
 {"t": "trend", "ts": 1790183933, "symbol": "SEIUSDT", "base": "SEI", "price": 0.05919, "score": 86.1, "rs7": 27.0, "rs30": 18.4, "new": true}
+{"t": "trend", "ts": 1790191141, "symbol": "SUPERUSDT", "base": "SUPER", "price": 0.1776, "score": 87.0, "rs7": 41.4, "rs30": 38.6, "new": true}
