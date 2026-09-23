@@ -178,5 +178,23 @@
 "result_pct": 2.06,
 "resolved_ts": 1790126339,
 "reported": 1
+},
+{
+"id": 12,
+"ts": 1790133543,
+"market": "KR",
+"symbol": "356680",
+"name": "엑스게이트",
+"theme": "양자암호/양자컴퓨팅",
+"leader": "우리넷",
+"ref_price": 18340.0,
+"target_pct": 2.0,
+"deadline": 1790231400,
+"status": "pending",
+"best_price": 18340.0,
+"last_price": null,
+"result_pct": null,
+"resolved_ts": null,
+"reported": 0
 }
 ]
