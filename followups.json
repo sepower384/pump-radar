@@ -127,7 +127,7 @@
 "cur_ts": 1790164800,
 "hi": 9.8,
 "lo": -15.83,
-"checked": 1790169543,
+"checked": 1790176746,
 "done": false
 },
 "coin|bitget|FLOCKUSDT|1789296347": {
@@ -1068,13 +1068,18 @@
 "r": 22.22,
 "hi": 33.41,
 "lo": -10.56
+},
+"h168": {
+"r": 35.03,
+"hi": 48.2,
+"lo": -10.56
 }
 },
-"cur": 27.09,
-"cur_ts": 1789956000,
-"hi": 33.41,
+"cur": 30.57,
+"cur_ts": 1790179200,
+"hi": 48.2,
 "lo": -10.56,
-"checked": 1789953558,
+"checked": 1790176746,
 "done": false
 },
 "coin|bitget|DGAIUSDT|1789571973": {
@@ -1210,11 +1215,11 @@
 "lo": -15.26
 }
 },
-"cur": -14.11,
-"cur_ts": 1790168400,
+"cur": -14.66,
+"cur_ts": 1790175600,
 "hi": 5.47,
 "lo": -15.67,
-"checked": 1790169543,
+"checked": 1790176746,
 "done": false
 },
 "coin|binance|ONEUSDT|1789607982": {
@@ -2724,7 +2729,7 @@
 "ts": 1789939129.0,
 "price": 0.06189,
 "note": "원인 미확인",
-"repeats": 7,
+"repeats": 9,
 "res": {
 "h24": {
 "r": 9.97,
@@ -2868,7 +2873,7 @@
 "ts": 1789960759.0,
 "price": 0.125,
 "note": "원인 미확인",
-"repeats": 6,
+"repeats": 7,
 "res": {
 "h24": {
 "r": 2.32,
@@ -3505,6 +3510,54 @@
 "hi": -2.33,
 "lo": -13.95,
 "checked": 1790162356,
+"done": false
+},
+"coin|binance|TAOUSDT|1790083151": {
+"asset": "coin",
+"kind": "trend",
+"market": "binance",
+"symbol": "TAOUSDT",
+"name": "TAO",
+"ts": 1790083151.0,
+"price": 321.9,
+"note": "우상향 점수 86.9",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -4.26,
+"hi": 1.27,
+"lo": -6.71
+}
+},
+"cur": -6.37,
+"cur_ts": 1790179200,
+"hi": 1.27,
+"lo": -8.08,
+"checked": 1790176746,
+"done": false
+},
+"coin|binance|BROCCOLI714USDT|1790090337": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "BROCCOLI714USDT",
+"name": "BROCCOLI714",
+"ts": 1790090337.0,
+"price": 0.02634,
+"note": "원인 미확인",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -12.49,
+"hi": 5.05,
+"lo": -17.27
+}
+},
+"cur": -12.6,
+"cur_ts": 1790179200,
+"hi": 5.05,
+"lo": -17.27,
+"checked": 1790176746,
 "done": false
 }
 }
