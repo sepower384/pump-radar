@@ -127,7 +127,7 @@
 "cur_ts": 1790136000,
 "hi": 9.8,
 "lo": -15.83,
-"checked": 1790140763,
+"checked": 1790147958,
 "done": false
 },
 "coin|bitget|FLOCKUSDT|1789296347": {
@@ -1210,11 +1210,11 @@
 "lo": -15.26
 }
 },
-"cur": -13.46,
-"cur_ts": 1790139600,
+"cur": -13.27,
+"cur_ts": 1790146800,
 "hi": 5.47,
 "lo": -15.67,
-"checked": 1790140763,
+"checked": 1790147958,
 "done": false
 },
 "coin|binance|ONEUSDT|1789607982": {
@@ -3452,6 +3452,30 @@
 "hi": 4.97,
 "lo": -19.75,
 "checked": 1790140763,
+"done": false
+},
+"coin|binance|COOKIEUSDT|1790061555": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "COOKIEUSDT",
+"name": "COOKIE",
+"ts": 1790061555.0,
+"price": 0.013,
+"note": "원인 미확인",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -2.69,
+"hi": 8.46,
+"lo": -7.69
+}
+},
+"cur": -2.0,
+"cur_ts": 1790150400,
+"hi": 8.46,
+"lo": -7.69,
+"checked": 1790147958,
 "done": false
 }
 }
