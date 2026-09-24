@@ -127,7 +127,7 @@
 "cur_ts": 1790222400,
 "hi": 9.8,
 "lo": -15.83,
-"checked": 1790227145,
+"checked": 1790234340,
 "done": false
 },
 "coin|bitget|FLOCKUSDT|1789296347": {
@@ -1240,11 +1240,11 @@
 "lo": -16.73
 }
 },
-"cur": -16.73,
-"cur_ts": 1790226000,
+"cur": -16.71,
+"cur_ts": 1790233200,
 "hi": 5.47,
-"lo": -16.73,
-"checked": 1790227145,
+"lo": -16.8,
+"checked": 1790234340,
 "done": false
 },
 "coin|binance|ONEUSDT|1789607982": {
@@ -2784,7 +2784,7 @@
 "ts": 1789939129.0,
 "price": 0.06189,
 "note": "원인 미확인",
-"repeats": 11,
+"repeats": 12,
 "res": {
 "h24": {
 "r": 9.97,
@@ -2993,13 +2993,18 @@
 "r": 1.64,
 "hi": 4.2,
 "lo": -14.94
+},
+"h72": {
+"r": 1.49,
+"hi": 10.6,
+"lo": -14.94
 }
 },
 "cur": 1.49,
-"cur_ts": 1790058600,
+"cur_ts": 1790145000,
 "hi": 10.6,
 "lo": -14.94,
-"checked": 1790061564,
+"checked": 1790234340,
 "done": false
 },
 "stock|KR|240810|1789967948": {
@@ -3017,13 +3022,18 @@
 "r": 1.63,
 "hi": 1.71,
 "lo": -5.51
+},
+"h72": {
+"r": 2.8,
+"hi": 11.88,
+"lo": -5.51
 }
 },
-"cur": -0.39,
-"cur_ts": 1790058600,
-"hi": 4.74,
+"cur": 2.8,
+"cur_ts": 1790145000,
+"hi": 11.88,
 "lo": -5.51,
-"checked": 1790061564,
+"checked": 1790234340,
 "done": false
 },
 "coin|binance|PHAUSDT|1789982364": {
@@ -3912,6 +3922,102 @@
 "hi": 8.78,
 "lo": -4.58,
 "checked": 1790227145,
+"done": false
+},
+"coin|binance|PENGUUSDT|1790140748": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "PENGUUSDT",
+"name": "PENGU",
+"ts": 1790140748.0,
+"price": 0.010745,
+"note": "뉴스",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -8.12,
+"hi": 3.89,
+"lo": -12.55
+}
+},
+"cur": -7.5,
+"cur_ts": 1790236800,
+"hi": 3.89,
+"lo": -12.55,
+"checked": 1790234340,
+"done": false
+},
+"coin|binance|SUPERUSDT|1790140748": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "SUPERUSDT",
+"name": "SUPER",
+"ts": 1790140748.0,
+"price": 0.1883,
+"note": "원인 미확인",
+"repeats": 3,
+"res": {
+"h24": {
+"r": -7.54,
+"hi": 9.24,
+"lo": -9.77
+}
+},
+"cur": -7.91,
+"cur_ts": 1790236800,
+"hi": 9.24,
+"lo": -9.77,
+"checked": 1790234340,
+"done": false
+},
+"stock|KR|446540|1790140762": {
+"asset": "stock",
+"kind": "stock",
+"market": "KR",
+"symbol": "446540",
+"name": "메가터치",
+"ts": 1790140762.0,
+"price": 11090.0,
+"note": "반도체 재료/부품 대장주",
+"repeats": 2,
+"res": {
+"h24": {
+"r": -1.8,
+"hi": 5.14,
+"lo": -14.52
+}
+},
+"cur": -1.8,
+"cur_ts": 1790145000,
+"hi": 5.14,
+"lo": -14.52,
+"checked": 1790234340,
+"done": false
+},
+"stock|KR|005290|1790140762": {
+"asset": "stock",
+"kind": "stock",
+"market": "KR",
+"symbol": "005290",
+"name": "동진쎄미켐",
+"ts": 1790140762.0,
+"price": 46200.0,
+"note": "반도체 재료/부품 관찰 콜",
+"repeats": 1,
+"res": {
+"h24": {
+"r": 1.41,
+"hi": 1.95,
+"lo": -6.28
+}
+},
+"cur": 1.41,
+"cur_ts": 1790145000,
+"hi": 1.95,
+"lo": -6.28,
+"checked": 1790234340,
 "done": false
 }
 }
