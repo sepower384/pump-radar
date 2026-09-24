@@ -123,11 +123,11 @@
 "lo": -15.83
 }
 },
-"cur": -9.42,
-"cur_ts": 1790222400,
+"cur": -9.5,
+"cur_ts": 1790236800,
 "hi": 9.8,
 "lo": -15.83,
-"checked": 1790234340,
+"checked": 1790241532,
 "done": false
 },
 "coin|bitget|FLOCKUSDT|1789296347": {
@@ -1240,11 +1240,11 @@
 "lo": -16.73
 }
 },
-"cur": -16.71,
-"cur_ts": 1790233200,
+"cur": -17.05,
+"cur_ts": 1790240400,
 "hi": 5.47,
-"lo": -16.8,
-"checked": 1790234340,
+"lo": -17.26,
+"checked": 1790241532,
 "done": false
 },
 "coin|binance|ONEUSDT|1789607982": {
@@ -3645,7 +3645,7 @@
 "ts": 1790090337.0,
 "price": 0.02634,
 "note": "원인 미확인",
-"repeats": 1,
+"repeats": 2,
 "res": {
 "h24": {
 "r": -12.49,
@@ -4018,6 +4018,30 @@
 "hi": 1.95,
 "lo": -6.28,
 "checked": 1790234340,
+"done": false
+},
+"coin|binance|SENTUSDT|1790147957": {
+"asset": "coin",
+"kind": "trend",
+"market": "binance",
+"symbol": "SENTUSDT",
+"name": "SENT",
+"ts": 1790147957.0,
+"price": 0.02278,
+"note": "우상향 점수 89.8",
+"repeats": 3,
+"res": {
+"h24": {
+"r": -4.92,
+"hi": 5.4,
+"lo": -9.7
+}
+},
+"cur": -7.16,
+"cur_ts": 1790244000,
+"hi": 5.4,
+"lo": -9.7,
+"checked": 1790241532,
 "done": false
 }
 }

@@ -427,3 +427,4 @@
 {"t": "trend", "ts": 1790227135, "symbol": "MINAUSDT", "base": "MINA", "price": 0.1461, "score": 91.7, "rs7": 46.2, "rs30": 131.6, "new": true}
 {"t": "trend", "ts": 1790227135, "symbol": "GRTUSDT", "base": "GRT", "price": 0.02568, "score": 88.9, "rs7": 29.4, "rs30": 30.6, "new": true}
 {"t": "pump", "ts": 1790234334, "market": "binance", "symbol": "NILUSDT", "base": "NIL", "price": 0.13032, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 4.27, "chg2h": -6.21, "chg24h": 25.42, "qvol": 35700098.163909, "vol_x": 0.5, "off_high": -12.8, "direction": "up", "tag": "검색 급증", "tags": ["검색 급증"], "conf": "낮음", "headline": "Nillion 급등 — 관심 급증", "news": ""}
+{"t": "trend", "ts": 1790241530, "symbol": "BROCCOLI714USDT", "base": "BROCCOLI714", "price": 0.02457, "score": 85.5, "rs7": 26.1, "rs30": 35.9, "new": true}
