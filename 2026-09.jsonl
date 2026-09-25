@@ -491,3 +491,5 @@
 {"t": "pump", "ts": 1790363934, "market": "bitget", "symbol": "GRASSUSDT", "base": "GRASS", "price": 0.5589, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 1.85, "chg2h": 5.38, "chg24h": 26.85, "qvol": 933343.901081, "vol_x": 0.2, "off_high": -1.37, "direction": "up", "tag": "검색 급증", "tags": ["검색 급증"], "conf": "낮음", "headline": "Grass 급등 — 관심 급증", "news": ""}
 {"t": "trend", "ts": 1790363940, "symbol": "PHAUSDT", "base": "PHA", "price": 0.0841, "score": 95.4, "rs7": 149.4, "rs30": 204.3, "new": true}
 {"t": "trend", "ts": 1790363940, "symbol": "SEIUSDT", "base": "SEI", "price": 0.07163, "score": 93.2, "rs7": 44.2, "rs30": 43.5, "new": true}
+{"t": "trend", "ts": 1790371136, "symbol": "METUSDT", "base": "MET", "price": 0.37, "score": 91.4, "rs7": 37.3, "rs30": 67.7, "new": true}
+{"t": "trend", "ts": 1790371136, "symbol": "NILUSDT", "base": "NIL", "price": 0.1163, "score": 89.1, "rs7": 143.4, "rs30": 147.7, "new": true}
