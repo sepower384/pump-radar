@@ -246,8 +246,8 @@
 "deadline": 1790625600,
 "status": "pending",
 "best_price": 631.27,
-"last_price": 630.17,
-"result_pct": -0.17,
+"last_price": 630.77,
+"result_pct": -0.08,
 "resolved_ts": null,
 "reported": 0
 },
@@ -263,9 +263,9 @@
 "target_pct": 2.0,
 "deadline": 1790625600,
 "status": "pending",
-"best_price": 951.53,
-"last_price": null,
-"result_pct": null,
+"best_price": 951.725,
+"last_price": 951.725,
+"result_pct": 0.02,
 "resolved_ts": null,
 "reported": 0
 },
@@ -281,9 +281,9 @@
 "target_pct": 2.0,
 "deadline": 1790625600,
 "status": "pending",
-"best_price": 250.4,
-"last_price": null,
-"result_pct": null,
+"best_price": 252.235,
+"last_price": 252.235,
+"result_pct": 0.73,
 "resolved_ts": null,
 "reported": 0
 }

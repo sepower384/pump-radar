@@ -127,7 +127,7 @@
 "cur_ts": 1790352000,
 "hi": 9.8,
 "lo": -15.83,
-"checked": 1790356801,
+"checked": 1790363942,
 "done": false
 },
 "coin|bitget|FLOCKUSDT|1789296347": {
@@ -1244,7 +1244,7 @@
 "cur_ts": 1790352000,
 "hi": 6.83,
 "lo": -26.91,
-"checked": 1790356801,
+"checked": 1790363942,
 "done": false
 },
 "coin|binance|ONEUSDT|1789607982": {
@@ -1936,7 +1936,7 @@
 "ts": 1789715934.0,
 "price": 0.03535,
 "note": "거래량 폭증",
-"repeats": 7,
+"repeats": 8,
 "res": {
 "h24": {
 "r": -9.5,
@@ -2185,13 +2185,18 @@
 "r": 4.87,
 "hi": 11.37,
 "lo": -2.98
+},
+"h168": {
+"r": 15.97,
+"hi": 19.13,
+"lo": -2.98
 }
 },
-"cur": 4.87,
-"cur_ts": 1790020800,
-"hi": 11.37,
+"cur": 15.34,
+"cur_ts": 1790366400,
+"hi": 19.13,
 "lo": -2.98,
-"checked": 1790018417,
+"checked": 1790363942,
 "done": false
 },
 "coin|binance|ARUSDT|1789759132": {
@@ -2214,13 +2219,18 @@
 "r": 28.15,
 "hi": 52.86,
 "lo": -0.23
+},
+"h168": {
+"r": 32.08,
+"hi": 52.86,
+"lo": -0.23
 }
 },
-"cur": 29.94,
-"cur_ts": 1790020800,
+"cur": 32.28,
+"cur_ts": 1790366400,
 "hi": 52.86,
 "lo": -0.23,
-"checked": 1790018417,
+"checked": 1790363942,
 "done": false
 },
 "coin|binance|CHIPUSDT|1789766341": {
@@ -3160,7 +3170,7 @@
 "ts": 1789982364.0,
 "price": 0.0458,
 "note": "원인 미확인",
-"repeats": 8,
+"repeats": 9,
 "res": {
 "h24": {
 "r": 0.44,
@@ -3218,7 +3228,7 @@
 "ts": 1789989536.0,
 "price": 0.06356,
 "note": "뉴스",
-"repeats": 4,
+"repeats": 5,
 "res": {
 "h24": {
 "r": -4.23,
@@ -3740,7 +3750,7 @@
 "ts": 1790054329.0,
 "price": 0.4462,
 "note": "원인 미확인",
-"repeats": 1,
+"repeats": 2,
 "res": {
 "h24": {
 "r": 0.34,
@@ -4470,6 +4480,54 @@
 "hi": 22.05,
 "lo": -2.81,
 "checked": 1790356801,
+"done": false
+},
+"coin|binance|XAIUSDT|1790277542": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "XAIUSDT",
+"name": "XAI",
+"ts": 1790277542.0,
+"price": 0.01136,
+"note": "원인 미확인",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -17.43,
+"hi": 2.11,
+"lo": -22.18
+}
+},
+"cur": -17.52,
+"cur_ts": 1790366400,
+"hi": 2.11,
+"lo": -22.18,
+"checked": 1790363942,
+"done": false
+},
+"coin|binance|PLUMEUSDT|1790277542": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "PLUMEUSDT",
+"name": "PLUME",
+"ts": 1790277542.0,
+"price": 0.0188,
+"note": "원인 미확인",
+"repeats": 2,
+"res": {
+"h24": {
+"r": 1.12,
+"hi": 6.49,
+"lo": -7.29
+}
+},
+"cur": -0.11,
+"cur_ts": 1790366400,
+"hi": 6.49,
+"lo": -7.29,
+"checked": 1790363942,
 "done": false
 }
 }
