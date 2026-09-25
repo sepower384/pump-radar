@@ -232,5 +232,23 @@
 "result_pct": 8.9,
 "resolved_ts": 1790306331,
 "reported": 1
+},
+{
+"id": 15,
+"ts": 1790349586,
+"market": "US",
+"symbol": "AMD",
+"name": "Advanced Micro Devices, Inc.",
+"theme": "AI 반도체",
+"leader": "MaxLinear, Inc",
+"ref_price": 631.27,
+"target_pct": 2.0,
+"deadline": 1790625600,
+"status": "pending",
+"best_price": 631.27,
+"last_price": null,
+"result_pct": null,
+"resolved_ts": null,
+"reported": 0
 }
 ]
