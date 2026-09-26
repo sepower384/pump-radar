@@ -511,3 +511,5 @@
 {"t": "trend", "ts": 1790407145, "symbol": "FETUSDT", "base": "FET", "price": 0.2427, "score": 89.0, "rs7": 32.7, "rs30": 40.0, "new": true}
 {"t": "trend", "ts": 1790407145, "symbol": "ZROUSDT", "base": "ZRO", "price": 1.641, "score": 88.6, "rs7": 41.4, "rs30": 28.1, "new": true}
 {"t": "trend", "ts": 1790407145, "symbol": "PHAUSDT", "base": "PHA", "price": 0.0782, "score": 88.1, "rs7": 134.4, "rs30": 186.7, "new": true}
+{"t": "pump", "ts": 1790414325, "market": "bitget", "symbol": "UPCUSDT", "base": "UPC", "price": 0.19, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 7.22, "chg2h": 8.7, "chg24h": 24.35, "qvol": 4639509.146582, "vol_x": 0.0, "off_high": 0.0, "direction": "up", "tag": "원인 미확인", "tags": ["원인 미확인"], "conf": "낮음", "headline": "UPC 급등 — 이유 불명 · 큰손 주도 의심", "news": ""}
+{"t": "trend", "ts": 1790414331, "symbol": "LTCUSDT", "base": "LTC", "price": 73.67, "score": 88.7, "rs7": 23.0, "rs30": 40.4, "new": true}
