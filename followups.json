@@ -127,7 +127,7 @@
 "cur_ts": 1790380800,
 "hi": 9.8,
 "lo": -15.83,
-"checked": 1790435929,
+"checked": 1790443157,
 "done": false
 },
 "coin|bitget|FLOCKUSDT|1789296347": {
@@ -1244,7 +1244,7 @@
 "cur_ts": 1790380800,
 "hi": 6.83,
 "lo": -26.91,
-"checked": 1790435929,
+"checked": 1790443157,
 "done": false
 },
 "coin|binance|ONEUSDT|1789607982": {
@@ -1596,7 +1596,7 @@
 "ts": 1789665586.0,
 "price": 3.012,
 "note": "에어드랍",
-"repeats": 20,
+"repeats": 21,
 "res": {
 "h24": {
 "r": 23.97,
@@ -1664,7 +1664,7 @@
 "ts": 1789672741.0,
 "price": 0.1196,
 "note": "원인 미확인",
-"repeats": 2,
+"repeats": 3,
 "res": {
 "h24": {
 "r": -6.94,
@@ -3259,7 +3259,7 @@
 "ts": 1789982364.0,
 "price": 1.0006,
 "note": "뉴스",
-"repeats": 4,
+"repeats": 5,
 "res": {
 "h24": {
 "r": 2.41,
@@ -3955,7 +3955,7 @@
 "ts": 1790090337.0,
 "price": 0.02634,
 "note": "원인 미확인",
-"repeats": 8,
+"repeats": 9,
 "res": {
 "h24": {
 "r": -12.49,
@@ -4607,7 +4607,7 @@
 "ts": 1790270371.0,
 "price": 85.77,
 "note": "뉴스",
-"repeats": 5,
+"repeats": 6,
 "res": {
 "h24": {
 "r": 14.32,
@@ -4812,6 +4812,174 @@
 "hi": -4.18,
 "lo": -9.75,
 "checked": 1790428740,
+"done": false
+},
+"coin|binance|MOVRUSDT|1790349544": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "MOVRUSDT",
+"name": "MOVR",
+"ts": 1790349544.0,
+"price": 1.111,
+"note": "거래량 폭증",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -8.28,
+"hi": -6.75,
+"lo": -13.32
+}
+},
+"cur": -8.73,
+"cur_ts": 1790445600,
+"hi": -6.75,
+"lo": -13.32,
+"checked": 1790443157,
+"done": false
+},
+"coin|binance|JOEUSDT|1790349544": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "JOEUSDT",
+"name": "JOE",
+"ts": 1790349544.0,
+"price": 0.0436,
+"note": "원인 미확인",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -6.19,
+"hi": -0.23,
+"lo": -10.32
+}
+},
+"cur": -6.42,
+"cur_ts": 1790445600,
+"hi": -0.23,
+"lo": -10.32,
+"checked": 1790443157,
+"done": false
+},
+"stock|US|MXL|1790349586": {
+"asset": "stock",
+"kind": "stock",
+"market": "US",
+"symbol": "MXL",
+"name": "MaxLinear, Inc",
+"ts": 1790349586.0,
+"price": 92.93,
+"note": "AI 반도체 대장주",
+"repeats": 1,
+"res": {
+"h24": {
+"r": 0.98,
+"hi": 3.54,
+"lo": -7.88
+}
+},
+"cur": 0.98,
+"cur_ts": 1790366400,
+"hi": 3.54,
+"lo": -7.88,
+"checked": 1790443157,
+"done": false
+},
+"stock|US|AMD|1790349586": {
+"asset": "stock",
+"kind": "stock",
+"market": "US",
+"symbol": "AMD",
+"name": "Advanced Micro Devices, Inc.",
+"ts": 1790349586.0,
+"price": 631.27,
+"note": "AI 반도체 관찰 콜",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -0.1,
+"hi": 1.22,
+"lo": -0.91
+}
+},
+"cur": -0.1,
+"cur_ts": 1790366400,
+"hi": 1.22,
+"lo": -0.91,
+"checked": 1790443157,
+"done": false
+},
+"coin|binance|SCUSDT|1790356747": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "SCUSDT",
+"name": "SC",
+"ts": 1790356747.0,
+"price": 0.001255,
+"note": "거래량 폭증",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -13.47,
+"hi": -0.48,
+"lo": -16.73
+}
+},
+"cur": -13.47,
+"cur_ts": 1790445600,
+"hi": -0.48,
+"lo": -16.73,
+"checked": 1790443157,
+"done": false
+},
+"coin|binance|RAREUSDT|1790356747": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "RAREUSDT",
+"name": "RARE",
+"ts": 1790356747.0,
+"price": 0.016,
+"note": "원인 미확인",
+"repeats": 2,
+"res": {
+"h24": {
+"r": 36.62,
+"hi": 59.37,
+"lo": -7.75
+}
+},
+"cur": 38.25,
+"cur_ts": 1790445600,
+"hi": 59.37,
+"lo": -7.75,
+"checked": 1790443157,
+"done": false
+},
+"coin|binance|FETUSDT|1790356753": {
+"asset": "coin",
+"kind": "trend",
+"market": "binance",
+"symbol": "FETUSDT",
+"name": "FET",
+"ts": 1790356753.0,
+"price": 0.2406,
+"note": "우상향 점수 87.3",
+"repeats": 2,
+"res": {
+"h24": {
+"r": 7.48,
+"hi": 8.06,
+"lo": -1.75
+}
+},
+"cur": 5.86,
+"cur_ts": 1790445600,
+"hi": 8.06,
+"lo": -1.75,
+"checked": 1790443157,
 "done": false
 }
 }

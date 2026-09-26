@@ -521,3 +521,8 @@
 {"t": "trend", "ts": 1790428739, "symbol": "VELODROMEUSDT", "base": "VELODROME", "price": 0.03857, "score": 89.2, "rs7": 31.4, "rs30": 61.9, "new": true}
 {"t": "trend", "ts": 1790428739, "symbol": "AEROUSDT", "base": "AERO", "price": 0.9031, "score": 88.6, "rs7": 30.6, "rs30": 64.9, "new": true}
 {"t": "trend", "ts": 1790435929, "symbol": "QNTUSDT", "base": "QNT", "price": 109.82, "score": 94.7, "rs7": 63.1, "rs30": 65.7, "new": true}
+{"t": "pump", "ts": 1790443151, "market": "binance", "symbol": "QNTUSDT", "base": "QNT", "price": 123.36, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 5.2, "chg2h": 12.19, "chg24h": 25.72, "qvol": 13360333.82597, "vol_x": 0.8, "off_high": -1.0, "direction": "up", "tag": "뉴스", "tags": ["뉴스", "뉴스", "파트너십", "검색 급증"], "conf": "높음", "headline": "Quant 급등 — 뉴스 재료", "news": "AI Agents Are Racing to Make Quantum-Safe Bitcoin Cheap—And Winning (Decrypt)"}
+{"t": "pump", "ts": 1790443151, "market": "binance", "symbol": "MARSCOINUSDT", "base": "MARSCOIN", "price": 0.1379, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 8.65, "chg2h": 9.08, "chg24h": 20.12, "qvol": 13105666.35475, "vol_x": 3.6, "off_high": 0.0, "direction": "up", "tag": "거래량 폭증", "tags": ["거래량 폭증"], "conf": "낮음", "headline": "MarsCoin 급등 — 매수세 몰림", "news": ""}
+{"t": "trend", "ts": 1790443157, "symbol": "NEARUSDT", "base": "NEAR", "price": 4.847, "score": 92.0, "rs7": 33.1, "rs30": 139.9, "new": true}
+{"t": "trend", "ts": 1790443157, "symbol": "BROCCOLI714USDT", "base": "BROCCOLI714", "price": 0.03055, "score": 91.7, "rs7": 57.9, "rs30": 61.1, "new": true}
+{"t": "trend", "ts": 1790443157, "symbol": "SUIUSDT", "base": "SUI", "price": 1.1767, "score": 89.8, "rs7": 30.1, "rs30": 44.1, "new": true}
