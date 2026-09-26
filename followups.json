@@ -127,7 +127,7 @@
 "cur_ts": 1790380800,
 "hi": 9.8,
 "lo": -15.83,
-"checked": 1790443157,
+"checked": 1790450327,
 "done": false
 },
 "coin|bitget|FLOCKUSDT|1789296347": {
@@ -1244,7 +1244,7 @@
 "cur_ts": 1790380800,
 "hi": 6.83,
 "lo": -26.91,
-"checked": 1790443157,
+"checked": 1790450327,
 "done": false
 },
 "coin|binance|ONEUSDT|1789607982": {
@@ -2661,13 +2661,18 @@
 "r": -11.32,
 "hi": 8.42,
 "lo": -15.53
+},
+"h168": {
+"r": -8.95,
+"hi": 8.42,
+"lo": -15.53
 }
 },
-"cur": -10.53,
-"cur_ts": 1790107200,
+"cur": -9.47,
+"cur_ts": 1790452800,
 "hi": 8.42,
 "lo": -15.53,
-"checked": 1790104781,
+"checked": 1790450327,
 "done": false
 },
 "coin|binance|CELRUSDT|1789845543": {
@@ -4980,6 +4985,54 @@
 "hi": 8.06,
 "lo": -1.75,
 "checked": 1790443157,
+"done": false
+},
+"stock|US|BE|1790356800": {
+"asset": "stock",
+"kind": "stock",
+"market": "US",
+"symbol": "BE",
+"name": "Bloom Energy Corporation",
+"ts": 1790356800.0,
+"price": 291.54,
+"note": "전력 인프라 대장주",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -0.97,
+"hi": 0.4,
+"lo": -9.44
+}
+},
+"cur": -0.97,
+"cur_ts": 1790366400,
+"hi": 0.4,
+"lo": -9.44,
+"checked": 1790450327,
+"done": false
+},
+"stock|US|VRT|1790356800": {
+"asset": "stock",
+"kind": "stock",
+"market": "US",
+"symbol": "VRT",
+"name": "Vertiv Holdings, LLC",
+"ts": 1790356800.0,
+"price": 250.4,
+"note": "전력 인프라 관찰 콜",
+"repeats": 1,
+"res": {
+"h24": {
+"r": 1.15,
+"hi": 1.64,
+"lo": -0.96
+}
+},
+"cur": 1.15,
+"cur_ts": 1790366400,
+"hi": 1.64,
+"lo": -0.96,
+"checked": 1790450327,
 "done": false
 }
 }
