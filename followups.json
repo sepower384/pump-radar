@@ -127,7 +127,7 @@
 "cur_ts": 1790380800,
 "hi": 9.8,
 "lo": -15.83,
-"checked": 1790421561,
+"checked": 1790428740,
 "done": false
 },
 "coin|bitget|FLOCKUSDT|1789296347": {
@@ -1244,7 +1244,7 @@
 "cur_ts": 1790380800,
 "hi": 6.83,
 "lo": -26.91,
-"checked": 1790421561,
+"checked": 1790428740,
 "done": false
 },
 "coin|binance|ONEUSDT|1789607982": {
@@ -1936,7 +1936,7 @@
 "ts": 1789715934.0,
 "price": 0.03535,
 "note": "거래량 폭증",
-"repeats": 9,
+"repeats": 10,
 "res": {
 "h24": {
 "r": -9.5,
@@ -4512,13 +4512,18 @@
 "r": -8.56,
 "hi": 0.07,
 "lo": -10.61
+},
+"h72": {
+"r": 2.45,
+"hi": 5.71,
+"lo": -10.61
 }
 },
-"cur": -5.89,
-"cur_ts": 1790265600,
-"hi": 0.07,
+"cur": 2.27,
+"cur_ts": 1790431200,
+"hi": 5.71,
 "lo": -10.61,
-"checked": 1790263177,
+"checked": 1790428740,
 "done": false
 },
 "coin|binance|NOMUSDT|1790212733": {
@@ -4783,6 +4788,30 @@
 "hi": 7.28,
 "lo": -4.34,
 "checked": 1790421561,
+"done": false
+},
+"coin|binance|PIXELUSDT|1790342334": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "PIXELUSDT",
+"name": "PIXEL",
+"ts": 1790342334.0,
+"price": 0.00646,
+"note": "원인 미확인",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -6.97,
+"hi": -4.18,
+"lo": -9.75
+}
+},
+"cur": -6.81,
+"cur_ts": 1790431200,
+"hi": -4.18,
+"lo": -9.75,
+"checked": 1790428740,
 "done": false
 }
 }
