@@ -562,3 +562,4 @@
 {"t": "trend", "ts": 1790529537, "symbol": "SUPERUSDT", "base": "SUPER", "price": 0.2124, "score": 96.9, "rs7": 46.4, "rs30": 75.8, "new": true}
 {"t": "trend", "ts": 1790529537, "symbol": "QNTUSDT", "base": "QNT", "price": 187.41, "score": 96.2, "rs7": 179.3, "rs30": 182.6, "new": true}
 {"t": "trend", "ts": 1790529537, "symbol": "RAYUSDT", "base": "RAY", "price": 2.1679, "score": 93.1, "rs7": 25.3, "rs30": 147.1, "new": true}
+{"t": "trend", "ts": 1790536737, "symbol": "ENAUSDT", "base": "ENA", "price": 0.2924, "score": 93.6, "rs7": 26.3, "rs30": 65.2, "new": true}
