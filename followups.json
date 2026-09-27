@@ -127,7 +127,7 @@
 "cur_ts": 1790380800,
 "hi": 9.8,
 "lo": -15.83,
-"checked": 1790471952,
+"checked": 1790479158,
 "done": false
 },
 "coin|bitget|FLOCKUSDT|1789296347": {
@@ -1244,7 +1244,7 @@
 "cur_ts": 1790380800,
 "hi": 6.83,
 "lo": -26.91,
-"checked": 1790471952,
+"checked": 1790479158,
 "done": false
 },
 "coin|binance|ONEUSDT|1789607982": {
@@ -2004,7 +2004,7 @@
 "ts": 1789723138.0,
 "price": 1.8465,
 "note": "뉴스",
-"repeats": 2,
+"repeats": 3,
 "res": {
 "h24": {
 "r": 1.99,
@@ -4357,7 +4357,7 @@
 "ts": 1790140748.0,
 "price": 0.1883,
 "note": "원인 미확인",
-"repeats": 4,
+"repeats": 5,
 "res": {
 "h24": {
 "r": -7.54,
@@ -4637,7 +4637,7 @@
 "ts": 1790270371.0,
 "price": 85.77,
 "note": "뉴스",
-"repeats": 7,
+"repeats": 8,
 "res": {
 "h24": {
 "r": 14.32,
@@ -5058,6 +5058,78 @@
 "hi": 1.64,
 "lo": -0.96,
 "checked": 1790450327,
+"done": false
+},
+"coin|binance|QUICKUSDT|1790385553": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "QUICKUSDT",
+"name": "QUICK",
+"ts": 1790385553.0,
+"price": 0.01225,
+"note": "거래량 폭증",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -8.73,
+"hi": 16.08,
+"lo": -11.76
+}
+},
+"cur": -9.88,
+"cur_ts": 1790481600,
+"hi": 16.08,
+"lo": -11.84,
+"checked": 1790479158,
+"done": false
+},
+"coin|binance|AEROUSDT|1790392753": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "AEROUSDT",
+"name": "AERO",
+"ts": 1790392753.0,
+"price": 0.8863,
+"note": "뉴스",
+"repeats": 2,
+"res": {
+"h24": {
+"r": -2.53,
+"hi": 5.16,
+"lo": -2.93
+}
+},
+"cur": -2.31,
+"cur_ts": 1790481600,
+"hi": 5.16,
+"lo": -2.93,
+"checked": 1790479158,
+"done": false
+},
+"coin|binance|VELODROMEUSDT|1790392753": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "VELODROMEUSDT",
+"name": "VELODROME",
+"ts": 1790392753.0,
+"price": 0.03709,
+"note": "원인 미확인",
+"repeats": 2,
+"res": {
+"h24": {
+"r": -2.53,
+"hi": 7.52,
+"lo": -2.7
+}
+},
+"cur": -2.24,
+"cur_ts": 1790481600,
+"hi": 7.52,
+"lo": -2.7,
+"checked": 1790479158,
 "done": false
 }
 }
