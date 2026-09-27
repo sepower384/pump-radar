@@ -127,7 +127,7 @@
 "cur_ts": 1790380800,
 "hi": 9.8,
 "lo": -15.83,
-"checked": 1790508031,
+"checked": 1790515147,
 "done": false
 },
 "coin|bitget|FLOCKUSDT|1789296347": {
@@ -1244,7 +1244,7 @@
 "cur_ts": 1790380800,
 "hi": 6.83,
 "lo": -26.91,
-"checked": 1790508031,
+"checked": 1790515147,
 "done": false
 },
 "coin|binance|ONEUSDT|1789607982": {
@@ -5017,7 +5017,7 @@
 "ts": 1790356753.0,
 "price": 0.2406,
 "note": "우상향 점수 87.3",
-"repeats": 2,
+"repeats": 3,
 "res": {
 "h24": {
 "r": 7.48,
@@ -5222,6 +5222,30 @@
 "hi": -0.41,
 "lo": -8.13,
 "checked": 1790508031,
+"done": false
+},
+"coin|binance|AMPUSDT|1790428733": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "AMPUSDT",
+"name": "AMP",
+"ts": 1790428733.0,
+"price": 0.000673,
+"note": "원인 미확인",
+"repeats": 4,
+"res": {
+"h24": {
+"r": 0.0,
+"hi": 28.83,
+"lo": -5.79
+}
+},
+"cur": -1.63,
+"cur_ts": 1790517600,
+"hi": 28.83,
+"lo": -5.79,
+"checked": 1790515147,
 "done": false
 }
 }
