@@ -532,3 +532,4 @@
 {"t": "trend", "ts": 1790457537, "symbol": "SEIUSDT", "base": "SEI", "price": 0.07154, "score": 90.2, "rs7": 39.9, "rs30": 43.9, "new": true}
 {"t": "trend", "ts": 1790457537, "symbol": "PYTHUSDT", "base": "PYTH", "price": 0.07854, "score": 90.1, "rs7": 24.1, "rs30": 52.9, "new": true}
 {"t": "trend", "ts": 1790457537, "symbol": "AMPUSDT", "base": "AMP", "price": 0.000789, "score": 89.6, "rs7": 64.2, "rs30": 71.6, "new": true}
+{"t": "pump", "ts": 1790471949, "market": "binance", "symbol": "QNTUSDT", "base": "QNT", "price": 168.63, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 10.01, "chg2h": 8.4, "chg24h": 70.42, "qvol": 35549054.78646, "vol_x": 1.4, "off_high": -0.64, "direction": "up", "tag": "뉴스", "tags": ["뉴스", "뉴스", "뉴스", "검색 급증"], "conf": "높음", "headline": "Quant 급등 — 뉴스 재료", "news": "AI Agents Are Racing to Make Quantum-Safe Bitcoin Cheap—And Winning (Decrypt)"}
