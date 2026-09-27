@@ -127,7 +127,7 @@
 "cur_ts": 1790380800,
 "hi": 9.8,
 "lo": -15.83,
-"checked": 1790543934,
+"checked": 1790551165,
 "done": false
 },
 "coin|bitget|FLOCKUSDT|1789296347": {
@@ -1244,7 +1244,7 @@
 "cur_ts": 1790380800,
 "hi": 6.83,
 "lo": -26.91,
-"checked": 1790543934,
+"checked": 1790551165,
 "done": false
 },
 "coin|binance|ONEUSDT|1789607982": {
@@ -4566,7 +4566,7 @@
 "ts": 1790169540.0,
 "price": 0.02734,
 "note": "우상향 점수 94.1",
-"repeats": 3,
+"repeats": 4,
 "res": {
 "h24": {
 "r": -8.56,
@@ -4775,13 +4775,18 @@
 "r": 2.68,
 "hi": 14.95,
 "lo": -2.67
+},
+"h72": {
+"r": -2.4,
+"hi": 14.95,
+"lo": -5.47
 }
 },
-"cur": 6.25,
-"cur_ts": 1790380800,
+"cur": -3.37,
+"cur_ts": 1790553600,
 "hi": 14.95,
-"lo": -2.67,
-"checked": 1790378327,
+"lo": -5.47,
+"checked": 1790551165,
 "done": false
 },
 "coin|binance|BONKUSDT|1790299156": {
@@ -5286,6 +5291,30 @@
 "hi": 28.83,
 "lo": -5.79,
 "checked": 1790515147,
+"done": false
+},
+"coin|binance|PYTHUSDT|1790457537": {
+"asset": "coin",
+"kind": "trend",
+"market": "binance",
+"symbol": "PYTHUSDT",
+"name": "PYTH",
+"ts": 1790457537.0,
+"price": 0.07854,
+"note": "우상향 점수 90.1",
+"repeats": 2,
+"res": {
+"h24": {
+"r": 6.54,
+"hi": 12.99,
+"lo": 0.97
+}
+},
+"cur": 6.16,
+"cur_ts": 1790553600,
+"hi": 12.99,
+"lo": 0.97,
+"checked": 1790551165,
 "done": false
 }
 }

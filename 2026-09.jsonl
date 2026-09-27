@@ -567,3 +567,4 @@
 {"t": "trend", "ts": 1790543934, "symbol": "GRTUSDT", "base": "GRT", "price": 0.03304, "score": 97.0, "rs7": 42.4, "rs30": 84.8, "new": true}
 {"t": "trend", "ts": 1790543934, "symbol": "NEARUSDT", "base": "NEAR", "price": 5.542, "score": 96.8, "rs7": 27.5, "rs30": 181.3, "new": true}
 {"t": "trend", "ts": 1790543934, "symbol": "SUIUSDT", "base": "SUI", "price": 1.2904, "score": 94.7, "rs7": 37.8, "rs30": 60.3, "new": true}
+{"t": "pump", "ts": 1790551162, "market": "binance", "symbol": "GRTUSDT", "base": "GRT", "price": 0.03506, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 2.16, "chg2h": 6.44, "chg24h": 26.89, "qvol": 7984331.01667, "vol_x": 0.6, "off_high": -2.83, "direction": "up", "tag": "원인 미확인", "tags": ["원인 미확인"], "conf": "낮음", "headline": "The Graph 급등 — 이유 불명 · 큰손 주도 의심", "news": ""}
