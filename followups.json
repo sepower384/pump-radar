@@ -127,7 +127,7 @@
 "cur_ts": 1790380800,
 "hi": 9.8,
 "lo": -15.83,
-"checked": 1790493559,
+"checked": 1790500727,
 "done": false
 },
 "coin|bitget|FLOCKUSDT|1789296347": {
@@ -1244,7 +1244,7 @@
 "cur_ts": 1790380800,
 "hi": 6.83,
 "lo": -26.91,
-"checked": 1790493559,
+"checked": 1790500727,
 "done": false
 },
 "coin|binance|ONEUSDT|1789607982": {
@@ -5169,6 +5169,30 @@
 "hi": 13.0,
 "lo": -6.51,
 "checked": 1790493559,
+"done": false
+},
+"coin|bitget|UPCUSDT|1790414325": {
+"asset": "coin",
+"kind": "pump",
+"market": "bitget",
+"symbol": "UPCUSDT",
+"name": "UPC",
+"ts": 1790414325.0,
+"price": 0.19,
+"note": "원인 미확인",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -6.0,
+"hi": 4.58,
+"lo": -12.63
+}
+},
+"cur": -6.0,
+"cur_ts": 1790499600,
+"hi": 4.58,
+"lo": -12.63,
+"checked": 1790500727,
 "done": false
 }
 }
