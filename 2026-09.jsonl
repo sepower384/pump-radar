@@ -598,3 +598,5 @@
 {"t": "trend", "ts": 1790615965, "symbol": "ALGOUSDT", "base": "ALGO", "price": 0.1363, "score": 83.8, "rs7": 25.3, "rs30": 44.5, "new": true}
 {"t": "pump", "ts": 1790623158, "market": "binance", "symbol": "MARSCOINUSDT", "base": "MARSCOIN", "price": 0.1598, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 3.3, "chg2h": 2.63, "chg24h": 24.84, "qvol": 60064997.19591, "vol_x": 0.4, "off_high": -5.44, "direction": "up", "tag": "에어드랍", "tags": ["에어드랍"], "conf": "높음", "headline": "MARSCOIN 급등 — 에어드랍 재료", "news": "Binance Will Support the SpaceX (SPCXB) Airdrop for MarsCoin (MARSCOIN) Holders and the Invesco (Binance)"}
 {"t": "trend", "ts": 1790623174, "symbol": "QNTUSDT", "base": "QNT", "price": 237.38, "score": 85.4, "rs7": 266.7, "rs30": 260.8, "new": true}
+{"t": "trend", "ts": 1790630349, "symbol": "ENAUSDT", "base": "ENA", "price": 0.2584, "score": 87.0, "rs7": 26.0, "rs30": 52.8, "new": true}
+{"t": "trend", "ts": 1790630349, "symbol": "AEROUSDT", "base": "AERO", "price": 0.8246, "score": 83.1, "rs7": 22.4, "rs30": 58.9, "new": true}
