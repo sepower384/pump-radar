@@ -585,3 +585,8 @@
 {"t": "trend", "ts": 1790594331, "symbol": "NEARUSDT", "base": "NEAR", "price": 5.105, "score": 95.0, "rs7": 25.0, "rs30": 160.3, "new": true}
 {"t": "trend", "ts": 1790594331, "symbol": "GRTUSDT", "base": "GRT", "price": 0.03169, "score": 89.4, "rs7": 38.6, "rs30": 79.5, "new": true}
 {"t": "trend", "ts": 1790594331, "symbol": "LTCUSDT", "base": "LTC", "price": 71.89, "score": 86.1, "rs7": 21.9, "rs30": 37.4, "new": true}
+{"t": "pump", "ts": 1790601532, "market": "binance", "symbol": "ONEUSDT", "base": "ONE", "price": 0.002633, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 5.63, "chg2h": 7.4, "chg24h": 25.08, "qvol": 21120798.377459, "vol_x": 1.1, "off_high": -10.03, "direction": "up", "tag": "원인 미확인", "tags": ["원인 미확인"], "conf": "낮음", "headline": "ONEchain 급등 — 이유 불명 · 큰손 주도 의심", "news": ""}
+{"t": "pump", "ts": 1790601532, "market": "binance", "symbol": "MARSCOINUSDT", "base": "MARSCOIN", "price": 0.1554, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 0.58, "chg2h": 4.85, "chg24h": 20.75, "qvol": 49032342.29559, "vol_x": 1.5, "off_high": -7.93, "direction": "up", "tag": "에어드랍", "tags": ["에어드랍"], "conf": "높음", "headline": "MarsCoin 급등 — 에어드랍 재료", "news": "Binance Will Support the SpaceX (SPCXB) Airdrop for MarsCoin (MARSCOIN) Holders and the Invesco (Binance)"}
+{"t": "trend", "ts": 1790601538, "symbol": "RUNEUSDT", "base": "RUNE", "price": 0.742, "score": 87.5, "rs7": 25.8, "rs30": 49.9, "new": true}
+{"t": "trend", "ts": 1790601538, "symbol": "WUSDT", "base": "W", "price": 0.01434, "score": 86.1, "rs7": 25.7, "rs30": 47.3, "new": true}
+{"t": "trend", "ts": 1790601538, "symbol": "IMXUSDT", "base": "IMX", "price": 0.1795, "score": 86.0, "rs7": 24.3, "rs30": 31.2, "new": true}
