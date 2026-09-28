@@ -18,7 +18,7 @@ from .engine import btc_trend, pump, reason, stock_pump, theme_follow
 from .http import get_json
 from .notify import charts, deliver
 from .notify.message import Msg
-from .sources import binance
+from .sources import binance, coingecko
 from .sources import themes as themes_src
 
 KST = timezone(timedelta(hours=9))
@@ -56,6 +56,51 @@ def _why_header(rsn: dict, up: bool = True) -> list[str]:
                 "이유 없는 급등락은 더 조심하시는 것이 좋습니다."]
     conf = rsn.get("confidence") or ""
     return [f"🔎 *{word} 이유* (확신도: {CONF_KR.get(conf, conf)})"]
+
+
+def _usd_size(v: float) -> str:
+    """달러 금액을 우리말 단위로 — 1조 달러 / 34억 달러 / 8천만 달러."""
+    if v >= 1e12:
+        return f"{v / 1e12:.2f}조 달러"
+    if v >= 1e8:
+        return f"{v / 1e8:,.0f}억 달러"
+    if v >= 1e7:
+        return f"{v / 1e7:.0f}천만 달러"
+    return f"{v / 1e6:.0f}백만 달러"
+
+
+def _coin_size_word(mcap: float) -> str:
+    """코인 덩치 한마디 — 같은 상승률도 덩치에 따라 뜻이 다르다."""
+    if mcap >= 1e10:
+        return "초대형"
+    if mcap >= 1e9:
+        return "대형"
+    if mcap >= 1e8:
+        return "중형"
+    if mcap >= 3e7:
+        return "소형"
+    return "초소형(변동이 매우 큼)"
+
+
+def coin_mcaps(symbols: list[str]) -> dict[str, dict]:
+    """심볼 → {mcap, rank}. 코인게코가 막히거나 자료가 없으면 빈 칸으로 둔다(알림은 계속 나가야 한다)."""
+    want = {s.upper() for s in symbols if s}
+    if not want:
+        return {}
+    try:
+        meta = coingecko.symbol_meta()
+    except Exception:  # noqa: BLE001
+        return {}
+    return {s: {"mcap": m.get("mcap") or 0, "rank": m.get("rank") or 0}
+            for s in want if (m := meta.get(s)) and (m.get("mcap") or 0) > 0}
+
+
+def mcap_bit(info: dict | None) -> str:
+    """알림 한 줄에 붙일 시가총액 조각 — 자료가 없으면 빈 글."""
+    if not info or not info.get("mcap"):
+        return ""
+    rank = f", 시총 {info['rank']}위" if 0 < info.get("rank", 0) < 9999 else ""
+    return f" · 시가총액 {_usd_size(info['mcap'])}({_coin_size_word(info['mcap'])}{rank})"
 
 
 def _size_word(mcap: float) -> str:
@@ -117,8 +162,9 @@ def _finish(kind: str, con, msg: Msg | None, marks: list[tuple[str, str]], info:
 # ─────────────────────────── 1. BTC 우상향 ───────────────────────────
 
 def build_trend_msg(top: list[dict], fresh_syms: set[str], cfg: dict, th: float,
-                    when: str = "") -> Msg:
+                    when: str = "", mcaps: dict[str, dict] | None = None) -> Msg:
     n = len(top)
+    mcaps = coin_mcaps([r.get("base", "") for r in top]) if mcaps is None else mcaps
     intro = [f"*비트코인보다 더 잘 오르고 있는 코인* {n}개를 정리했습니다.",
              "_비트코인이 오를 때 더 많이 오르고, 빠질 때 덜 빠지는 '체력 좋은 코인'을 고른 목록입니다._"]
     units: list[list[str]] = [intro]
@@ -133,8 +179,9 @@ def build_trend_msg(top: list[dict], fresh_syms: set[str], cfg: dict, th: float,
             f"• BTC 대비 한 달 `{r['rs30']:+.1f}%`, 일주일 `{r['rs7']:+.1f}%` 더 올랐습니다.",
             f"• 추세 R² {fit:.2f}로 {shape}이며, 한 달 최고가의 {r['near_high'] * 100:.0f}% 위치까지 올라와 있습니다.{stack}",
             f"• 최근 2주 MDD는 {abs(r['mdd14']):.0f}%입니다. 작을수록 안정적인 흐름입니다.",
-            f"• 현재가 {_price(r['price'])} · 하루 {r['chg24']:+.1f}% · 하루 거래대금 ${_fmt_qvol(r['qvol'])} · "
-            f"<https://www.binance.com/en/trade/{r['base']}_BTC|비트코인 기준 차트 보기>",
+            f"• 현재가 {_price(r['price'])} · 하루 {r['chg24']:+.1f}% · 하루 거래대금 ${_fmt_qvol(r['qvol'])}"
+            f"{mcap_bit(mcaps.get((r.get('base') or '').upper()))}",
+            f"• <https://www.binance.com/en/trade/{r['base']}_BTC|비트코인 기준 차트 보기>",
         ])
     footer = [f"{when or now_kst()} 기준 · 거래가 많은 상위 {cfg.get('universe_top_n')}개 코인 중 {th:.0f}점 이상만 담았습니다.",
               "_점수는 비트코인보다 더 오른 정도 + 꾸준함 + 고점 근접도 − 출렁임으로 계산합니다. "
@@ -195,8 +242,11 @@ def run_btc_trend(con) -> dict:
 
 # ─────────────────────────── 2. 코인 급등 ───────────────────────────
 
-def build_pump_msg(items: list[dict], when: str = "", translate: bool = True) -> Msg:
+def build_pump_msg(items: list[dict], when: str = "", translate: bool = True,
+                   mcaps: dict[str, dict] | None = None) -> Msg:
     units: list[list[str]] = []
+    if mcaps is None:
+        mcaps = coin_mcaps([it["raw"].get("base", "") for it in items])
     n_up = sum(1 for it in items if it["raw"].get("direction", "up") == "up")
     intro = f"지금 급하게 움직이는 코인 *{len(items)}개*를 알려드립니다."
     if n_up != len(items):
@@ -220,7 +270,8 @@ def build_pump_msg(items: list[dict], when: str = "", translate: bool = True) ->
                    f"{'매수세' if up else '매도세'}가 크게 몰린 것으로 보입니다.")
         unit = [f"{arrow} *{h['base']}* — {it.get('llm') or rsn['headline']}",
                 f"• {', '.join(chg_bits) or '짧은 시간에 크게'} {move}.{vol}",
-                f"• 현재가 {_price(h['price'])} ({ex}) · 하루 거래대금 ${_fmt_qvol(h['qvol'])}"]
+                f"• 현재가 {_price(h['price'])} ({ex}) · 하루 거래대금 ${_fmt_qvol(h['qvol'])}"
+                f"{mcap_bit(mcaps.get((h.get('base') or '').upper()))}"]
         unit += _why_header(rsn, up)
         unit += _evidence_lines(rsn, translate)
         if up and (h.get("off_high") or 0) <= -5:

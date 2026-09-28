@@ -60,10 +60,10 @@ def markets(pages: int = 2) -> list[dict]:
     return d if isinstance(d, list) else []
 
 
-def symbol_meta() -> dict[str, dict]:
-    """UPPER심볼 → {name, mcap, rank, chg7d}"""
+def symbol_meta(pages: int = 4) -> dict[str, dict]:
+    """UPPER심볼 → {name, mcap, rank, chg7d}. 기본 시총 1000위까지 — 급등 코인은 소형이 많다."""
     out: dict[str, dict] = {}
-    for m in markets():
+    for m in markets(pages):
         sym = (m.get("symbol") or "").upper()
         if not sym or sym in out:
             continue

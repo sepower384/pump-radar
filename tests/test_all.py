@@ -734,6 +734,37 @@ def test_news_relevance() -> None:
     check("한글 종목명·테마 키워드", nw.title_matches("양자암호 관련주 강세", must=["대장전자", "양자암호"]))
 
 
+def test_coin_mcap() -> None:
+    """코인 알림의 시가총액 표시 — 자료가 없으면 조용히 빠져야 한다(알림 자체는 나가야 하므로)."""
+    from radar.runner import _coin_size_word, _usd_size, build_pump_msg, build_trend_msg, mcap_bit
+    print("\n[코인 시가총액]")
+    check("조 단위", _usd_size(1.67e12) == "1.67조 달러")
+    check("억 단위", _usd_size(5.4e9) == "54억 달러")
+    check("작은 코인", _usd_size(6e7) == "6천만 달러")
+    check("덩치 말", (_coin_size_word(2.6e10), _coin_size_word(1.1e9), _coin_size_word(2e8),
+                    _coin_size_word(5e7), _coin_size_word(1e7))
+          == ("초대형", "대형", "중형", "소형", "초소형(변동이 매우 큼)"))
+    check("한 줄 조각", mcap_bit({"mcap": 2.59e10, "rank": 9}) == " · 시가총액 259억 달러(초대형, 시총 9위)")
+    check("자료 없으면 빈 글", mcap_bit(None) == "" and mcap_bit({"mcap": 0, "rank": 0}) == "")
+
+    raw = {"base": "ZEC", "symbol": "ZECUSDT", "price": 640.0, "qvol": 4.2e8, "chg1h": 9.0,
+           "market": "binance", "direction": "up", "vol_x": 3.1, "closes": []}
+    item = {"key": "ZEC", "raw": raw, "reason": {"headline": "시험", "evidence": [], "confidence": "보통"},
+            "llm": ""}
+    mc = {"ZEC": {"mcap": 2.59e10, "rank": 9}}
+    txt = build_pump_msg([item], translate=False, mcaps=mc).slack_text()
+    check("급등탐정에 시총", "259억 달러" in txt and "시총 9위" in txt)
+    check("급등탐정은 거래대금 뒤에", txt.index("거래대금") < txt.index("시가총액"))
+    none_txt = build_pump_msg([item], translate=False, mcaps={}).slack_text()
+    check("모르는 코인은 생략", "시가총액" not in none_txt and "거래대금" in none_txt)
+
+    row = {"base": "ZEC", "symbol": "ZECUSDT", "score": 92, "fit": 0.85, "rs30": 120.0, "rs7": 30.0,
+           "near_high": 0.99, "mdd14": -7.0, "price": 640.0, "chg24": 3.0, "qvol": 4.2e8,
+           "ema_stacked": True, "ratio_tail": []}
+    ttxt = build_trend_msg([row], {"ZECUSDT"}, {"universe_top_n": 250}, 65.0, mcaps=mc).slack_text()
+    check("BTC차트에 시총", "259억 달러" in ttxt)
+
+
 def test_stock_msg() -> None:
     from radar.notify import charts
     print("\n[주식 테마 메시지]")
@@ -781,6 +812,7 @@ def main() -> int:
     test_call_tracking()
     test_news_relevance()
     test_stock_msg()
+    test_coin_mcap()
     if "--live" in sys.argv:
         test_live()
     print(f"\n{'=' * 46}\n결과: {PASS} PASS / {FAIL} FAIL\n{'=' * 46}")
