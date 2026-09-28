@@ -582,3 +582,6 @@
 {"t": "pump", "ts": 1790579934, "market": "bitget", "symbol": "BTWUSDT", "base": "BTW", "price": 1.368146, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 1.84, "chg2h": 5.22, "chg24h": 29.56, "qvol": 13597473.38640654, "vol_x": 0.5, "off_high": -1.0, "direction": "up", "tag": "뉴스", "tags": ["뉴스", "뉴스"], "conf": "높음", "headline": "Bitway 급등 — 뉴스 재료", "news": "Crypto rebounds sharply with Bitcoin near $86k; Quant surges 170%, Bitway and NEAR also rally s (Pluang)"}
 {"t": "trend", "ts": 1790579940, "symbol": "QNTUSDT", "base": "QNT", "price": 280.06, "score": 95.9, "rs7": 318.7, "rs30": 329.0, "new": true}
 {"t": "trend", "ts": 1790587129, "symbol": "ENAUSDT", "base": "ENA", "price": 0.2609, "score": 85.7, "rs7": 19.8, "rs30": 56.7, "new": true}
+{"t": "trend", "ts": 1790594331, "symbol": "NEARUSDT", "base": "NEAR", "price": 5.105, "score": 95.0, "rs7": 25.0, "rs30": 160.3, "new": true}
+{"t": "trend", "ts": 1790594331, "symbol": "GRTUSDT", "base": "GRT", "price": 0.03169, "score": 89.4, "rs7": 38.6, "rs30": 79.5, "new": true}
+{"t": "trend", "ts": 1790594331, "symbol": "LTCUSDT", "base": "LTC", "price": 71.89, "score": 86.1, "rs7": 21.9, "rs30": 37.4, "new": true}
