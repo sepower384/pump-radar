@@ -127,7 +127,7 @@
 "cur_ts": 1790712000,
 "hi": 9.8,
 "lo": -15.83,
-"checked": 1790716811,
+"checked": 1790723994,
 "done": false
 },
 "coin|bitget|FLOCKUSDT|1789296347": {
@@ -1244,7 +1244,7 @@
 "cur_ts": 1790712000,
 "hi": 6.83,
 "lo": -26.91,
-"checked": 1790716811,
+"checked": 1790723994,
 "done": false
 },
 "coin|binance|ONEUSDT|1789607982": {
@@ -3330,7 +3330,7 @@
 "ts": 1789982364.0,
 "price": 0.0458,
 "note": "원인 미확인",
-"repeats": 12,
+"repeats": 13,
 "res": {
 "h24": {
 "r": 0.44,
@@ -4877,7 +4877,7 @@
 "ts": 1790270371.0,
 "price": 85.77,
 "note": "뉴스",
-"repeats": 14,
+"repeats": 15,
 "res": {
 "h24": {
 "r": 14.32,
@@ -5980,6 +5980,54 @@
 "hi": 3.08,
 "lo": -8.22,
 "checked": 1790702387,
+"done": false
+},
+"coin|binance|NMRUSDT|1790637550": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "NMRUSDT",
+"name": "NMR",
+"ts": 1790637550.0,
+"price": 14.72,
+"note": "원인 미확인",
+"repeats": 2,
+"res": {
+"h24": {
+"r": -15.29,
+"hi": 4.35,
+"lo": -18.07
+}
+},
+"cur": -16.58,
+"cur_ts": 1790726400,
+"hi": 4.35,
+"lo": -18.07,
+"checked": 1790723994,
+"done": false
+},
+"coin|binance|NIGHTUSDT|1790637565": {
+"asset": "coin",
+"kind": "trend",
+"market": "binance",
+"symbol": "NIGHTUSDT",
+"name": "NIGHT",
+"ts": 1790637565.0,
+"price": 0.02848,
+"note": "우상향 점수 85.2",
+"repeats": 2,
+"res": {
+"h24": {
+"r": 13.8,
+"hi": 15.87,
+"lo": -3.79
+}
+},
+"cur": 15.48,
+"cur_ts": 1790726400,
+"hi": 15.87,
+"lo": -3.79,
+"checked": 1790723994,
 "done": false
 }
 }
