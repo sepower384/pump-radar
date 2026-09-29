@@ -631,3 +631,5 @@
 {"t": "trend", "ts": 1790702385, "symbol": "SEIUSDT", "base": "SEI", "price": 0.0724, "score": 85.6, "rs7": 23.3, "rs30": 54.1, "new": true}
 {"t": "trend", "ts": 1790702385, "symbol": "PYTHUSDT", "base": "PYTH", "price": 0.07698, "score": 82.8, "rs7": 20.7, "rs30": 52.7, "new": true}
 {"t": "trend", "ts": 1790702385, "symbol": "PUMPUSDT", "base": "PUMP", "price": 0.005654, "score": 82.6, "rs7": 31.9, "rs30": 18.1, "new": true}
+{"t": "pump", "ts": 1790709587, "market": "binance", "symbol": "MOVRUSDT", "base": "MOVR", "price": 1.164, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 6.69, "chg2h": 6.99, "chg24h": 20.75, "qvol": 3441813.001329, "vol_x": 2.9, "off_high": -1.44, "direction": "up", "tag": "원인 미확인", "tags": ["원인 미확인"], "conf": "낮음", "headline": "MOVR 급등 — 이유 불명 · 큰손 주도 의심", "news": ""}
+{"t": "trend", "ts": 1790709595, "symbol": "ENAUSDT", "base": "ENA", "price": 0.2514, "score": 82.6, "rs7": 24.6, "rs30": 57.6, "new": true}
