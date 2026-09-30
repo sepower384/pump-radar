@@ -123,11 +123,11 @@
 "lo": -15.83
 }
 },
-"cur": -11.44,
-"cur_ts": 1790755200,
+"cur": -9.5,
+"cur_ts": 1790769600,
 "hi": 9.8,
 "lo": -15.83,
-"checked": 1790767172,
+"checked": 1790774307,
 "done": false
 },
 "coin|bitget|FLOCKUSDT|1789296347": {
@@ -1240,11 +1240,11 @@
 "lo": -16.73
 }
 },
-"cur": -11.01,
-"cur_ts": 1790755200,
+"cur": -11.09,
+"cur_ts": 1790769600,
 "hi": 6.83,
 "lo": -26.91,
-"checked": 1790767172,
+"checked": 1790774307,
 "done": false
 },
 "coin|binance|ONEUSDT|1789607982": {
@@ -4942,7 +4942,7 @@
 "ts": 1790270371.0,
 "price": 85.77,
 "note": "뉴스",
-"repeats": 17,
+"repeats": 18,
 "res": {
 "h24": {
 "r": 14.32,
@@ -5725,7 +5725,7 @@
 "ts": 1790479150.0,
 "price": 0.28,
 "note": "뉴스",
-"repeats": 4,
+"repeats": 5,
 "res": {
 "h24": {
 "r": 9.64,
@@ -6195,6 +6195,30 @@
 "hi": 4.04,
 "lo": -19.44,
 "checked": 1790731211,
+"done": false
+},
+"coin|binance|CELOUSDT|1790680792": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "CELOUSDT",
+"name": "CELO",
+"ts": 1790680792.0,
+"price": 0.11469,
+"note": "뉴스",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -13.09,
+"hi": 1.08,
+"lo": -15.03
+}
+},
+"cur": -11.59,
+"cur_ts": 1790776800,
+"hi": 1.08,
+"lo": -15.03,
+"checked": 1790774307,
 "done": false
 }
 }
