@@ -1,7 +1,13 @@
-"""코인게코 무료 API — 트렌딩/테마(카테고리)/시총. 캐시로 레이트리밋 회피."""
+"""코인게코 API — 트렌딩/테마(카테고리)/시총. 캐시로 레이트리밋 회피.
+
+2026-09-30: 코인게코가 **키 없는 호출을 403으로 막았다**(같은 요청도 무료 데모 키를 붙이면 200).
+그래서 `COINGECKO_DEMO_KEY` 를 헤더에 싣는다. 키가 없으면 예전처럼 부르되 대개 실패하고,
+그때는 캐시에 남은 값으로 버틴다(_cached 가 실패 시 옛 값을 돌려준다).
+"""
 from __future__ import annotations
 
 import json
+import os
 import time
 from pathlib import Path
 
@@ -10,6 +16,11 @@ from ..http import get_json
 
 BASE = "https://api.coingecko.com/api/v3"
 _CACHE = DATA_DIR / "cg_cache.json"
+
+
+def _hdr() -> dict | None:
+    key = (os.environ.get("COINGECKO_DEMO_KEY") or "").strip()
+    return {"x-cg-demo-api-key": key} if key else None
 
 
 def _cached(key: str, ttl: int, fetch) -> object:
@@ -36,7 +47,7 @@ def _cached(key: str, ttl: int, fetch) -> object:
 
 
 def trending() -> list[dict]:
-    d = _cached("trending", 900, lambda: get_json(f"{BASE}/search/trending", timeout=20))
+    d = _cached("trending", 900, lambda: get_json(f"{BASE}/search/trending", timeout=20, headers=_hdr()))
     if not isinstance(d, dict):
         return []
     return [c.get("item", {}) for c in d.get("coins", [])]
@@ -51,7 +62,7 @@ def markets(pages: int = 2) -> list[dict]:
     def fetch():
         rows = []
         for p in range(1, pages + 1):
-            rows += get_json(f"{BASE}/coins/markets", timeout=25, params={
+            rows += get_json(f"{BASE}/coins/markets", timeout=25, headers=_hdr(), params={
                 "vs_currency": "usd", "order": "market_cap_desc",
                 "per_page": 250, "page": p, "price_change_percentage": "1h,24h,7d"})
             time.sleep(1.2)
@@ -80,7 +91,7 @@ def symbol_meta(pages: int = 4) -> dict[str, dict]:
 
 def hot_categories(top: int = 8) -> list[dict]:
     """24h 시총 변화 기준 뜨는 테마."""
-    d = _cached("categories", 1800, lambda: get_json(f"{BASE}/coins/categories", timeout=30))
+    d = _cached("categories", 1800, lambda: get_json(f"{BASE}/coins/categories", timeout=30, headers=_hdr()))
     if not isinstance(d, list):
         return []
     rows = [c for c in d if (c.get("market_cap") or 0) > 5e7]
@@ -111,7 +122,7 @@ def theme_map() -> dict[str, list[str]]:
         ok = 0
         for cid, label in THEME_IDS:
             try:
-                rows = get_json(f"{BASE}/coins/markets", timeout=25, params={
+                rows = get_json(f"{BASE}/coins/markets", timeout=25, headers=_hdr(), params={
                     "vs_currency": "usd", "category": cid,
                     "order": "market_cap_desc", "per_page": 100, "page": 1})
             except Exception:  # noqa: BLE001

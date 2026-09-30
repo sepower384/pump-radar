@@ -22,6 +22,8 @@ env:
   # 보낸 알림의 영구 기록(보고서 원재료) — 저장소의 history 브랜치를 여기에 받아 쓴다
   HISTORY_DIR: ${{ github.workspace }}/hist
   GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+  # 코인게코는 2026-09-30 부터 키 없는 호출을 403 으로 막았다 — 무료 데모 키를 반드시 실어야 한다
+  COINGECKO_DEMO_KEY: ${{ secrets.COINGECKO_DEMO_KEY }}
   # 텔레그램 (없으면 조용히 건너뜀). 봇 토큰은 kind별 → 공용 순으로 찾는다
   TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
   TELEGRAM_BOT_TOKEN_PUMP: ${{ secrets.TELEGRAM_BOT_TOKEN_PUMP }}
