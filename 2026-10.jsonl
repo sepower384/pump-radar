@@ -9,3 +9,5 @@
 {"t": "trend", "ts": 1790803086, "symbol": "PUMPUSDT", "base": "PUMP", "price": 0.005906, "score": 88.9, "rs7": 48.5, "rs30": 22.6, "new": true}
 {"t": "trend", "ts": 1790803086, "symbol": "AUDIOUSDT", "base": "AUDIO", "price": 0.01757, "score": 80.3, "rs7": 30.0, "rs30": 26.9, "new": true}
 {"t": "trend", "ts": 1790803086, "symbol": "JSTUSDT", "base": "JST", "price": 0.13291, "score": 79.5, "rs7": 20.9, "rs30": 23.7, "new": true}
+{"t": "trend", "ts": 1790810256, "symbol": "SEIUSDT", "base": "SEI", "price": 0.07368, "score": 80.4, "rs7": 25.8, "rs30": 52.8, "new": true}
+{"t": "trend", "ts": 1790810256, "symbol": "NEARUSDT", "base": "NEAR", "price": 5.38, "score": 80.3, "rs7": 25.2, "rs30": 155.9, "new": true}
