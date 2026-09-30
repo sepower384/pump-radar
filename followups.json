@@ -123,11 +123,11 @@
 "lo": -15.83
 }
 },
-"cur": -9.5,
-"cur_ts": 1790769600,
+"cur": -10.09,
+"cur_ts": 1790784000,
 "hi": 9.8,
 "lo": -15.83,
-"checked": 1790781508,
+"checked": 1790788665,
 "done": false
 },
 "coin|bitget|FLOCKUSDT|1789296347": {
@@ -1240,11 +1240,11 @@
 "lo": -16.73
 }
 },
-"cur": -11.09,
-"cur_ts": 1790769600,
+"cur": -13.58,
+"cur_ts": 1790784000,
 "hi": 6.83,
 "lo": -26.91,
-"checked": 1790781508,
+"checked": 1790788665,
 "done": false
 },
 "coin|binance|ONEUSDT|1789607982": {
@@ -5759,7 +5759,7 @@
 "ts": 1790486333.0,
 "price": 0.008175,
 "note": "거래량 폭증",
-"repeats": 2,
+"repeats": 3,
 "res": {
 "h24": {
 "r": -4.91,
@@ -6144,7 +6144,7 @@
 "ts": 1790644750.0,
 "price": 0.2883,
 "note": "우상향 점수 83.9",
-"repeats": 5,
+"repeats": 6,
 "res": {
 "h24": {
 "r": 17.62,
@@ -6229,6 +6229,54 @@
 "hi": 1.08,
 "lo": -15.03,
 "checked": 1790774307,
+"done": false
+},
+"stock|US|AXTI|1790695256": {
+"asset": "stock",
+"kind": "stock",
+"market": "US",
+"symbol": "AXTI",
+"name": "AXT Inc",
+"ts": 1790695256.0,
+"price": 79.92,
+"note": "AI 반도체 대장주",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -2.18,
+"hi": 2.78,
+"lo": -5.43
+}
+},
+"cur": -4.24,
+"cur_ts": 1790798400,
+"hi": 5.08,
+"lo": -5.8,
+"checked": 1790788665,
+"done": false
+},
+"stock|US|MU|1790695256": {
+"asset": "stock",
+"kind": "stock",
+"market": "US",
+"symbol": "MU",
+"name": "Micron Technology, Inc.",
+"ts": 1790695256.0,
+"price": 1069.87,
+"note": "AI 반도체 관찰 콜",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -0.45,
+"hi": 1.2,
+"lo": -1.14
+}
+},
+"cur": 0.06,
+"cur_ts": 1790798400,
+"hi": 1.27,
+"lo": -1.14,
+"checked": 1790788665,
 "done": false
 }
 }
