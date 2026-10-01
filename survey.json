@@ -1,5 +1,20 @@
 {
  "offset": {
   "trend": 708736886
+ },
+ "bot": {
+  "pump": "https://t.me/sepower_high_bot",
+  "trend": "https://t.me/sepower_btcchartart_bot",
+  "stock": "https://t.me/sepower_high_bot"
+ },
+ "sent": {
+  "2026-09": {
+   "at": 1790817487,
+   "kinds": [
+    "pump",
+    "trend",
+    "stock"
+   ]
+  }
  }
 }

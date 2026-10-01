@@ -123,11 +123,11 @@
 "lo": -15.83
 }
 },
-"cur": -12.19,
-"cur_ts": 1790798400,
+"cur": -11.31,
+"cur_ts": 1790812800,
 "hi": 9.8,
 "lo": -15.83,
-"checked": 1790810256,
+"checked": 1790817485,
 "done": false
 },
 "coin|bitget|FLOCKUSDT|1789296347": {
@@ -1240,11 +1240,11 @@
 "lo": -16.73
 }
 },
-"cur": -13.3,
-"cur_ts": 1790798400,
+"cur": -13.21,
+"cur_ts": 1790812800,
 "hi": 6.83,
 "lo": -26.91,
-"checked": 1790810256,
+"checked": 1790817485,
 "done": false
 },
 "coin|binance|ONEUSDT|1789607982": {
@@ -4350,7 +4350,7 @@
 "ts": 1790111943.0,
 "price": 0.3372,
 "note": "우상향 점수 85.9",
-"repeats": 1,
+"repeats": 2,
 "res": {
 "h24": {
 "r": -9.19,
@@ -5208,7 +5208,7 @@
 "ts": 1790349544.0,
 "price": 1.111,
 "note": "거래량 폭증",
-"repeats": 6,
+"repeats": 7,
 "res": {
 "h24": {
 "r": -8.28,
@@ -6301,6 +6301,30 @@
 "hi": 6.69,
 "lo": -3.27,
 "checked": 1790795858,
+"done": false
+},
+"coin|binance|HUMAUSDT|1790723992": {
+"asset": "coin",
+"kind": "trend",
+"market": "binance",
+"symbol": "HUMAUSDT",
+"name": "HUMA",
+"ts": 1790723992.0,
+"price": 0.02957,
+"note": "우상향 점수 86.7",
+"repeats": 2,
+"res": {
+"h24": {
+"r": 9.84,
+"hi": 10.59,
+"lo": -2.13
+}
+},
+"cur": 2.1,
+"cur_ts": 1790820000,
+"hi": 10.59,
+"lo": -2.13,
+"checked": 1790817485,
 "done": false
 }
 }
