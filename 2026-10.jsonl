@@ -30,3 +30,7 @@
 {"t": "pump", "ts": 1790846254, "market": "bitget", "symbol": "CTUSDT", "base": "CT", "price": 0.44268, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 7.59, "chg2h": 9.29, "chg24h": 2113.4, "qvol": 11267157.2506487, "vol_x": 0.9, "off_high": -1.82, "direction": "up", "tag": "거래소 상장", "tags": ["거래소 상장", "거래소 상장"], "conf": "높음", "headline": "CT 급등 — 거래소 상장 재료", "news": "콘크리트, 한국 진출 공식화·서울 밋업 성황 속 코인베이스 CT 상장 발표 (v.daum.net)"}
 {"t": "trend", "ts": 1790846260, "symbol": "JASMYUSDT", "base": "JASMY", "price": 0.00595, "score": 82.4, "rs7": 37.4, "rs30": 10.8, "new": true}
 {"t": "trend", "ts": 1790846260, "symbol": "0GUSDT", "base": "0G", "price": 0.308, "score": 80.4, "rs7": 23.9, "rs30": 40.7, "new": true}
+{"t": "pump", "ts": 1790853483, "market": "binance", "symbol": "MOVRUSDT", "base": "MOVR", "price": 2.91, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 2.93, "chg2h": 5.74, "chg24h": 62.21, "qvol": 84031734.885287, "vol_x": 0.6, "off_high": -5.73, "direction": "up", "tag": "뉴스", "tags": ["뉴스", "뉴스", "검색 급증"], "conf": "높음", "headline": "Moonriver 급등 — 뉴스 재료", "news": "[인기 검색 코인 톱15] Pump.fun 16% 상승…Moonriver는 58% 급등 (이투데이)"}
+{"t": "trend", "ts": 1790853490, "symbol": "RUNEUSDT", "base": "RUNE", "price": 0.793, "score": 92.9, "rs7": 27.0, "rs30": 54.2, "new": true}
+{"t": "trend", "ts": 1790853490, "symbol": "PUMPUSDT", "base": "PUMP", "price": 0.005587, "score": 83.2, "rs7": 47.0, "rs30": 15.6, "new": true}
+{"t": "trend", "ts": 1790853490, "symbol": "JSTUSDT", "base": "JST", "price": 0.13448, "score": 77.6, "rs7": 19.1, "rs30": 24.6, "new": true}

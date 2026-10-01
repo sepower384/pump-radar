@@ -127,7 +127,7 @@
 "cur_ts": 1790841600,
 "hi": 9.8,
 "lo": -15.83,
-"checked": 1790846263,
+"checked": 1790853492,
 "done": false
 },
 "coin|bitget|FLOCKUSDT|1789296347": {
@@ -1244,7 +1244,7 @@
 "cur_ts": 1790841600,
 "hi": 6.83,
 "lo": -26.91,
-"checked": 1790846263,
+"checked": 1790853492,
 "done": false
 },
 "coin|binance|ONEUSDT|1789607982": {
@@ -5213,7 +5213,7 @@
 "ts": 1790349544.0,
 "price": 1.111,
 "note": "거래량 폭증",
-"repeats": 8,
+"repeats": 9,
 "res": {
 "h24": {
 "r": -8.28,
@@ -5706,7 +5706,7 @@
 "ts": 1790479150.0,
 "price": 0.803,
 "note": "뉴스",
-"repeats": 7,
+"repeats": 8,
 "res": {
 "h24": {
 "r": -9.22,
@@ -6318,7 +6318,7 @@
 "ts": 1790702385.0,
 "price": 0.005654,
 "note": "우상향 점수 82.6",
-"repeats": 3,
+"repeats": 4,
 "res": {
 "h24": {
 "r": 3.98,
@@ -6475,6 +6475,30 @@
 "hi": 7.16,
 "lo": -5.85,
 "checked": 1790839063,
+"done": false
+},
+"coin|binance|GTCUSDT|1790759975": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "GTCUSDT",
+"name": "GTC",
+"ts": 1790759975.0,
+"price": 0.11662,
+"note": "거래소 상장",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -14.29,
+"hi": -1.19,
+"lo": -20.64
+}
+},
+"cur": -14.08,
+"cur_ts": 1790856000,
+"hi": -1.19,
+"lo": -20.64,
+"checked": 1790853492,
 "done": false
 }
 }
