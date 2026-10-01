@@ -34,3 +34,6 @@
 {"t": "trend", "ts": 1790853490, "symbol": "RUNEUSDT", "base": "RUNE", "price": 0.793, "score": 92.9, "rs7": 27.0, "rs30": 54.2, "new": true}
 {"t": "trend", "ts": 1790853490, "symbol": "PUMPUSDT", "base": "PUMP", "price": 0.005587, "score": 83.2, "rs7": 47.0, "rs30": 15.6, "new": true}
 {"t": "trend", "ts": 1790853490, "symbol": "JSTUSDT", "base": "JST", "price": 0.13448, "score": 77.6, "rs7": 19.1, "rs30": 24.6, "new": true}
+{"t": "pump", "ts": 1790860662, "market": "bitget", "symbol": "BTWUSDT", "base": "BTW", "price": 1.458163, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 10.2, "chg2h": 1.25, "chg24h": 22.4, "qvol": 20237234.18482041, "vol_x": 0.7, "off_high": -1.92, "direction": "up", "tag": "뉴스", "tags": ["뉴스"], "conf": "높음", "headline": "Bitway 급등 — 뉴스 재료", "news": "Bitway (BTW) token surges 70% in two days amid Binance Wallet DeFi incentive campaign ending Oc (Pluang)"}
+{"t": "trend", "ts": 1790860669, "symbol": "HUMAUSDT", "base": "HUMA", "price": 0.03332, "score": 91.6, "rs7": 37.8, "rs30": 49.0, "new": true}
+{"t": "trend", "ts": 1790860669, "symbol": "NOMUSDT", "base": "NOM", "price": 0.003073, "score": 82.5, "rs7": 32.3, "rs30": 80.1, "new": true}
