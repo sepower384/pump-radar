@@ -394,5 +394,23 @@
 "result_pct": 2.15,
 "resolved_ts": 1790759991,
 "reported": 1
+},
+{
+"id": 24,
+"ts": 1790831865,
+"market": "KR",
+"symbol": "001820",
+"name": "삼화콘덴서",
+"theme": "MLCC(적층세라믹콘덴서)",
+"leader": "아모텍",
+"ref_price": 160800.0,
+"target_pct": 2.0,
+"deadline": 1790922600,
+"status": "pending",
+"best_price": 160800.0,
+"last_price": null,
+"result_pct": null,
+"resolved_ts": null,
+"reported": 0
 }
 ]
