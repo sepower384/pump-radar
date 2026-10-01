@@ -127,7 +127,7 @@
 "cur_ts": 1790884800,
 "hi": 9.8,
 "lo": -18.17,
-"checked": 1790889459,
+"checked": 1790896663,
 "done": false
 },
 "coin|bitget|FLOCKUSDT|1789296347": {
@@ -1244,7 +1244,7 @@
 "cur_ts": 1790884800,
 "hi": 6.83,
 "lo": -26.91,
-"checked": 1790889459,
+"checked": 1790896663,
 "done": false
 },
 "coin|binance|ONEUSDT|1789607982": {
@@ -4622,7 +4622,7 @@
 "ts": 1790140748.0,
 "price": 0.1883,
 "note": "원인 미확인",
-"repeats": 7,
+"repeats": 8,
 "res": {
 "h24": {
 "r": -7.54,
@@ -5075,13 +5075,18 @@
 "r": -2.4,
 "hi": 14.95,
 "lo": -5.47
+},
+"h168": {
+"r": -12.23,
+"hi": 14.95,
+"lo": -17.09
 }
 },
-"cur": -3.37,
-"cur_ts": 1790553600,
+"cur": -11.82,
+"cur_ts": 1790899200,
 "hi": 14.95,
-"lo": -5.47,
-"checked": 1790551165,
+"lo": -17.09,
+"checked": 1790896663,
 "done": false
 },
 "coin|binance|BONKUSDT|1790299156": {
@@ -6563,6 +6568,30 @@
 "hi": 1.0,
 "lo": -6.05,
 "checked": 1790875064,
+"done": false
+},
+"coin|binance|JSTUSDT|1790803086": {
+"asset": "coin",
+"kind": "trend",
+"market": "binance",
+"symbol": "JSTUSDT",
+"name": "JST",
+"ts": 1790803086.0,
+"price": 0.13291,
+"note": "우상향 점수 79.5",
+"repeats": 2,
+"res": {
+"h24": {
+"r": 0.19,
+"hi": 1.35,
+"lo": -0.65
+}
+},
+"cur": -1.2,
+"cur_ts": 1790899200,
+"hi": 1.35,
+"lo": -1.2,
+"checked": 1790896663,
 "done": false
 }
 }
