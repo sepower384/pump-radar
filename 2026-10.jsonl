@@ -41,3 +41,8 @@
 {"t": "pump", "ts": 1790867862, "market": "bitget", "symbol": "USUSDT", "base": "US", "price": 0.030965, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 59.07, "chg2h": 61.68, "chg24h": 21.5, "qvol": 3895079.03959477, "vol_x": 5.8, "off_high": -2.03, "direction": "up", "tag": "뉴스", "tags": ["뉴스", "뉴스", "거래량 폭증"], "conf": "높음", "headline": "Talus 급등 — 뉴스 재료", "news": "Iran/United States • US agencies target crypto exchanges for intel gathering (Intelligence Online)"}
 {"t": "trend", "ts": 1790867869, "symbol": "MOVRUSDT", "base": "MOVR", "price": 2.499, "score": 81.4, "rs7": 174.1, "rs30": 194.8, "new": true}
 {"t": "trend", "ts": 1790867869, "symbol": "ALICEUSDT", "base": "ALICE", "price": 0.2338, "score": 80.1, "rs7": 61.6, "rs30": 58.0, "new": true}
+{"t": "pump", "ts": 1790875055, "market": "binance", "symbol": "MEGAUSDT", "base": "MEGA", "price": 0.05392, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 5.56, "chg2h": 10.04, "chg24h": 26.36, "qvol": 10644691.387009, "vol_x": 2.0, "off_high": -3.0, "direction": "up", "tag": "검색 급증", "tags": ["검색 급증"], "conf": "낮음", "headline": "MegaETH 급등 — 관심 급증", "news": ""}
+{"t": "trend", "ts": 1790875061, "symbol": "NIGHTUSDT", "base": "NIGHT", "price": 0.0392, "score": 89.4, "rs7": 61.2, "rs30": 92.5, "new": true}
+{"t": "trend", "ts": 1790875061, "symbol": "QNTUSDT", "base": "QNT", "price": 264.2, "score": 84.2, "rs7": 205.5, "rs30": 279.6, "new": true}
+{"t": "trend", "ts": 1790875061, "symbol": "ZROUSDT", "base": "ZRO", "price": 1.773, "score": 73.8, "rs7": 18.9, "rs30": 57.8, "new": true}
+{"t": "trend", "ts": 1790875061, "symbol": "AUDIOUSDT", "base": "AUDIO", "price": 0.01736, "score": 73.8, "rs7": 25.1, "rs30": 21.8, "new": true}
