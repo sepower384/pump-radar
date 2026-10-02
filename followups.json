@@ -127,7 +127,7 @@
 "cur_ts": 1790942400,
 "hi": 9.8,
 "lo": -18.17,
-"checked": 1790947079,
+"checked": 1790954272,
 "done": false
 },
 "coin|bitget|FLOCKUSDT|1789296347": {
@@ -1244,7 +1244,7 @@
 "cur_ts": 1790942400,
 "hi": 6.83,
 "lo": -26.91,
-"checked": 1790947079,
+"checked": 1790954272,
 "done": false
 },
 "coin|binance|ONEUSDT|1789607982": {
@@ -5245,13 +5245,18 @@
 "r": -11.61,
 "hi": -2.94,
 "lo": -13.47
+},
+"h168": {
+"r": -3.72,
+"hi": -2.94,
+"lo": -15.63
 }
 },
-"cur": -12.07,
-"cur_ts": 1790604000,
-"hi": -2.94,
-"lo": -13.47,
-"checked": 1790601541,
+"cur": -5.11,
+"cur_ts": 1790956800,
+"hi": -2.48,
+"lo": -15.63,
+"checked": 1790954272,
 "done": false
 },
 "coin|binance|MOVRUSDT|1790349544": {
@@ -6413,7 +6418,7 @@
 "ts": 1790702385.0,
 "price": 0.005654,
 "note": "우상향 점수 82.6",
-"repeats": 5,
+"repeats": 6,
 "res": {
 "h24": {
 "r": 3.98,
@@ -6834,6 +6839,30 @@
 "hi": 4.87,
 "lo": -9.92,
 "checked": 1790932691,
+"done": false
+},
+"coin|binance|ALICEUSDT|1790867862": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "ALICEUSDT",
+"name": "ALICE",
+"ts": 1790867862.0,
+"price": 0.2334,
+"note": "선물 자금유입",
+"repeats": 2,
+"res": {
+"h24": {
+"r": -23.78,
+"hi": 3.08,
+"lo": -27.29
+}
+},
+"cur": -23.56,
+"cur_ts": 1790956800,
+"hi": 3.08,
+"lo": -27.29,
+"checked": 1790954272,
 "done": false
 }
 }
