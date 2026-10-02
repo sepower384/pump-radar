@@ -69,3 +69,4 @@
 {"t": "trend", "ts": 1790925465, "symbol": "ZROUSDT", "base": "ZRO", "price": 1.874, "score": 77.8, "rs7": 21.4, "rs30": 65.9, "new": true}
 {"t": "trend", "ts": 1790925465, "symbol": "QNTUSDT", "base": "QNT", "price": 226.1, "score": 77.4, "rs7": 116.7, "rs30": 216.3, "new": true}
 {"t": "trend", "ts": 1790925465, "symbol": "AAVEUSDT", "base": "AAVE", "price": 184.4, "score": 76.5, "rs7": 25.5, "rs30": 30.6, "new": true}
+{"t": "trend", "ts": 1790932688, "symbol": "GTCUSDT", "base": "GTC", "price": 0.13024, "score": 72.5, "rs7": 44.1, "rs30": 47.9, "new": true}

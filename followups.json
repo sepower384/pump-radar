@@ -123,11 +123,11 @@
 "lo": -15.83
 }
 },
-"cur": -10.69,
-"cur_ts": 1790913600,
+"cur": -9.8,
+"cur_ts": 1790928000,
 "hi": 9.8,
 "lo": -18.17,
-"checked": 1790925467,
+"checked": 1790932691,
 "done": false
 },
 "coin|bitget|FLOCKUSDT|1789296347": {
@@ -1240,11 +1240,11 @@
 "lo": -16.73
 }
 },
-"cur": -12.64,
-"cur_ts": 1790913600,
+"cur": -12.85,
+"cur_ts": 1790928000,
 "hi": 6.83,
 "lo": -26.91,
-"checked": 1790925467,
+"checked": 1790932691,
 "done": false
 },
 "coin|binance|ONEUSDT|1789607982": {
@@ -6566,7 +6566,7 @@
 "ts": 1790759975.0,
 "price": 0.11662,
 "note": "거래소 상장",
-"repeats": 4,
+"repeats": 5,
 "res": {
 "h24": {
 "r": -14.29,
@@ -6771,6 +6771,54 @@
 "hi": 1.68,
 "lo": -8.4,
 "checked": 1790925467,
+"done": false
+},
+"coin|bitget|CTUSDT|1790846254": {
+"asset": "coin",
+"kind": "pump",
+"market": "bitget",
+"symbol": "CTUSDT",
+"name": "CT",
+"ts": 1790846254.0,
+"price": 0.44268,
+"note": "거래소 상장",
+"repeats": 3,
+"res": {
+"h24": {
+"r": 36.31,
+"hi": 43.6,
+"lo": -4.71
+}
+},
+"cur": 36.31,
+"cur_ts": 1790931600,
+"hi": 43.6,
+"lo": -4.71,
+"checked": 1790932691,
+"done": false
+},
+"coin|binance|JASMYUSDT|1790846260": {
+"asset": "coin",
+"kind": "trend",
+"market": "binance",
+"symbol": "JASMYUSDT",
+"name": "JASMY",
+"ts": 1790846260.0,
+"price": 0.00595,
+"note": "우상향 점수 82.4",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -7.23,
+"hi": 4.87,
+"lo": -9.92
+}
+},
+"cur": -8.24,
+"cur_ts": 1790935200,
+"hi": 4.87,
+"lo": -9.92,
+"checked": 1790932691,
 "done": false
 }
 }
