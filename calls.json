@@ -406,12 +406,12 @@
 "ref_price": 160800.0,
 "target_pct": 2.0,
 "deadline": 1790922600,
-"status": "pending",
+"status": "miss",
 "best_price": 160800.0,
-"last_price": 157300.0,
-"result_pct": -2.18,
-"resolved_ts": null,
-"reported": 0
+"last_price": 156800.0,
+"result_pct": -2.49,
+"resolved_ts": 1790925465,
+"reported": 1
 },
 {
 "id": 25,
@@ -425,9 +425,9 @@
 "target_pct": 2.0,
 "deadline": 1791181800,
 "status": "pending",
-"best_price": 31150.0,
-"last_price": 31150.0,
-"result_pct": 0.16,
+"best_price": 31350.0,
+"last_price": 31350.0,
+"result_pct": 0.8,
 "resolved_ts": null,
 "reported": 0
 }
