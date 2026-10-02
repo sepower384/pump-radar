@@ -408,8 +408,26 @@
 "deadline": 1790922600,
 "status": "pending",
 "best_price": 160800.0,
-"last_price": 157900.0,
-"result_pct": -1.8,
+"last_price": 158000.0,
+"result_pct": -1.74,
+"resolved_ts": null,
+"reported": 0
+},
+{
+"id": 25,
+"ts": 1790911087,
+"market": "KR",
+"symbol": "043260",
+"name": "성호전자",
+"theme": "광통신(광케이블/광섬유 등)",
+"leader": "티엠씨",
+"ref_price": 31100.0,
+"target_pct": 2.0,
+"deadline": 1791181800,
+"status": "pending",
+"best_price": 31100.0,
+"last_price": null,
+"result_pct": null,
 "resolved_ts": null,
 "reported": 0
 }
