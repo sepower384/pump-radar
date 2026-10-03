@@ -94,3 +94,4 @@
 {"t": "trend", "ts": 1790990306, "symbol": "SUPERUSDT", "base": "SUPER", "price": 0.2393, "score": 80.8, "rs7": 29.3, "rs30": 103.3, "new": true}
 {"t": "trend", "ts": 1790990306, "symbol": "MINAUSDT", "base": "MINA", "price": 0.1676, "score": 74.4, "rs7": 19.4, "rs30": 110.1, "new": true}
 {"t": "trend", "ts": 1790990306, "symbol": "GALAUSDT", "base": "GALA", "price": 0.002698, "score": 73.9, "rs7": 24.7, "rs30": 39.9, "new": true}
+{"t": "pump", "ts": 1790997457, "market": "binance", "symbol": "ENJUSDT", "base": "ENJ", "price": 0.03678, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 4.7, "chg2h": 4.28, "chg24h": 20.2, "qvol": 23413931.029675, "vol_x": 1.3, "off_high": -3.08, "direction": "up", "tag": "검색 급증", "tags": ["검색 급증"], "conf": "낮음", "headline": "Enjin Coin 급등 — 관심 급증", "news": ""}
