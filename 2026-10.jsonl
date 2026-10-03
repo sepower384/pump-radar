@@ -108,3 +108,7 @@
 {"t": "trend", "ts": 1791026262, "symbol": "SANDUSDT", "base": "SAND", "price": 0.07374, "score": 83.8, "rs7": 60.3, "rs30": 77.2, "new": true}
 {"t": "trend", "ts": 1791026262, "symbol": "AAVEUSDT", "base": "AAVE", "price": 181.15, "score": 76.5, "rs7": 16.7, "rs30": 29.7, "new": true}
 {"t": "trend", "ts": 1791026262, "symbol": "MOVRUSDT", "base": "MOVR", "price": 1.918, "score": 72.7, "rs7": 87.9, "rs30": 138.2, "new": true}
+{"t": "pump", "ts": 1791033458, "market": "binance", "symbol": "QIUSDT", "base": "QI", "price": 0.003251, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 5.62, "chg2h": 8.8, "chg24h": 24.46, "qvol": 3060752.595002, "vol_x": 0.5, "off_high": -8.42, "direction": "up", "tag": "원인 미확인", "tags": ["원인 미확인"], "conf": "낮음", "headline": "BENQI 급등 — 이유 불명 · 큰손 주도 의심", "news": ""}
+{"t": "pump", "ts": 1791033458, "market": "bitget", "symbol": "PUMPBTCUSDT", "base": "PUMPBTC", "price": 0.01012, "chg5m": 0.0, "chg15m": 0.0, "chg1h": -5.6, "chg2h": 10.84, "chg24h": 25.56, "qvol": 1255258.2651442, "vol_x": 0.6, "off_high": -6.73, "direction": "up", "tag": "원인 미확인", "tags": ["원인 미확인"], "conf": "낮음", "headline": "PUMPBTC 급등 — 이유 불명 · 큰손 주도 의심", "news": ""}
+{"t": "trend", "ts": 1791033464, "symbol": "GLMRUSDT", "base": "GLMR", "price": 0.012634, "score": 83.4, "rs7": 78.1, "rs30": 83.2, "new": true}
+{"t": "trend", "ts": 1791033464, "symbol": "GTCUSDT", "base": "GTC", "price": 0.12699, "score": 76.1, "rs7": 35.9, "rs30": 49.9, "new": true}
