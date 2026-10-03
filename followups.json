@@ -127,7 +127,7 @@
 "cur_ts": 1790985600,
 "hi": 9.8,
 "lo": -18.17,
-"checked": 1791055062,
+"checked": 1791062288,
 "done": false
 },
 "coin|bitget|FLOCKUSDT|1789296347": {
@@ -1244,7 +1244,7 @@
 "cur_ts": 1790985600,
 "hi": 6.83,
 "lo": -26.91,
-"checked": 1791055062,
+"checked": 1791062288,
 "done": false
 },
 "coin|binance|ONEUSDT|1789607982": {
@@ -4282,7 +4282,7 @@
 "ts": 1790097536.0,
 "price": 1.439,
 "note": "뉴스",
-"repeats": 10,
+"repeats": 11,
 "res": {
 "h24": {
 "r": 1.6,
@@ -6508,7 +6508,7 @@
 "ts": 1790702385.0,
 "price": 0.005654,
 "note": "우상향 점수 82.6",
-"repeats": 7,
+"repeats": 8,
 "res": {
 "h24": {
 "r": 3.98,
@@ -6775,13 +6775,18 @@
 "r": 0.19,
 "hi": 1.35,
 "lo": -0.65
+},
+"h72": {
+"r": 4.21,
+"hi": 4.69,
+"lo": -5.06
 }
 },
-"cur": -1.2,
-"cur_ts": 1790899200,
-"hi": 1.35,
-"lo": -1.2,
-"checked": 1790896663,
+"cur": 4.15,
+"cur_ts": 1791064800,
+"hi": 4.69,
+"lo": -5.06,
+"checked": 1791062288,
 "done": false
 },
 "coin|binance|WLDUSDT|1790817473": {
@@ -7310,6 +7315,30 @@
 "hi": 0.6,
 "lo": -1.11,
 "checked": 1791040695,
+"done": false
+},
+"coin|bitget|VELVETUSDT|1790975851": {
+"asset": "coin",
+"kind": "pump",
+"market": "bitget",
+"symbol": "VELVETUSDT",
+"name": "VELVET",
+"ts": 1790975851.0,
+"price": 0.07901,
+"note": "원인 미확인",
+"repeats": 3,
+"res": {
+"h24": {
+"r": 0.95,
+"hi": 20.78,
+"lo": -19.07
+}
+},
+"cur": 0.95,
+"cur_ts": 1791061200,
+"hi": 20.78,
+"lo": -19.07,
+"checked": 1791062288,
 "done": false
 }
 }
