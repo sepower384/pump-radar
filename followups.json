@@ -127,7 +127,7 @@
 "cur_ts": 1790985600,
 "hi": 9.8,
 "lo": -18.17,
-"checked": 1791004659,
+"checked": 1791011910,
 "done": false
 },
 "coin|bitget|FLOCKUSDT|1789296347": {
@@ -343,7 +343,7 @@
 "ts": 1789327197.0,
 "price": 3.296,
 "note": "원인 미확인",
-"repeats": 5,
+"repeats": 6,
 "res": {
 "h24": {
 "r": -15.05,
@@ -1244,7 +1244,7 @@
 "cur_ts": 1790985600,
 "hi": 6.83,
 "lo": -26.91,
-"checked": 1791004659,
+"checked": 1791011910,
 "done": false
 },
 "coin|binance|ONEUSDT|1789607982": {
@@ -2344,7 +2344,7 @@
 "ts": 1789766341.0,
 "price": 0.26555,
 "note": "거래량 폭증",
-"repeats": 3,
+"repeats": 4,
 "res": {
 "h24": {
 "r": -12.77,
@@ -6488,7 +6488,7 @@
 "ts": 1790702385.0,
 "price": 0.005654,
 "note": "우상향 점수 82.6",
-"repeats": 6,
+"repeats": 7,
 "res": {
 "h24": {
 "r": 3.98,
@@ -6668,13 +6668,18 @@
 "r": 1.91,
 "hi": 7.16,
 "lo": -3.34
+},
+"h72": {
+"r": -4.3,
+"hi": 7.16,
+"lo": -6.21
 }
 },
-"cur": -4.06,
-"cur_ts": 1790836200,
+"cur": -4.3,
+"cur_ts": 1790922600,
 "hi": 7.16,
-"lo": -5.85,
-"checked": 1790839063,
+"lo": -6.21,
+"checked": 1791011910,
 "done": false
 },
 "coin|binance|GTCUSDT|1790759975": {
@@ -7107,6 +7112,78 @@
 "hi": 5.79,
 "lo": -5.79,
 "checked": 1791004659,
+"done": false
+},
+"stock|KR|478340|1790918260": {
+"asset": "stock",
+"kind": "stock",
+"market": "KR",
+"symbol": "478340",
+"name": "나라스페이스테크놀로지",
+"ts": 1790918260.0,
+"price": 17670.0,
+"note": "우주항공산업(누리호/인공위성 등) 대장주",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -3.28,
+"hi": 3.34,
+"lo": -20.09
+}
+},
+"cur": -3.28,
+"cur_ts": 1790922600,
+"hi": 3.34,
+"lo": -20.09,
+"checked": 1791011910,
+"done": false
+},
+"coin|binance|SANDUSDT|1790925458": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "SANDUSDT",
+"name": "SAND",
+"ts": 1790925458.0,
+"price": 0.05751,
+"note": "거래량 폭증",
+"repeats": 3,
+"res": {
+"h24": {
+"r": 36.08,
+"hi": 45.99,
+"lo": -0.19
+}
+},
+"cur": 34.06,
+"cur_ts": 1791014400,
+"hi": 45.99,
+"lo": -0.19,
+"checked": 1791011910,
+"done": false
+},
+"coin|binance|AAVEUSDT|1790925465": {
+"asset": "coin",
+"kind": "trend",
+"market": "binance",
+"symbol": "AAVEUSDT",
+"name": "AAVE",
+"ts": 1790925465.0,
+"price": 184.4,
+"note": "우상향 점수 76.5",
+"repeats": 2,
+"res": {
+"h24": {
+"r": -2.27,
+"hi": 1.13,
+"lo": -4.38
+}
+},
+"cur": -2.42,
+"cur_ts": 1791014400,
+"hi": 1.13,
+"lo": -4.38,
+"checked": 1791011910,
 "done": false
 }
 }
