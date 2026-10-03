@@ -127,7 +127,7 @@
 "cur_ts": 1790985600,
 "hi": 9.8,
 "lo": -18.17,
-"checked": 1791033466,
+"checked": 1791040695,
 "done": false
 },
 "coin|bitget|FLOCKUSDT|1789296347": {
@@ -343,7 +343,7 @@
 "ts": 1789327197.0,
 "price": 3.296,
 "note": "원인 미확인",
-"repeats": 6,
+"repeats": 7,
 "res": {
 "h24": {
 "r": -15.05,
@@ -1244,7 +1244,7 @@
 "cur_ts": 1790985600,
 "hi": 6.83,
 "lo": -26.91,
-"checked": 1791033466,
+"checked": 1791040695,
 "done": false
 },
 "coin|binance|ONEUSDT|1789607982": {
@@ -4622,7 +4622,7 @@
 "ts": 1790140748.0,
 "price": 0.1883,
 "note": "원인 미확인",
-"repeats": 10,
+"repeats": 11,
 "res": {
 "h24": {
 "r": -7.54,
@@ -5789,13 +5789,18 @@
 "r": -4.75,
 "hi": 28.83,
 "lo": -11.14
+},
+"h168": {
+"r": -6.98,
+"hi": 28.83,
+"lo": -11.14
 }
 },
-"cur": -5.35,
-"cur_ts": 1790690400,
+"cur": -6.24,
+"cur_ts": 1791043200,
 "hi": 28.83,
 "lo": -11.14,
-"checked": 1790687979,
+"checked": 1791040695,
 "done": false
 },
 "coin|binance|PYTHUSDT|1790457537": {
@@ -7167,7 +7172,7 @@
 "ts": 1790925458.0,
 "price": 0.05751,
 "note": "거래량 폭증",
-"repeats": 4,
+"repeats": 5,
 "res": {
 "h24": {
 "r": 36.08,
@@ -7204,6 +7209,102 @@
 "hi": 1.13,
 "lo": -4.38,
 "checked": 1791011910,
+"done": false
+},
+"coin|binance|ENJUSDT|1790947071": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "ENJUSDT",
+"name": "ENJ",
+"ts": 1790947071.0,
+"price": 0.03596,
+"note": "테마 순환매",
+"repeats": 2,
+"res": {
+"h24": {
+"r": -5.65,
+"hi": 5.53,
+"lo": -12.04
+}
+},
+"cur": -4.28,
+"cur_ts": 1791043200,
+"hi": 5.53,
+"lo": -12.04,
+"checked": 1791040695,
+"done": false
+},
+"coin|binance|GALAUSDT|1790947071": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "GALAUSDT",
+"name": "GALA",
+"ts": 1790947071.0,
+"price": 0.002688,
+"note": "뉴스",
+"repeats": 2,
+"res": {
+"h24": {
+"r": -6.1,
+"hi": 2.94,
+"lo": -9.82
+}
+},
+"cur": -5.32,
+"cur_ts": 1791043200,
+"hi": 2.94,
+"lo": -9.82,
+"checked": 1791040695,
+"done": false
+},
+"coin|binance|MAGICUSDT|1790954257": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "MAGICUSDT",
+"name": "MAGIC",
+"ts": 1790954257.0,
+"price": 0.0645,
+"note": "거래량 폭증",
+"repeats": 2,
+"res": {
+"h24": {
+"r": -11.94,
+"hi": -5.58,
+"lo": -13.02
+}
+},
+"cur": -12.09,
+"cur_ts": 1791043200,
+"hi": -5.58,
+"lo": -13.02,
+"checked": 1791040695,
+"done": false
+},
+"stock|US|SYNA|1790954272": {
+"asset": "stock",
+"kind": "stock",
+"market": "US",
+"symbol": "SYNA",
+"name": "Synaptics Incorporated",
+"ts": 1790954272.0,
+"price": 121.25,
+"note": "AI 반도체 대장주",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -0.12,
+"hi": 0.6,
+"lo": -1.11
+}
+},
+"cur": -0.12,
+"cur_ts": 1790971200,
+"hi": 0.6,
+"lo": -1.11,
+"checked": 1791040695,
 "done": false
 }
 }
