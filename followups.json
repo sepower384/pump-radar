@@ -127,7 +127,7 @@
 "cur_ts": 1790985600,
 "hi": 9.8,
 "lo": -18.17,
-"checked": 1791047862,
+"checked": 1791055062,
 "done": false
 },
 "coin|bitget|FLOCKUSDT|1789296347": {
@@ -1244,7 +1244,7 @@
 "cur_ts": 1790985600,
 "hi": 6.83,
 "lo": -26.91,
-"checked": 1791047862,
+"checked": 1791055062,
 "done": false
 },
 "coin|binance|ONEUSDT|1789607982": {
@@ -5899,7 +5899,7 @@
 "ts": 1790486333.0,
 "price": 0.008175,
 "note": "거래량 폭증",
-"repeats": 7,
+"repeats": 8,
 "res": {
 "h24": {
 "r": -4.91,
