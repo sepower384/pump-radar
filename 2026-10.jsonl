@@ -137,3 +137,8 @@
 {"t": "trend", "ts": 1791112695, "symbol": "ZROUSDT", "base": "ZRO", "price": 1.993, "score": 87.7, "rs7": 21.9, "rs30": 76.0, "new": true}
 {"t": "trend", "ts": 1791112695, "symbol": "PUMPUSDT", "base": "PUMP", "price": 0.006266, "score": 81.0, "rs7": 38.7, "rs30": 37.6, "new": true}
 {"t": "trend", "ts": 1791112695, "symbol": "NOMUSDT", "base": "NOM", "price": 0.002706, "score": 76.2, "rs7": 31.3, "rs30": 63.7, "new": true}
+{"t": "pump", "ts": 1791127053, "market": "binance", "symbol": "MUBARAKUSDT", "base": "MUBARAK", "price": 0.07579, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 1.49, "chg2h": 4.06, "chg24h": 22.01, "qvol": 13207876.560794, "vol_x": 0.7, "off_high": -0.85, "direction": "up", "tag": "원인 미확인", "tags": ["원인 미확인"], "conf": "낮음", "headline": "Mubarak 급등 — 이유 불명 · 큰손 주도 의심", "news": ""}
+{"t": "pump", "ts": 1791127053, "market": "bitget", "symbol": "COLLECTUSDT", "base": "COLLECT", "price": 0.027071, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 9.15, "chg2h": 12.52, "chg24h": 47.55, "qvol": 1389140.12419026, "vol_x": 4.3, "off_high": -0.39, "direction": "up", "tag": "거래량 폭증", "tags": ["거래량 폭증"], "conf": "낮음", "headline": "COLLECT 급등 — 매수세 몰림", "news": ""}
+{"t": "trend", "ts": 1791127059, "symbol": "NIGHTUSDT", "base": "NIGHT", "price": 0.04924, "score": 94.3, "rs7": 82.2, "rs30": 116.7, "new": true}
+{"t": "trend", "ts": 1791127059, "symbol": "SANDUSDT", "base": "SAND", "price": 0.07781, "score": 91.2, "rs7": 73.7, "rs30": 85.9, "new": true}
+{"t": "trend", "ts": 1791127059, "symbol": "AAVEUSDT", "base": "AAVE", "price": 179.14, "score": 75.8, "rs7": 15.4, "rs30": 28.2, "new": true}
