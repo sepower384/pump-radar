@@ -124,3 +124,6 @@
 {"t": "trend", "ts": 1791076654, "symbol": "NIGHTUSDT", "base": "NIGHT", "price": 0.04874, "score": 94.3, "rs7": 89.1, "rs30": 120.5, "new": true}
 {"t": "trend", "ts": 1791076654, "symbol": "SANDUSDT", "base": "SAND", "price": 0.07398, "score": 86.4, "rs7": 65.5, "rs30": 79.8, "new": true}
 {"t": "trend", "ts": 1791076654, "symbol": "AAVEUSDT", "base": "AAVE", "price": 182.22, "score": 79.4, "rs7": 17.2, "rs30": 29.6, "new": true}
+{"t": "pump", "ts": 1791083854, "market": "binance", "symbol": "QIUSDT", "base": "QI", "price": 0.003243, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 13.39, "chg2h": 12.49, "chg24h": 26.04, "qvol": 4748579.329607, "vol_x": 7.5, "off_high": -0.83, "direction": "up", "tag": "거래량 폭증", "tags": ["거래량 폭증"], "conf": "낮음", "headline": "BENQI 급등 — 매수세 몰림", "news": ""}
+{"t": "pump", "ts": 1791083854, "market": "bitget", "symbol": "AINUSDT", "base": "AIN", "price": 0.049986, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 8.64, "chg2h": 12.2, "chg24h": 110.17, "qvol": 826693.83342965, "vol_x": 0.3, "off_high": -12.24, "direction": "up", "tag": "원인 미확인", "tags": ["원인 미확인"], "conf": "낮음", "headline": "AIN 급등 — 이유 불명 · 큰손 주도 의심", "news": ""}
+{"t": "trend", "ts": 1791083860, "symbol": "GLMRUSDT", "base": "GLMR", "price": 0.011933, "score": 76.2, "rs7": 57.1, "rs30": 76.1, "new": true}
