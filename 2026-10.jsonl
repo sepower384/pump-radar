@@ -144,3 +144,6 @@
 {"t": "trend", "ts": 1791127059, "symbol": "AAVEUSDT", "base": "AAVE", "price": 179.14, "score": 75.8, "rs7": 15.4, "rs30": 28.2, "new": true}
 {"t": "trend", "ts": 1791134254, "symbol": "GTCUSDT", "base": "GTC", "price": 0.1395, "score": 82.2, "rs7": 52.2, "rs30": 64.2, "new": true}
 {"t": "trend", "ts": 1791134254, "symbol": "GLMRUSDT", "base": "GLMR", "price": 0.011311, "score": 77.6, "rs7": 35.5, "rs30": 61.0, "new": true}
+{"t": "pump", "ts": 1791141497, "market": "binance", "symbol": "ATUSDT", "base": "AT", "price": 0.1376, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 8.6, "chg2h": 8.01, "chg24h": 23.19, "qvol": 6191874.75443, "vol_x": 48.7, "off_high": -3.78, "direction": "up", "tag": "거래량 폭증", "tags": ["거래량 폭증"], "conf": "낮음", "headline": "Apro 급등 — 매수세 몰림", "news": ""}
+{"t": "pump", "ts": 1791141497, "market": "binance", "symbol": "GTCUSDT", "base": "GTC", "price": 0.16282, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 8.2, "chg2h": 16.73, "chg24h": 43.83, "qvol": 6929295.874418, "vol_x": 1.9, "off_high": -1.24, "direction": "up", "tag": "뉴스", "tags": ["뉴스"], "conf": "높음", "headline": "GTC 급등 — 뉴스 재료", "news": "GTC Surges Past $0.13: 11.36% Jump in One Hour (Coinfomania)"}
+{"t": "trend", "ts": 1791141503, "symbol": "STRKUSDT", "base": "STRK", "price": 0.05423, "score": 87.4, "rs7": 30.7, "rs30": 94.7, "new": true}
