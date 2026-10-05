@@ -179,3 +179,5 @@
 {"t": "trend", "ts": 1791220696, "symbol": "ORCAUSDT", "base": "ORCA", "price": 1.998, "score": 79.8, "rs7": 15.9, "rs30": 45.0, "new": true}
 {"t": "trend", "ts": 1791227892, "symbol": "GTCUSDT", "base": "GTC", "price": 0.1965, "score": 84.9, "rs7": 127.5, "rs30": 123.0, "new": true}
 {"t": "trend", "ts": 1791227892, "symbol": "BEAMXUSDT", "base": "BEAMX", "price": 0.002555, "score": 81.6, "rs7": 23.6, "rs30": 49.6, "new": true}
+{"t": "pump", "ts": 1791235104, "market": "binance", "symbol": "RADUSDT", "base": "RAD", "price": 0.345, "chg5m": 0.0, "chg15m": 0.0, "chg1h": -2.82, "chg2h": 18.56, "chg24h": 32.18, "qvol": 8263700.6615, "vol_x": 0.5, "off_high": -8.0, "direction": "up", "tag": "원인 미확인", "tags": ["원인 미확인"], "conf": "낮음", "headline": "Radworks 급등 — 이유 불명 · 큰손 주도 의심", "news": ""}
+{"t": "trend", "ts": 1791235110, "symbol": "STRKUSDT", "base": "STRK", "price": 0.05294, "score": 83.3, "rs7": 23.2, "rs30": 55.8, "new": true}
