@@ -177,3 +177,5 @@
 {"t": "trend", "ts": 1791220696, "symbol": "NIGHTUSDT", "base": "NIGHT", "price": 0.04734, "score": 88.2, "rs7": 64.7, "rs30": 98.1, "new": true}
 {"t": "trend", "ts": 1791220696, "symbol": "SANDUSDT", "base": "SAND", "price": 0.06666, "score": 80.9, "rs7": 53.5, "rs30": 56.2, "new": true}
 {"t": "trend", "ts": 1791220696, "symbol": "ORCAUSDT", "base": "ORCA", "price": 1.998, "score": 79.8, "rs7": 15.9, "rs30": 45.0, "new": true}
+{"t": "trend", "ts": 1791227892, "symbol": "GTCUSDT", "base": "GTC", "price": 0.1965, "score": 84.9, "rs7": 127.5, "rs30": 123.0, "new": true}
+{"t": "trend", "ts": 1791227892, "symbol": "BEAMXUSDT", "base": "BEAMX", "price": 0.002555, "score": 81.6, "rs7": 23.6, "rs30": 49.6, "new": true}
