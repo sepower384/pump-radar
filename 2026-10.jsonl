@@ -170,3 +170,5 @@
 {"t": "pump", "ts": 1791199065, "market": "binance", "symbol": "GTCUSDT", "base": "GTC", "price": 0.2162, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 0.71, "chg2h": 4.75, "chg24h": 68.91, "qvol": 33189354.390309, "vol_x": 0.7, "off_high": -4.63, "direction": "up", "tag": "뉴스", "tags": ["뉴스", "뉴스"], "conf": "높음", "headline": "Gitcoin 급등 — 뉴스 재료", "news": "GTC Jumps 10.44%, Is $0.24 Within Reach? (coinfomania.com)"}
 {"t": "trend", "ts": 1791206256, "symbol": "SKYUSDT", "base": "SKY", "price": 0.10018, "score": 85.8, "rs7": 24.8, "rs30": 34.9, "new": true}
 {"t": "trend", "ts": 1791206256, "symbol": "RLCUSDT", "base": "RLC", "price": 0.5778, "score": 79.8, "rs7": 64.8, "rs30": 68.3, "new": true}
+{"t": "trend", "ts": 1791213457, "symbol": "ZROUSDT", "base": "ZRO", "price": 1.976, "score": 85.3, "rs7": 21.2, "rs30": 73.7, "new": true}
+{"t": "trend", "ts": 1791213457, "symbol": "PUMPUSDT", "base": "PUMP", "price": 0.006381, "score": 79.9, "rs7": 21.9, "rs30": 51.6, "new": true}
