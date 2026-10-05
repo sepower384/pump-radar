@@ -158,3 +158,6 @@
 {"t": "pump", "ts": 1791170284, "market": "bitget", "symbol": "AINUSDT", "base": "AIN", "price": 0.067517, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 11.0, "chg2h": 18.99, "chg24h": 35.34, "qvol": 890556.98684317, "vol_x": 1.6, "off_high": -2.96, "direction": "up", "tag": "원인 미확인", "tags": ["원인 미확인"], "conf": "낮음", "headline": "AIN 급등 — 이유 불명 · 큰손 주도 의심", "news": ""}
 {"t": "trend", "ts": 1791170290, "symbol": "SANDUSDT", "base": "SAND", "price": 0.07255, "score": 86.4, "rs7": 56.2, "rs30": 69.4, "new": true}
 {"t": "trend", "ts": 1791170290, "symbol": "NIGHTUSDT", "base": "NIGHT", "price": 0.04555, "score": 86.4, "rs7": 63.7, "rs30": 94.1, "new": true}
+{"t": "trend", "ts": 1791184655, "symbol": "GTCUSDT", "base": "GTC", "price": 0.19888, "score": 91.6, "rs7": 124.0, "rs30": 122.0, "new": true}
+{"t": "trend", "ts": 1791184655, "symbol": "BEAMXUSDT", "base": "BEAMX", "price": 0.002595, "score": 76.5, "rs7": 23.4, "rs30": 52.4, "new": true}
+{"t": "trend", "ts": 1791184655, "symbol": "GLMRUSDT", "base": "GLMR", "price": 0.011277, "score": 76.4, "rs7": 37.6, "rs30": 58.5, "new": true}
