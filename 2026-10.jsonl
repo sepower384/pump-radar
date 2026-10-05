@@ -172,3 +172,8 @@
 {"t": "trend", "ts": 1791206256, "symbol": "RLCUSDT", "base": "RLC", "price": 0.5778, "score": 79.8, "rs7": 64.8, "rs30": 68.3, "new": true}
 {"t": "trend", "ts": 1791213457, "symbol": "ZROUSDT", "base": "ZRO", "price": 1.976, "score": 85.3, "rs7": 21.2, "rs30": 73.7, "new": true}
 {"t": "trend", "ts": 1791213457, "symbol": "PUMPUSDT", "base": "PUMP", "price": 0.006381, "score": 79.9, "rs7": 21.9, "rs30": 51.6, "new": true}
+{"t": "pump", "ts": 1791220690, "market": "binance", "symbol": "NILUSDT", "base": "NIL", "price": 0.10879, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 5.72, "chg2h": 7.86, "chg24h": 23.5, "qvol": 13277904.258633, "vol_x": 3.8, "off_high": -2.68, "direction": "up", "tag": "테마 순환매", "tags": ["테마 순환매", "거래량 폭증"], "conf": "보통", "headline": "Nillion 급등 — 같은 분야 동반 상승", "news": ""}
+{"t": "pump", "ts": 1791220690, "market": "binance", "symbol": "RLCUSDT", "base": "RLC", "price": 0.5811, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 6.78, "chg2h": 2.13, "chg24h": 60.97, "qvol": 15339653.35282, "vol_x": 0.9, "off_high": -13.68, "direction": "up", "tag": "테마 순환매", "tags": ["테마 순환매"], "conf": "보통", "headline": "iExec RLC 급등 — 같은 분야 동반 상승", "news": ""}
+{"t": "trend", "ts": 1791220696, "symbol": "NIGHTUSDT", "base": "NIGHT", "price": 0.04734, "score": 88.2, "rs7": 64.7, "rs30": 98.1, "new": true}
+{"t": "trend", "ts": 1791220696, "symbol": "SANDUSDT", "base": "SAND", "price": 0.06666, "score": 80.9, "rs7": 53.5, "rs30": 56.2, "new": true}
+{"t": "trend", "ts": 1791220696, "symbol": "ORCAUSDT", "base": "ORCA", "price": 1.998, "score": 79.8, "rs7": 15.9, "rs30": 45.0, "new": true}
