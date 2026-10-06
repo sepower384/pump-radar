@@ -198,3 +198,7 @@
 {"t": "trend", "ts": 1791271097, "symbol": "SANDUSDT", "base": "SAND", "price": 0.06571, "score": 78.5, "rs7": 48.3, "rs30": 53.1, "new": true}
 {"t": "trend", "ts": 1791278261, "symbol": "MUBARAKUSDT", "base": "MUBARAK", "price": 0.07643, "score": 77.6, "rs7": 21.9, "rs30": 125.9, "new": true}
 {"t": "trend", "ts": 1791285458, "symbol": "SENTUSDT", "base": "SENT", "price": 0.02643, "score": 82.0, "rs7": 20.8, "rs30": 83.7, "new": true}
+{"t": "pump", "ts": 1791292693, "market": "binance", "symbol": "NMRUSDT", "base": "NMR", "price": 16.81, "chg5m": 0.0, "chg15m": 0.0, "chg1h": -2.55, "chg2h": 40.28, "chg24h": 41.74, "qvol": 18107744.6089, "vol_x": 0.9, "off_high": -11.43, "direction": "up", "tag": "테마 순환매", "tags": ["테마 순환매", "검색 급증"], "conf": "보통", "headline": "Numeraire 급등 — 같은 분야 동반 상승", "news": ""}
+{"t": "pump", "ts": 1791292693, "market": "bitget", "symbol": "BRUSDT", "base": "BR", "price": 0.6001, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 14.3, "chg2h": 15.58, "chg24h": 49.54, "qvol": 1362552.983576, "vol_x": 0.3, "off_high": -12.59, "direction": "up", "tag": "테마 순환매", "tags": ["테마 순환매"], "conf": "보통", "headline": "Bedrock 급등 — 같은 분야 동반 상승", "news": ""}
+{"t": "trend", "ts": 1791292699, "symbol": "RLCUSDT", "base": "RLC", "price": 0.8786, "score": 80.0, "rs7": 147.3, "rs30": 162.8, "new": true}
+{"t": "trend", "ts": 1791292699, "symbol": "STRKUSDT", "base": "STRK", "price": 0.05206, "score": 77.2, "rs7": 17.2, "rs30": 58.7, "new": true}
