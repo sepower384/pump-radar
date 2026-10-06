@@ -127,7 +127,7 @@
 "cur_ts": 1791288000,
 "hi": 9.8,
 "lo": -18.17,
-"checked": 1791292701,
+"checked": 1791299906,
 "done": false
 },
 "coin|bitget|FLOCKUSDT|1789296347": {
@@ -1244,7 +1244,7 @@
 "cur_ts": 1791288000,
 "hi": 6.83,
 "lo": -26.91,
-"checked": 1791292701,
+"checked": 1791299906,
 "done": false
 },
 "coin|binance|ONEUSDT|1789607982": {
@@ -7782,7 +7782,7 @@
 "ts": 1791163053.0,
 "price": 2.077,
 "note": "우상향 점수 73.3",
-"repeats": 4,
+"repeats": 5,
 "res": {
 "h24": {
 "r": 12.23,
@@ -7812,7 +7812,7 @@
 "cur_ts": 1791268200,
 "hi": 5.71,
 "lo": 0.5,
-"checked": 1791292701,
+"checked": 1791299906,
 "done": false
 },
 "coin|binance|RLCUSDT|1791199065": {
