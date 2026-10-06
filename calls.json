@@ -448,5 +448,23 @@
 "result_pct": 2.35,
 "resolved_ts": 1791170290,
 "reported": 1
+},
+{
+"id": 27,
+"ts": 1791249503,
+"market": "KR",
+"symbol": "456010",
+"name": "아이씨티케이",
+"theme": "딥페이크(deepfake)",
+"leader": "라온시큐어",
+"ref_price": 28450.0,
+"target_pct": 2.0,
+"deadline": 1791354600,
+"status": "pending",
+"best_price": 28450.0,
+"last_price": null,
+"result_pct": null,
+"resolved_ts": null,
+"reported": 0
 }
 ]
