@@ -214,3 +214,6 @@
 {"t": "trend", "ts": 1791321508, "symbol": "NIGHTUSDT", "base": "NIGHT", "price": 0.04976, "score": 89.1, "rs7": 50.3, "rs30": 93.7, "new": true}
 {"t": "trend", "ts": 1791321508, "symbol": "MUBARAKUSDT", "base": "MUBARAK", "price": 0.07573, "score": 78.7, "rs7": 19.6, "rs30": 131.4, "new": true}
 {"t": "trend", "ts": 1791321508, "symbol": "SANDUSDT", "base": "SAND", "price": 0.06654, "score": 77.2, "rs7": 48.8, "rs30": 55.2, "new": true}
+{"t": "pump", "ts": 1791328661, "market": "binance", "symbol": "ORCAUSDT", "base": "ORCA", "price": 3.177, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 3.05, "chg2h": 6.36, "chg24h": 34.68, "qvol": 44265849.48693, "vol_x": 0.5, "off_high": -1.97, "direction": "up", "tag": "검색 급증", "tags": ["검색 급증"], "conf": "낮음", "headline": "Orca 급등 — 관심 급증", "news": ""}
+{"t": "trend", "ts": 1791328667, "symbol": "MAGICUSDT", "base": "MAGIC", "price": 0.0713, "score": 89.2, "rs7": 36.3, "rs30": 41.0, "new": true}
+{"t": "trend", "ts": 1791328667, "symbol": "SENTUSDT", "base": "SENT", "price": 0.02568, "score": 86.2, "rs7": 22.6, "rs30": 73.7, "new": true}
