@@ -196,3 +196,4 @@
 {"t": "trend", "ts": 1791271097, "symbol": "NIGHTUSDT", "base": "NIGHT", "price": 0.05003, "score": 91.4, "rs7": 70.8, "rs30": 100.1, "new": true}
 {"t": "trend", "ts": 1791271097, "symbol": "GTCUSDT", "base": "GTC", "price": 0.17845, "score": 79.7, "rs7": 102.7, "rs30": 102.5, "new": true}
 {"t": "trend", "ts": 1791271097, "symbol": "SANDUSDT", "base": "SAND", "price": 0.06571, "score": 78.5, "rs7": 48.3, "rs30": 53.1, "new": true}
+{"t": "trend", "ts": 1791278261, "symbol": "MUBARAKUSDT", "base": "MUBARAK", "price": 0.07643, "score": 77.6, "rs7": 21.9, "rs30": 125.9, "new": true}
