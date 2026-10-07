@@ -127,7 +127,7 @@
 "cur_ts": 1791374400,
 "hi": 9.8,
 "lo": -18.17,
-"checked": 1791379062,
+"checked": 1791386281,
 "done": false
 },
 "coin|bitget|FLOCKUSDT|1789296347": {
@@ -1244,7 +1244,7 @@
 "cur_ts": 1791374400,
 "hi": 6.83,
 "lo": -26.91,
-"checked": 1791379062,
+"checked": 1791386281,
 "done": false
 },
 "coin|binance|ONEUSDT|1789607982": {
@@ -7877,7 +7877,7 @@
 "cur_ts": 1791354600,
 "hi": 11.25,
 "lo": -1.57,
-"checked": 1791379062,
+"checked": 1791386281,
 "done": false
 },
 "coin|binance|RLCUSDT|1791199065": {
@@ -8070,6 +8070,30 @@
 "hi": 8.31,
 "lo": -14.66,
 "checked": 1791364695,
+"done": false
+},
+"coin|bitget|2U2USDT|1791299854": {
+"asset": "coin",
+"kind": "pump",
+"market": "bitget",
+"symbol": "2U2USDT",
+"name": "2U2",
+"ts": 1791299854.0,
+"price": 0.02603,
+"note": "원인 미확인",
+"repeats": 2,
+"res": {
+"h24": {
+"r": 3.88,
+"hi": 11.06,
+"lo": -1.5
+}
+},
+"cur": 3.88,
+"cur_ts": 1791385200,
+"hi": 11.06,
+"lo": -1.5,
+"checked": 1791386281,
 "done": false
 }
 }
