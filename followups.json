@@ -127,7 +127,7 @@
 "cur_ts": 1791388800,
 "hi": 9.8,
 "lo": -18.17,
-"checked": 1791393466,
+"checked": 1791400667,
 "done": false
 },
 "coin|bitget|FLOCKUSDT|1789296347": {
@@ -1244,7 +1244,7 @@
 "cur_ts": 1791388800,
 "hi": 6.83,
 "lo": -26.91,
-"checked": 1791393466,
+"checked": 1791400667,
 "done": false
 },
 "coin|binance|ONEUSDT|1789607982": {
@@ -1868,7 +1868,7 @@
 "ts": 1789708753.0,
 "price": 0.2493,
 "note": "원인 미확인",
-"repeats": 5,
+"repeats": 6,
 "res": {
 "h24": {
 "r": 6.74,
@@ -7882,7 +7882,7 @@
 "cur_ts": 1791354600,
 "hi": 11.25,
 "lo": -1.57,
-"checked": 1791393466,
+"checked": 1791400667,
 "done": false
 },
 "coin|binance|RLCUSDT|1791199065": {
@@ -8158,7 +8158,7 @@
 "ts": 1791307057.0,
 "price": 0.033,
 "note": "우상향 점수 78.3",
-"repeats": 2,
+"repeats": 3,
 "res": {
 "h24": {
 "r": 1.82,
@@ -8171,6 +8171,30 @@
 "hi": 11.52,
 "lo": -7.88,
 "checked": 1791393466,
+"done": false
+},
+"coin|binance|FLUXUSDT|1791314258": {
+"asset": "coin",
+"kind": "trend",
+"market": "binance",
+"symbol": "FLUXUSDT",
+"name": "FLUX",
+"ts": 1791314258.0,
+"price": 0.0947,
+"note": "우상향 점수 85.6",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -15.42,
+"hi": -3.38,
+"lo": -18.48
+}
+},
+"cur": -15.84,
+"cur_ts": 1791403200,
+"hi": -3.38,
+"lo": -18.48,
+"checked": 1791400667,
 "done": false
 }
 }
