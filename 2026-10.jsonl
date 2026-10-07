@@ -243,3 +243,8 @@
 {"t": "trend", "ts": 1791400666, "symbol": "PARTIUSDT", "base": "PARTI", "price": 0.0344, "score": 87.6, "rs7": 30.1, "rs30": 31.0, "new": true}
 {"t": "trend", "ts": 1791407854, "symbol": "ZROUSDT", "base": "ZRO", "price": 2.168, "score": 94.0, "rs7": 24.9, "rs30": 81.9, "new": true}
 {"t": "trend", "ts": 1791407854, "symbol": "MAGICUSDT", "base": "MAGIC", "price": 0.0647, "score": 80.2, "rs7": 22.4, "rs30": 32.0, "new": true}
+{"t": "pump", "ts": 1791415091, "market": "binance", "symbol": "GTCUSDT", "base": "GTC", "price": 0.18616, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 4.52, "chg2h": 5.22, "chg24h": 24.75, "qvol": 15365033.943572, "vol_x": 1.8, "off_high": -1.65, "direction": "up", "tag": "뉴스", "tags": ["뉴스"], "conf": "높음", "headline": "GTC 급등 — 뉴스 재료", "news": "GTC Climbs Past $0.17: 10% Surge in Just One Hour (Coinfomania)"}
+{"t": "trend", "ts": 1791415104, "symbol": "ORCAUSDT", "base": "ORCA", "price": 2.918, "score": 93.0, "rs7": 77.3, "rs30": 87.9, "new": true}
+{"t": "trend", "ts": 1791415104, "symbol": "BEAMXUSDT", "base": "BEAMX", "price": 0.002578, "score": 92.2, "rs7": 30.9, "rs30": 58.1, "new": true}
+{"t": "trend", "ts": 1791415104, "symbol": "MUBARAKUSDT", "base": "MUBARAK", "price": 0.07343, "score": 90.1, "rs7": 22.1, "rs30": 136.1, "new": true}
+{"t": "trend", "ts": 1791415104, "symbol": "SANDUSDT", "base": "SAND", "price": 0.07796, "score": 83.6, "rs7": 78.5, "rs30": 82.6, "new": true}
