@@ -123,11 +123,11 @@
 "lo": -15.83
 }
 },
-"cur": -3.15,
-"cur_ts": 1791374400,
+"cur": 1.31,
+"cur_ts": 1791388800,
 "hi": 9.8,
 "lo": -18.17,
-"checked": 1791386281,
+"checked": 1791393466,
 "done": false
 },
 "coin|bitget|FLOCKUSDT|1789296347": {
@@ -1240,11 +1240,11 @@
 "lo": -16.73
 }
 },
-"cur": -8.35,
-"cur_ts": 1791374400,
+"cur": -9.75,
+"cur_ts": 1791388800,
 "hi": 6.83,
 "lo": -26.91,
-"checked": 1791386281,
+"checked": 1791393466,
 "done": false
 },
 "coin|binance|ONEUSDT|1789607982": {
@@ -6911,13 +6911,18 @@
 "r": -0.01,
 "hi": 1.35,
 "lo": -6.05
+},
+"h168": {
+"r": -5.27,
+"hi": 1.35,
+"lo": -6.05
 }
 },
-"cur": -0.01,
-"cur_ts": 1790971200,
+"cur": -6.02,
+"cur_ts": 1791403200,
 "hi": 1.35,
-"lo": -6.05,
-"checked": 1791163067,
+"lo": -9.03,
+"checked": 1791393466,
 "done": false
 },
 "coin|binance|JSTUSDT|1790803086": {
@@ -7422,7 +7427,7 @@
 "ts": 1790925458.0,
 "price": 0.05751,
 "note": "거래량 폭증",
-"repeats": 12,
+"repeats": 13,
 "res": {
 "h24": {
 "r": 36.08,
@@ -7877,7 +7882,7 @@
 "cur_ts": 1791354600,
 "hi": 11.25,
 "lo": -1.57,
-"checked": 1791386281,
+"checked": 1791393466,
 "done": false
 },
 "coin|binance|RLCUSDT|1791199065": {
@@ -8094,6 +8099,78 @@
 "hi": 11.06,
 "lo": -1.5,
 "checked": 1791386281,
+"done": false
+},
+"stock|US|CEG|1791299905": {
+"asset": "stock",
+"kind": "stock",
+"market": "US",
+"symbol": "CEG",
+"name": "Constellation Energy Corpora",
+"ts": 1791299905.0,
+"price": 303.89,
+"note": "원전·SMR 대장주",
+"repeats": 2,
+"res": {
+"h24": {
+"r": -1.15,
+"hi": 1.94,
+"lo": -4.24
+}
+},
+"cur": -1.94,
+"cur_ts": 1791403200,
+"hi": 1.94,
+"lo": -5.76,
+"checked": 1791393466,
+"done": false
+},
+"stock|US|TLN|1791299905": {
+"asset": "stock",
+"kind": "stock",
+"market": "US",
+"symbol": "TLN",
+"name": "Talen Energy Corporation",
+"ts": 1791299905.0,
+"price": 374.845,
+"note": "전력 인프라 대장주",
+"repeats": 2,
+"res": {
+"h24": {
+"r": -0.46,
+"hi": 0.84,
+"lo": -6.85
+}
+},
+"cur": -0.35,
+"cur_ts": 1791403200,
+"hi": 0.84,
+"lo": -6.85,
+"checked": 1791393466,
+"done": false
+},
+"coin|binance|PARTIUSDT|1791307057": {
+"asset": "coin",
+"kind": "trend",
+"market": "binance",
+"symbol": "PARTIUSDT",
+"name": "PARTI",
+"ts": 1791307057.0,
+"price": 0.033,
+"note": "우상향 점수 78.3",
+"repeats": 2,
+"res": {
+"h24": {
+"r": 1.82,
+"hi": 11.52,
+"lo": -7.88
+}
+},
+"cur": 3.64,
+"cur_ts": 1791396000,
+"hi": 11.52,
+"lo": -7.88,
+"checked": 1791393466,
 "done": false
 }
 }
