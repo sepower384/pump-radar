@@ -235,3 +235,5 @@
 {"t": "trend", "ts": 1791371857, "symbol": "BEAMXUSDT", "base": "BEAMX", "price": 0.002532, "score": 89.3, "rs7": 27.4, "rs30": 55.7, "new": true}
 {"t": "trend", "ts": 1791371857, "symbol": "NIGHTUSDT", "base": "NIGHT", "price": 0.04757, "score": 85.6, "rs7": 27.8, "rs30": 92.9, "new": true}
 {"t": "trend", "ts": 1791371857, "symbol": "SANDUSDT", "base": "SAND", "price": 0.07235, "score": 84.0, "rs7": 60.3, "rs30": 69.6, "new": true}
+{"t": "pump", "ts": 1791379054, "market": "binance", "symbol": "LAZIOUSDT", "base": "LAZIO", "price": 0.48, "chg5m": 0.0, "chg15m": 0.0, "chg1h": -9.6, "chg2h": 5.49, "chg24h": 23.08, "qvol": 6163580.92547, "vol_x": 0.9, "off_high": -11.11, "direction": "up", "tag": "원인 미확인", "tags": ["원인 미확인"], "conf": "낮음", "headline": "LAZIO 급등 — 이유 불명 · 큰손 주도 의심", "news": ""}
+{"t": "trend", "ts": 1791379060, "symbol": "RAYUSDT", "base": "RAY", "price": 2.4528, "score": 84.6, "rs7": 20.0, "rs30": 100.2, "new": true}
