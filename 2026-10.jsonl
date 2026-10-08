@@ -273,3 +273,6 @@
 {"t": "trend", "ts": 1791465497, "symbol": "BEAMXUSDT", "base": "BEAMX", "price": 0.002518, "score": 89.5, "rs7": 30.5, "rs30": 53.5, "new": true}
 {"t": "trend", "ts": 1791465497, "symbol": "MUBARAKUSDT", "base": "MUBARAK", "price": 0.0726, "score": 87.7, "rs7": 20.6, "rs30": 139.3, "new": true}
 {"t": "trend", "ts": 1791465497, "symbol": "ORCAUSDT", "base": "ORCA", "price": 2.616, "score": 86.7, "rs7": 62.3, "rs30": 76.7, "new": true}
+{"t": "pump", "ts": 1791472655, "market": "binance", "symbol": "SKLUSDT", "base": "SKL", "price": 0.00537, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 12.34, "chg2h": 11.88, "chg24h": 23.16, "qvol": 6157875.28104, "vol_x": 2.3, "off_high": -10.05, "direction": "up", "tag": "원인 미확인", "tags": ["원인 미확인"], "conf": "낮음", "headline": "SKALE 급등 — 이유 불명 · 큰손 주도 의심", "news": ""}
+{"t": "trend", "ts": 1791472661, "symbol": "GTCUSDT", "base": "GTC", "price": 0.18051, "score": 77.2, "rs7": 76.8, "rs30": 110.9, "new": true}
+{"t": "trend", "ts": 1791472661, "symbol": "RLCUSDT", "base": "RLC", "price": 0.7161, "score": 76.5, "rs7": 104.3, "rs30": 126.3, "new": true}
