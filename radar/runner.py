@@ -714,7 +714,9 @@ def compose_stock(con, respect_cooldown: bool = True, preview: bool = False) -> 
         except Exception as e:  # noqa: BLE001
             minfo["resolve_error"] = f"{type(e).__name__}: {e}"
         blocks: list[dict] = []
-        if sess != markets.CLOSED or preview:
+        # 미국 프리마켓엔 시세가 전날 정규장 등락 그대로라, 지난 장 급등이 '신규'로 다시 나간다 → 건너뛴다
+        stale = market == "US" and sess == "프리마켓"
+        if (sess != markets.CLOSED and not stale) or preview:
             try:
                 blocks = _us_blocks(cfg, s) if market == "US" else _kr_blocks(cfg, s)
             except Exception as e:  # noqa: BLE001
