@@ -262,3 +262,6 @@
 {"t": "trend", "ts": 1791443892, "symbol": "PARTIUSDT", "base": "PARTI", "price": 0.0339, "score": 87.0, "rs7": 28.9, "rs30": 27.9, "new": true}
 {"t": "trend", "ts": 1791443892, "symbol": "METUSDT", "base": "MET", "price": 0.5257, "score": 84.3, "rs7": 71.9, "rs30": 154.9, "new": true}
 {"t": "trend", "ts": 1791443892, "symbol": "GLMRUSDT", "base": "GLMR", "price": 0.0125, "score": 79.8, "rs7": 28.7, "rs30": 55.8, "new": true}
+{"t": "pump", "ts": 1791451054, "market": "binance", "symbol": "OGNUSDT", "base": "OGN", "price": 0.02611, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 7.41, "chg2h": 13.99, "chg24h": 25.77, "qvol": 7397735.68282, "vol_x": 1.0, "off_high": -3.16, "direction": "up", "tag": "뉴스", "tags": ["뉴스"], "conf": "높음", "headline": "Origin Token 급등 — 뉴스 재료", "news": "OGN Jumps 10.31% as Momentum Builds in Crypto Market (Coinfomania)"}
+{"t": "trend", "ts": 1791451061, "symbol": "ZROUSDT", "base": "ZRO", "price": 2.075, "score": 90.6, "rs7": 26.7, "rs30": 73.7, "new": true}
+{"t": "trend", "ts": 1791451061, "symbol": "STRKUSDT", "base": "STRK", "price": 0.05302, "score": 79.2, "rs7": 24.9, "rs30": 65.5, "new": true}
