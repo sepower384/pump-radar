@@ -123,11 +123,11 @@
 "lo": -15.83
 }
 },
-"cur": 2.18,
-"cur_ts": 1791532800,
+"cur": 1.75,
+"cur_ts": 1791547200,
 "hi": 9.8,
 "lo": -18.17,
-"checked": 1791544656,
+"checked": 1791551887,
 "done": false
 },
 "coin|bitget|FLOCKUSDT|1789296347": {
@@ -1240,11 +1240,11 @@
 "lo": -16.73
 }
 },
-"cur": -5.08,
-"cur_ts": 1791532800,
+"cur": -3.96,
+"cur_ts": 1791547200,
 "hi": 6.83,
 "lo": -26.91,
-"checked": 1791544656,
+"checked": 1791551887,
 "done": false
 },
 "coin|binance|ONEUSDT|1789607982": {
@@ -6016,7 +6016,7 @@
 "ts": 1790493552.0,
 "price": 0.031484,
 "note": "ETF",
-"repeats": 9,
+"repeats": 10,
 "res": {
 "h24": {
 "r": -15.67,
@@ -7591,13 +7591,18 @@
 "r": -7.09,
 "hi": 5.53,
 "lo": -12.04
+},
+"h168": {
+"r": -14.99,
+"hi": 5.53,
+"lo": -20.8
 }
 },
-"cur": -7.9,
-"cur_ts": 1791216000,
+"cur": -14.29,
+"cur_ts": 1791554400,
 "hi": 5.53,
-"lo": -12.04,
-"checked": 1791213459,
+"lo": -20.8,
+"checked": 1791551887,
 "done": false
 },
 "coin|binance|GALAUSDT|1790947071": {
@@ -7620,13 +7625,18 @@
 "r": -6.62,
 "hi": 2.94,
 "lo": -9.82
+},
+"h168": {
+"r": -17.6,
+"hi": 2.94,
+"lo": -22.84
 }
 },
-"cur": -8.04,
-"cur_ts": 1791216000,
+"cur": -17.3,
+"cur_ts": 1791554400,
 "hi": 2.94,
-"lo": -9.82,
-"checked": 1791213459,
+"lo": -22.84,
+"checked": 1791551887,
 "done": false
 },
 "coin|binance|MAGICUSDT|1790954257": {
@@ -7998,7 +8008,7 @@
 "cur_ts": 1791441000,
 "hi": 11.25,
 "lo": -6.22,
-"checked": 1791544656,
+"checked": 1791551887,
 "done": false
 },
 "coin|binance|RLCUSDT|1791199065": {
@@ -8639,6 +8649,54 @@
 "hi": 104.71,
 "lo": 4.1,
 "checked": 1791537462,
+"done": false
+},
+"coin|binance|ERAUSDT|1791458257": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "ERAUSDT",
+"name": "ERA",
+"ts": 1791458257.0,
+"price": 0.0761,
+"note": "역프",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -18.79,
+"hi": -0.66,
+"lo": -21.02
+}
+},
+"cur": -15.9,
+"cur_ts": 1791554400,
+"hi": -0.66,
+"lo": -21.02,
+"checked": 1791551887,
+"done": false
+},
+"coin|binance|WINUSDT|1791458257": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "WINUSDT",
+"name": "WIN",
+"ts": 1791458257.0,
+"price": 6.317e-05,
+"note": "거래량 폭증",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -18.62,
+"hi": 2.9,
+"lo": -20.66
+}
+},
+"cur": -17.78,
+"cur_ts": 1791554400,
+"hi": 2.9,
+"lo": -20.66,
+"checked": 1791551887,
 "done": false
 }
 }
