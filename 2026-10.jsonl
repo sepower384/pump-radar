@@ -314,3 +314,9 @@
 {"t": "pump", "ts": 1791566263, "market": "bitget", "symbol": "QUSDT", "base": "Q", "price": 0.029589, "chg5m": 0.0, "chg15m": 0.0, "chg1h": -0.26, "chg2h": 7.13, "chg24h": 23.81, "qvol": 4600778.72056947, "vol_x": 0.4, "off_high": -2.35, "direction": "up", "tag": "원인 미확인", "tags": ["원인 미확인"], "conf": "낮음", "headline": "Quack AI 급등 — 이유 불명 · 큰손 주도 의심", "news": ""}
 {"t": "trend", "ts": 1791566269, "symbol": "BATUSDT", "base": "BAT", "price": 0.1333, "score": 84.5, "rs7": 46.9, "rs30": 70.4, "new": true}
 {"t": "trend", "ts": 1791573455, "symbol": "WUSDT", "base": "W", "price": 0.01722, "score": 92.5, "rs7": 34.0, "rs30": 63.3, "new": true}
+{"t": "pump", "ts": 1791580687, "market": "binance", "symbol": "PIXELUSDT", "base": "PIXEL", "price": 0.00726, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 11.69, "chg2h": 12.04, "chg24h": 28.5, "qvol": 4190012.644734, "vol_x": 7.8, "off_high": -2.68, "direction": "up", "tag": "거래량 폭증", "tags": ["거래량 폭증"], "conf": "낮음", "headline": "PIXEL 급등 — 매수세 몰림", "news": ""}
+{"t": "pump", "ts": 1791580687, "market": "binance", "symbol": "MAGICUSDT", "base": "MAGIC", "price": 0.1255, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 6.8, "chg2h": 7.08, "chg24h": 89.29, "qvol": 29504710.21847, "vol_x": 0.6, "off_high": -1.8, "direction": "up", "tag": "원인 미확인", "tags": ["원인 미확인"], "conf": "낮음", "headline": "Treasure 급등 — 이유 불명 · 큰손 주도 의심", "news": ""}
+{"t": "trend", "ts": 1791580693, "symbol": "MAGICUSDT", "base": "MAGIC", "price": 0.1255, "score": 93.2, "rs7": 118.1, "rs30": 165.7, "new": true}
+{"t": "trend", "ts": 1791580693, "symbol": "BEAMXUSDT", "base": "BEAMX", "price": 0.002659, "score": 90.4, "rs7": 26.6, "rs30": 63.0, "new": true}
+{"t": "trend", "ts": 1791580693, "symbol": "KAIAUSDT", "base": "KAIA", "price": 0.0557, "score": 87.9, "rs7": 57.1, "rs30": 77.9, "new": true}
+{"t": "trend", "ts": 1791580693, "symbol": "RAYUSDT", "base": "RAY", "price": 2.3032, "score": 86.5, "rs7": 22.4, "rs30": 69.5, "new": true}
