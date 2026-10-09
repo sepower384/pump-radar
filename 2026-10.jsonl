@@ -292,3 +292,6 @@
 {"t": "trend", "ts": 1791515867, "symbol": "RLCUSDT", "base": "RLC", "price": 0.9307, "score": 88.7, "rs7": 159.9, "rs30": 192.8, "new": true}
 {"t": "trend", "ts": 1791515867, "symbol": "GTCUSDT", "base": "GTC", "price": 0.2008, "score": 84.8, "rs7": 33.2, "rs30": 131.5, "new": true}
 {"t": "trend", "ts": 1791515867, "symbol": "ORCAUSDT", "base": "ORCA", "price": 2.497, "score": 82.4, "rs7": 52.2, "rs30": 66.5, "new": true}
+{"t": "pump", "ts": 1791523100, "market": "binance", "symbol": "OGNUSDT", "base": "OGN", "price": 0.04477, "chg5m": 0.0, "chg15m": 0.0, "chg1h": -2.7, "chg2h": 5.61, "chg24h": 97.92, "qvol": 63637016.84431, "vol_x": 0.6, "off_high": -13.22, "direction": "up", "tag": "뉴스", "tags": ["뉴스", "뉴스"], "conf": "높음", "headline": "Origin Token 급등 — 뉴스 재료", "news": "오리진 프로토콜, 올해 5620만 OGN 코인 바이백…24시간 100%↑ (이코노미블록)"}
+{"t": "pump", "ts": 1791523100, "market": "bitget", "symbol": "QUSDT", "base": "Q", "price": 0.0269178, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 3.58, "chg2h": 9.66, "chg24h": 25.77, "qvol": 3854570.57425952, "vol_x": 0.9, "off_high": -3.38, "direction": "up", "tag": "원인 미확인", "tags": ["원인 미확인"], "conf": "낮음", "headline": "Quack AI 급등 — 이유 불명 · 큰손 주도 의심", "news": ""}
+{"t": "trend", "ts": 1791523107, "symbol": "WUSDT", "base": "W", "price": 0.01673, "score": 85.2, "rs7": 27.7, "rs30": 56.3, "new": true}
