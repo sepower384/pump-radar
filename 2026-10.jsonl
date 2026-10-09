@@ -301,3 +301,4 @@
 {"t": "trend", "ts": 1791530266, "symbol": "SENTUSDT", "base": "SENT", "price": 0.02448, "score": 86.1, "rs7": 19.4, "rs30": 62.1, "new": true}
 {"t": "pump", "ts": 1791537455, "market": "binance", "symbol": "KAIAUSDT", "base": "KAIA", "price": 0.0522, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 9.43, "chg2h": 39.57, "chg24h": 34.19, "qvol": 10763710.09777, "vol_x": 3.0, "off_high": -2.43, "direction": "up", "tag": "거래소 상장", "tags": ["거래소 상장", "거래소 상장", "검색 급증", "거래량 폭증"], "conf": "높음", "headline": "Kaia 급등 — 거래소 상장 재료", "news": "업비트 상장 소식에 KAIA(카이아) 25% 급등 (디지털애셋)"}
 {"t": "trend", "ts": 1791537461, "symbol": "BEAMXUSDT", "base": "BEAMX", "price": 0.002688, "score": 94.1, "rs7": 32.2, "rs30": 63.2, "new": true}
+{"t": "trend", "ts": 1791544656, "symbol": "STRKUSDT", "base": "STRK", "price": 0.07391, "score": 88.6, "rs7": 80.7, "rs30": 123.8, "new": true}
