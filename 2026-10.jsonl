@@ -353,3 +353,4 @@
 {"t": "pump", "ts": 1791659865, "market": "binance", "symbol": "STRKUSDT", "base": "STRK", "price": 0.10072, "chg5m": 0.0, "chg15m": 0.0, "chg1h": -0.22, "chg2h": 9.96, "chg24h": 41.42, "qvol": 61766887.0209598, "vol_x": 0.4, "off_high": -4.45, "direction": "up", "tag": "뉴스", "tags": ["뉴스", "뉴스", "검색 급증"], "conf": "높음", "headline": "Starknet 급등 — 뉴스 재료", "news": "Starknet's STRK token jumps over 10% amid risin... (Pluang)"}
 {"t": "trend", "ts": 1791659870, "symbol": "WUSDT", "base": "W", "price": 0.01784, "score": 94.9, "rs7": 33.0, "rs30": 73.7, "new": true}
 {"t": "trend", "ts": 1791667055, "symbol": "CHIPUSDT", "base": "CHIP", "price": 0.06738, "score": 80.7, "rs7": 55.9, "rs30": 32.4, "new": true}
+{"t": "trend", "ts": 1791674253, "symbol": "METUSDT", "base": "MET", "price": 0.4232, "score": 78.9, "rs7": 41.6, "rs30": 82.1, "new": true}
