@@ -333,3 +333,5 @@
 {"t": "trend", "ts": 1791609494, "symbol": "MUBARAKUSDT", "base": "MUBARAK", "price": 0.07588, "score": 87.2, "rs7": 22.0, "rs30": 159.6, "new": true}
 {"t": "trend", "ts": 1791609494, "symbol": "RLCUSDT", "base": "RLC", "price": 1.0105, "score": 86.3, "rs7": 179.7, "rs30": 228.5, "new": true}
 {"t": "trend", "ts": 1791609494, "symbol": "CTSIUSDT", "base": "CTSI", "price": 0.03553, "score": 83.7, "rs7": 22.7, "rs30": 37.5, "new": true}
+{"t": "pump", "ts": 1791616653, "market": "binance", "symbol": "LUMIAUSDT", "base": "LUMIA", "price": 0.1116, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 34.98, "chg2h": 34.33, "chg24h": 37.27, "qvol": 2177488.755489, "vol_x": 182.0, "off_high": -5.33, "direction": "up", "tag": "거래량 폭증", "tags": ["거래량 폭증"], "conf": "낮음", "headline": "Lumia 급등 — 매수세 몰림", "news": ""}
+{"t": "trend", "ts": 1791616660, "symbol": "WUSDT", "base": "W", "price": 0.01711, "score": 92.8, "rs7": 32.8, "rs30": 68.5, "new": true}
