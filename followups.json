@@ -127,7 +127,7 @@
 "cur_ts": 1791590400,
 "hi": 9.8,
 "lo": -18.17,
-"checked": 1791616661,
+"checked": 1791623857,
 "done": false
 },
 "coin|bitget|FLOCKUSDT|1789296347": {
@@ -1244,7 +1244,7 @@
 "cur_ts": 1791590400,
 "hi": 6.83,
 "lo": -26.91,
-"checked": 1791616661,
+"checked": 1791623857,
 "done": false
 },
 "coin|binance|ONEUSDT|1789607982": {
@@ -1868,7 +1868,7 @@
 "ts": 1789708753.0,
 "price": 0.2493,
 "note": "원인 미확인",
-"repeats": 8,
+"repeats": 9,
 "res": {
 "h24": {
 "r": 6.74,
@@ -7795,13 +7795,18 @@
 "r": -23.31,
 "hi": -0.92,
 "lo": -25.79
+},
+"h168": {
+"r": -25.51,
+"hi": -0.92,
+"lo": -30.31
 }
 },
-"cur": -22.59,
-"cur_ts": 1791280800,
+"cur": -24.83,
+"cur_ts": 1791626400,
 "hi": -0.92,
-"lo": -25.79,
-"checked": 1791278264,
+"lo": -30.31,
+"checked": 1791623857,
 "done": false
 },
 "coin|bitget|PUMPBTCUSDT|1791033458": {
@@ -8028,7 +8033,7 @@
 "cur_ts": 1791441000,
 "hi": 11.25,
 "lo": -6.22,
-"checked": 1791616661,
+"checked": 1791623857,
 "done": false
 },
 "coin|binance|RLCUSDT|1791199065": {
@@ -8778,7 +8783,7 @@
 "ts": 1791494284.0,
 "price": 0.002048,
 "note": "원인 미확인",
-"repeats": 3,
+"repeats": 4,
 "res": {
 "h24": {
 "r": 13.77,
@@ -8791,6 +8796,30 @@
 "hi": 38.72,
 "lo": -0.78,
 "checked": 1791580695,
+"done": false
+},
+"coin|binance|KAIAUSDT|1791537455": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "KAIAUSDT",
+"name": "KAIA",
+"ts": 1791537455.0,
+"price": 0.0522,
+"note": "거래소 상장",
+"repeats": 3,
+"res": {
+"h24": {
+"r": 10.15,
+"hi": 30.27,
+"lo": -2.3
+}
+},
+"cur": 11.69,
+"cur_ts": 1791626400,
+"hi": 30.27,
+"lo": -2.3,
+"checked": 1791623857,
 "done": false
 }
 }
