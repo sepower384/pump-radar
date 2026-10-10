@@ -341,3 +341,4 @@
 {"t": "trend", "ts": 1791631087, "symbol": "STRKUSDT", "base": "STRK", "price": 0.07116, "score": 85.1, "rs7": 65.2, "rs30": 126.1, "new": true}
 {"t": "trend", "ts": 1791631087, "symbol": "RAYUSDT", "base": "RAY", "price": 2.3408, "score": 79.3, "rs7": 15.0, "rs30": 66.7, "new": true}
 {"t": "trend", "ts": 1791638257, "symbol": "GTCUSDT", "base": "GTC", "price": 0.19709, "score": 80.7, "rs7": 65.3, "rs30": 141.4, "new": true}
+{"t": "pump", "ts": 1791645454, "market": "binance", "symbol": "CFXUSDT", "base": "CFX", "price": 0.06277, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 9.0, "chg2h": 18.79, "chg24h": 27.76, "qvol": 14141491.22914, "vol_x": 1.9, "off_high": -3.43, "direction": "up", "tag": "원인 미확인", "tags": ["원인 미확인"], "conf": "낮음", "headline": "Conflux 급등 — 이유 불명 · 큰손 주도 의심", "news": ""}
