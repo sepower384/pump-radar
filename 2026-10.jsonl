@@ -342,3 +342,9 @@
 {"t": "trend", "ts": 1791631087, "symbol": "RAYUSDT", "base": "RAY", "price": 2.3408, "score": 79.3, "rs7": 15.0, "rs30": 66.7, "new": true}
 {"t": "trend", "ts": 1791638257, "symbol": "GTCUSDT", "base": "GTC", "price": 0.19709, "score": 80.7, "rs7": 65.3, "rs30": 141.4, "new": true}
 {"t": "pump", "ts": 1791645454, "market": "binance", "symbol": "CFXUSDT", "base": "CFX", "price": 0.06277, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 9.0, "chg2h": 18.79, "chg24h": 27.76, "qvol": 14141491.22914, "vol_x": 1.9, "off_high": -3.43, "direction": "up", "tag": "원인 미확인", "tags": ["원인 미확인"], "conf": "낮음", "headline": "Conflux 급등 — 이유 불명 · 큰손 주도 의심", "news": ""}
+{"t": "pump", "ts": 1791652752, "market": "binance", "symbol": "ACTUSDT", "base": "ACT", "price": 0.01204, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 17.92, "chg2h": 18.62, "chg24h": 23.23, "qvol": 1999802.079964, "vol_x": 18.0, "off_high": -1.55, "direction": "up", "tag": "거래량 폭증", "tags": ["거래량 폭증"], "conf": "낮음", "headline": "ACT 급등 — 매수세 몰림", "news": ""}
+{"t": "pump", "ts": 1791652752, "market": "bitget", "symbol": "JCTUSDT", "base": "JCT", "price": 0.002969, "chg5m": 0.0, "chg15m": 0.0, "chg1h": -1.69, "chg2h": 5.66, "chg24h": 23.25, "qvol": 2823123.5469213, "vol_x": 0.5, "off_high": -4.81, "direction": "up", "tag": "원인 미확인", "tags": ["원인 미확인"], "conf": "낮음", "headline": "Janction 급등 — 이유 불명 · 큰손 주도 의심", "news": ""}
+{"t": "trend", "ts": 1791652759, "symbol": "CTSIUSDT", "base": "CTSI", "price": 0.0365, "score": 88.3, "rs7": 24.2, "rs30": 42.8, "new": true}
+{"t": "trend", "ts": 1791652759, "symbol": "RLCUSDT", "base": "RLC", "price": 1.0464, "score": 87.8, "rs7": 189.7, "rs30": 238.1, "new": true}
+{"t": "trend", "ts": 1791652759, "symbol": "BATUSDT", "base": "BAT", "price": 0.138, "score": 87.3, "rs7": 48.7, "rs30": 80.6, "new": true}
+{"t": "trend", "ts": 1791652759, "symbol": "MUBARAKUSDT", "base": "MUBARAK", "price": 0.07554, "score": 80.8, "rs7": 22.4, "rs30": 143.3, "new": true}
