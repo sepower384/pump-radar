@@ -337,3 +337,6 @@
 {"t": "trend", "ts": 1791616660, "symbol": "WUSDT", "base": "W", "price": 0.01711, "score": 92.8, "rs7": 32.8, "rs30": 68.5, "new": true}
 {"t": "pump", "ts": 1791623850, "market": "bitget", "symbol": "JCTUSDT", "base": "JCT", "price": 0.002917, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 5.54, "chg2h": 3.37, "chg24h": 23.03, "qvol": 3512977.8277797, "vol_x": 2.9, "off_high": -3.12, "direction": "up", "tag": "원인 미확인", "tags": ["원인 미확인"], "conf": "낮음", "headline": "Janction 급등 — 이유 불명 · 큰손 주도 의심", "news": ""}
 {"t": "trend", "ts": 1791623857, "symbol": "METUSDT", "base": "MET", "price": 0.433, "score": 79.9, "rs7": 48.6, "rs30": 84.3, "new": true}
+{"t": "trend", "ts": 1791631087, "symbol": "KAIAUSDT", "base": "KAIA", "price": 0.0564, "score": 85.9, "rs7": 58.0, "rs30": 81.4, "new": true}
+{"t": "trend", "ts": 1791631087, "symbol": "STRKUSDT", "base": "STRK", "price": 0.07116, "score": 85.1, "rs7": 65.2, "rs30": 126.1, "new": true}
+{"t": "trend", "ts": 1791631087, "symbol": "RAYUSDT", "base": "RAY", "price": 2.3408, "score": 79.3, "rs7": 15.0, "rs30": 66.7, "new": true}
