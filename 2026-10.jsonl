@@ -365,3 +365,8 @@
 {"t": "pump", "ts": 1791695861, "market": "binance", "symbol": "TIAUSDT", "base": "TIA", "price": 0.6142, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 3.51, "chg2h": 1.84, "chg24h": 25.68, "qvol": 26832692.755588, "vol_x": 0.9, "off_high": -3.02, "direction": "up", "tag": "뉴스", "tags": ["뉴스", "뉴스", "검색 급증"], "conf": "높음", "headline": "Celestia 급등 — 뉴스 재료", "news": "Celestia (TIA) Crypto Surges 20%: What the Rally Means for Traders (CoinDCX)"}
 {"t": "trend", "ts": 1791695867, "symbol": "LUMIAUSDT", "base": "LUMIA", "price": 0.1537, "score": 83.5, "rs7": 84.1, "rs30": 95.7, "new": true}
 {"t": "trend", "ts": 1791695867, "symbol": "ERAUSDT", "base": "ERA", "price": 0.0835, "score": 78.3, "rs7": 31.2, "rs30": 38.8, "new": true}
+{"t": "pump", "ts": 1791703087, "market": "binance", "symbol": "CFXUSDT", "base": "CFX", "price": 0.06933, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 13.4, "chg2h": 15.24, "chg24h": 35.46, "qvol": 36790599.68298, "vol_x": 3.4, "off_high": -1.48, "direction": "up", "tag": "뉴스", "tags": ["뉴스", "뉴스", "거래량 폭증"], "conf": "높음", "headline": "Conflux 급등 — 뉴스 재료", "news": "Conflux (CFX) jumps over 10% in an hour, gainin... (Pluang)"}
+{"t": "trend", "ts": 1791703093, "symbol": "WUSDT", "base": "W", "price": 0.01776, "score": 94.9, "rs7": 24.7, "rs30": 74.5, "new": true}
+{"t": "trend", "ts": 1791703093, "symbol": "BATUSDT", "base": "BAT", "price": 0.1434, "score": 91.0, "rs7": 38.1, "rs30": 88.7, "new": true}
+{"t": "trend", "ts": 1791703093, "symbol": "RLCUSDT", "base": "RLC", "price": 1.0085, "score": 84.6, "rs7": 181.4, "rs30": 243.6, "new": true}
+{"t": "trend", "ts": 1791703093, "symbol": "CTSIUSDT", "base": "CTSI", "price": 0.0357, "score": 83.4, "rs7": 19.8, "rs30": 40.0, "new": true}
