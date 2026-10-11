@@ -127,7 +127,7 @@
 "cur_ts": 1791590400,
 "hi": 9.8,
 "lo": -18.17,
-"checked": 1791724703,
+"checked": 1791731864,
 "done": false
 },
 "coin|bitget|FLOCKUSDT|1789296347": {
@@ -1244,7 +1244,7 @@
 "cur_ts": 1791590400,
 "hi": 6.83,
 "lo": -26.64,
-"checked": 1791724703,
+"checked": 1791731864,
 "done": false
 },
 "coin|binance|ONEUSDT|1789607982": {
@@ -1970,7 +1970,7 @@
 "ts": 1789723138.0,
 "price": 0.03561,
 "note": "뉴스",
-"repeats": 27,
+"repeats": 28,
 "res": {
 "h24": {
 "r": 19.26,
@@ -2412,7 +2412,7 @@
 "ts": 1789780744.0,
 "price": 0.03306,
 "note": "거래량 폭증",
-"repeats": 4,
+"repeats": 6,
 "res": {
 "h24": {
 "r": 0.27,
@@ -8053,7 +8053,7 @@
 "cur_ts": 1791441000,
 "hi": 11.25,
 "lo": -6.22,
-"checked": 1791724703,
+"checked": 1791731864,
 "done": false
 },
 "coin|binance|RLCUSDT|1791199065": {
@@ -8933,6 +8933,30 @@
 "hi": 64.25,
 "lo": -9.68,
 "checked": 1791703093,
+"done": false
+},
+"coin|binance|CFXUSDT|1791645454": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "CFXUSDT",
+"name": "CFX",
+"ts": 1791645454.0,
+"price": 0.06277,
+"note": "원인 미확인",
+"repeats": 2,
+"res": {
+"h24": {
+"r": 12.79,
+"hi": 15.34,
+"lo": -7.46
+}
+},
+"cur": 14.47,
+"cur_ts": 1791734400,
+"hi": 15.34,
+"lo": -7.46,
+"checked": 1791731864,
 "done": false
 }
 }
