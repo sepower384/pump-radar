@@ -370,3 +370,4 @@
 {"t": "trend", "ts": 1791703093, "symbol": "BATUSDT", "base": "BAT", "price": 0.1434, "score": 91.0, "rs7": 38.1, "rs30": 88.7, "new": true}
 {"t": "trend", "ts": 1791703093, "symbol": "RLCUSDT", "base": "RLC", "price": 1.0085, "score": 84.6, "rs7": 181.4, "rs30": 243.6, "new": true}
 {"t": "trend", "ts": 1791703093, "symbol": "CTSIUSDT", "base": "CTSI", "price": 0.0357, "score": 83.4, "rs7": 19.8, "rs30": 40.0, "new": true}
+{"t": "trend", "ts": 1791710254, "symbol": "ZKUSDT", "base": "ZK", "price": 0.0159, "score": 82.7, "rs7": 24.1, "rs30": 55.0, "new": true}
