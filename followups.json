@@ -127,7 +127,7 @@
 "cur_ts": 1791590400,
 "hi": 9.8,
 "lo": -18.17,
-"checked": 1791739050,
+"checked": 1791746252,
 "done": false
 },
 "coin|bitget|FLOCKUSDT|1789296347": {
@@ -1244,7 +1244,7 @@
 "cur_ts": 1791590400,
 "hi": 6.83,
 "lo": -26.64,
-"checked": 1791739050,
+"checked": 1791746252,
 "done": false
 },
 "coin|binance|ONEUSDT|1789607982": {
@@ -8053,7 +8053,7 @@
 "cur_ts": 1791441000,
 "hi": 11.25,
 "lo": -6.22,
-"checked": 1791739050,
+"checked": 1791746252,
 "done": false
 },
 "coin|binance|RLCUSDT|1791199065": {
@@ -8957,6 +8957,30 @@
 "hi": 15.34,
 "lo": -7.46,
 "checked": 1791731864,
+"done": false
+},
+"coin|binance|ACTUSDT|1791652752": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "ACTUSDT",
+"name": "ACT",
+"ts": 1791652752.0,
+"price": 0.01204,
+"note": "거래량 폭증",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -8.89,
+"hi": -6.81,
+"lo": -13.37
+}
+},
+"cur": -9.63,
+"cur_ts": 1791748800,
+"hi": -6.81,
+"lo": -13.37,
+"checked": 1791746252,
 "done": false
 }
 }
