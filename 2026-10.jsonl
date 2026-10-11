@@ -371,3 +371,5 @@
 {"t": "trend", "ts": 1791703093, "symbol": "RLCUSDT", "base": "RLC", "price": 1.0085, "score": 84.6, "rs7": 181.4, "rs30": 243.6, "new": true}
 {"t": "trend", "ts": 1791703093, "symbol": "CTSIUSDT", "base": "CTSI", "price": 0.0357, "score": 83.4, "rs7": 19.8, "rs30": 40.0, "new": true}
 {"t": "trend", "ts": 1791710254, "symbol": "ZKUSDT", "base": "ZK", "price": 0.0159, "score": 82.7, "rs7": 24.1, "rs30": 55.0, "new": true}
+{"t": "pump", "ts": 1791717453, "market": "binance", "symbol": "CHIPUSDT", "base": "CHIP", "price": 0.06806, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 1.43, "chg2h": 6.26, "chg24h": 30.73, "qvol": 24046885.87756, "vol_x": 0.8, "off_high": -0.99, "direction": "up", "tag": "원인 미확인", "tags": ["원인 미확인"], "conf": "낮음", "headline": "USD.AI 급등 — 이유 불명 · 큰손 주도 의심", "news": ""}
+{"t": "trend", "ts": 1791717460, "symbol": "CHIPUSDT", "base": "CHIP", "price": 0.06817, "score": 84.8, "rs7": 57.0, "rs30": 31.9, "new": true}
