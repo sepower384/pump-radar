@@ -354,3 +354,7 @@
 {"t": "trend", "ts": 1791659870, "symbol": "WUSDT", "base": "W", "price": 0.01784, "score": 94.9, "rs7": 33.0, "rs30": 73.7, "new": true}
 {"t": "trend", "ts": 1791667055, "symbol": "CHIPUSDT", "base": "CHIP", "price": 0.06738, "score": 80.7, "rs7": 55.9, "rs30": 32.4, "new": true}
 {"t": "trend", "ts": 1791674253, "symbol": "METUSDT", "base": "MET", "price": 0.4232, "score": 78.9, "rs7": 41.6, "rs30": 82.1, "new": true}
+{"t": "pump", "ts": 1791681485, "market": "binance", "symbol": "CHIPUSDT", "base": "CHIP", "price": 0.06884, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 4.1, "chg2h": -1.06, "chg24h": 32.08, "qvol": 16755202.97939, "vol_x": 0.7, "off_high": -2.17, "direction": "up", "tag": "원인 미확인", "tags": ["원인 미확인"], "conf": "낮음", "headline": "USD.AI 급등 — 이유 불명 · 큰손 주도 의심", "news": ""}
+{"t": "trend", "ts": 1791681490, "symbol": "STRKUSDT", "base": "STRK", "price": 0.10184, "score": 90.0, "rs7": 98.8, "rs30": 229.4, "new": true}
+{"t": "trend", "ts": 1791681490, "symbol": "KAIAUSDT", "base": "KAIA", "price": 0.0542, "score": 84.8, "rs7": 48.9, "rs30": 75.1, "new": true}
+{"t": "trend", "ts": 1791681490, "symbol": "TIAUSDT", "base": "TIA", "price": 0.601, "score": 81.2, "rs7": 30.9, "rs30": 51.7, "new": true}
