@@ -123,11 +123,11 @@
 "lo": -15.83
 }
 },
-"cur": 2.8,
-"cur_ts": 1791792000,
+"cur": 2.15,
+"cur_ts": 1791806400,
 "hi": 9.8,
 "lo": -18.17,
-"checked": 1791803887,
+"checked": 1791811063,
 "done": false
 },
 "coin|bitget|FLOCKUSDT|1789296347": {
@@ -1240,11 +1240,11 @@
 "lo": -16.73
 }
 },
-"cur": -5.46,
-"cur_ts": 1791792000,
+"cur": -6.69,
+"cur_ts": 1791806400,
 "hi": 6.83,
 "lo": -26.64,
-"checked": 1791803887,
+"checked": 1791811063,
 "done": false
 },
 "coin|binance|ONEUSDT|1789607982": {
@@ -8073,7 +8073,7 @@
 "cur_ts": 1791786600,
 "hi": 11.25,
 "lo": -13.49,
-"checked": 1791803887,
+"checked": 1791811063,
 "done": false
 },
 "coin|binance|RLCUSDT|1791199065": {
