@@ -412,3 +412,6 @@
 {"t": "trend", "ts": 1791803886, "symbol": "ZKUSDT", "base": "ZK", "price": 0.0157, "score": 84.5, "rs7": 25.6, "rs30": 49.9, "new": true}
 {"t": "trend", "ts": 1791803886, "symbol": "RLCUSDT", "base": "RLC", "price": 0.9995, "score": 83.3, "rs7": 117.0, "rs30": 229.2, "new": true}
 {"t": "trend", "ts": 1791803886, "symbol": "MAGICUSDT", "base": "MAGIC", "price": 0.1334, "score": 82.1, "rs7": 124.9, "rs30": 181.3, "new": true}
+{"t": "pump", "ts": 1791818258, "market": "binance", "symbol": "CTKUSDT", "base": "CTK", "price": 0.1815, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 16.08, "chg2h": 30.58, "chg24h": 39.08, "qvol": 29582518.74958, "vol_x": 0.7, "off_high": -6.72, "direction": "up", "tag": "원인 미확인", "tags": ["원인 미확인"], "conf": "낮음", "headline": "Shentu 급등 — 이유 불명 · 큰손 주도 의심", "news": ""}
+{"t": "trend", "ts": 1791818264, "symbol": "TIAUSDT", "base": "TIA", "price": 0.5622, "score": 85.2, "rs7": 24.0, "rs30": 48.2, "new": true}
+{"t": "trend", "ts": 1791818264, "symbol": "币安人生USDT", "base": "币安人生", "price": 0.5971, "score": 80.8, "rs7": 21.4, "rs30": 17.6, "new": true}
