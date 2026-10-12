@@ -415,3 +415,6 @@
 {"t": "pump", "ts": 1791818258, "market": "binance", "symbol": "CTKUSDT", "base": "CTK", "price": 0.1815, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 16.08, "chg2h": 30.58, "chg24h": 39.08, "qvol": 29582518.74958, "vol_x": 0.7, "off_high": -6.72, "direction": "up", "tag": "원인 미확인", "tags": ["원인 미확인"], "conf": "낮음", "headline": "Shentu 급등 — 이유 불명 · 큰손 주도 의심", "news": ""}
 {"t": "trend", "ts": 1791818264, "symbol": "TIAUSDT", "base": "TIA", "price": 0.5622, "score": 85.2, "rs7": 24.0, "rs30": 48.2, "new": true}
 {"t": "trend", "ts": 1791818264, "symbol": "币安人生USDT", "base": "币安人生", "price": 0.5971, "score": 80.8, "rs7": 21.4, "rs30": 17.6, "new": true}
+{"t": "pump", "ts": 1791825455, "market": "binance", "symbol": "OSMOUSDT", "base": "OSMO", "price": 0.0445, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 8.54, "chg2h": 5.95, "chg24h": 23.61, "qvol": 4057209.737728, "vol_x": 2.6, "off_high": -8.44, "direction": "up", "tag": "원인 미확인", "tags": ["원인 미확인"], "conf": "낮음", "headline": "Osmosis 급등 — 이유 불명 · 큰손 주도 의심", "news": ""}
+{"t": "trend", "ts": 1791825463, "symbol": "GTCUSDT", "base": "GTC", "price": 0.29412, "score": 81.4, "rs7": 62.6, "rs30": 252.7, "new": true}
+{"t": "trend", "ts": 1791825463, "symbol": "STRKUSDT", "base": "STRK", "price": 0.09417, "score": 79.8, "rs7": 86.7, "rs30": 204.8, "new": true}
