@@ -441,3 +441,9 @@
 {"t": "trend", "ts": 1791883092, "symbol": "SUSDT", "base": "S", "price": 0.05706, "score": 85.5, "rs7": 33.4, "rs30": 99.9, "new": true}
 {"t": "trend", "ts": 1791897458, "symbol": "PLUMEUSDT", "base": "PLUME", "price": 0.02117, "score": 78.3, "rs7": 16.7, "rs30": 50.0, "new": true}
 {"t": "trend", "ts": 1791897458, "symbol": "DUSKUSDT", "base": "DUSK", "price": 0.0987, "score": 75.5, "rs7": 16.9, "rs30": 25.1, "new": true}
+{"t": "pump", "ts": 1791904701, "market": "binance", "symbol": "GNSUSDT", "base": "GNS", "price": 0.524, "chg5m": 0.0, "chg15m": 0.0, "chg1h": -1.13, "chg2h": 41.62, "chg24h": 44.35, "qvol": 1438982.35639, "vol_x": 3.1, "off_high": -7.91, "direction": "up", "tag": "뉴스", "tags": ["뉴스", "거래량 폭증"], "conf": "높음", "headline": "GNS 급등 — 뉴스 재료", "news": "Genus (LSE:GNS) Surges on Profit Outlook Beat as Animal Genetics Demand Strengthens While FTSE  (Kalkine Media)"}
+{"t": "trend", "ts": 1791904708, "symbol": "BATUSDT", "base": "BAT", "price": 0.1818, "score": 97.2, "rs7": 82.5, "rs30": 111.6, "new": true}
+{"t": "trend", "ts": 1791904708, "symbol": "ZKUSDT", "base": "ZK", "price": 0.0169, "score": 93.3, "rs7": 30.5, "rs30": 62.3, "new": true}
+{"t": "trend", "ts": 1791904708, "symbol": "TIAUSDT", "base": "TIA", "price": 0.5821, "score": 87.8, "rs7": 25.3, "rs30": 49.4, "new": true}
+{"t": "trend", "ts": 1791904708, "symbol": "MAGICUSDT", "base": "MAGIC", "price": 0.1183, "score": 76.3, "rs7": 78.4, "rs30": 142.0, "new": true}
+{"t": "trend", "ts": 1791904708, "symbol": "WUSDT", "base": "W", "price": 0.01793, "score": 70.9, "rs7": 26.7, "rs30": 64.7, "new": true}
