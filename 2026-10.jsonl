@@ -439,3 +439,5 @@
 {"t": "trend", "ts": 1791875885, "symbol": "STRKUSDT", "base": "STRK", "price": 0.08517, "score": 75.8, "rs7": 67.3, "rs30": 174.0, "new": true}
 {"t": "pump", "ts": 1791883085, "market": "binance", "symbol": "GTCUSDT", "base": "GTC", "price": 0.2493, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 4.82, "chg2h": 2.22, "chg24h": 50.47, "qvol": 30589108.961405, "vol_x": 1.6, "off_high": -6.48, "direction": "up", "tag": "거래소 상장", "tags": ["거래소 상장", "뉴스"], "conf": "높음", "headline": "Gitcoin 급등 — 거래소 상장 재료", "news": "업비트 깃코인(GTC) 신규 상장 후 64% 급등…0.30달러 안착 가능할까? (99Bitcoins)"}
 {"t": "trend", "ts": 1791883092, "symbol": "SUSDT", "base": "S", "price": 0.05706, "score": 85.5, "rs7": 33.4, "rs30": 99.9, "new": true}
+{"t": "trend", "ts": 1791897458, "symbol": "PLUMEUSDT", "base": "PLUME", "price": 0.02117, "score": 78.3, "rs7": 16.7, "rs30": 50.0, "new": true}
+{"t": "trend", "ts": 1791897458, "symbol": "DUSKUSDT", "base": "DUSK", "price": 0.0987, "score": 75.5, "rs7": 16.9, "rs30": 25.1, "new": true}
