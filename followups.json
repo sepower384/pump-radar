@@ -127,7 +127,7 @@
 "cur_ts": 1791864000,
 "hi": 9.8,
 "lo": -18.17,
-"checked": 1791868662,
+"checked": 1791875886,
 "done": false
 },
 "coin|bitget|FLOCKUSDT|1789296347": {
@@ -1244,7 +1244,7 @@
 "cur_ts": 1791864000,
 "hi": 6.83,
 "lo": -26.64,
-"checked": 1791868662,
+"checked": 1791875886,
 "done": false
 },
 "coin|binance|ONEUSDT|1789607982": {
@@ -1970,7 +1970,7 @@
 "ts": 1789723138.0,
 "price": 0.03561,
 "note": "뉴스",
-"repeats": 31,
+"repeats": 32,
 "res": {
 "h24": {
 "r": 19.26,
@@ -8069,11 +8069,11 @@
 "lo": -6.22
 }
 },
-"cur": -17.64,
+"cur": -17.75,
 "cur_ts": 1791873000,
 "hi": 11.25,
 "lo": -20.72,
-"checked": 1791868662,
+"checked": 1791875886,
 "done": false
 },
 "coin|binance|RLCUSDT|1791199065": {
@@ -8816,7 +8816,7 @@
 "ts": 1791451054.0,
 "price": 0.02611,
 "note": "뉴스",
-"repeats": 6,
+"repeats": 7,
 "res": {
 "h24": {
 "r": 49.25,
@@ -8996,13 +8996,18 @@
 "r": 48.3,
 "hi": 64.25,
 "lo": -9.68
+},
+"h72": {
+"r": 4.48,
+"hi": 64.25,
+"lo": -12.9
 }
 },
-"cur": 8.69,
-"cur_ts": 1791770400,
+"cur": 1.97,
+"cur_ts": 1791878400,
 "hi": 64.25,
-"lo": -9.68,
-"checked": 1791767888,
+"lo": -12.9,
+"checked": 1791875886,
 "done": false
 },
 "coin|binance|CFXUSDT|1791645454": {
@@ -9171,6 +9176,78 @@
 "hi": -1.71,
 "lo": -16.07,
 "checked": 1791861494,
+"done": false
+},
+"coin|binance|RSRUSDT|1791782282": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "RSRUSDT",
+"name": "RSR",
+"ts": 1791782282.0,
+"price": 0.002616,
+"note": "ETF",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -19.76,
+"hi": 5.12,
+"lo": -26.19
+}
+},
+"cur": -21.1,
+"cur_ts": 1791878400,
+"hi": 5.12,
+"lo": -26.19,
+"checked": 1791875886,
+"done": false
+},
+"stock|KR|002990|1791782299": {
+"asset": "stock",
+"kind": "stock",
+"market": "KR",
+"symbol": "002990",
+"name": "금호건설",
+"ts": 1791782299.0,
+"price": 13730.0,
+"note": "건설 중소형 대장주",
+"repeats": 1,
+"res": {
+"h24": {
+"r": 0.22,
+"hi": 2.69,
+"lo": -14.71
+}
+},
+"cur": -11.14,
+"cur_ts": 1791873000,
+"hi": 12.09,
+"lo": -14.71,
+"checked": 1791875886,
+"done": false
+},
+"coin|binance|CYBERUSDT|1791789464": {
+"asset": "coin",
+"kind": "trend",
+"market": "binance",
+"symbol": "CYBERUSDT",
+"name": "CYBER",
+"ts": 1791789464.0,
+"price": 0.396,
+"note": "우상향 점수 80.9",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -6.31,
+"hi": 6.06,
+"lo": -15.15
+}
+},
+"cur": -7.32,
+"cur_ts": 1791878400,
+"hi": 6.06,
+"lo": -15.15,
+"checked": 1791875886,
 "done": false
 }
 }
