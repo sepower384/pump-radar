@@ -449,3 +449,4 @@
 {"t": "trend", "ts": 1791904708, "symbol": "WUSDT", "base": "W", "price": 0.01793, "score": 70.9, "rs7": 26.7, "rs30": 64.7, "new": true}
 {"t": "trend", "ts": 1791911856, "symbol": "BEAMXUSDT", "base": "BEAMX", "price": 0.002817, "score": 74.3, "rs7": 16.3, "rs30": 53.1, "new": true}
 {"t": "trend", "ts": 1791919060, "symbol": "OPUSDT", "base": "OP", "price": 0.1545, "score": 83.5, "rs7": 20.9, "rs30": 50.5, "new": true}
+{"t": "pump", "ts": 1791926260, "market": "binance", "symbol": "BATUSDT", "base": "BAT", "price": 0.1942, "chg5m": 0.0, "chg15m": 0.0, "chg1h": -4.52, "chg2h": 5.25, "chg24h": 25.78, "qvol": 20345765.7928, "vol_x": 0.6, "off_high": -6.27, "direction": "up", "tag": "뉴스", "tags": ["뉴스", "뉴스", "검색 급증"], "conf": "높음", "headline": "Basic Attention 급등 — 뉴스 재료", "news": "Basic Attention Token (BAT) jumps over 10% in a... (Pluang)"}
