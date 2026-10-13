@@ -520,5 +520,23 @@
 "result_pct": 6.54,
 "resolved_ts": 1791775058,
 "reported": 1
+},
+{
+"id": 31,
+"ts": 1791868662,
+"market": "KR",
+"symbol": "005830",
+"name": "DB손해보험",
+"theme": "손해보험",
+"leader": "롯데손해보험",
+"ref_price": 193800.0,
+"target_pct": 2.0,
+"deadline": 1791959400,
+"status": "pending",
+"best_price": 193800.0,
+"last_price": null,
+"result_pct": null,
+"resolved_ts": null,
+"reported": 0
 }
 ]
