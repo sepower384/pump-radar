@@ -147,7 +147,7 @@
 "cur_ts": 1791892800,
 "hi": 9.8,
 "lo": -18.17,
-"checked": 1791904710,
+"checked": 1791911859,
 "done": false
 },
 "coin|bitget|FLOCKUSDT|1789296347": {
@@ -1275,11 +1275,11 @@
 "lo": -16.73
 }
 },
-"cur": -9.3,
-"cur_ts": 1791892800,
+"cur": -12.24,
+"cur_ts": 1791907200,
 "hi": 6.83,
 "lo": -26.64,
-"checked": 1791904710,
+"checked": 1791911859,
 "done": false
 },
 "coin|binance|ONEUSDT|1789607982": {
@@ -7955,7 +7955,7 @@
 "ts": 1791105480.0,
 "price": 0.002857,
 "note": "거래량 폭증",
-"repeats": 9,
+"repeats": 10,
 "res": {
 "h24": {
 "r": -11.2,
@@ -8108,7 +8108,7 @@
 "cur_ts": 1791873000,
 "hi": 11.25,
 "lo": -20.72,
-"checked": 1791904710,
+"checked": 1791911859,
 "done": false
 },
 "coin|binance|RLCUSDT|1791199065": {
@@ -8505,13 +8505,18 @@
 "r": 1.21,
 "hi": 11.52,
 "lo": -7.88
+},
+"h168": {
+"r": 5.15,
+"hi": 11.52,
+"lo": -7.88
 }
 },
-"cur": 4.24,
-"cur_ts": 1791770400,
+"cur": 4.55,
+"cur_ts": 1791914400,
 "hi": 11.52,
 "lo": -7.88,
-"checked": 1791767888,
+"checked": 1791911859,
 "done": false
 },
 "coin|binance|FLUXUSDT|1791314258": {
@@ -9332,6 +9337,30 @@
 "hi": -0.28,
 "lo": -33.83,
 "checked": 1791904710,
+"done": false
+},
+"coin|binance|OSMOUSDT|1791825455": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "OSMOUSDT",
+"name": "OSMO",
+"ts": 1791825455.0,
+"price": 0.0445,
+"note": "원인 미확인",
+"repeats": 3,
+"res": {
+"h24": {
+"r": -4.49,
+"hi": 26.97,
+"lo": -6.52
+}
+},
+"cur": -4.94,
+"cur_ts": 1791914400,
+"hi": 26.97,
+"lo": -6.52,
+"checked": 1791911859,
 "done": false
 }
 }
