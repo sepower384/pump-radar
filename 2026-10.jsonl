@@ -474,3 +474,5 @@
 {"t": "pump", "ts": 1791983883, "market": "bitget", "symbol": "QUSDT", "base": "Q", "price": 0.0498633, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 1.24, "chg2h": 6.34, "chg24h": 26.26, "qvol": 1879968.84327494, "vol_x": 0.4, "off_high": -2.32, "direction": "up", "tag": "원인 미확인", "tags": ["원인 미확인"], "conf": "낮음", "headline": "Quack AI 급등 — 이유 불명 · 큰손 주도 의심", "news": ""}
 {"t": "trend", "ts": 1791983891, "symbol": "SUSDT", "base": "S", "price": 0.05589, "score": 85.8, "rs7": 41.5, "rs30": 98.6, "new": true}
 {"t": "trend", "ts": 1791983891, "symbol": "STXUSDT", "base": "STX", "price": 0.4251, "score": 73.8, "rs7": 14.5, "rs30": 51.7, "new": true}
+{"t": "trend", "ts": 1791991055, "symbol": "DUSKUSDT", "base": "DUSK", "price": 0.1022, "score": 86.8, "rs7": 32.8, "rs30": 35.6, "new": true}
+{"t": "trend", "ts": 1791991055, "symbol": "AXLUSDT", "base": "AXL", "price": 0.0606, "score": 78.0, "rs7": 23.6, "rs30": 30.0, "new": true}
