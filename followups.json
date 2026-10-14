@@ -147,7 +147,7 @@
 "cur_ts": 1791892800,
 "hi": 9.8,
 "lo": -18.17,
-"checked": 1791991057,
+"checked": 1791998263,
 "done": false
 },
 "coin|bitget|FLOCKUSDT|1789296347": {
@@ -415,7 +415,7 @@
 "cur_ts": 1791921600,
 "hi": 32.15,
 "lo": -47.98,
-"checked": 1791991057,
+"checked": 1791998263,
 "done": false
 },
 "coin|bitget|POWERUSDT|1789327197": {
@@ -449,7 +449,7 @@
 "cur_ts": 1791921600,
 "hi": 86.75,
 "lo": -35.54,
-"checked": 1791991057,
+"checked": 1791998263,
 "done": false
 },
 "coin|binance|ARKUSDT|1789348745": {
@@ -522,7 +522,7 @@
 "cur_ts": 1791964800,
 "hi": 104.81,
 "lo": -82.0,
-"checked": 1791991057,
+"checked": 1791998263,
 "done": false
 },
 "coin|binance|TUSDT|1789384750": {
@@ -595,7 +595,7 @@
 "cur_ts": 1791979200,
 "hi": 186.66,
 "lo": -57.35,
-"checked": 1791991057,
+"checked": 1791998263,
 "done": false
 },
 "coin|binance|QKCUSDT|1789391926": {
@@ -664,11 +664,11 @@
 "lo": -1.87
 }
 },
-"cur": -3.12,
-"cur_ts": 1791763200,
+"cur": -4.37,
+"cur_ts": 1791993600,
 "hi": 154.82,
-"lo": -7.17,
-"checked": 1791767888,
+"lo": -7.4,
+"checked": 1791998263,
 "done": false
 },
 "coin|bitget|CPOOLUSDT|1789420744": {
@@ -1305,11 +1305,11 @@
 "lo": -16.73
 }
 },
-"cur": -10.44,
-"cur_ts": 1791979200,
+"cur": -15.97,
+"cur_ts": 1791993600,
 "hi": 6.83,
 "lo": -26.64,
-"checked": 1791991057,
+"checked": 1791998263,
 "done": false
 },
 "coin|binance|ONEUSDT|1789607982": {
@@ -1423,7 +1423,7 @@
 "ts": 1789622326.0,
 "price": 0.1954,
 "note": "거래소 상장",
-"repeats": 6,
+"repeats": 7,
 "res": {
 "h24": {
 "r": 33.67,
@@ -8138,7 +8138,7 @@
 "cur_ts": 1791959400,
 "hi": 11.25,
 "lo": -20.72,
-"checked": 1791991057,
+"checked": 1791998263,
 "done": false
 },
 "coin|binance|RLCUSDT|1791199065": {
@@ -9513,6 +9513,30 @@
 "hi": 2.58,
 "lo": -5.52,
 "checked": 1791955106,
+"done": false
+},
+"coin|binance|GNSUSDT|1791904701": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "GNSUSDT",
+"name": "GNS",
+"ts": 1791904701.0,
+"price": 0.524,
+"note": "뉴스",
+"repeats": 4,
+"res": {
+"h24": {
+"r": 14.89,
+"hi": 63.74,
+"lo": -2.67
+}
+},
+"cur": 5.73,
+"cur_ts": 1792000800,
+"hi": 63.74,
+"lo": -2.67,
+"checked": 1791998263,
 "done": false
 }
 }
