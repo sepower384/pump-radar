@@ -147,7 +147,7 @@
 "cur_ts": 1791892800,
 "hi": 9.8,
 "lo": -18.17,
-"checked": 1791998263,
+"checked": 1792005501,
 "done": false
 },
 "coin|bitget|FLOCKUSDT|1789296347": {
@@ -415,7 +415,7 @@
 "cur_ts": 1791921600,
 "hi": 32.15,
 "lo": -47.98,
-"checked": 1791998263,
+"checked": 1792005501,
 "done": false
 },
 "coin|bitget|POWERUSDT|1789327197": {
@@ -449,7 +449,7 @@
 "cur_ts": 1791921600,
 "hi": 86.75,
 "lo": -35.54,
-"checked": 1791998263,
+"checked": 1792005501,
 "done": false
 },
 "coin|binance|ARKUSDT|1789348745": {
@@ -522,7 +522,7 @@
 "cur_ts": 1791964800,
 "hi": 104.81,
 "lo": -82.0,
-"checked": 1791998263,
+"checked": 1792005501,
 "done": false
 },
 "coin|binance|TUSDT|1789384750": {
@@ -595,7 +595,7 @@
 "cur_ts": 1791979200,
 "hi": 186.66,
 "lo": -57.35,
-"checked": 1791998263,
+"checked": 1792005501,
 "done": false
 },
 "coin|binance|QKCUSDT|1789391926": {
@@ -668,7 +668,7 @@
 "cur_ts": 1791993600,
 "hi": 154.82,
 "lo": -7.4,
-"checked": 1791998263,
+"checked": 1792005501,
 "done": false
 },
 "coin|bitget|CPOOLUSDT|1789420744": {
@@ -1309,7 +1309,7 @@
 "cur_ts": 1791993600,
 "hi": 6.83,
 "lo": -26.64,
-"checked": 1791998263,
+"checked": 1792005501,
 "done": false
 },
 "coin|binance|ONEUSDT|1789607982": {
@@ -2239,7 +2239,7 @@
 "ts": 1789759132.0,
 "price": 0.01108,
 "note": "거래량 폭증",
-"repeats": 8,
+"repeats": 9,
 "res": {
 "h24": {
 "r": -0.45,
@@ -4857,7 +4857,7 @@
 "ts": 1790162354.0,
 "price": 0.5289,
 "note": "우상향 점수 88.7",
-"repeats": 10,
+"repeats": 11,
 "res": {
 "h24": {
 "r": -13.5,
@@ -8138,7 +8138,7 @@
 "cur_ts": 1791959400,
 "hi": 11.25,
 "lo": -20.72,
-"checked": 1791998263,
+"checked": 1792005501,
 "done": false
 },
 "coin|binance|RLCUSDT|1791199065": {
@@ -8807,13 +8807,18 @@
 "r": 13.7,
 "hi": 18.74,
 "lo": -4.88
+},
+"h168": {
+"r": 8.03,
+"hi": 22.68,
+"lo": -4.88
 }
 },
-"cur": 15.91,
-"cur_ts": 1791770400,
-"hi": 18.74,
+"cur": 8.82,
+"cur_ts": 1792008000,
+"hi": 22.68,
 "lo": -4.88,
-"checked": 1791767888,
+"checked": 1792005501,
 "done": false
 },
 "stock|KR|084670|1791422268": {
@@ -9086,7 +9091,7 @@
 "ts": 1791566263.0,
 "price": 0.1328,
 "note": "검색 급증",
-"repeats": 12,
+"repeats": 13,
 "res": {
 "h24": {
 "r": 2.86,
@@ -9537,6 +9542,30 @@
 "hi": 63.74,
 "lo": -2.67,
 "checked": 1791998263,
+"done": false
+},
+"coin|binance|OPUSDT|1791919060": {
+"asset": "coin",
+"kind": "trend",
+"market": "binance",
+"symbol": "OPUSDT",
+"name": "OP",
+"ts": 1791919060.0,
+"price": 0.1545,
+"note": "우상향 점수 83.5",
+"repeats": 2,
+"res": {
+"h24": {
+"r": -9.06,
+"hi": 5.18,
+"lo": -11.39
+}
+},
+"cur": -9.13,
+"cur_ts": 1792008000,
+"hi": 5.18,
+"lo": -11.39,
+"checked": 1792005501,
 "done": false
 }
 }
