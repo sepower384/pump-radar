@@ -538,5 +538,41 @@
 "result_pct": 2.58,
 "resolved_ts": 1791940693,
 "reported": 1
+},
+{
+"id": 32,
+"ts": 1791955105,
+"market": "KR",
+"symbol": "023160",
+"name": "태광",
+"theme": "피팅(관이음쇠)/밸브",
+"leader": "한선엔지니어링",
+"ref_price": 26950.0,
+"target_pct": 2.0,
+"deadline": 1792045800,
+"status": "pending",
+"best_price": 26950.0,
+"last_price": null,
+"result_pct": null,
+"resolved_ts": null,
+"reported": 0
+},
+{
+"id": 33,
+"ts": 1791955105,
+"market": "KR",
+"symbol": "014620",
+"name": "성광벤드",
+"theme": "피팅(관이음쇠)/밸브",
+"leader": "한선엔지니어링",
+"ref_price": 28750.0,
+"target_pct": 2.0,
+"deadline": 1792045800,
+"status": "pending",
+"best_price": 28750.0,
+"last_price": null,
+"result_pct": null,
+"resolved_ts": null,
+"reported": 0
 }
 ]
