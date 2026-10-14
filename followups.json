@@ -147,7 +147,7 @@
 "cur_ts": 1791892800,
 "hi": 9.8,
 "lo": -18.17,
-"checked": 1792005501,
+"checked": 1792012678,
 "done": false
 },
 "coin|bitget|FLOCKUSDT|1789296347": {
@@ -415,7 +415,7 @@
 "cur_ts": 1791921600,
 "hi": 32.15,
 "lo": -47.98,
-"checked": 1792005501,
+"checked": 1792012678,
 "done": false
 },
 "coin|bitget|POWERUSDT|1789327197": {
@@ -449,7 +449,7 @@
 "cur_ts": 1791921600,
 "hi": 86.75,
 "lo": -35.54,
-"checked": 1792005501,
+"checked": 1792012678,
 "done": false
 },
 "coin|binance|ARKUSDT|1789348745": {
@@ -522,7 +522,7 @@
 "cur_ts": 1791964800,
 "hi": 104.81,
 "lo": -82.0,
-"checked": 1792005501,
+"checked": 1792012678,
 "done": false
 },
 "coin|binance|TUSDT|1789384750": {
@@ -595,7 +595,7 @@
 "cur_ts": 1791979200,
 "hi": 186.66,
 "lo": -57.35,
-"checked": 1792005501,
+"checked": 1792012678,
 "done": false
 },
 "coin|binance|QKCUSDT|1789391926": {
@@ -668,7 +668,7 @@
 "cur_ts": 1791993600,
 "hi": 154.82,
 "lo": -7.4,
-"checked": 1792005501,
+"checked": 1792012678,
 "done": false
 },
 "coin|bitget|CPOOLUSDT|1789420744": {
@@ -1305,11 +1305,11 @@
 "lo": -16.73
 }
 },
-"cur": -15.97,
-"cur_ts": 1791993600,
+"cur": -17.02,
+"cur_ts": 1792008000,
 "hi": 6.83,
 "lo": -26.64,
-"checked": 1792005501,
+"checked": 1792012678,
 "done": false
 },
 "coin|binance|ONEUSDT|1789607982": {
@@ -3089,7 +3089,7 @@
 "ts": 1789939129.0,
 "price": 0.06189,
 "note": "원인 미확인",
-"repeats": 17,
+"repeats": 18,
 "res": {
 "h24": {
 "r": 9.97,
@@ -7985,7 +7985,7 @@
 "ts": 1791105480.0,
 "price": 0.002857,
 "note": "거래량 폭증",
-"repeats": 11,
+"repeats": 12,
 "res": {
 "h24": {
 "r": -11.2,
@@ -8138,7 +8138,7 @@
 "cur_ts": 1791959400,
 "hi": 11.25,
 "lo": -20.72,
-"checked": 1792005501,
+"checked": 1792012678,
 "done": false
 },
 "coin|binance|RLCUSDT|1791199065": {
