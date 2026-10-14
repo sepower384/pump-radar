@@ -471,3 +471,6 @@
 {"t": "trend", "ts": 1791962279, "symbol": "OPUSDT", "base": "OP", "price": 0.1515, "score": 86.4, "rs7": 26.1, "rs30": 47.4, "new": true}
 {"t": "trend", "ts": 1791962279, "symbol": "WALUSDT", "base": "WAL", "price": 0.05051, "score": 80.6, "rs7": 37.8, "rs30": 63.5, "new": true}
 {"t": "pump", "ts": 1791969456, "market": "binance", "symbol": "GNSUSDT", "base": "GNS", "price": 0.665, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 3.74, "chg2h": -7.25, "chg24h": 80.71, "qvol": 10994585.59126, "vol_x": 0.6, "off_high": -13.75, "direction": "up", "tag": "원인 미확인", "tags": ["원인 미확인"], "conf": "낮음", "headline": "GNS 급등 — 이유 불명 · 큰손 주도 의심", "news": ""}
+{"t": "pump", "ts": 1791983883, "market": "bitget", "symbol": "QUSDT", "base": "Q", "price": 0.0498633, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 1.24, "chg2h": 6.34, "chg24h": 26.26, "qvol": 1879968.84327494, "vol_x": 0.4, "off_high": -2.32, "direction": "up", "tag": "원인 미확인", "tags": ["원인 미확인"], "conf": "낮음", "headline": "Quack AI 급등 — 이유 불명 · 큰손 주도 의심", "news": ""}
+{"t": "trend", "ts": 1791983891, "symbol": "SUSDT", "base": "S", "price": 0.05589, "score": 85.8, "rs7": 41.5, "rs30": 98.6, "new": true}
+{"t": "trend", "ts": 1791983891, "symbol": "STXUSDT", "base": "STX", "price": 0.4251, "score": 73.8, "rs7": 14.5, "rs30": 51.7, "new": true}
