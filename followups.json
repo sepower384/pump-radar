@@ -147,7 +147,7 @@
 "cur_ts": 1791892800,
 "hi": 9.8,
 "lo": -18.17,
-"checked": 1792084720,
+"checked": 1792091903,
 "done": false
 },
 "coin|bitget|FLOCKUSDT|1789296347": {
@@ -415,7 +415,7 @@
 "cur_ts": 1791921600,
 "hi": 32.15,
 "lo": -47.98,
-"checked": 1792084720,
+"checked": 1792091903,
 "done": false
 },
 "coin|bitget|POWERUSDT|1789327197": {
@@ -449,7 +449,7 @@
 "cur_ts": 1791921600,
 "hi": 86.75,
 "lo": -35.54,
-"checked": 1792084720,
+"checked": 1792091903,
 "done": false
 },
 "coin|binance|ARKUSDT|1789348745": {
@@ -522,7 +522,7 @@
 "cur_ts": 1791964800,
 "hi": 104.81,
 "lo": -82.0,
-"checked": 1792084720,
+"checked": 1792091903,
 "done": false
 },
 "coin|binance|TUSDT|1789384750": {
@@ -595,7 +595,7 @@
 "cur_ts": 1791979200,
 "hi": 186.66,
 "lo": -57.35,
-"checked": 1792084720,
+"checked": 1792091903,
 "done": false
 },
 "coin|binance|QKCUSDT|1789391926": {
@@ -668,7 +668,7 @@
 "cur_ts": 1791993600,
 "hi": 154.82,
 "lo": -7.4,
-"checked": 1792084720,
+"checked": 1792091903,
 "done": false
 },
 "coin|bitget|CPOOLUSDT|1789420744": {
@@ -780,7 +780,7 @@
 "cur_ts": 1792022400,
 "hi": 30.27,
 "lo": -19.72,
-"checked": 1792084720,
+"checked": 1792091903,
 "done": false
 },
 "coin|binance|ASTRUSDT|1789442344": {
@@ -925,14 +925,19 @@
 "r": 3.92,
 "hi": 6.0,
 "lo": -24.33
+},
+"h720": {
+"r": -35.17,
+"hi": 6.0,
+"lo": -37.67
 }
 },
-"cur": -22.0,
-"cur_ts": 1791763200,
+"cur": -35.17,
+"cur_ts": 1792080000,
 "hi": 6.0,
-"lo": -24.58,
-"checked": 1791767888,
-"done": false
+"lo": -37.67,
+"checked": 1792091903,
+"done": true
 },
 "stock|US|QRVO|1789492778": {
 "asset": "stock",
@@ -962,10 +967,10 @@
 }
 },
 "cur": -2.44,
-"cur_ts": 1790971200,
-"hi": 3.48,
-"lo": -7.61,
-"checked": 1791163067,
+"cur_ts": 1790994600,
+"hi": -1.2,
+"lo": -4.96,
+"checked": 1792091903,
 "done": false
 },
 "coin|bitget|RFFIVUSDT|1789521535": {
@@ -1334,7 +1339,7 @@
 "cur_ts": 1792080000,
 "hi": 6.83,
 "lo": -26.64,
-"checked": 1792084720,
+"checked": 1792091903,
 "done": false
 },
 "coin|binance|ONEUSDT|1789607982": {
@@ -8163,7 +8168,7 @@
 "cur_ts": 1792045800,
 "hi": 11.25,
 "lo": -30.8,
-"checked": 1792084720,
+"checked": 1792091903,
 "done": false
 },
 "coin|binance|RLCUSDT|1791199065": {
@@ -9151,7 +9156,7 @@
 "ts": 1791566263.0,
 "price": 0.1328,
 "note": "검색 급증",
-"repeats": 14,
+"repeats": 15,
 "res": {
 "h24": {
 "r": 2.86,
@@ -9834,6 +9839,30 @@
 "hi": 7.1,
 "lo": -14.85,
 "checked": 1792077493,
+"done": false
+},
+"stock|US|AADX|1792005501": {
+"asset": "stock",
+"kind": "stock",
+"market": "US",
+"symbol": "AADX",
+"name": "Applied Aerospace & Defense,",
+"ts": 1792005501.0,
+"price": 11.365,
+"note": "드론·방산 대장주",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -3.04,
+"hi": 1.36,
+"lo": -9.28
+}
+},
+"cur": 0.22,
+"cur_ts": 1792094400,
+"hi": 1.36,
+"lo": -9.28,
+"checked": 1792091903,
 "done": false
 }
 }
