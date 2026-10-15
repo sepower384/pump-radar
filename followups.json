@@ -147,7 +147,7 @@
 "cur_ts": 1791892800,
 "hi": 9.8,
 "lo": -18.17,
-"checked": 1792070258,
+"checked": 1792077493,
 "done": false
 },
 "coin|bitget|FLOCKUSDT|1789296347": {
@@ -415,7 +415,7 @@
 "cur_ts": 1791921600,
 "hi": 32.15,
 "lo": -47.98,
-"checked": 1792070258,
+"checked": 1792077493,
 "done": false
 },
 "coin|bitget|POWERUSDT|1789327197": {
@@ -449,7 +449,7 @@
 "cur_ts": 1791921600,
 "hi": 86.75,
 "lo": -35.54,
-"checked": 1792070258,
+"checked": 1792077493,
 "done": false
 },
 "coin|binance|ARKUSDT|1789348745": {
@@ -522,7 +522,7 @@
 "cur_ts": 1791964800,
 "hi": 104.81,
 "lo": -82.0,
-"checked": 1792070258,
+"checked": 1792077493,
 "done": false
 },
 "coin|binance|TUSDT|1789384750": {
@@ -595,7 +595,7 @@
 "cur_ts": 1791979200,
 "hi": 186.66,
 "lo": -57.35,
-"checked": 1792070258,
+"checked": 1792077493,
 "done": false
 },
 "coin|binance|QKCUSDT|1789391926": {
@@ -668,7 +668,7 @@
 "cur_ts": 1791993600,
 "hi": 154.82,
 "lo": -7.4,
-"checked": 1792070258,
+"checked": 1792077493,
 "done": false
 },
 "coin|bitget|CPOOLUSDT|1789420744": {
@@ -780,7 +780,7 @@
 "cur_ts": 1792022400,
 "hi": 30.27,
 "lo": -19.72,
-"checked": 1792070258,
+"checked": 1792077493,
 "done": false
 },
 "coin|binance|ASTRUSDT|1789442344": {
@@ -886,14 +886,19 @@
 "r": -8.37,
 "hi": 12.35,
 "lo": -20.6
+},
+"h720": {
+"r": -54.57,
+"hi": 12.35,
+"lo": -60.4
 }
 },
-"cur": -48.56,
-"cur_ts": 1791763200,
+"cur": -54.57,
+"cur_ts": 1792065600,
 "hi": 12.35,
-"lo": -51.86,
-"checked": 1791767888,
-"done": false
+"lo": -60.4,
+"checked": 1792077493,
+"done": true
 },
 "coin|bitget|IDOLUSDT|1789492721": {
 "asset": "coin",
@@ -1329,7 +1334,7 @@
 "cur_ts": 1792065600,
 "hi": 6.83,
 "lo": -26.64,
-"checked": 1792070258,
+"checked": 1792077493,
 "done": false
 },
 "coin|binance|ONEUSDT|1789607982": {
@@ -4877,7 +4882,7 @@
 "ts": 1790162354.0,
 "price": 0.5289,
 "note": "우상향 점수 88.7",
-"repeats": 11,
+"repeats": 12,
 "res": {
 "h24": {
 "r": -13.5,
@@ -5897,7 +5902,7 @@
 "ts": 1790457537.0,
 "price": 0.07854,
 "note": "우상향 점수 90.1",
-"repeats": 6,
+"repeats": 7,
 "res": {
 "h24": {
 "r": 6.54,
@@ -8158,7 +8163,7 @@
 "cur_ts": 1792045800,
 "hi": 11.25,
 "lo": -30.8,
-"checked": 1792070258,
+"checked": 1792077493,
 "done": false
 },
 "coin|binance|RLCUSDT|1791199065": {
@@ -9500,13 +9505,18 @@
 "r": -31.9,
 "hi": -0.28,
 "lo": -32.95
+},
+"h72": {
+"r": -35.43,
+"hi": -0.28,
+"lo": -38.29
 }
 },
-"cur": -33.39,
-"cur_ts": 1791907200,
+"cur": -35.15,
+"cur_ts": 1792080000,
 "hi": -0.28,
-"lo": -33.83,
-"checked": 1791904710,
+"lo": -38.29,
+"checked": 1792077493,
 "done": false
 },
 "coin|binance|OSMOUSDT|1791825455": {
@@ -9795,6 +9805,30 @@
 "hi": 33.93,
 "lo": -7.93,
 "checked": 1792055891,
+"done": false
+},
+"coin|binance|AXLUSDT|1791991055": {
+"asset": "coin",
+"kind": "trend",
+"market": "binance",
+"symbol": "AXLUSDT",
+"name": "AXL",
+"ts": 1791991055.0,
+"price": 0.0606,
+"note": "우상향 점수 78.0",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -10.07,
+"hi": 7.1,
+"lo": -14.85
+}
+},
+"cur": -8.42,
+"cur_ts": 1792080000,
+"hi": 7.1,
+"lo": -14.85,
+"checked": 1792077493,
 "done": false
 }
 }

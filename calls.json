@@ -574,5 +574,23 @@
 "result_pct": -7.48,
 "resolved_ts": 1792048652,
 "reported": 1
+},
+{
+"id": 34,
+"ts": 1792077492,
+"market": "US",
+"symbol": "CCJ",
+"name": "Cameco Corporation",
+"theme": "원전·SMR",
+"leader": "Denison Mines Corp",
+"ref_price": 82.65,
+"target_pct": 2.0,
+"deadline": 1792180800,
+"status": "pending",
+"best_price": 82.65,
+"last_price": null,
+"result_pct": null,
+"resolved_ts": null,
+"reported": 0
 }
 ]
