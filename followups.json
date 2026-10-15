@@ -147,7 +147,7 @@
 "cur_ts": 1791892800,
 "hi": 9.8,
 "lo": -18.17,
-"checked": 1792077493,
+"checked": 1792084720,
 "done": false
 },
 "coin|bitget|FLOCKUSDT|1789296347": {
@@ -415,7 +415,7 @@
 "cur_ts": 1791921600,
 "hi": 32.15,
 "lo": -47.98,
-"checked": 1792077493,
+"checked": 1792084720,
 "done": false
 },
 "coin|bitget|POWERUSDT|1789327197": {
@@ -449,7 +449,7 @@
 "cur_ts": 1791921600,
 "hi": 86.75,
 "lo": -35.54,
-"checked": 1792077493,
+"checked": 1792084720,
 "done": false
 },
 "coin|binance|ARKUSDT|1789348745": {
@@ -522,7 +522,7 @@
 "cur_ts": 1791964800,
 "hi": 104.81,
 "lo": -82.0,
-"checked": 1792077493,
+"checked": 1792084720,
 "done": false
 },
 "coin|binance|TUSDT|1789384750": {
@@ -595,7 +595,7 @@
 "cur_ts": 1791979200,
 "hi": 186.66,
 "lo": -57.35,
-"checked": 1792077493,
+"checked": 1792084720,
 "done": false
 },
 "coin|binance|QKCUSDT|1789391926": {
@@ -668,7 +668,7 @@
 "cur_ts": 1791993600,
 "hi": 154.82,
 "lo": -7.4,
-"checked": 1792077493,
+"checked": 1792084720,
 "done": false
 },
 "coin|bitget|CPOOLUSDT|1789420744": {
@@ -780,7 +780,7 @@
 "cur_ts": 1792022400,
 "hi": 30.27,
 "lo": -19.72,
-"checked": 1792077493,
+"checked": 1792084720,
 "done": false
 },
 "coin|binance|ASTRUSDT|1789442344": {
@@ -1330,11 +1330,11 @@
 "lo": -16.73
 }
 },
-"cur": -19.0,
-"cur_ts": 1792065600,
+"cur": -17.81,
+"cur_ts": 1792080000,
 "hi": 6.83,
 "lo": -26.64,
-"checked": 1792077493,
+"checked": 1792084720,
 "done": false
 },
 "coin|binance|ONEUSDT|1789607982": {
@@ -2502,7 +2502,7 @@
 "ts": 1789780744.0,
 "price": 0.03306,
 "note": "거래량 폭증",
-"repeats": 12,
+"repeats": 13,
 "res": {
 "h24": {
 "r": 0.27,
@@ -2570,7 +2570,7 @@
 "ts": 1789802357.0,
 "price": 7.542,
 "note": "ETF",
-"repeats": 2,
+"repeats": 3,
 "res": {
 "h24": {
 "r": 1.29,
@@ -3590,7 +3590,7 @@
 "ts": 1789996734.0,
 "price": 0.0886,
 "note": "원인 미확인",
-"repeats": 5,
+"repeats": 6,
 "res": {
 "h24": {
 "r": 0.79,
@@ -8163,7 +8163,7 @@
 "cur_ts": 1792045800,
 "hi": 11.25,
 "lo": -30.8,
-"checked": 1792077493,
+"checked": 1792084720,
 "done": false
 },
 "coin|binance|RLCUSDT|1791199065": {
@@ -9412,7 +9412,7 @@
 "ts": 1791782282.0,
 "price": 0.002616,
 "note": "ETF",
-"repeats": 2,
+"repeats": 3,
 "res": {
 "h24": {
 "r": -19.76,
@@ -9528,19 +9528,24 @@
 "ts": 1791825455.0,
 "price": 0.0445,
 "note": "원인 미확인",
-"repeats": 6,
+"repeats": 7,
 "res": {
 "h24": {
 "r": -4.49,
 "hi": 26.97,
 "lo": -6.52
+},
+"h72": {
+"r": -1.12,
+"hi": 26.97,
+"lo": -15.73
 }
 },
-"cur": -4.94,
-"cur_ts": 1791914400,
+"cur": -1.12,
+"cur_ts": 1792087200,
 "hi": 26.97,
-"lo": -6.52,
-"checked": 1791911859,
+"lo": -15.73,
+"checked": 1792084720,
 "done": false
 },
 "coin|bitget|DOSUSDT|1791839863": {
