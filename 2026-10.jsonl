@@ -501,3 +501,4 @@
 {"t": "trend", "ts": 1792055890, "symbol": "BATUSDT", "base": "BAT", "price": 0.1754, "score": 89.2, "rs7": 74.0, "rs30": 125.8, "new": true}
 {"t": "trend", "ts": 1792055890, "symbol": "WALUSDT", "base": "WAL", "price": 0.05532, "score": 87.0, "rs7": 57.9, "rs30": 88.1, "new": true}
 {"t": "trend", "ts": 1792055890, "symbol": "SOXSBUSDT", "base": "SOXSB", "price": 45.27, "score": 67.7, "rs7": 41.0, "rs30": -17.2, "new": true}
+{"t": "pump", "ts": 1792070255, "market": "binance", "symbol": "OSMOUSDT", "base": "OSMO", "price": 0.0473, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 3.27, "chg2h": 13.4, "chg24h": 21.28, "qvol": 4559422.209904, "vol_x": 3.3, "off_high": -7.78, "direction": "up", "tag": "뉴스", "tags": ["뉴스", "뉴스", "거래량 폭증"], "conf": "높음", "headline": "Osmosis 급등 — 뉴스 재료", "news": "[아침코인] 10월 15일 WAL(월러스) 63%↑ OSMO(오스모시스) 27%↑ 등 (디지털애셋)"}
