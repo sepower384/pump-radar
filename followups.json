@@ -147,7 +147,7 @@
 "cur_ts": 1791892800,
 "hi": 9.8,
 "lo": -18.17,
-"checked": 1792099060,
+"checked": 1792106293,
 "done": false
 },
 "coin|bitget|FLOCKUSDT|1789296347": {
@@ -415,7 +415,7 @@
 "cur_ts": 1791921600,
 "hi": 32.15,
 "lo": -47.98,
-"checked": 1792099060,
+"checked": 1792106293,
 "done": false
 },
 "coin|bitget|POWERUSDT|1789327197": {
@@ -449,7 +449,7 @@
 "cur_ts": 1791921600,
 "hi": 86.75,
 "lo": -35.54,
-"checked": 1792099060,
+"checked": 1792106293,
 "done": false
 },
 "coin|binance|ARKUSDT|1789348745": {
@@ -522,7 +522,7 @@
 "cur_ts": 1791964800,
 "hi": 104.81,
 "lo": -82.0,
-"checked": 1792099060,
+"checked": 1792106293,
 "done": false
 },
 "coin|binance|TUSDT|1789384750": {
@@ -595,7 +595,7 @@
 "cur_ts": 1791979200,
 "hi": 186.66,
 "lo": -57.35,
-"checked": 1792099060,
+"checked": 1792106293,
 "done": false
 },
 "coin|binance|QKCUSDT|1789391926": {
@@ -668,7 +668,7 @@
 "cur_ts": 1791993600,
 "hi": 154.82,
 "lo": -7.4,
-"checked": 1792099060,
+"checked": 1792106293,
 "done": false
 },
 "coin|bitget|CPOOLUSDT|1789420744": {
@@ -780,7 +780,7 @@
 "cur_ts": 1792022400,
 "hi": 30.27,
 "lo": -19.72,
-"checked": 1792099060,
+"checked": 1792106293,
 "done": false
 },
 "coin|binance|ASTRUSDT|1789442344": {
@@ -970,7 +970,7 @@
 "cur_ts": 1791230400,
 "hi": -2.44,
 "lo": -2.44,
-"checked": 1792099060,
+"checked": 1792106293,
 "done": false
 },
 "coin|bitget|RFFIVUSDT|1789521535": {
@@ -1339,7 +1339,7 @@
 "cur_ts": 1792094400,
 "hi": 6.83,
 "lo": -26.64,
-"checked": 1792099060,
+"checked": 1792106293,
 "done": false
 },
 "coin|binance|ONEUSDT|1789607982": {
@@ -2269,7 +2269,7 @@
 "ts": 1789759132.0,
 "price": 0.01108,
 "note": "거래량 폭증",
-"repeats": 10,
+"repeats": 11,
 "res": {
 "h24": {
 "r": -0.45,
@@ -8168,7 +8168,7 @@
 "cur_ts": 1792045800,
 "hi": 11.25,
 "lo": -30.8,
-"checked": 1792099060,
+"checked": 1792106293,
 "done": false
 },
 "coin|binance|RLCUSDT|1791199065": {
@@ -9109,13 +9109,18 @@
 "r": -11.82,
 "hi": 52.29,
 "lo": -24.8
+},
+"h168": {
+"r": -0.15,
+"hi": 52.29,
+"lo": -24.8
 }
 },
-"cur": -11.82,
-"cur_ts": 1791752400,
+"cur": -1.71,
+"cur_ts": 1792105200,
 "hi": 52.29,
 "lo": -24.8,
-"checked": 1791753500,
+"checked": 1792106293,
 "done": false
 },
 "coin|binance|KAIAUSDT|1791537455": {
@@ -9156,7 +9161,7 @@
 "ts": 1791566263.0,
 "price": 0.1328,
 "note": "검색 급증",
-"repeats": 15,
+"repeats": 16,
 "res": {
 "h24": {
 "r": 2.86,
@@ -9568,13 +9573,18 @@
 "r": -50.89,
 "hi": 81.82,
 "lo": -64.47
+},
+"h72": {
+"r": -56.51,
+"hi": 81.82,
+"lo": -64.47
 }
 },
-"cur": -50.89,
-"cur_ts": 1791925200,
+"cur": -56.7,
+"cur_ts": 1792105200,
 "hi": 81.82,
 "lo": -64.47,
-"checked": 1791926265,
+"checked": 1792106293,
 "done": false
 },
 "stock|KR|000400|1791868662": {
@@ -9802,7 +9812,7 @@
 "ts": 1791962273.0,
 "price": 0.05067,
 "note": "검색 급증",
-"repeats": 6,
+"repeats": 7,
 "res": {
 "h24": {
 "r": 15.89,
@@ -9863,6 +9873,30 @@
 "hi": 1.36,
 "lo": -9.28,
 "checked": 1792091903,
+"done": false
+},
+"coin|bitget|UMXMUSDT|1792012669": {
+"asset": "coin",
+"kind": "pump",
+"market": "bitget",
+"symbol": "UMXMUSDT",
+"name": "UMXM",
+"ts": 1792012669.0,
+"price": 0.67923,
+"note": "원인 미확인",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -90.43,
+"hi": 8.15,
+"lo": -92.64
+}
+},
+"cur": -90.89,
+"cur_ts": 1792105200,
+"hi": 8.15,
+"lo": -92.64,
+"checked": 1792106293,
 "done": false
 }
 }
