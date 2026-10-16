@@ -537,3 +537,4 @@
 {"t": "trend", "ts": 1792156692, "symbol": "ZKUSDT", "base": "ZK", "price": 0.01709, "score": 85.5, "rs7": 25.5, "rs30": 85.3, "new": true}
 {"t": "trend", "ts": 1792156692, "symbol": "AVAUSDT", "base": "AVA", "price": 0.288, "score": 79.7, "rs7": 24.6, "rs30": 73.9, "new": true}
 {"t": "trend", "ts": 1792156692, "symbol": "WALUSDT", "base": "WAL", "price": 0.04568, "score": 77.6, "rs7": 36.6, "rs30": 61.2, "new": true}
+{"t": "pump", "ts": 1792163854, "market": "bitget", "symbol": "DNAUSDT", "base": "DNA", "price": 0.2805, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 4.61, "chg2h": -0.48, "chg24h": 2705.0, "qvol": 803039.5475931, "vol_x": 0.6, "off_high": -6.2, "direction": "up", "tag": "에어드랍", "tags": ["에어드랍", "거래소 상장", "검색 급증"], "conf": "높음", "headline": "NeoSoul 급등 — 에어드랍 재료", "news": "KuCoin Web3 Wallet × NeoSoul Airdrop: Share Up to 50,000 DNA! (KuCoin)"}

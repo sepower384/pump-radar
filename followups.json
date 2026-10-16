@@ -147,7 +147,7 @@
 "cur_ts": 1791892800,
 "hi": 9.8,
 "lo": -18.17,
-"checked": 1792156693,
+"checked": 1792163859,
 "done": false
 },
 "coin|bitget|FLOCKUSDT|1789296347": {
@@ -415,7 +415,7 @@
 "cur_ts": 1791921600,
 "hi": 32.15,
 "lo": -47.98,
-"checked": 1792156693,
+"checked": 1792163859,
 "done": false
 },
 "coin|bitget|POWERUSDT|1789327197": {
@@ -449,7 +449,7 @@
 "cur_ts": 1791921600,
 "hi": 86.75,
 "lo": -35.54,
-"checked": 1792156693,
+"checked": 1792163859,
 "done": false
 },
 "coin|binance|ARKUSDT|1789348745": {
@@ -522,7 +522,7 @@
 "cur_ts": 1791964800,
 "hi": 104.81,
 "lo": -82.0,
-"checked": 1792156693,
+"checked": 1792163859,
 "done": false
 },
 "coin|binance|TUSDT|1789384750": {
@@ -595,7 +595,7 @@
 "cur_ts": 1791979200,
 "hi": 186.66,
 "lo": -57.35,
-"checked": 1792156693,
+"checked": 1792163859,
 "done": false
 },
 "coin|binance|QKCUSDT|1789391926": {
@@ -668,7 +668,7 @@
 "cur_ts": 1791993600,
 "hi": 154.82,
 "lo": -7.4,
-"checked": 1792156693,
+"checked": 1792163859,
 "done": false
 },
 "coin|bitget|CPOOLUSDT|1789420744": {
@@ -780,7 +780,7 @@
 "cur_ts": 1792022400,
 "hi": 30.27,
 "lo": -19.72,
-"checked": 1792156693,
+"checked": 1792163859,
 "done": false
 },
 "coin|binance|ASTRUSDT|1789442344": {
@@ -967,10 +967,10 @@
 }
 },
 "cur": -2.44,
-"cur_ts": 1791230400,
-"hi": -2.44,
-"lo": -2.44,
-"checked": 1792156693,
+"cur_ts": 1790994600,
+"hi": -1.2,
+"lo": -4.96,
+"checked": 1792163859,
 "done": false
 },
 "coin|bitget|RFFIVUSDT|1789521535": {
@@ -1193,14 +1193,19 @@
 "r": 35.03,
 "hi": 48.2,
 "lo": -10.56
+},
+"h720": {
+"r": 15.66,
+"hi": 48.2,
+"lo": -10.56
 }
 },
-"cur": 14.85,
-"cur_ts": 1791770400,
+"cur": 13.75,
+"cur_ts": 1792166400,
 "hi": 48.2,
 "lo": -10.56,
-"checked": 1791767888,
-"done": false
+"checked": 1792163859,
+"done": true
 },
 "coin|bitget|DGAIUSDT|1789571973": {
 "asset": "coin",
@@ -1364,7 +1369,7 @@
 "cur_ts": 1792152000,
 "hi": 6.83,
 "lo": -26.64,
-"checked": 1792156693,
+"checked": 1792163859,
 "done": false
 },
 "coin|binance|ONEUSDT|1789607982": {
@@ -8193,7 +8198,7 @@
 "cur_ts": 1792132200,
 "hi": 11.25,
 "lo": -30.8,
-"checked": 1792156693,
+"checked": 1792163859,
 "done": false
 },
 "coin|binance|RLCUSDT|1791199065": {
@@ -9985,6 +9990,30 @@
 "hi": 7.13,
 "lo": -5.19,
 "checked": 1792149455,
+"done": false
+},
+"coin|bitget|PUFFERUSDT|1792077449": {
+"asset": "coin",
+"kind": "pump",
+"market": "bitget",
+"symbol": "PUFFERUSDT",
+"name": "PUFFER",
+"ts": 1792077449.0,
+"price": 0.05348,
+"note": "뉴스",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -21.0,
+"hi": 1.89,
+"lo": -23.49
+}
+},
+"cur": -21.0,
+"cur_ts": 1792162800,
+"hi": 1.89,
+"lo": -23.49,
+"checked": 1792163859,
 "done": false
 }
 }
