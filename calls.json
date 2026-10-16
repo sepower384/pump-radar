@@ -592,5 +592,23 @@
 "result_pct": 0.7,
 "resolved_ts": null,
 "reported": 0
+},
+{
+"id": 35,
+"ts": 1792113464,
+"market": "KR",
+"symbol": "225530",
+"name": "HC보광산업",
+"theme": "시멘트/레미콘",
+"leader": "서산",
+"ref_price": 2745.0,
+"target_pct": 2.0,
+"deadline": 1792391400,
+"status": "pending",
+"best_price": 2745.0,
+"last_price": null,
+"result_pct": null,
+"resolved_ts": null,
+"reported": 0
 }
 ]
