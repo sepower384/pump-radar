@@ -542,3 +542,6 @@
 {"t": "trend", "ts": 1792171058, "symbol": "TIAUSDT", "base": "TIA", "price": 0.6715, "score": 80.3, "rs7": 47.0, "rs30": 85.0, "new": true}
 {"t": "trend", "ts": 1792171058, "symbol": "AMPUSDT", "base": "AMP", "price": 0.000804, "score": 76.0, "rs7": 24.3, "rs30": 74.4, "new": true}
 {"t": "trend", "ts": 1792178253, "symbol": "INITUSDT", "base": "INIT", "price": 0.12556, "score": 78.2, "rs7": 18.3, "rs30": 72.1, "new": true}
+{"t": "pump", "ts": 1792185482, "market": "bitget", "symbol": "ICNTUSDT", "base": "ICNT", "price": 0.1746, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 3.8, "chg2h": 4.86, "chg24h": 28.38, "qvol": 3045277.38772, "vol_x": 0.4, "off_high": -2.18, "direction": "up", "tag": "원인 미확인", "tags": ["원인 미확인"], "conf": "낮음", "headline": "Impossible Cloud Network Token 급등 — 이유 불명 · 큰손 주도 의심", "news": ""}
+{"t": "trend", "ts": 1792185489, "symbol": "DUSKUSDT", "base": "DUSK", "price": 0.122, "score": 98.4, "rs7": 55.0, "rs30": 62.0, "new": true}
+{"t": "trend", "ts": 1792185489, "symbol": "INJUSDT", "base": "INJ", "price": 8.558, "score": 78.1, "rs7": 24.7, "rs30": 44.7, "new": true}

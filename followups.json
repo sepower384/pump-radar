@@ -147,7 +147,7 @@
 "cur_ts": 1791892800,
 "hi": 9.8,
 "lo": -18.17,
-"checked": 1792178255,
+"checked": 1792185492,
 "done": false
 },
 "coin|bitget|FLOCKUSDT|1789296347": {
@@ -415,7 +415,7 @@
 "cur_ts": 1791921600,
 "hi": 32.15,
 "lo": -47.98,
-"checked": 1792178255,
+"checked": 1792185492,
 "done": false
 },
 "coin|bitget|POWERUSDT|1789327197": {
@@ -449,7 +449,7 @@
 "cur_ts": 1791921600,
 "hi": 86.75,
 "lo": -35.54,
-"checked": 1792178255,
+"checked": 1792185492,
 "done": false
 },
 "coin|binance|ARKUSDT|1789348745": {
@@ -522,7 +522,7 @@
 "cur_ts": 1791964800,
 "hi": 104.81,
 "lo": -82.0,
-"checked": 1792178255,
+"checked": 1792185492,
 "done": false
 },
 "coin|binance|TUSDT|1789384750": {
@@ -595,7 +595,7 @@
 "cur_ts": 1791979200,
 "hi": 186.66,
 "lo": -57.35,
-"checked": 1792178255,
+"checked": 1792185492,
 "done": false
 },
 "coin|binance|QKCUSDT|1789391926": {
@@ -668,7 +668,7 @@
 "cur_ts": 1791993600,
 "hi": 154.82,
 "lo": -7.4,
-"checked": 1792178255,
+"checked": 1792185492,
 "done": false
 },
 "coin|bitget|CPOOLUSDT|1789420744": {
@@ -780,7 +780,7 @@
 "cur_ts": 1792022400,
 "hi": 30.27,
 "lo": -19.72,
-"checked": 1792178255,
+"checked": 1792185492,
 "done": false
 },
 "coin|binance|ASTRUSDT|1789442344": {
@@ -967,10 +967,10 @@
 }
 },
 "cur": -2.44,
-"cur_ts": 1790994600,
-"hi": -1.2,
-"lo": -4.96,
-"checked": 1792178255,
+"cur_ts": 1791230400,
+"hi": -2.44,
+"lo": -2.44,
+"checked": 1792185492,
 "done": false
 },
 "coin|bitget|RFFIVUSDT|1789521535": {
@@ -1238,7 +1238,7 @@
 "cur_ts": 1792166400,
 "hi": 22.22,
 "lo": -15.99,
-"checked": 1792178255,
+"checked": 1792185492,
 "done": false
 },
 "coin|binance|HEIUSDT|1789579129": {
@@ -1344,14 +1344,19 @@
 "r": 3.13,
 "hi": 5.86,
 "lo": -2.89
+},
+"h720": {
+"r": 0.97,
+"hi": 14.74,
+"lo": -5.06
 }
 },
-"cur": 9.5,
-"cur_ts": 1791576000,
+"cur": 0.4,
+"cur_ts": 1792180800,
 "hi": 14.74,
-"lo": -2.89,
-"checked": 1791767888,
-"done": false
+"lo": -5.06,
+"checked": 1792185492,
+"done": true
 },
 "coin|bitget|RGNRCUSDT|1789593550": {
 "asset": "coin",
@@ -1375,11 +1380,11 @@
 "lo": -16.73
 }
 },
-"cur": -17.65,
-"cur_ts": 1792166400,
+"cur": -19.28,
+"cur_ts": 1792180800,
 "hi": 6.83,
 "lo": -26.64,
-"checked": 1792178255,
+"checked": 1792185492,
 "done": false
 },
 "coin|binance|ONEUSDT|1789607982": {
@@ -2615,7 +2620,7 @@
 "ts": 1789802357.0,
 "price": 7.542,
 "note": "ETF",
-"repeats": 5,
+"repeats": 6,
 "res": {
 "h24": {
 "r": 1.29,
@@ -3635,7 +3640,7 @@
 "ts": 1789996734.0,
 "price": 0.0886,
 "note": "원인 미확인",
-"repeats": 7,
+"repeats": 8,
 "res": {
 "h24": {
 "r": 0.79,
@@ -8208,7 +8213,7 @@
 "cur_ts": 1792132200,
 "hi": 11.25,
 "lo": -30.8,
-"checked": 1792178255,
+"checked": 1792185492,
 "done": false
 },
 "coin|binance|RLCUSDT|1791199065": {
@@ -9739,13 +9744,18 @@
 "r": -9.06,
 "hi": 5.18,
 "lo": -11.39
+},
+"h72": {
+"r": -12.3,
+"hi": 5.18,
+"lo": -17.22
 }
 },
-"cur": -9.13,
-"cur_ts": 1792008000,
+"cur": -11.39,
+"cur_ts": 1792188000,
 "hi": 5.18,
-"lo": -11.39,
-"checked": 1792005501,
+"lo": -17.22,
+"checked": 1792185492,
 "done": false
 },
 "stock|KR|039610|1791940706": {
@@ -10130,6 +10140,30 @@
 "hi": 8.65,
 "lo": -12.38,
 "checked": 1792178255,
+"done": false
+},
+"stock|US|ENVX|1792091902": {
+"asset": "stock",
+"kind": "stock",
+"market": "US",
+"symbol": "ENVX",
+"name": "Enovix Corporation",
+"ts": 1792091902.0,
+"price": 2.705,
+"note": "전력 인프라 대장주",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -0.92,
+"hi": 2.03,
+"lo": -13.12
+}
+},
+"cur": -7.95,
+"cur_ts": 1792180800,
+"hi": 2.03,
+"lo": -13.12,
+"checked": 1792185492,
 "done": false
 }
 }
