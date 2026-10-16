@@ -541,3 +541,4 @@
 {"t": "pump", "ts": 1792171052, "market": "binance", "symbol": "AMPUSDT", "base": "AMP", "price": 0.0008, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 6.81, "chg2h": 5.26, "chg24h": 20.48, "qvol": 4875596.829464, "vol_x": 2.0, "off_high": -5.77, "direction": "up", "tag": "원인 미확인", "tags": ["원인 미확인"], "conf": "낮음", "headline": "Amp 급등 — 이유 불명 · 큰손 주도 의심", "news": ""}
 {"t": "trend", "ts": 1792171058, "symbol": "TIAUSDT", "base": "TIA", "price": 0.6715, "score": 80.3, "rs7": 47.0, "rs30": 85.0, "new": true}
 {"t": "trend", "ts": 1792171058, "symbol": "AMPUSDT", "base": "AMP", "price": 0.000804, "score": 76.0, "rs7": 24.3, "rs30": 74.4, "new": true}
+{"t": "trend", "ts": 1792178253, "symbol": "INITUSDT", "base": "INIT", "price": 0.12556, "score": 78.2, "rs7": 18.3, "rs30": 72.1, "new": true}
