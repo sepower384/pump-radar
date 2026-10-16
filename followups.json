@@ -147,7 +147,7 @@
 "cur_ts": 1791892800,
 "hi": 9.8,
 "lo": -18.17,
-"checked": 1792163859,
+"checked": 1792171060,
 "done": false
 },
 "coin|bitget|FLOCKUSDT|1789296347": {
@@ -415,7 +415,7 @@
 "cur_ts": 1791921600,
 "hi": 32.15,
 "lo": -47.98,
-"checked": 1792163859,
+"checked": 1792171060,
 "done": false
 },
 "coin|bitget|POWERUSDT|1789327197": {
@@ -449,7 +449,7 @@
 "cur_ts": 1791921600,
 "hi": 86.75,
 "lo": -35.54,
-"checked": 1792163859,
+"checked": 1792171060,
 "done": false
 },
 "coin|binance|ARKUSDT|1789348745": {
@@ -522,7 +522,7 @@
 "cur_ts": 1791964800,
 "hi": 104.81,
 "lo": -82.0,
-"checked": 1792163859,
+"checked": 1792171060,
 "done": false
 },
 "coin|binance|TUSDT|1789384750": {
@@ -595,7 +595,7 @@
 "cur_ts": 1791979200,
 "hi": 186.66,
 "lo": -57.35,
-"checked": 1792163859,
+"checked": 1792171060,
 "done": false
 },
 "coin|binance|QKCUSDT|1789391926": {
@@ -668,7 +668,7 @@
 "cur_ts": 1791993600,
 "hi": 154.82,
 "lo": -7.4,
-"checked": 1792163859,
+"checked": 1792171060,
 "done": false
 },
 "coin|bitget|CPOOLUSDT|1789420744": {
@@ -780,7 +780,7 @@
 "cur_ts": 1792022400,
 "hi": 30.27,
 "lo": -19.72,
-"checked": 1792163859,
+"checked": 1792171060,
 "done": false
 },
 "coin|binance|ASTRUSDT|1789442344": {
@@ -970,7 +970,7 @@
 "cur_ts": 1790994600,
 "hi": -1.2,
 "lo": -4.96,
-"checked": 1792163859,
+"checked": 1792171060,
 "done": false
 },
 "coin|bitget|RFFIVUSDT|1789521535": {
@@ -1234,11 +1234,11 @@
 "lo": -11.76
 }
 },
-"cur": 2.55,
-"cur_ts": 1791763200,
+"cur": -8.93,
+"cur_ts": 1792166400,
 "hi": 22.22,
 "lo": -15.99,
-"checked": 1791767888,
+"checked": 1792171060,
 "done": false
 },
 "coin|binance|HEIUSDT|1789579129": {
@@ -1365,11 +1365,11 @@
 "lo": -16.73
 }
 },
-"cur": -16.84,
-"cur_ts": 1792152000,
+"cur": -17.65,
+"cur_ts": 1792166400,
 "hi": 6.83,
 "lo": -26.64,
-"checked": 1792163859,
+"checked": 1792171060,
 "done": false
 },
 "coin|binance|ONEUSDT|1789607982": {
@@ -4917,7 +4917,7 @@
 "ts": 1790162354.0,
 "price": 0.5289,
 "note": "우상향 점수 88.7",
-"repeats": 14,
+"repeats": 15,
 "res": {
 "h24": {
 "r": -13.5,
@@ -5903,7 +5903,7 @@
 "ts": 1790428733.0,
 "price": 0.000673,
 "note": "원인 미확인",
-"repeats": 6,
+"repeats": 8,
 "res": {
 "h24": {
 "r": 0.0,
@@ -8198,7 +8198,7 @@
 "cur_ts": 1792132200,
 "hi": 11.25,
 "lo": -30.8,
-"checked": 1792163859,
+"checked": 1792171060,
 "done": false
 },
 "coin|binance|RLCUSDT|1791199065": {
@@ -9695,13 +9695,18 @@
 "r": 14.89,
 "hi": 63.74,
 "lo": -2.67
+},
+"h72": {
+"r": -11.45,
+"hi": 63.74,
+"lo": -16.03
 }
 },
-"cur": 5.73,
-"cur_ts": 1792000800,
+"cur": -14.12,
+"cur_ts": 1792173600,
 "hi": 63.74,
-"lo": -2.67,
-"checked": 1791998263,
+"lo": -16.03,
+"checked": 1792171060,
 "done": false
 },
 "coin|binance|OPUSDT|1791919060": {
@@ -10014,6 +10019,54 @@
 "hi": 1.89,
 "lo": -23.49,
 "checked": 1792163859,
+"done": false
+},
+"stock|US|DNN|1792077492": {
+"asset": "stock",
+"kind": "stock",
+"market": "US",
+"symbol": "DNN",
+"name": "Denison Mines Corp",
+"ts": 1792077492.0,
+"price": 2.344,
+"note": "원전·SMR 대장주",
+"repeats": 1,
+"res": {
+"h24": {
+"r": 0.68,
+"hi": 1.11,
+"lo": -10.41
+}
+},
+"cur": -2.67,
+"cur_ts": 1792180800,
+"hi": 1.96,
+"lo": -10.41,
+"checked": 1792171060,
+"done": false
+},
+"stock|US|CCJ|1792077492": {
+"asset": "stock",
+"kind": "stock",
+"market": "US",
+"symbol": "CCJ",
+"name": "Cameco Corporation",
+"ts": 1792077492.0,
+"price": 82.65,
+"note": "원전·SMR 관찰 콜",
+"repeats": 1,
+"res": {
+"h24": {
+"r": 0.7,
+"hi": 1.26,
+"lo": -4.96
+}
+},
+"cur": -1.68,
+"cur_ts": 1792180800,
+"hi": 1.55,
+"lo": -4.96,
+"checked": 1792171060,
 "done": false
 }
 }
