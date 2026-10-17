@@ -147,7 +147,7 @@
 "cur_ts": 1791892800,
 "hi": 9.8,
 "lo": -18.17,
-"checked": 1792264697,
+"checked": 1792271851,
 "done": false
 },
 "coin|bitget|FLOCKUSDT|1789296347": {
@@ -415,7 +415,7 @@
 "cur_ts": 1791921600,
 "hi": 32.15,
 "lo": -47.98,
-"checked": 1792264697,
+"checked": 1792271851,
 "done": false
 },
 "coin|bitget|POWERUSDT|1789327197": {
@@ -449,7 +449,7 @@
 "cur_ts": 1791921600,
 "hi": 86.75,
 "lo": -35.54,
-"checked": 1792264697,
+"checked": 1792271851,
 "done": false
 },
 "coin|binance|ARKUSDT|1789348745": {
@@ -522,7 +522,7 @@
 "cur_ts": 1791964800,
 "hi": 104.81,
 "lo": -82.0,
-"checked": 1792264697,
+"checked": 1792271851,
 "done": false
 },
 "coin|binance|TUSDT|1789384750": {
@@ -595,7 +595,7 @@
 "cur_ts": 1791979200,
 "hi": 186.66,
 "lo": -57.35,
-"checked": 1792264697,
+"checked": 1792271851,
 "done": false
 },
 "coin|binance|QKCUSDT|1789391926": {
@@ -668,7 +668,7 @@
 "cur_ts": 1791993600,
 "hi": 154.82,
 "lo": -7.4,
-"checked": 1792264697,
+"checked": 1792271851,
 "done": false
 },
 "coin|bitget|CPOOLUSDT|1789420744": {
@@ -780,7 +780,7 @@
 "cur_ts": 1792022400,
 "hi": 30.27,
 "lo": -19.72,
-"checked": 1792264697,
+"checked": 1792271851,
 "done": false
 },
 "coin|binance|ASTRUSDT|1789442344": {
@@ -970,7 +970,7 @@
 "cur_ts": 1790994600,
 "hi": -1.2,
 "lo": -4.96,
-"checked": 1792264697,
+"checked": 1792271851,
 "done": false
 },
 "coin|bitget|RFFIVUSDT|1789521535": {
@@ -1238,7 +1238,7 @@
 "cur_ts": 1792166400,
 "hi": 22.22,
 "lo": -15.99,
-"checked": 1792264697,
+"checked": 1792271851,
 "done": false
 },
 "coin|binance|HEIUSDT|1789579129": {
@@ -1389,7 +1389,7 @@
 "cur_ts": 1792180800,
 "hi": 6.83,
 "lo": -26.64,
-"checked": 1792264697,
+"checked": 1792271851,
 "done": false
 },
 "coin|binance|ONEUSDT|1789607982": {
@@ -1579,7 +1579,7 @@
 "cur_ts": 1792238400,
 "hi": 61.39,
 "lo": -41.53,
-"checked": 1792264697,
+"checked": 1792271851,
 "done": false
 },
 "coin|binance|GENIUSUSDT|1789651131": {
@@ -1841,14 +1841,19 @@
 "r": -26.58,
 "hi": 22.15,
 "lo": -34.93
+},
+"h720": {
+"r": -49.45,
+"hi": 22.15,
+"lo": -51.51
 }
 },
-"cur": -38.58,
-"cur_ts": 1791770400,
+"cur": -49.5,
+"cur_ts": 1792274400,
 "hi": 22.15,
-"lo": -44.43,
-"checked": 1791767888,
-"done": false
+"lo": -51.51,
+"checked": 1792271851,
+"done": true
 },
 "coin|binance|MARSCOINUSDT|1789672741": {
 "asset": "coin",
@@ -1875,14 +1880,19 @@
 "r": -3.43,
 "hi": 21.99,
 "lo": -25.75
+},
+"h720": {
+"r": -35.54,
+"hi": 41.39,
+"lo": -40.64
 }
 },
-"cur": -20.9,
-"cur_ts": 1791770400,
+"cur": -35.79,
+"cur_ts": 1792274400,
 "hi": 41.39,
-"lo": -27.26,
-"checked": 1791767888,
-"done": false
+"lo": -40.64,
+"checked": 1792271851,
+"done": true
 },
 "coin|bitget|CROSSUSDT|1789672741": {
 "asset": "coin",
@@ -1911,11 +1921,11 @@
 "lo": -23.8
 }
 },
-"cur": -22.8,
-"cur_ts": 1791763200,
+"cur": -38.78,
+"cur_ts": 1792267200,
 "hi": 12.21,
-"lo": -25.63,
-"checked": 1791767888,
+"lo": -39.36,
+"checked": 1792271851,
 "done": false
 },
 "coin|bitget|MCATUSDT|1789687173": {
@@ -8268,7 +8278,7 @@
 "cur_ts": 1792132200,
 "hi": 11.25,
 "lo": -30.8,
-"checked": 1792264697,
+"checked": 1792271851,
 "done": false
 },
 "coin|binance|RLCUSDT|1791199065": {
@@ -10046,13 +10056,18 @@
 "r": -3.04,
 "hi": 1.36,
 "lo": -9.28
+},
+"h72": {
+"r": 0.04,
+"hi": 2.77,
+"lo": -9.28
 }
 },
-"cur": 0.22,
-"cur_ts": 1792094400,
-"hi": 1.36,
+"cur": 0.04,
+"cur_ts": 1792180800,
+"hi": 2.77,
 "lo": -9.28,
-"checked": 1792091903,
+"checked": 1792271851,
 "done": false
 },
 "coin|bitget|UMXMUSDT|1792012669": {
