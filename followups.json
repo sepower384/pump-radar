@@ -147,7 +147,7 @@
 "cur_ts": 1791892800,
 "hi": 9.8,
 "lo": -18.17,
-"checked": 1792243056,
+"checked": 1792250258,
 "done": false
 },
 "coin|bitget|FLOCKUSDT|1789296347": {
@@ -415,7 +415,7 @@
 "cur_ts": 1791921600,
 "hi": 32.15,
 "lo": -47.98,
-"checked": 1792243056,
+"checked": 1792250258,
 "done": false
 },
 "coin|bitget|POWERUSDT|1789327197": {
@@ -449,7 +449,7 @@
 "cur_ts": 1791921600,
 "hi": 86.75,
 "lo": -35.54,
-"checked": 1792243056,
+"checked": 1792250258,
 "done": false
 },
 "coin|binance|ARKUSDT|1789348745": {
@@ -522,7 +522,7 @@
 "cur_ts": 1791964800,
 "hi": 104.81,
 "lo": -82.0,
-"checked": 1792243056,
+"checked": 1792250258,
 "done": false
 },
 "coin|binance|TUSDT|1789384750": {
@@ -595,7 +595,7 @@
 "cur_ts": 1791979200,
 "hi": 186.66,
 "lo": -57.35,
-"checked": 1792243056,
+"checked": 1792250258,
 "done": false
 },
 "coin|binance|QKCUSDT|1789391926": {
@@ -668,7 +668,7 @@
 "cur_ts": 1791993600,
 "hi": 154.82,
 "lo": -7.4,
-"checked": 1792243056,
+"checked": 1792250258,
 "done": false
 },
 "coin|bitget|CPOOLUSDT|1789420744": {
@@ -780,7 +780,7 @@
 "cur_ts": 1792022400,
 "hi": 30.27,
 "lo": -19.72,
-"checked": 1792243056,
+"checked": 1792250258,
 "done": false
 },
 "coin|binance|ASTRUSDT|1789442344": {
@@ -970,7 +970,7 @@
 "cur_ts": 1791230400,
 "hi": -2.44,
 "lo": -2.44,
-"checked": 1792243056,
+"checked": 1792250258,
 "done": false
 },
 "coin|bitget|RFFIVUSDT|1789521535": {
@@ -1238,7 +1238,7 @@
 "cur_ts": 1792166400,
 "hi": 22.22,
 "lo": -15.99,
-"checked": 1792243056,
+"checked": 1792250258,
 "done": false
 },
 "coin|binance|HEIUSDT|1789579129": {
@@ -1389,7 +1389,7 @@
 "cur_ts": 1792180800,
 "hi": 6.83,
 "lo": -26.64,
-"checked": 1792243056,
+"checked": 1792250258,
 "done": false
 },
 "coin|binance|ONEUSDT|1789607982": {
@@ -1518,7 +1518,7 @@
 "ts": 1789622326.0,
 "price": 0.1954,
 "note": "거래소 상장",
-"repeats": 9,
+"repeats": 10,
 "res": {
 "h24": {
 "r": 33.67,
@@ -1579,7 +1579,7 @@
 "cur_ts": 1792238400,
 "hi": 61.39,
 "lo": -41.53,
-"checked": 1792243056,
+"checked": 1792250258,
 "done": false
 },
 "coin|binance|GENIUSUSDT|1789651131": {
@@ -1607,14 +1607,19 @@
 "r": -10.31,
 "hi": 7.95,
 "lo": -19.42
+},
+"h720": {
+"r": -22.84,
+"hi": 7.95,
+"lo": -30.45
 }
 },
-"cur": -13.99,
-"cur_ts": 1791770400,
+"cur": -22.84,
+"cur_ts": 1792252800,
 "hi": 7.95,
-"lo": -24.64,
-"checked": 1791767888,
-"done": false
+"lo": -30.45,
+"checked": 1792250258,
+"done": true
 },
 "coin|binance|CAKEUSDT|1789651137": {
 "asset": "coin",
@@ -1641,14 +1646,19 @@
 "r": 11.02,
 "hi": 13.82,
 "lo": -4.09
+},
+"h720": {
+"r": -9.14,
+"hi": 19.54,
+"lo": -13.11
 }
 },
-"cur": -1.09,
-"cur_ts": 1791770400,
+"cur": -6.47,
+"cur_ts": 1792252800,
 "hi": 19.54,
 "lo": -13.11,
-"checked": 1791767888,
-"done": false
+"checked": 1792250258,
+"done": true
 },
 "coin|binance|PENDLEUSDT|1789658339": {
 "asset": "coin",
@@ -6113,7 +6123,7 @@
 "ts": 1790486333.0,
 "price": 0.0419169,
 "note": "거래량 폭증",
-"repeats": 10,
+"repeats": 11,
 "res": {
 "h24": {
 "r": -19.53,
@@ -8238,7 +8248,7 @@
 "cur_ts": 1792132200,
 "hi": 11.25,
 "lo": -30.8,
-"checked": 1792243056,
+"checked": 1792250258,
 "done": false
 },
 "coin|binance|RLCUSDT|1791199065": {
@@ -9315,13 +9325,18 @@
 "r": -7.9,
 "hi": 15.98,
 "lo": -12.43
+},
+"h168": {
+"r": -14.08,
+"hi": 15.98,
+"lo": -17.76
 }
 },
-"cur": -8.06,
-"cur_ts": 1791907200,
+"cur": -14.32,
+"cur_ts": 1792252800,
 "hi": 15.98,
-"lo": -12.43,
-"checked": 1791904710,
+"lo": -17.76,
+"checked": 1792250258,
 "done": false
 },
 "coin|binance|ACTUSDT|1791652752": {
@@ -9977,13 +9992,18 @@
 "r": -10.07,
 "hi": 7.1,
 "lo": -14.85
+},
+"h72": {
+"r": -6.93,
+"hi": 7.1,
+"lo": -14.85
 }
 },
-"cur": -8.42,
-"cur_ts": 1792080000,
+"cur": -6.77,
+"cur_ts": 1792252800,
 "hi": 7.1,
 "lo": -14.85,
-"checked": 1792077493,
+"checked": 1792250258,
 "done": false
 },
 "stock|US|AADX|1792005501": {
@@ -10368,6 +10388,30 @@
 "hi": -0.08,
 "lo": -15.0,
 "checked": 1792214289,
+"done": false
+},
+"coin|bitget|DNAUSDT|1792163854": {
+"asset": "coin",
+"kind": "pump",
+"market": "bitget",
+"symbol": "DNAUSDT",
+"name": "DNA",
+"ts": 1792163854.0,
+"price": 0.2805,
+"note": "에어드랍",
+"repeats": 2,
+"res": {
+"h24": {
+"r": -0.6,
+"hi": 14.08,
+"lo": -16.87
+}
+},
+"cur": -0.6,
+"cur_ts": 1792249200,
+"hi": 14.08,
+"lo": -16.87,
+"checked": 1792250258,
 "done": false
 }
 }
