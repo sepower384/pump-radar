@@ -551,3 +551,5 @@
 {"t": "trend", "ts": 1792207085, "symbol": "BATUSDT", "base": "BAT", "price": 0.1989, "score": 92.0, "rs7": 51.5, "rs30": 155.1, "new": true}
 {"t": "trend", "ts": 1792207085, "symbol": "ZKUSDT", "base": "ZK", "price": 0.01625, "score": 73.1, "rs7": 17.7, "rs30": 71.0, "new": true}
 {"t": "trend", "ts": 1792207085, "symbol": "WALUSDT", "base": "WAL", "price": 0.04379, "score": 72.5, "rs7": 24.1, "rs30": 52.2, "new": true}
+{"t": "pump", "ts": 1792214281, "market": "binance", "symbol": "TIAUSDT", "base": "TIA", "price": 0.7493, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 1.57, "chg2h": 5.95, "chg24h": 22.76, "qvol": 47371118.653861, "vol_x": 0.8, "off_high": -2.56, "direction": "up", "tag": "뉴스", "tags": ["뉴스", "뉴스", "뉴스", "검색 급증"], "conf": "높음", "headline": "Celestia 급등 — 뉴스 재료", "news": "Altcoins outpace bitcoin as celestia jumps 16%, Warsh silent on interest-rate plans (CoinDesk)"}
+{"t": "trend", "ts": 1792214287, "symbol": "TIAUSDT", "base": "TIA", "price": 0.7517, "score": 84.9, "rs7": 55.3, "rs30": 102.0, "new": true}

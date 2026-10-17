@@ -147,7 +147,7 @@
 "cur_ts": 1791892800,
 "hi": 9.8,
 "lo": -18.17,
-"checked": 1792207086,
+"checked": 1792214289,
 "done": false
 },
 "coin|bitget|FLOCKUSDT|1789296347": {
@@ -415,7 +415,7 @@
 "cur_ts": 1791921600,
 "hi": 32.15,
 "lo": -47.98,
-"checked": 1792207086,
+"checked": 1792214289,
 "done": false
 },
 "coin|bitget|POWERUSDT|1789327197": {
@@ -449,7 +449,7 @@
 "cur_ts": 1791921600,
 "hi": 86.75,
 "lo": -35.54,
-"checked": 1792207086,
+"checked": 1792214289,
 "done": false
 },
 "coin|binance|ARKUSDT|1789348745": {
@@ -522,7 +522,7 @@
 "cur_ts": 1791964800,
 "hi": 104.81,
 "lo": -82.0,
-"checked": 1792207086,
+"checked": 1792214289,
 "done": false
 },
 "coin|binance|TUSDT|1789384750": {
@@ -595,7 +595,7 @@
 "cur_ts": 1791979200,
 "hi": 186.66,
 "lo": -57.35,
-"checked": 1792207086,
+"checked": 1792214289,
 "done": false
 },
 "coin|binance|QKCUSDT|1789391926": {
@@ -668,7 +668,7 @@
 "cur_ts": 1791993600,
 "hi": 154.82,
 "lo": -7.4,
-"checked": 1792207086,
+"checked": 1792214289,
 "done": false
 },
 "coin|bitget|CPOOLUSDT|1789420744": {
@@ -780,7 +780,7 @@
 "cur_ts": 1792022400,
 "hi": 30.27,
 "lo": -19.72,
-"checked": 1792207086,
+"checked": 1792214289,
 "done": false
 },
 "coin|binance|ASTRUSDT|1789442344": {
@@ -967,10 +967,10 @@
 }
 },
 "cur": -2.44,
-"cur_ts": 1791230400,
-"hi": -2.44,
-"lo": -2.44,
-"checked": 1792207086,
+"cur_ts": 1790994600,
+"hi": -1.2,
+"lo": -4.96,
+"checked": 1792214289,
 "done": false
 },
 "coin|bitget|RFFIVUSDT|1789521535": {
@@ -1238,7 +1238,7 @@
 "cur_ts": 1792166400,
 "hi": 22.22,
 "lo": -15.99,
-"checked": 1792207086,
+"checked": 1792214289,
 "done": false
 },
 "coin|binance|HEIUSDT|1789579129": {
@@ -1389,7 +1389,7 @@
 "cur_ts": 1792180800,
 "hi": 6.83,
 "lo": -26.64,
-"checked": 1792207086,
+"checked": 1792214289,
 "done": false
 },
 "coin|binance|ONEUSDT|1789607982": {
@@ -1495,14 +1495,19 @@
 "r": -1.33,
 "hi": 9.89,
 "lo": -13.33
+},
+"h720": {
+"r": -14.0,
+"hi": 14.11,
+"lo": -15.78
 }
 },
-"cur": -3.44,
-"cur_ts": 1791770400,
+"cur": -13.56,
+"cur_ts": 1792216800,
 "hi": 14.11,
-"lo": -13.33,
-"checked": 1791767888,
-"done": false
+"lo": -15.78,
+"checked": 1792214289,
+"done": true
 },
 "coin|binance|AVAUSDT|1789622326": {
 "asset": "coin",
@@ -4947,7 +4952,7 @@
 "ts": 1790162354.0,
 "price": 0.5289,
 "note": "우상향 점수 88.7",
-"repeats": 15,
+"repeats": 17,
 "res": {
 "h24": {
 "r": -13.5,
@@ -8228,7 +8233,7 @@
 "cur_ts": 1792132200,
 "hi": 11.25,
 "lo": -30.8,
-"checked": 1792207086,
+"checked": 1792214289,
 "done": false
 },
 "coin|binance|RLCUSDT|1791199065": {
@@ -10213,6 +10218,126 @@
 "hi": 6.74,
 "lo": -9.11,
 "checked": 1792207086,
+"done": false
+},
+"stock|KR|014950|1792120691": {
+"asset": "stock",
+"kind": "stock",
+"market": "KR",
+"symbol": "014950",
+"name": "삼익제약",
+"ts": 1792120691.0,
+"price": 8210.0,
+"note": "탈모 치료 대장주",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -2.31,
+"hi": 2.8,
+"lo": -17.66
+}
+},
+"cur": -2.31,
+"cur_ts": 1792132200,
+"hi": 2.8,
+"lo": -17.66,
+"checked": 1792214289,
+"done": false
+},
+"stock|KR|290660|1792120691": {
+"asset": "stock",
+"kind": "stock",
+"market": "KR",
+"symbol": "290660",
+"name": "다이나믹솔루션",
+"ts": 1792120691.0,
+"price": 1324.0,
+"note": "원격진료/비대면진료(U-Healthcare) 대장주",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -6.27,
+"hi": 3.93,
+"lo": -19.56
+}
+},
+"cur": -6.27,
+"cur_ts": 1792132200,
+"hi": 3.93,
+"lo": -19.56,
+"checked": 1792214289,
+"done": false
+},
+"stock|KR|458870|1792120691": {
+"asset": "stock",
+"kind": "stock",
+"market": "KR",
+"symbol": "458870",
+"name": "씨어스",
+"ts": 1792120691.0,
+"price": 23000.0,
+"note": "원격진료/비대면진료(U-Healthcare) 관찰 콜",
+"repeats": 1,
+"res": {
+"h24": {
+"r": 2.17,
+"hi": 6.74,
+"lo": -11.52
+}
+},
+"cur": 2.17,
+"cur_ts": 1792132200,
+"hi": 6.74,
+"lo": -11.52,
+"checked": 1792214289,
+"done": false
+},
+"coin|bitget|ICNTUSDT|1792127852": {
+"asset": "coin",
+"kind": "pump",
+"market": "bitget",
+"symbol": "ICNTUSDT",
+"name": "ICNT",
+"ts": 1792127852.0,
+"price": 0.1394,
+"note": "원인 미확인",
+"repeats": 3,
+"res": {
+"h24": {
+"r": 51.58,
+"hi": 59.04,
+"lo": -3.23
+}
+},
+"cur": 51.58,
+"cur_ts": 1792213200,
+"hi": 59.04,
+"lo": -3.23,
+"checked": 1792214289,
+"done": false
+},
+"coin|binance|INITUSDT|1792127858": {
+"asset": "coin",
+"kind": "trend",
+"market": "binance",
+"symbol": "INITUSDT",
+"name": "INIT",
+"ts": 1792127858.0,
+"price": 0.14071,
+"note": "우상향 점수 91.5",
+"repeats": 2,
+"res": {
+"h24": {
+"r": -11.0,
+"hi": -0.08,
+"lo": -15.0
+}
+},
+"cur": -11.27,
+"cur_ts": 1792216800,
+"hi": -0.08,
+"lo": -15.0,
+"checked": 1792214289,
 "done": false
 }
 }
