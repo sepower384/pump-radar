@@ -561,3 +561,4 @@
 {"t": "pump", "ts": 1792235892, "market": "bitget", "symbol": "BTWUSDT", "base": "BTW", "price": 2.183561, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 7.02, "chg2h": 7.4, "chg24h": 29.18, "qvol": 7830450.74584059, "vol_x": 6.2, "off_high": -4.46, "direction": "up", "tag": "뉴스", "tags": ["뉴스", "거래량 폭증"], "conf": "높음", "headline": "Bitway 급등 — 뉴스 재료", "news": "Top 7 crypto gainers this week: Celestia, Bitway, Injective (FXStreet)"}
 {"t": "trend", "ts": 1792235898, "symbol": "DUSKUSDT", "base": "DUSK", "price": 0.1173, "score": 90.8, "rs7": 44.2, "rs30": 55.2, "new": true}
 {"t": "trend", "ts": 1792235898, "symbol": "INJUSDT", "base": "INJ", "price": 8.741, "score": 79.4, "rs7": 22.5, "rs30": 46.9, "new": true}
+{"t": "trend", "ts": 1792243055, "symbol": "AMPUSDT", "base": "AMP", "price": 0.000729, "score": 66.2, "rs7": 15.4, "rs30": 56.4, "new": true}
