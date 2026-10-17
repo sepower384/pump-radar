@@ -548,3 +548,6 @@
 {"t": "pump", "ts": 1792192671, "market": "bitget", "symbol": "DNAUSDT", "base": "DNA", "price": 0.28621, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 8.93, "chg2h": 16.2, "chg24h": 2762.1, "qvol": 1468767.8789449, "vol_x": 1.5, "off_high": -9.73, "direction": "up", "tag": "에어드랍", "tags": ["에어드랍", "거래소 상장"], "conf": "높음", "headline": "NeoSoul 급등 — 에어드랍 재료", "news": "KuCoin Web3 Wallet × NeoSoul Airdrop: Share Up to 50,000 DNA! (KuCoin)"}
 {"t": "pump", "ts": 1792192671, "market": "bitget", "symbol": "QUSDT", "base": "Q", "price": 0.0656497, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 15.35, "chg2h": 15.64, "chg24h": 26.81, "qvol": 904893.39260295, "vol_x": 52.4, "off_high": -9.16, "direction": "up", "tag": "거래량 폭증", "tags": ["거래량 폭증"], "conf": "낮음", "headline": "Quack AI 급등 — 매수세 몰림", "news": ""}
 {"t": "trend", "ts": 1792192678, "symbol": "SUSDT", "base": "S", "price": 0.0545, "score": 72.1, "rs7": 25.2, "rs30": 94.1, "new": true}
+{"t": "trend", "ts": 1792207085, "symbol": "BATUSDT", "base": "BAT", "price": 0.1989, "score": 92.0, "rs7": 51.5, "rs30": 155.1, "new": true}
+{"t": "trend", "ts": 1792207085, "symbol": "ZKUSDT", "base": "ZK", "price": 0.01625, "score": 73.1, "rs7": 17.7, "rs30": 71.0, "new": true}
+{"t": "trend", "ts": 1792207085, "symbol": "WALUSDT", "base": "WAL", "price": 0.04379, "score": 72.5, "rs7": 24.1, "rs30": 52.2, "new": true}
