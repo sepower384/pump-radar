@@ -605,7 +605,7 @@
 "target_pct": 2.0,
 "deadline": 1792391400,
 "status": "pending",
-"best_price": 2780.0,
+"best_price": 2795.0,
 "last_price": 2750.0,
 "result_pct": 0.18,
 "resolved_ts": null,
@@ -628,5 +628,23 @@
 "result_pct": 5.65,
 "resolved_ts": 1792127858,
 "reported": 1
+},
+{
+"id": 37,
+"ts": 1792372662,
+"market": "KR",
+"symbol": "039610",
+"name": "화성밸브",
+"theme": "남-북-러 가스관사업",
+"leader": "KBI동양철관",
+"ref_price": 8270.0,
+"target_pct": 2.0,
+"deadline": 1792477800,
+"status": "pending",
+"best_price": 8270.0,
+"last_price": null,
+"result_pct": null,
+"resolved_ts": null,
+"reported": 0
 }
 ]
