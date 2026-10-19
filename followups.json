@@ -147,7 +147,7 @@
 "cur_ts": 1791892800,
 "hi": 9.8,
 "lo": -18.17,
-"checked": 1792423064,
+"checked": 1792430272,
 "done": false
 },
 "coin|bitget|FLOCKUSDT|1789296347": {
@@ -415,7 +415,7 @@
 "cur_ts": 1791921600,
 "hi": 32.15,
 "lo": -47.98,
-"checked": 1792423064,
+"checked": 1792430272,
 "done": false
 },
 "coin|bitget|POWERUSDT|1789327197": {
@@ -449,7 +449,7 @@
 "cur_ts": 1791921600,
 "hi": 86.75,
 "lo": -35.54,
-"checked": 1792423064,
+"checked": 1792430272,
 "done": false
 },
 "coin|binance|ARKUSDT|1789348745": {
@@ -522,7 +522,7 @@
 "cur_ts": 1791964800,
 "hi": 104.81,
 "lo": -82.0,
-"checked": 1792423064,
+"checked": 1792430272,
 "done": false
 },
 "coin|binance|TUSDT|1789384750": {
@@ -595,7 +595,7 @@
 "cur_ts": 1791979200,
 "hi": 186.66,
 "lo": -57.35,
-"checked": 1792423064,
+"checked": 1792430272,
 "done": false
 },
 "coin|binance|QKCUSDT|1789391926": {
@@ -668,7 +668,7 @@
 "cur_ts": 1791993600,
 "hi": 154.82,
 "lo": -7.4,
-"checked": 1792423064,
+"checked": 1792430272,
 "done": false
 },
 "coin|bitget|CPOOLUSDT|1789420744": {
@@ -780,7 +780,7 @@
 "cur_ts": 1792022400,
 "hi": 30.27,
 "lo": -19.72,
-"checked": 1792423064,
+"checked": 1792430272,
 "done": false
 },
 "coin|binance|ASTRUSDT|1789442344": {
@@ -1238,7 +1238,7 @@
 "cur_ts": 1792166400,
 "hi": 22.22,
 "lo": -15.99,
-"checked": 1792423064,
+"checked": 1792430272,
 "done": false
 },
 "coin|binance|HEIUSDT|1789579129": {
@@ -1389,7 +1389,7 @@
 "cur_ts": 1792180800,
 "hi": 6.83,
 "lo": -26.64,
-"checked": 1792423064,
+"checked": 1792430272,
 "done": false
 },
 "coin|binance|ONEUSDT|1789607982": {
@@ -1518,7 +1518,7 @@
 "ts": 1789622326.0,
 "price": 0.1954,
 "note": "거래소 상장",
-"repeats": 16,
+"repeats": 17,
 "res": {
 "h24": {
 "r": 33.67,
@@ -1579,7 +1579,7 @@
 "cur_ts": 1792238400,
 "hi": 61.39,
 "lo": -41.53,
-"checked": 1792423064,
+"checked": 1792430272,
 "done": false
 },
 "coin|binance|GENIUSUSDT|1789651131": {
@@ -1925,7 +1925,7 @@
 "cur_ts": 1792267200,
 "hi": 12.21,
 "lo": -39.36,
-"checked": 1792423064,
+"checked": 1792430272,
 "done": false
 },
 "coin|bitget|MCATUSDT|1789687173": {
@@ -1959,7 +1959,7 @@
 "cur_ts": 1792281600,
 "hi": 84.01,
 "lo": -32.44,
-"checked": 1792423064,
+"checked": 1792430272,
 "done": false
 },
 "stock|KR|001440|1789694344": {
@@ -2851,7 +2851,7 @@
 "cur_ts": 1791255600,
 "hi": 7.42,
 "lo": -32.71,
-"checked": 1792423064,
+"checked": 1792430272,
 "done": false
 },
 "coin|bitget|B2USDT|1789809559": {
@@ -7196,7 +7196,7 @@
 "ts": 1790759975.0,
 "price": 0.11662,
 "note": "거래소 상장",
-"repeats": 25,
+"repeats": 27,
 "res": {
 "h24": {
 "r": -14.29,
@@ -8403,7 +8403,7 @@
 "cur_ts": 1792391400,
 "hi": 11.25,
 "lo": -30.8,
-"checked": 1792423064,
+"checked": 1792430272,
 "done": false
 },
 "coin|binance|RLCUSDT|1791199065": {
@@ -9854,13 +9854,18 @@
 "r": -1.12,
 "hi": 26.97,
 "lo": -15.73
+},
+"h168": {
+"r": 31.24,
+"hi": 45.84,
+"lo": -15.73
 }
 },
-"cur": -1.35,
-"cur_ts": 1792375200,
-"hi": 26.97,
+"cur": 28.09,
+"cur_ts": 1792432800,
+"hi": 45.84,
 "lo": -15.73,
-"checked": 1792372662,
+"checked": 1792430272,
 "done": false
 },
 "coin|bitget|DOSUSDT|1791839863": {
