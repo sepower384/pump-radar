@@ -664,5 +664,41 @@
 "result_pct": 2.58,
 "resolved_ts": 1792401453,
 "reported": 1
+},
+{
+"id": 39,
+"ts": 1792423064,
+"market": "US",
+"symbol": "MU",
+"name": "Micron Technology, Inc.",
+"theme": "AI 반도체",
+"leader": "AXT Inc",
+"ref_price": 919.73,
+"target_pct": 2.0,
+"deadline": 1792526400,
+"status": "pending",
+"best_price": 919.73,
+"last_price": null,
+"result_pct": null,
+"resolved_ts": null,
+"reported": 0
+},
+{
+"id": 40,
+"ts": 1792423064,
+"market": "US",
+"symbol": "MXL",
+"name": "MaxLinear, Inc",
+"theme": "AI 반도체",
+"leader": "AXT Inc",
+"ref_price": 78.55,
+"target_pct": 2.0,
+"deadline": 1792526400,
+"status": "pending",
+"best_price": 78.55,
+"last_price": null,
+"result_pct": null,
+"resolved_ts": null,
+"reported": 0
 }
 ]
