@@ -603,3 +603,4 @@
 {"t": "pump", "ts": 1792437489, "market": "binance", "symbol": "PHAUSDT", "base": "PHA", "price": 0.0629, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 8.85, "chg2h": 15.47, "chg24h": 30.5, "qvol": 6808783.4886, "vol_x": 0.8, "off_high": -0.48, "direction": "up", "tag": "뉴스", "tags": ["뉴스", "검색 급증"], "conf": "높음", "headline": "PHALA 급등 — 뉴스 재료", "news": "Phala Cloud, guest-agent 취약점 악용한 토큰 탈취 보고 (토큰포스트)"}
 {"t": "trend", "ts": 1792437496, "symbol": "AVAUSDT", "base": "AVA", "price": 0.4307, "score": 96.2, "rs7": 81.4, "rs30": 88.8, "new": true}
 {"t": "trend", "ts": 1792437496, "symbol": "SOXSBUSDT", "base": "SOXSB", "price": 46.25, "score": 72.0, "rs7": 25.6, "rs30": 8.1, "new": true}
+{"t": "trend", "ts": 1792451880, "symbol": "ALTUSDT", "base": "ALT", "price": 0.00927, "score": 69.0, "rs7": 18.7, "rs30": 28.2, "new": true}
