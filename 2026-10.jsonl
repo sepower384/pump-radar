@@ -604,3 +604,4 @@
 {"t": "trend", "ts": 1792437496, "symbol": "AVAUSDT", "base": "AVA", "price": 0.4307, "score": 96.2, "rs7": 81.4, "rs30": 88.8, "new": true}
 {"t": "trend", "ts": 1792437496, "symbol": "SOXSBUSDT", "base": "SOXSB", "price": 46.25, "score": 72.0, "rs7": 25.6, "rs30": 8.1, "new": true}
 {"t": "trend", "ts": 1792451880, "symbol": "ALTUSDT", "base": "ALT", "price": 0.00927, "score": 69.0, "rs7": 18.7, "rs30": 28.2, "new": true}
+{"t": "stock", "ts": 1792459062, "market": "KR", "theme": "탈모 치료", "leader": {"symbol": "014950", "name": "삼익제약", "chg": 13.62, "price": 9010.0, "trade_value": 514.1, "mcap": 909.0}, "catalyst": ["‘먹는 탈모 치료제’ 임상 희소식에 관련주 급등…삼익제약, 17%대↑"], "peers": [{"symbol": "226950", "name": "올릭스", "chg": -7.67, "verdict": "lagging", "blocker": "테마 힘 약함"}, {"symbol": "004310", "name": "현대약품", "chg": 3.27, "verdict": "lagging", "blocker": "테마 힘 약함"}], "calls": []}
