@@ -780,7 +780,7 @@
 "cur_ts": 1792022400,
 "hi": 30.27,
 "lo": -19.72,
-"checked": 1792595998,
+"checked": 1792603228,
 "done": false
 },
 "coin|binance|ASTRUSDT|1789442344": {
@@ -1238,7 +1238,7 @@
 "cur_ts": 1792166400,
 "hi": 22.22,
 "lo": -15.99,
-"checked": 1792595998,
+"checked": 1792603228,
 "done": false
 },
 "coin|binance|HEIUSDT|1789579129": {
@@ -1389,7 +1389,7 @@
 "cur_ts": 1792180800,
 "hi": 6.83,
 "lo": -26.64,
-"checked": 1792595998,
+"checked": 1792603228,
 "done": false
 },
 "coin|binance|ONEUSDT|1789607982": {
@@ -1579,7 +1579,7 @@
 "cur_ts": 1792238400,
 "hi": 61.39,
 "lo": -41.53,
-"checked": 1792595998,
+"checked": 1792603228,
 "done": false
 },
 "coin|binance|GENIUSUSDT|1789651131": {
@@ -1925,7 +1925,7 @@
 "cur_ts": 1792267200,
 "hi": 12.21,
 "lo": -39.36,
-"checked": 1792595998,
+"checked": 1792603228,
 "done": false
 },
 "coin|bitget|MCATUSDT|1789687173": {
@@ -1959,7 +1959,7 @@
 "cur_ts": 1792281600,
 "hi": 84.01,
 "lo": -32.44,
-"checked": 1792595998,
+"checked": 1792603228,
 "done": false
 },
 "stock|KR|001440|1789694344": {
@@ -2851,7 +2851,7 @@
 "cur_ts": 1791255600,
 "hi": 7.42,
 "lo": -32.71,
-"checked": 1792595998,
+"checked": 1792603228,
 "done": false
 },
 "coin|bitget|B2USDT|1789809559": {
@@ -4244,14 +4244,19 @@
 "r": -21.96,
 "hi": -0.93,
 "lo": -26.78
+},
+"h720": {
+"r": -32.58,
+"hi": -0.93,
+"lo": -38.97
 }
 },
-"cur": -35.59,
-"cur_ts": 1792375200,
+"cur": -32.63,
+"cur_ts": 1792605600,
 "hi": -0.93,
 "lo": -38.97,
-"checked": 1792372662,
-"done": false
+"checked": 1792603228,
+"done": true
 },
 "stock|US|EAF|1790011146": {
 "asset": "stock",
@@ -4278,14 +4283,19 @@
 "r": 14.98,
 "hi": 23.28,
 "lo": -16.43
+},
+"h720": {
+"r": -27.94,
+"hi": 23.28,
+"lo": -28.36
 }
 },
-"cur": -26.39,
-"cur_ts": 1792180800,
+"cur": -23.69,
+"cur_ts": 1792612800,
 "hi": 23.28,
-"lo": -27.84,
-"checked": 1792372662,
-"done": false
+"lo": -28.36,
+"checked": 1792603228,
+"done": true
 },
 "coin|bitget|ZETAUSDT|1790018382": {
 "asset": "coin",
@@ -8563,7 +8573,7 @@
 "cur_ts": 1792564200,
 "hi": 11.25,
 "lo": -30.8,
-"checked": 1792595998,
+"checked": 1792603228,
 "done": false
 },
 "coin|binance|RLCUSDT|1791199065": {
@@ -10706,7 +10716,7 @@
 "ts": 1792091902.0,
 "price": 2.705,
 "note": "전력 인프라 대장주",
-"repeats": 1,
+"repeats": 2,
 "res": {
 "h24": {
 "r": -0.92,
@@ -11058,7 +11068,7 @@
 "ts": 1792451880.0,
 "price": 0.00927,
 "note": "우상향 점수 69.0",
-"repeats": 5,
+"repeats": 6,
 "res": {
 "h24": {
 "r": 5.5,
@@ -11178,7 +11188,7 @@
 "ts": 1792509465.0,
 "price": 0.00092,
 "note": "원인 미확인",
-"repeats": 4,
+"repeats": 5,
 "res": {
 "h24": {
 "r": 70.43,
@@ -11191,6 +11201,30 @@
 "hi": 94.35,
 "lo": -3.04,
 "checked": 1792595998,
+"done": false
+},
+"coin|binance|COMPUSDT|1792516691": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "COMPUSDT",
+"name": "COMP",
+"ts": 1792516691.0,
+"price": 28.17,
+"note": "검색 급증",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -7.88,
+"hi": -4.65,
+"lo": -10.72
+}
+},
+"cur": -7.38,
+"cur_ts": 1792605600,
+"hi": -4.65,
+"lo": -10.72,
+"checked": 1792603228,
 "done": false
 }
 }

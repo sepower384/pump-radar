@@ -700,5 +700,41 @@
 "result_pct": -6.42,
 "resolved_ts": 1792531052,
 "reported": 1
+},
+{
+"id": 41,
+"ts": 1792603228,
+"market": "US",
+"symbol": "MSTR",
+"name": "Strategy Inc",
+"theme": "크립토 관련주",
+"leader": "Galaxy Digital Inc.",
+"ref_price": 153.87,
+"target_pct": 2.0,
+"deadline": 1792699200,
+"status": "pending",
+"best_price": 153.87,
+"last_price": null,
+"result_pct": null,
+"resolved_ts": null,
+"reported": 0
+},
+{
+"id": 42,
+"ts": 1792603228,
+"market": "US",
+"symbol": "HOOD",
+"name": "Robinhood Markets, Inc.",
+"theme": "크립토 관련주",
+"leader": "Galaxy Digital Inc.",
+"ref_price": 102.42,
+"target_pct": 2.0,
+"deadline": 1792699200,
+"status": "pending",
+"best_price": 102.42,
+"last_price": null,
+"result_pct": null,
+"resolved_ts": null,
+"reported": 0
 }
 ]
