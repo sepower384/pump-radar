@@ -522,7 +522,7 @@
 "cur_ts": 1791964800,
 "hi": 104.81,
 "lo": -82.0,
-"checked": 1792552675,
+"checked": 1792559862,
 "done": false
 },
 "coin|binance|TUSDT|1789384750": {
@@ -595,7 +595,7 @@
 "cur_ts": 1791979200,
 "hi": 186.66,
 "lo": -57.35,
-"checked": 1792552675,
+"checked": 1792559862,
 "done": false
 },
 "coin|binance|QKCUSDT|1789391926": {
@@ -668,7 +668,7 @@
 "cur_ts": 1791993600,
 "hi": 154.82,
 "lo": -7.4,
-"checked": 1792552675,
+"checked": 1792559862,
 "done": false
 },
 "coin|bitget|CPOOLUSDT|1789420744": {
@@ -780,7 +780,7 @@
 "cur_ts": 1792022400,
 "hi": 30.27,
 "lo": -19.72,
-"checked": 1792552675,
+"checked": 1792559862,
 "done": false
 },
 "coin|binance|ASTRUSDT|1789442344": {
@@ -970,7 +970,7 @@
 "cur_ts": 1791230400,
 "hi": -2.44,
 "lo": -2.44,
-"checked": 1792545500,
+"checked": 1792559862,
 "done": false
 },
 "coin|bitget|RFFIVUSDT|1789521535": {
@@ -1238,7 +1238,7 @@
 "cur_ts": 1792166400,
 "hi": 22.22,
 "lo": -15.99,
-"checked": 1792552675,
+"checked": 1792559862,
 "done": false
 },
 "coin|binance|HEIUSDT|1789579129": {
@@ -1389,7 +1389,7 @@
 "cur_ts": 1792180800,
 "hi": 6.83,
 "lo": -26.64,
-"checked": 1792552675,
+"checked": 1792559862,
 "done": false
 },
 "coin|binance|ONEUSDT|1789607982": {
@@ -1579,7 +1579,7 @@
 "cur_ts": 1792238400,
 "hi": 61.39,
 "lo": -41.53,
-"checked": 1792552675,
+"checked": 1792559862,
 "done": false
 },
 "coin|binance|GENIUSUSDT|1789651131": {
@@ -1925,7 +1925,7 @@
 "cur_ts": 1792267200,
 "hi": 12.21,
 "lo": -39.36,
-"checked": 1792552675,
+"checked": 1792559862,
 "done": false
 },
 "coin|bitget|MCATUSDT|1789687173": {
@@ -1959,7 +1959,7 @@
 "cur_ts": 1792281600,
 "hi": 84.01,
 "lo": -32.44,
-"checked": 1792552675,
+"checked": 1792559862,
 "done": false
 },
 "stock|KR|001440|1789694344": {
@@ -2851,7 +2851,7 @@
 "cur_ts": 1791255600,
 "hi": 7.42,
 "lo": -32.71,
-"checked": 1792552675,
+"checked": 1792559862,
 "done": false
 },
 "coin|bitget|B2USDT|1789809559": {
@@ -3581,14 +3581,19 @@
 "r": -17.18,
 "hi": 6.76,
 "lo": -18.0
+},
+"h720": {
+"r": -14.66,
+"hi": 6.76,
+"lo": -23.77
 }
 },
-"cur": -16.35,
-"cur_ts": 1792375200,
+"cur": -14.66,
+"cur_ts": 1792562400,
 "hi": 6.76,
 "lo": -23.77,
-"checked": 1792372662,
-"done": false
+"checked": 1792559862,
+"done": true
 },
 "coin|binance|KMNOUSDT|1789960759": {
 "asset": "coin",
@@ -3615,14 +3620,19 @@
 "r": 34.44,
 "hi": 51.64,
 "lo": -6.4
+},
+"h720": {
+"r": 16.73,
+"hi": 51.64,
+"lo": -6.4
 }
 },
-"cur": 16.55,
-"cur_ts": 1792375200,
+"cur": 17.13,
+"cur_ts": 1792562400,
 "hi": 51.64,
 "lo": -6.4,
-"checked": 1792372662,
-"done": false
+"checked": 1792559862,
+"done": true
 },
 "coin|binance|MINAUSDT|1789960759": {
 "asset": "coin",
@@ -3649,14 +3659,19 @@
 "r": 13.36,
 "hi": 28.24,
 "lo": -4.16
+},
+"h720": {
+"r": -42.48,
+"hi": 37.12,
+"lo": -45.04
 }
 },
-"cur": -41.92,
-"cur_ts": 1792375200,
+"cur": -42.48,
+"cur_ts": 1792562400,
 "hi": 37.12,
 "lo": -45.04,
-"checked": 1792372662,
-"done": false
+"checked": 1792559862,
+"done": true
 },
 "stock|KR|232140|1789967948": {
 "asset": "stock",
@@ -8474,11 +8489,11 @@
 "lo": -6.22
 }
 },
-"cur": -21.61,
+"cur": -23.12,
 "cur_ts": 1792564200,
 "hi": 11.25,
 "lo": -30.8,
-"checked": 1792552675,
+"checked": 1792559862,
 "done": false
 },
 "coin|binance|RLCUSDT|1791199065": {
@@ -10961,6 +10976,30 @@
 "hi": 19.42,
 "lo": -2.8,
 "checked": 1792545500,
+"done": false
+},
+"stock|KR|048530|1792466296": {
+"asset": "stock",
+"kind": "stock",
+"market": "KR",
+"symbol": "048530",
+"name": "인트론바이오",
+"ts": 1792466296.0,
+"price": 3110.0,
+"note": "마이코플라스마 폐렴 대장주",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -7.4,
+"hi": 12.54,
+"lo": -9.16
+}
+},
+"cur": -7.56,
+"cur_ts": 1792564200,
+"hi": 12.54,
+"lo": -9.16,
+"checked": 1792559862,
 "done": false
 }
 }
