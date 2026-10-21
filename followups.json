@@ -522,7 +522,7 @@
 "cur_ts": 1791964800,
 "hi": 104.81,
 "lo": -82.0,
-"checked": 1792538259,
+"checked": 1792545500,
 "done": false
 },
 "coin|binance|TUSDT|1789384750": {
@@ -595,7 +595,7 @@
 "cur_ts": 1791979200,
 "hi": 186.66,
 "lo": -57.35,
-"checked": 1792538259,
+"checked": 1792545500,
 "done": false
 },
 "coin|binance|QKCUSDT|1789391926": {
@@ -668,7 +668,7 @@
 "cur_ts": 1791993600,
 "hi": 154.82,
 "lo": -7.4,
-"checked": 1792538259,
+"checked": 1792545500,
 "done": false
 },
 "coin|bitget|CPOOLUSDT|1789420744": {
@@ -780,7 +780,7 @@
 "cur_ts": 1792022400,
 "hi": 30.27,
 "lo": -19.72,
-"checked": 1792538259,
+"checked": 1792545500,
 "done": false
 },
 "coin|binance|ASTRUSDT|1789442344": {
@@ -970,7 +970,7 @@
 "cur_ts": 1791230400,
 "hi": -2.44,
 "lo": -2.44,
-"checked": 1792538259,
+"checked": 1792545500,
 "done": false
 },
 "coin|bitget|RFFIVUSDT|1789521535": {
@@ -1238,7 +1238,7 @@
 "cur_ts": 1792166400,
 "hi": 22.22,
 "lo": -15.99,
-"checked": 1792538259,
+"checked": 1792545500,
 "done": false
 },
 "coin|binance|HEIUSDT|1789579129": {
@@ -1389,7 +1389,7 @@
 "cur_ts": 1792180800,
 "hi": 6.83,
 "lo": -26.64,
-"checked": 1792538259,
+"checked": 1792545500,
 "done": false
 },
 "coin|binance|ONEUSDT|1789607982": {
@@ -1579,7 +1579,7 @@
 "cur_ts": 1792238400,
 "hi": 61.39,
 "lo": -41.53,
-"checked": 1792538259,
+"checked": 1792545500,
 "done": false
 },
 "coin|binance|GENIUSUSDT|1789651131": {
@@ -1925,7 +1925,7 @@
 "cur_ts": 1792267200,
 "hi": 12.21,
 "lo": -39.36,
-"checked": 1792538259,
+"checked": 1792545500,
 "done": false
 },
 "coin|bitget|MCATUSDT|1789687173": {
@@ -1959,7 +1959,7 @@
 "cur_ts": 1792281600,
 "hi": 84.01,
 "lo": -32.44,
-"checked": 1792538259,
+"checked": 1792545500,
 "done": false
 },
 "stock|KR|001440|1789694344": {
@@ -2851,7 +2851,7 @@
 "cur_ts": 1791255600,
 "hi": 7.42,
 "lo": -32.71,
-"checked": 1792538259,
+"checked": 1792545500,
 "done": false
 },
 "coin|bitget|B2USDT|1789809559": {
@@ -8459,11 +8459,11 @@
 "lo": -6.22
 }
 },
-"cur": -30.29,
-"cur_ts": 1792477800,
+"cur": -27.49,
+"cur_ts": 1792564200,
 "hi": 11.25,
 "lo": -30.8,
-"checked": 1792538259,
+"checked": 1792545500,
 "done": false
 },
 "coin|binance|RLCUSDT|1791199065": {
@@ -10039,7 +10039,7 @@
 "ts": 1791904701.0,
 "price": 0.524,
 "note": "뉴스",
-"repeats": 5,
+"repeats": 6,
 "res": {
 "h24": {
 "r": 14.89,
@@ -10912,6 +10912,30 @@
 "hi": 1.71,
 "lo": -23.99,
 "checked": 1792487898,
+"done": false
+},
+"coin|binance|ALTUSDT|1792451880": {
+"asset": "coin",
+"kind": "trend",
+"market": "binance",
+"symbol": "ALTUSDT",
+"name": "ALT",
+"ts": 1792451880.0,
+"price": 0.00927,
+"note": "우상향 점수 69.0",
+"repeats": 4,
+"res": {
+"h24": {
+"r": 5.5,
+"hi": 19.42,
+"lo": -2.8
+}
+},
+"cur": 7.01,
+"cur_ts": 1792548000,
+"hi": 19.42,
+"lo": -2.8,
+"checked": 1792545500,
 "done": false
 }
 }
