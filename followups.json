@@ -1238,7 +1238,7 @@
 "cur_ts": 1792166400,
 "hi": 22.22,
 "lo": -15.99,
-"checked": 1792704004,
+"checked": 1792711205,
 "done": false
 },
 "coin|binance|HEIUSDT|1789579129": {
@@ -1389,7 +1389,7 @@
 "cur_ts": 1792180800,
 "hi": 6.83,
 "lo": -26.64,
-"checked": 1792704004,
+"checked": 1792711205,
 "done": false
 },
 "coin|binance|ONEUSDT|1789607982": {
@@ -1579,7 +1579,7 @@
 "cur_ts": 1792238400,
 "hi": 61.39,
 "lo": -41.53,
-"checked": 1792704004,
+"checked": 1792711205,
 "done": false
 },
 "coin|binance|GENIUSUSDT|1789651131": {
@@ -1925,7 +1925,7 @@
 "cur_ts": 1792267200,
 "hi": 12.21,
 "lo": -39.36,
-"checked": 1792704004,
+"checked": 1792711205,
 "done": false
 },
 "coin|bitget|MCATUSDT|1789687173": {
@@ -1959,7 +1959,7 @@
 "cur_ts": 1792281600,
 "hi": 84.01,
 "lo": -32.44,
-"checked": 1792704004,
+"checked": 1792711205,
 "done": false
 },
 "stock|KR|001440|1789694344": {
@@ -2851,7 +2851,7 @@
 "cur_ts": 1791255600,
 "hi": 7.42,
 "lo": -32.71,
-"checked": 1792704004,
+"checked": 1792711205,
 "done": false
 },
 "coin|bitget|B2USDT|1789809559": {
@@ -4328,7 +4328,7 @@
 "cur_ts": 1792612800,
 "hi": 10.57,
 "lo": -35.37,
-"checked": 1792704004,
+"checked": 1792711205,
 "done": false
 },
 "stock|US|ARM|1790018417": {
@@ -7446,7 +7446,7 @@
 "ts": 1790759975.0,
 "price": 0.11662,
 "note": "거래소 상장",
-"repeats": 34,
+"repeats": 35,
 "res": {
 "h24": {
 "r": -14.29,
@@ -8653,7 +8653,7 @@
 "cur_ts": 1792650600,
 "hi": 11.25,
 "lo": -30.8,
-"checked": 1792704004,
+"checked": 1792711205,
 "done": false
 },
 "coin|binance|RLCUSDT|1791199065": {
@@ -11229,13 +11229,18 @@
 "r": 5.5,
 "hi": 19.42,
 "lo": -2.8
+},
+"h72": {
+"r": -11.87,
+"hi": 68.5,
+"lo": -19.53
 }
 },
-"cur": 7.01,
-"cur_ts": 1792548000,
-"hi": 19.42,
-"lo": -2.8,
-"checked": 1792545500,
+"cur": -11.33,
+"cur_ts": 1792713600,
+"hi": 68.5,
+"lo": -19.53,
+"checked": 1792711205,
 "done": false
 },
 "stock|KR|048530|1792466296": {
@@ -11668,6 +11673,30 @@
 "hi": 0.36,
 "lo": -17.08,
 "checked": 1792704004,
+"done": false
+},
+"coin|bitget|BILLUSDT|1792624777": {
+"asset": "coin",
+"kind": "pump",
+"market": "bitget",
+"symbol": "BILLUSDT",
+"name": "BILL",
+"ts": 1792624777.0,
+"price": 0.007361,
+"note": "뉴스",
+"repeats": 2,
+"res": {
+"h24": {
+"r": -15.3,
+"hi": 1.96,
+"lo": -19.82
+}
+},
+"cur": -15.3,
+"cur_ts": 1792710000,
+"hi": 1.96,
+"lo": -19.82,
+"checked": 1792711205,
 "done": false
 }
 }
