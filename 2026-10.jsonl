@@ -682,3 +682,4 @@
 {"t": "trend", "ts": 1792660757, "symbol": "GTCUSDT", "base": "GTC", "price": 0.28215, "score": 70.6, "rs7": 43.6, "rs30": 243.5, "new": true}
 {"t": "pump", "ts": 1792675155, "market": "bitget", "symbol": "BILLUSDT", "base": "BILL", "price": 0.006812, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 4.64, "chg2h": 3.43, "chg24h": 21.82, "qvol": 1832735.49161525, "vol_x": 1.1, "off_high": -0.54, "direction": "up", "tag": "뉴스", "tags": ["뉴스", "뉴스"], "conf": "높음", "headline": "BILL 급등 — 뉴스 재료", "news": "Crypto traders price India telecoms company Reliance Jio's IPO at about $110 billion (CoinDesk)"}
 {"t": "trend", "ts": 1792675173, "symbol": "AVAUSDT", "base": "AVA", "price": 0.3691, "score": 74.3, "rs7": 38.3, "rs30": 47.3, "new": true}
+{"t": "trend", "ts": 1792682382, "symbol": "BMTUSDT", "base": "BMT", "price": 0.0261, "score": 81.9, "rs7": 48.8, "rs30": 32.6, "new": true}
