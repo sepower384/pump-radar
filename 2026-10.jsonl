@@ -718,3 +718,4 @@
 {"t": "pump", "ts": 1792790379, "market": "binance", "symbol": "ERAUSDT", "base": "ERA", "price": 0.0797, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 5.01, "chg2h": 10.39, "chg24h": 22.05, "qvol": 11616472.24532, "vol_x": 0.8, "off_high": -10.75, "direction": "up", "tag": "원인 미확인", "tags": ["원인 미확인"], "conf": "낮음", "headline": "ERA 급등 — 이유 불명 · 큰손 주도 의심", "news": ""}
 {"t": "trend", "ts": 1792790385, "symbol": "INITUSDT", "base": "INIT", "price": 0.15333, "score": 70.0, "rs7": 22.3, "rs30": 76.9, "new": true}
 {"t": "trend", "ts": 1792790385, "symbol": "AVAUSDT", "base": "AVA", "price": 0.4103, "score": 67.2, "rs7": 39.7, "rs30": 66.8, "new": true}
+{"t": "trend", "ts": 1792797581, "symbol": "BEAMXUSDT", "base": "BEAMX", "price": 0.003299, "score": 69.8, "rs7": 10.2, "rs30": 78.4, "new": true}
