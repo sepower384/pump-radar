@@ -701,3 +701,6 @@
 {"t": "trend", "ts": 1792739966, "symbol": "PHAUSDT", "base": "PHA", "price": 0.0645, "score": 68.8, "rs7": 20.9, "rs30": 43.5, "new": true}
 {"t": "trend", "ts": 1792739966, "symbol": "BNCBUSDT", "base": "BNCB", "price": 5.55, "score": 65.5, "rs7": 18.1, "rs30": -7.8, "new": true}
 {"t": "trend", "ts": 1792739966, "symbol": "PEPEUSDT", "base": "PEPE", "price": 4.61e-06, "score": 65.2, "rs7": 12.9, "rs30": 1.9, "new": true}
+{"t": "pump", "ts": 1792754367, "market": "binance", "symbol": "SOPHUSDT", "base": "SOPH", "price": 0.00215, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 16.22, "chg2h": 21.47, "chg24h": 36.08, "qvol": 3683561.12485, "vol_x": 2.3, "off_high": -4.44, "direction": "up", "tag": "국내 매수세", "tags": ["국내 매수세"], "conf": "낮음", "headline": "SOPH 급등 — 한국에서 먼저 매수", "news": ""}
+{"t": "pump", "ts": 1792754367, "market": "bitget", "symbol": "BIRBUSDT", "base": "BIRB", "price": 0.07488, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 2.91, "chg2h": 16.63, "chg24h": 43.23, "qvol": 924241.7909913, "vol_x": 1.4, "off_high": -2.86, "direction": "up", "tag": "원인 미확인", "tags": ["원인 미확인"], "conf": "낮음", "headline": "Moonbirds 급등 — 이유 불명 · 큰손 주도 의심", "news": ""}
+{"t": "trend", "ts": 1792754374, "symbol": "GTCUSDT", "base": "GTC", "price": 0.29463, "score": 71.1, "rs7": 52.4, "rs30": 261.7, "new": true}
