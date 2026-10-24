@@ -1925,7 +1925,7 @@
 "cur_ts": 1792267200,
 "hi": 12.21,
 "lo": -39.36,
-"checked": 1792833592,
+"checked": 1792840794,
 "done": false
 },
 "coin|bitget|MCATUSDT|1789687173": {
@@ -1959,7 +1959,7 @@
 "cur_ts": 1792281600,
 "hi": 84.01,
 "lo": -32.44,
-"checked": 1792833592,
+"checked": 1792840794,
 "done": false
 },
 "stock|KR|001440|1789694344": {
@@ -2851,7 +2851,7 @@
 "cur_ts": 1791255600,
 "hi": 7.42,
 "lo": -32.71,
-"checked": 1792833592,
+"checked": 1792840794,
 "done": false
 },
 "coin|bitget|B2USDT|1789809559": {
@@ -4328,7 +4328,7 @@
 "cur_ts": 1792612800,
 "hi": 10.57,
 "lo": -35.37,
-"checked": 1792833592,
+"checked": 1792840794,
 "done": false
 },
 "stock|US|ARM|1790018417": {
@@ -8728,7 +8728,7 @@
 "cur_ts": 1792737000,
 "hi": 11.25,
 "lo": -30.8,
-"checked": 1792833592,
+"checked": 1792840794,
 "done": false
 },
 "coin|binance|RLCUSDT|1791199065": {
@@ -11120,7 +11120,7 @@
 "ts": 1792127858.0,
 "price": 0.14071,
 "note": "우상향 점수 91.5",
-"repeats": 3,
+"repeats": 4,
 "res": {
 "h24": {
 "r": -11.0,
@@ -12126,6 +12126,54 @@
 "hi": 10.85,
 "lo": -5.42,
 "checked": 1792833592,
+"done": false
+},
+"coin|binance|SOPHUSDT|1792754367": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "SOPHUSDT",
+"name": "SOPH",
+"ts": 1792754367.0,
+"price": 0.00215,
+"note": "국내 매수세",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -27.44,
+"hi": -0.47,
+"lo": -30.7
+}
+},
+"cur": -25.58,
+"cur_ts": 1792843200,
+"hi": -0.47,
+"lo": -30.7,
+"checked": 1792840794,
+"done": false
+},
+"coin|bitget|BIRBUSDT|1792754367": {
+"asset": "coin",
+"kind": "pump",
+"market": "bitget",
+"symbol": "BIRBUSDT",
+"name": "BIRB",
+"ts": 1792754367.0,
+"price": 0.07488,
+"note": "원인 미확인",
+"repeats": 3,
+"res": {
+"h24": {
+"r": 52.99,
+"hi": 182.83,
+"lo": -8.33
+}
+},
+"cur": 52.99,
+"cur_ts": 1792839600,
+"hi": 182.83,
+"lo": -8.33,
+"checked": 1792840794,
 "done": false
 }
 }
