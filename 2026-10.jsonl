@@ -740,3 +740,5 @@
 {"t": "pump", "ts": 1792847989, "market": "bitget", "symbol": "LIGHTUSDT", "base": "LIGHT", "price": 0.28422, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 3.5, "chg2h": 8.46, "chg24h": 28.33, "qvol": 1884850.3097076, "vol_x": 0.5, "off_high": -10.32, "direction": "up", "tag": "원인 미확인", "tags": ["원인 미확인"], "conf": "낮음", "headline": "LIGHT 급등 — 이유 불명 · 큰손 주도 의심", "news": ""}
 {"t": "trend", "ts": 1792848016, "symbol": "BEAMXUSDT", "base": "BEAMX", "price": 0.003245, "score": 74.4, "rs7": 12.1, "rs30": 67.6, "new": true}
 {"t": "trend", "ts": 1792848016, "symbol": "KERNELUSDT", "base": "KERNEL", "price": 0.0506, "score": 73.7, "rs7": 21.4, "rs30": -3.4, "new": true}
+{"t": "pump", "ts": 1792855175, "market": "bitget", "symbol": "JCTUSDT", "base": "JCT", "price": 0.006076, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 14.07, "chg2h": 31.17, "chg24h": 30.72, "qvol": 18333688.7918616, "vol_x": 1.5, "off_high": -14.83, "direction": "up", "tag": "검색 급증", "tags": ["검색 급증"], "conf": "낮음", "headline": "Janction 급등 — 관심 급증", "news": ""}
+{"t": "trend", "ts": 1792855192, "symbol": "ERAUSDT", "base": "ERA", "price": 0.0858, "score": 69.6, "rs7": 38.4, "rs30": 32.9, "new": true}
