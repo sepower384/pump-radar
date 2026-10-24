@@ -742,3 +742,5 @@
 {"t": "trend", "ts": 1792848016, "symbol": "KERNELUSDT", "base": "KERNEL", "price": 0.0506, "score": 73.7, "rs7": 21.4, "rs30": -3.4, "new": true}
 {"t": "pump", "ts": 1792855175, "market": "bitget", "symbol": "JCTUSDT", "base": "JCT", "price": 0.006076, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 14.07, "chg2h": 31.17, "chg24h": 30.72, "qvol": 18333688.7918616, "vol_x": 1.5, "off_high": -14.83, "direction": "up", "tag": "검색 급증", "tags": ["검색 급증"], "conf": "낮음", "headline": "Janction 급등 — 관심 급증", "news": ""}
 {"t": "trend", "ts": 1792855192, "symbol": "ERAUSDT", "base": "ERA", "price": 0.0858, "score": 69.6, "rs7": 38.4, "rs30": 32.9, "new": true}
+{"t": "pump", "ts": 1792862403, "market": "binance", "symbol": "EPICUSDT", "base": "EPIC", "price": 0.1574, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 10.53, "chg2h": 15.23, "chg24h": 26.43, "qvol": 2060178.39333, "vol_x": 5.1, "off_high": -1.62, "direction": "up", "tag": "거래량 폭증", "tags": ["거래량 폭증"], "conf": "낮음", "headline": "Epic Private Internet Cash 급등 — 매수세 몰림", "news": ""}
+{"t": "trend", "ts": 1792862415, "symbol": "ANIMEUSDT", "base": "ANIME", "price": 0.00339, "score": 68.7, "rs7": 24.1, "rs30": 5.2, "new": true}
