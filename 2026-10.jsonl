@@ -744,3 +744,6 @@
 {"t": "trend", "ts": 1792855192, "symbol": "ERAUSDT", "base": "ERA", "price": 0.0858, "score": 69.6, "rs7": 38.4, "rs30": 32.9, "new": true}
 {"t": "pump", "ts": 1792862403, "market": "binance", "symbol": "EPICUSDT", "base": "EPIC", "price": 0.1574, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 10.53, "chg2h": 15.23, "chg24h": 26.43, "qvol": 2060178.39333, "vol_x": 5.1, "off_high": -1.62, "direction": "up", "tag": "거래량 폭증", "tags": ["거래량 폭증"], "conf": "낮음", "headline": "Epic Private Internet Cash 급등 — 매수세 몰림", "news": ""}
 {"t": "trend", "ts": 1792862415, "symbol": "ANIMEUSDT", "base": "ANIME", "price": 0.00339, "score": 68.7, "rs7": 24.1, "rs30": 5.2, "new": true}
+{"t": "pump", "ts": 1792869604, "market": "bitget", "symbol": "LIGHTUSDT", "base": "LIGHT", "price": 0.28597, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 0.1, "chg2h": 4.29, "chg24h": 31.38, "qvol": 2196985.0185476, "vol_x": 0.5, "off_high": -9.77, "direction": "up", "tag": "원인 미확인", "tags": ["원인 미확인"], "conf": "낮음", "headline": "LIGHT 급등 — 이유 불명 · 큰손 주도 의심", "news": ""}
+{"t": "trend", "ts": 1792869611, "symbol": "BMTUSDT", "base": "BMT", "price": 0.03782, "score": 86.2, "rs7": 126.5, "rs30": 94.8, "new": true}
+{"t": "trend", "ts": 1792869611, "symbol": "REZUSDT", "base": "REZ", "price": 0.004441, "score": 80.7, "rs7": 25.3, "rs30": 18.4, "new": true}
