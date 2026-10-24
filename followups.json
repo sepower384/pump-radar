@@ -1579,7 +1579,7 @@
 "cur_ts": 1792238400,
 "hi": 61.39,
 "lo": -41.53,
-"checked": 1792826365,
+"checked": 1792833592,
 "done": false
 },
 "coin|binance|GENIUSUSDT|1789651131": {
@@ -1925,7 +1925,7 @@
 "cur_ts": 1792267200,
 "hi": 12.21,
 "lo": -39.36,
-"checked": 1792826365,
+"checked": 1792833592,
 "done": false
 },
 "coin|bitget|MCATUSDT|1789687173": {
@@ -1959,7 +1959,7 @@
 "cur_ts": 1792281600,
 "hi": 84.01,
 "lo": -32.44,
-"checked": 1792826365,
+"checked": 1792833592,
 "done": false
 },
 "stock|KR|001440|1789694344": {
@@ -2851,7 +2851,7 @@
 "cur_ts": 1791255600,
 "hi": 7.42,
 "lo": -32.71,
-"checked": 1792826365,
+"checked": 1792833592,
 "done": false
 },
 "coin|bitget|B2USDT|1789809559": {
@@ -4328,7 +4328,7 @@
 "cur_ts": 1792612800,
 "hi": 10.57,
 "lo": -35.37,
-"checked": 1792826365,
+"checked": 1792833592,
 "done": false
 },
 "stock|US|ARM|1790018417": {
@@ -8728,7 +8728,7 @@
 "cur_ts": 1792737000,
 "hi": 11.25,
 "lo": -30.8,
-"checked": 1792826365,
+"checked": 1792833592,
 "done": false
 },
 "coin|binance|RLCUSDT|1791199065": {
@@ -11658,13 +11658,18 @@
 "r": 20.53,
 "hi": 47.98,
 "lo": -10.23
+},
+"h72": {
+"r": 389.89,
+"hi": 1907.17,
+"lo": -10.23
 }
 },
-"cur": 20.53,
-"cur_ts": 1792659600,
-"hi": 47.98,
+"cur": 389.89,
+"cur_ts": 1792832400,
+"hi": 1907.17,
 "lo": -10.23,
-"checked": 1792660757,
+"checked": 1792833592,
 "done": false
 },
 "stock|US|SMCI|1792595997": {
@@ -12073,6 +12078,54 @@
 "hi": 0.0,
 "lo": -26.81,
 "checked": 1792819217,
+"done": false
+},
+"coin|binance|BNCBUSDT|1792739966": {
+"asset": "coin",
+"kind": "trend",
+"market": "binance",
+"symbol": "BNCBUSDT",
+"name": "BNCB",
+"ts": 1792739966.0,
+"price": 5.55,
+"note": "우상향 점수 65.5",
+"repeats": 2,
+"res": {
+"h24": {
+"r": -1.44,
+"hi": 1.26,
+"lo": -4.32
+}
+},
+"cur": -2.34,
+"cur_ts": 1792836000,
+"hi": 1.26,
+"lo": -4.32,
+"checked": 1792833592,
+"done": false
+},
+"coin|binance|PEPEUSDT|1792739966": {
+"asset": "coin",
+"kind": "trend",
+"market": "binance",
+"symbol": "PEPEUSDT",
+"name": "PEPE",
+"ts": 1792739966.0,
+"price": 4.61e-06,
+"note": "우상향 점수 65.2",
+"repeats": 2,
+"res": {
+"h24": {
+"r": -3.25,
+"hi": 10.85,
+"lo": -3.69
+}
+},
+"cur": -5.21,
+"cur_ts": 1792836000,
+"hi": 10.85,
+"lo": -5.42,
+"checked": 1792833592,
 "done": false
 }
 }
