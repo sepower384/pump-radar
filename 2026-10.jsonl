@@ -759,3 +759,4 @@
 {"t": "trend", "ts": 1792920019, "symbol": "BMTUSDT", "base": "BMT", "price": 0.03174, "score": 80.5, "rs7": 98.0, "rs30": 65.5, "new": true}
 {"t": "trend", "ts": 1792920019, "symbol": "REZUSDT", "base": "REZ", "price": 0.004172, "score": 75.0, "rs7": 24.0, "rs30": 6.1, "new": true}
 {"t": "pump", "ts": 1792927135, "market": "bitget", "symbol": "JCTUSDT", "base": "JCT", "price": 0.007162, "chg5m": 0.0, "chg15m": 0.0, "chg1h": -2.16, "chg2h": 7.18, "chg24h": 47.7, "qvol": 12985396.5343145, "vol_x": 0.8, "off_high": -12.38, "direction": "up", "tag": "뉴스", "tags": ["뉴스", "물량 언락"], "conf": "높음", "headline": "Janction 급등 — 뉴스 재료", "news": "Janction token JCT doubles in a day with no news behind the surge (Startup Fortune)"}
+{"t": "trend", "ts": 1792934357, "symbol": "BABYUSDT", "base": "BABY", "price": 0.01389, "score": 70.7, "rs7": 17.2, "rs30": 9.2, "new": true}
