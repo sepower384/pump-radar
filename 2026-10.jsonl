@@ -765,3 +765,6 @@
 {"t": "trend", "ts": 1792955988, "symbol": "AVAUSDT", "base": "AVA", "price": 0.403, "score": 71.9, "rs7": 25.0, "rs30": 59.1, "new": true}
 {"t": "trend", "ts": 1792955988, "symbol": "ERAUSDT", "base": "ERA", "price": 0.0803, "score": 65.2, "rs7": 26.1, "rs30": 18.7, "new": true}
 {"t": "trend", "ts": 1792963198, "symbol": "DODOUSDT", "base": "DODO", "price": 0.02476, "score": 72.1, "rs7": 19.0, "rs30": 39.2, "new": true}
+{"t": "pump", "ts": 1792970387, "market": "bitget", "symbol": "UMXMUSDT", "base": "UMXM", "price": 0.02839, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 17.69, "chg2h": 26.63, "chg24h": 28.4, "qvol": 1299591.0036949, "vol_x": 5.3, "off_high": -1.32, "direction": "up", "tag": "뉴스", "tags": ["뉴스", "거래량 폭증"], "conf": "높음", "headline": "Manadia 급등 — 뉴스 재료", "news": "Crypto market’s weekly winners and losers – M, YELLOW, BTW, UMXM (AMBCrypto)"}
+{"t": "trend", "ts": 1792970393, "symbol": "REZUSDT", "base": "REZ", "price": 0.004713, "score": 86.6, "rs7": 43.8, "rs30": 14.1, "new": true}
+{"t": "trend", "ts": 1792970393, "symbol": "BMTUSDT", "base": "BMT", "price": 0.0323, "score": 78.8, "rs7": 100.7, "rs30": 68.4, "new": true}
