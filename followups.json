@@ -2851,7 +2851,7 @@
 "cur_ts": 1791255600,
 "hi": 7.42,
 "lo": -32.71,
-"checked": 1792912750,
+"checked": 1792920020,
 "done": false
 },
 "coin|bitget|B2USDT|1789809559": {
@@ -4328,7 +4328,7 @@
 "cur_ts": 1792612800,
 "hi": 10.57,
 "lo": -35.37,
-"checked": 1792912750,
+"checked": 1792920020,
 "done": false
 },
 "stock|US|ARM|1790018417": {
@@ -8768,7 +8768,7 @@
 "cur_ts": 1792737000,
 "hi": 11.25,
 "lo": -30.8,
-"checked": 1792912750,
+"checked": 1792920020,
 "done": false
 },
 "coin|binance|RLCUSDT|1791199065": {
@@ -11489,7 +11489,7 @@
 "ts": 1792502255.0,
 "price": 0.0201,
 "note": "거래량 폭증",
-"repeats": 12,
+"repeats": 13,
 "res": {
 "h24": {
 "r": 23.33,
@@ -12376,7 +12376,7 @@
 "ts": 1792819217.0,
 "price": 0.004519,
 "note": "우상향 점수 79.6",
-"repeats": 2,
+"repeats": 3,
 "res": {
 "h24": {
 "r": -6.51,
@@ -12389,6 +12389,54 @@
 "hi": 3.1,
 "lo": -8.1,
 "checked": 1792905624,
+"done": false
+},
+"coin|binance|TREEUSDT|1792833574": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "TREEUSDT",
+"name": "TREE",
+"ts": 1792833574.0,
+"price": 0.0486,
+"note": "원인 미확인",
+"repeats": 2,
+"res": {
+"h24": {
+"r": -23.87,
+"hi": 51.44,
+"lo": -24.49
+}
+},
+"cur": -22.84,
+"cur_ts": 1792922400,
+"hi": 51.44,
+"lo": -24.49,
+"checked": 1792920020,
+"done": false
+},
+"coin|bitget|ORDERUSDT|1792833574": {
+"asset": "coin",
+"kind": "pump",
+"market": "bitget",
+"symbol": "ORDERUSDT",
+"name": "ORDER",
+"ts": 1792833574.0,
+"price": 0.07505,
+"note": "뉴스",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -33.3,
+"hi": 39.91,
+"lo": -34.44
+}
+},
+"cur": -33.3,
+"cur_ts": 1792918800,
+"hi": 39.91,
+"lo": -34.44,
+"checked": 1792920020,
 "done": false
 }
 }
