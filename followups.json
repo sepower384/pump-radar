@@ -2851,7 +2851,7 @@
 "cur_ts": 1791255600,
 "hi": 7.42,
 "lo": -32.71,
-"checked": 1792905624,
+"checked": 1792912750,
 "done": false
 },
 "coin|bitget|B2USDT|1789809559": {
@@ -4328,7 +4328,7 @@
 "cur_ts": 1792612800,
 "hi": 10.57,
 "lo": -35.37,
-"checked": 1792905624,
+"checked": 1792912750,
 "done": false
 },
 "stock|US|ARM|1790018417": {
@@ -8768,7 +8768,7 @@
 "cur_ts": 1792737000,
 "hi": 11.25,
 "lo": -30.8,
-"checked": 1792905624,
+"checked": 1792912750,
 "done": false
 },
 "coin|binance|RLCUSDT|1791199065": {
