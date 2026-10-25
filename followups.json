@@ -2851,7 +2851,7 @@
 "cur_ts": 1791255600,
 "hi": 7.42,
 "lo": -32.71,
-"checked": 1792934357,
+"checked": 1792941586,
 "done": false
 },
 "coin|bitget|B2USDT|1789809559": {
@@ -4328,7 +4328,7 @@
 "cur_ts": 1792612800,
 "hi": 10.57,
 "lo": -35.37,
-"checked": 1792934357,
+"checked": 1792941586,
 "done": false
 },
 "stock|US|ARM|1790018417": {
@@ -5994,14 +5994,19 @@
 "r": 101.89,
 "hi": 200.63,
 "lo": -16.11
+},
+"h720": {
+"r": -4.41,
+"hi": 200.63,
+"lo": -16.11
 }
 },
-"cur": 23.4,
-"cur_ts": 1792375200,
+"cur": -4.05,
+"cur_ts": 1792944000,
 "hi": 200.63,
 "lo": -16.11,
-"checked": 1792372662,
-"done": false
+"checked": 1792941586,
+"done": true
 },
 "coin|binance|JOEUSDT|1790349544": {
 "asset": "coin",
@@ -6028,14 +6033,19 @@
 "r": -9.4,
 "hi": -0.23,
 "lo": -22.25
+},
+"h720": {
+"r": -32.8,
+"hi": -0.23,
+"lo": -34.86
 }
 },
-"cur": -26.38,
-"cur_ts": 1792375200,
+"cur": -32.8,
+"cur_ts": 1792944000,
 "hi": -0.23,
-"lo": -30.28,
-"checked": 1792372662,
-"done": false
+"lo": -34.86,
+"checked": 1792941586,
+"done": true
 },
 "stock|US|MXL|1790349586": {
 "asset": "stock",
@@ -6062,14 +6072,19 @@
 "r": -0.87,
 "hi": 3.54,
 "lo": -7.88
+},
+"h720": {
+"r": -31.71,
+"hi": 21.74,
+"lo": -37.11
 }
 },
-"cur": -23.25,
-"cur_ts": 1792180800,
+"cur": -31.71,
+"cur_ts": 1792785600,
 "hi": 21.74,
-"lo": -24.57,
-"checked": 1792372662,
-"done": false
+"lo": -37.11,
+"checked": 1792941586,
+"done": true
 },
 "stock|US|AMD|1790349586": {
 "asset": "stock",
@@ -6096,14 +6111,19 @@
 "r": -2.46,
 "hi": 1.22,
 "lo": -5.58
+},
+"h720": {
+"r": -18.13,
+"hi": 4.32,
+"lo": -20.38
 }
 },
-"cur": -16.24,
-"cur_ts": 1792180800,
+"cur": -18.13,
+"cur_ts": 1792785600,
 "hi": 4.32,
-"lo": -16.54,
-"checked": 1792372662,
-"done": false
+"lo": -20.38,
+"checked": 1792941586,
+"done": true
 },
 "coin|binance|SCUSDT|1790356747": {
 "asset": "coin",
@@ -8783,7 +8803,7 @@
 "cur_ts": 1792737000,
 "hi": 11.25,
 "lo": -30.8,
-"checked": 1792934357,
+"checked": 1792941586,
 "done": false
 },
 "coin|binance|RLCUSDT|1791199065": {
@@ -11175,7 +11195,7 @@
 "ts": 1792127858.0,
 "price": 0.14071,
 "note": "우상향 점수 91.5",
-"repeats": 5,
+"repeats": 6,
 "res": {
 "h24": {
 "r": -11.0,
@@ -12452,6 +12472,54 @@
 "hi": 39.91,
 "lo": -34.44,
 "checked": 1792920020,
+"done": false
+},
+"coin|bitget|LIGHTUSDT|1792847989": {
+"asset": "coin",
+"kind": "pump",
+"market": "bitget",
+"symbol": "LIGHTUSDT",
+"name": "LIGHT",
+"ts": 1792847989.0,
+"price": 0.28422,
+"note": "원인 미확인",
+"repeats": 3,
+"res": {
+"h24": {
+"r": -14.91,
+"hi": 15.71,
+"lo": -34.06
+}
+},
+"cur": -13.51,
+"cur_ts": 1792940400,
+"hi": 15.71,
+"lo": -34.06,
+"checked": 1792941586,
+"done": false
+},
+"coin|binance|KERNELUSDT|1792848016": {
+"asset": "coin",
+"kind": "trend",
+"market": "binance",
+"symbol": "KERNELUSDT",
+"name": "KERNEL",
+"ts": 1792848016.0,
+"price": 0.0506,
+"note": "우상향 점수 73.7",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -6.52,
+"hi": 3.36,
+"lo": -6.52
+}
+},
+"cur": -6.13,
+"cur_ts": 1792944000,
+"hi": 3.36,
+"lo": -6.92,
+"checked": 1792941586,
 "done": false
 }
 }
