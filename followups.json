@@ -1518,7 +1518,7 @@
 "ts": 1789622326.0,
 "price": 0.1954,
 "note": "거래소 상장",
-"repeats": 26,
+"repeats": 27,
 "res": {
 "h24": {
 "r": 33.67,
@@ -2851,7 +2851,7 @@
 "cur_ts": 1791255600,
 "hi": 7.42,
 "lo": -32.71,
-"checked": 1792898386,
+"checked": 1792905624,
 "done": false
 },
 "coin|bitget|B2USDT|1789809559": {
@@ -4328,7 +4328,7 @@
 "cur_ts": 1792612800,
 "hi": 10.57,
 "lo": -35.37,
-"checked": 1792898386,
+"checked": 1792905624,
 "done": false
 },
 "stock|US|ARM|1790018417": {
@@ -5838,14 +5838,19 @@
 "r": -15.09,
 "hi": 54.88,
 "lo": -18.05
+},
+"h720": {
+"r": -31.95,
+"hi": 54.88,
+"lo": -38.02
 }
 },
-"cur": -25.21,
-"cur_ts": 1792375200,
+"cur": -32.71,
+"cur_ts": 1792908000,
 "hi": 54.88,
-"lo": -27.93,
-"checked": 1792372662,
-"done": false
+"lo": -38.02,
+"checked": 1792905624,
+"done": true
 },
 "coin|binance|CYPHBUSDT|1790335130": {
 "asset": "coin",
@@ -8763,7 +8768,7 @@
 "cur_ts": 1792737000,
 "hi": 11.25,
 "lo": -30.8,
-"checked": 1792898386,
+"checked": 1792905624,
 "done": false
 },
 "coin|binance|RLCUSDT|1791199065": {
@@ -11339,7 +11344,7 @@
 "ts": 1792401451.0,
 "price": 0.03105,
 "note": "원인 미확인",
-"repeats": 2,
+"repeats": 3,
 "res": {
 "h24": {
 "r": -7.47,
@@ -12012,13 +12017,18 @@
 "r": 0.0,
 "hi": 0.0,
 "lo": -18.75
+},
+"h72": {
+"r": -8.97,
+"hi": 12.1,
+"lo": -18.75
 }
 },
-"cur": -9.78,
+"cur": -8.97,
 "cur_ts": 1792737000,
 "hi": 12.1,
 "lo": -18.75,
-"checked": 1792732779,
+"checked": 1792905624,
 "done": false
 },
 "stock|US|AVEX|1792689654": {
@@ -12307,6 +12317,78 @@
 "hi": 4.66,
 "lo": -10.94,
 "checked": 1792876813,
+"done": false
+},
+"coin|binance|KATUSDT|1792811996": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "KATUSDT",
+"name": "KAT",
+"ts": 1792811996.0,
+"price": 0.00482,
+"note": "거래량 폭증",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -12.86,
+"hi": 31.95,
+"lo": -13.9
+}
+},
+"cur": -12.86,
+"cur_ts": 1792908000,
+"hi": 31.95,
+"lo": -13.9,
+"checked": 1792905624,
+"done": false
+},
+"coin|binance|LAUSDT|1792819192": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "LAUSDT",
+"name": "LA",
+"ts": 1792819192.0,
+"price": 0.0669,
+"note": "뉴스",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -8.97,
+"hi": 11.06,
+"lo": -12.71
+}
+},
+"cur": -9.72,
+"cur_ts": 1792908000,
+"hi": 11.06,
+"lo": -12.71,
+"checked": 1792905624,
+"done": false
+},
+"coin|binance|REZUSDT|1792819217": {
+"asset": "coin",
+"kind": "trend",
+"market": "binance",
+"symbol": "REZUSDT",
+"name": "REZ",
+"ts": 1792819217.0,
+"price": 0.004519,
+"note": "우상향 점수 79.6",
+"repeats": 2,
+"res": {
+"h24": {
+"r": -6.51,
+"hi": 3.1,
+"lo": -8.1
+}
+},
+"cur": -6.09,
+"cur_ts": 1792908000,
+"hi": 3.1,
+"lo": -8.1,
+"checked": 1792905624,
 "done": false
 }
 }
