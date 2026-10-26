@@ -777,3 +777,5 @@
 {"t": "stock", "ts": 1792991998, "market": "KR", "theme": "원격진료/비대면진료(U-Healthcare)", "leader": {"symbol": "458870", "name": "씨어스", "chg": 15.82, "price": 27450.0, "trade_value": 241.2, "mcap": 10526.0}, "catalyst": ["[장중수급포착] 씨어스, 외국인/기관 동시 순매수… 주가 +16.67%", "특징주, 씨어스-의료AI 테마 상승세에 6.12% ↑"], "peers": [{"symbol": "347700", "name": "스피어", "chg": -4.75, "verdict": "lagging", "blocker": "흐름 이탈(하락)"}, {"symbol": "039860", "name": "나노엔텍", "chg": 5.23, "verdict": "following", "blocker": ""}], "calls": ["039860"]}
 {"t": "trend", "ts": 1792999211, "symbol": "ERAUSDT", "base": "ERA", "price": 0.0938, "score": 84.9, "rs7": 39.8, "rs30": 40.0, "new": true}
 {"t": "trend", "ts": 1793006394, "symbol": "BEAMXUSDT", "base": "BEAMX", "price": 0.003402, "score": 67.6, "rs7": 21.9, "rs30": 63.8, "new": true}
+{"t": "trend", "ts": 1793020768, "symbol": "REZUSDT", "base": "REZ", "price": 0.004482, "score": 81.3, "rs7": 39.0, "rs30": 6.8, "new": true}
+{"t": "trend", "ts": 1793020768, "symbol": "BMTUSDT", "base": "BMT", "price": 0.03004, "score": 76.0, "rs7": 83.7, "rs30": 55.9, "new": true}
