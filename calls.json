@@ -767,9 +767,9 @@
 "target_pct": 2.0,
 "deadline": 1793131200,
 "status": "pending",
-"best_price": 853.3,
-"last_price": null,
-"result_pct": null,
+"best_price": 859.6,
+"last_price": 859.6,
+"result_pct": 0.74,
 "resolved_ts": null,
 "reported": 0
 }
