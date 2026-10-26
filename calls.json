@@ -754,5 +754,23 @@
 "result_pct": 0.72,
 "resolved_ts": null,
 "reported": 0
+},
+{
+"id": 44,
+"ts": 1793027983,
+"market": "US",
+"symbol": "GEV",
+"name": "GE Vernova Inc.",
+"theme": "전력 인프라",
+"leader": "GrafTech International Ltd.",
+"ref_price": 853.3,
+"target_pct": 2.0,
+"deadline": 1793131200,
+"status": "pending",
+"best_price": 853.3,
+"last_price": null,
+"result_pct": null,
+"resolved_ts": null,
+"reported": 0
 }
 ]
