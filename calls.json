@@ -750,8 +750,8 @@
 "deadline": 1793082600,
 "status": "pending",
 "best_price": 4835.0,
-"last_price": 4835.0,
-"result_pct": 0.1,
+"last_price": 4815.0,
+"result_pct": -0.31,
 "resolved_ts": null,
 "reported": 0
 }
