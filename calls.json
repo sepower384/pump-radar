@@ -736,5 +736,23 @@
 "result_pct": -5.7,
 "resolved_ts": 1792704001,
 "reported": 1
+},
+{
+"id": 43,
+"ts": 1792991998,
+"market": "KR",
+"symbol": "039860",
+"name": "나노엔텍",
+"theme": "원격진료/비대면진료(U-Healthcare)",
+"leader": "씨어스",
+"ref_price": 4830.0,
+"target_pct": 2.0,
+"deadline": 1793082600,
+"status": "pending",
+"best_price": 4830.0,
+"last_price": null,
+"result_pct": null,
+"resolved_ts": null,
+"reported": 0
 }
 ]
