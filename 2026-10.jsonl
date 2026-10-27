@@ -822,3 +822,4 @@
 {"t": "pump", "ts": 1793136004, "market": "bitget", "symbol": "BTWUSDT", "base": "BTW", "price": 1.735, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 7.19, "chg2h": 8.09, "chg24h": 51.87, "qvol": 2772439.52829193, "vol_x": 3.4, "off_high": -0.44, "direction": "up", "tag": "물량 언락", "tags": ["물량 언락", "뉴스", "거래량 폭증"], "conf": "높음", "headline": "Bitway 급등 — 물량 언락 재료", "news": "Bitway token unlock on November 2: 101.6m BTW (CryptoTicker)"}
 {"t": "trend", "ts": 1793136011, "symbol": "REZUSDT", "base": "REZ", "price": 0.005464, "score": 93.0, "rs7": 43.8, "rs30": 35.9, "new": true}
 {"t": "trend", "ts": 1793136011, "symbol": "OSMOUSDT", "base": "OSMO", "price": 0.057, "score": 71.5, "rs7": 21.2, "rs30": 59.2, "new": true}
+{"t": "trend", "ts": 1793143189, "symbol": "MEGAUSDT", "base": "MEGA", "price": 0.04971, "score": 68.1, "rs7": 17.6, "rs30": 21.2, "new": true}
