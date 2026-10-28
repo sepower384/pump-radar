@@ -4328,7 +4328,7 @@
 "cur_ts": 1792612800,
 "hi": 10.57,
 "lo": -35.37,
-"checked": 1793157579,
+"checked": 1793164795,
 "done": false
 },
 "stock|US|ARM|1790018417": {
@@ -6702,7 +6702,7 @@
 "cur_ts": 1793073600,
 "hi": 97.61,
 "lo": -19.64,
-"checked": 1793157579,
+"checked": 1793164795,
 "done": false
 },
 "coin|binance|GLMRUSDT|1790486333": {
@@ -6853,7 +6853,7 @@
 "cur_ts": 1793088000,
 "hi": 26.63,
 "lo": -85.9,
-"checked": 1793157579,
+"checked": 1793164795,
 "done": false
 },
 "coin|binance|AUDIOUSDT|1790515140": {
@@ -7076,14 +7076,19 @@
 "r": -7.74,
 "hi": 7.45,
 "lo": -22.63
+},
+"h720": {
+"r": -26.57,
+"hi": 7.45,
+"lo": -29.2
 }
 },
-"cur": -27.74,
-"cur_ts": 1792996200,
+"cur": -27.3,
+"cur_ts": 1793169000,
 "hi": 7.45,
-"lo": -28.47,
-"checked": 1792984869,
-"done": false
+"lo": -29.2,
+"checked": 1793164795,
+"done": true
 },
 "coin|binance|IMXUSDT|1790601538": {
 "asset": "coin",
@@ -8909,11 +8914,11 @@
 "lo": -6.22
 }
 },
-"cur": -16.46,
+"cur": -15.9,
 "cur_ts": 1793169000,
 "hi": 11.25,
 "lo": -30.8,
-"checked": 1793157579,
+"checked": 1793164795,
 "done": false
 },
 "coin|binance|RLCUSDT|1791199065": {
@@ -11509,7 +11514,7 @@
 "ts": 1792401451.0,
 "price": 0.03105,
 "note": "원인 미확인",
-"repeats": 5,
+"repeats": 6,
 "res": {
 "h24": {
 "r": -7.47,
@@ -11894,13 +11899,18 @@
 "r": -6.12,
 "hi": 21.15,
 "lo": -22.97
+},
+"h168": {
+"r": -21.24,
+"hi": 21.15,
+"lo": -27.18
 }
 },
-"cur": -22.78,
-"cur_ts": 1792996200,
+"cur": -16.36,
+"cur_ts": 1793169000,
 "hi": 21.15,
-"lo": -23.06,
-"checked": 1792984869,
+"lo": -27.18,
+"checked": 1793164795,
 "done": false
 },
 "coin|bitget|IRYSUSDT|1792574271": {
@@ -13050,6 +13060,54 @@
 "hi": 11.5,
 "lo": -10.15,
 "checked": 1793157579,
+"done": false
+},
+"coin|binance|SYNUSDT|1793071195": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "SYNUSDT",
+"name": "SYN",
+"ts": 1793071195.0,
+"price": 0.1969,
+"note": "원인 미확인",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -8.61,
+"hi": 3.89,
+"lo": -12.83
+}
+},
+"cur": -9.28,
+"cur_ts": 1793167200,
+"hi": 3.89,
+"lo": -12.83,
+"checked": 1793164795,
+"done": false
+},
+"coin|bitget|TAGUSDT|1793078364": {
+"asset": "coin",
+"kind": "pump",
+"market": "bitget",
+"symbol": "TAGUSDT",
+"name": "TAG",
+"ts": 1793078364.0,
+"price": 0.00073145,
+"note": "원인 미확인",
+"repeats": 2,
+"res": {
+"h24": {
+"r": -4.7,
+"hi": 16.42,
+"lo": -14.64
+}
+},
+"cur": -4.7,
+"cur_ts": 1793163600,
+"hi": 16.42,
+"lo": -14.64,
+"checked": 1793164795,
 "done": false
 }
 }
