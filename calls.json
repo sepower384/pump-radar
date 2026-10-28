@@ -772,5 +772,23 @@
 "result_pct": 3.53,
 "resolved_ts": 1793114367,
 "reported": 1
+},
+{
+"id": 45,
+"ts": 1793150356,
+"market": "KR",
+"symbol": "108490",
+"name": "로보티즈",
+"theme": "로봇(산업용/협동로봇 등)",
+"leader": "원익홀딩스",
+"ref_price": 279000.0,
+"target_pct": 2.0,
+"deadline": 1793255400,
+"status": "pending",
+"best_price": 279000.0,
+"last_price": null,
+"result_pct": null,
+"resolved_ts": null,
+"reported": 0
 }
 ]
