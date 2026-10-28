@@ -4328,7 +4328,7 @@
 "cur_ts": 1792612800,
 "hi": 10.57,
 "lo": -35.37,
-"checked": 1793193591,
+"checked": 1793200862,
 "done": false
 },
 "stock|US|ARM|1790018417": {
@@ -6702,7 +6702,7 @@
 "cur_ts": 1793073600,
 "hi": 97.61,
 "lo": -19.64,
-"checked": 1793193591,
+"checked": 1793200862,
 "done": false
 },
 "coin|binance|GLMRUSDT|1790486333": {
@@ -6853,7 +6853,7 @@
 "cur_ts": 1793088000,
 "hi": 26.63,
 "lo": -85.9,
-"checked": 1793193591,
+"checked": 1793200862,
 "done": false
 },
 "coin|binance|AUDIOUSDT|1790515140": {
@@ -8923,7 +8923,7 @@
 "cur_ts": 1793169000,
 "hi": 11.25,
 "lo": -30.8,
-"checked": 1793193591,
+"checked": 1793200862,
 "done": false
 },
 "coin|binance|RLCUSDT|1791199065": {
@@ -11972,13 +11972,18 @@
 "r": -7.3,
 "hi": 5.39,
 "lo": -7.89
+},
+"h168": {
+"r": -1.25,
+"hi": 5.39,
+"lo": -8.32
 }
 },
-"cur": -7.3,
-"cur_ts": 1792785600,
+"cur": -2.14,
+"cur_ts": 1793217600,
 "hi": 5.39,
-"lo": -7.89,
-"checked": 1792984869,
+"lo": -8.32,
+"checked": 1793200862,
 "done": false
 },
 "stock|US|SPCX|1792595997": {
@@ -12001,13 +12006,18 @@
 "r": -8.73,
 "hi": 2.84,
 "lo": -11.37
+},
+"h168": {
+"r": -8.05,
+"hi": 2.84,
+"lo": -11.37
 }
 },
-"cur": -8.73,
-"cur_ts": 1792785600,
+"cur": -10.72,
+"cur_ts": 1793217600,
 "hi": 2.84,
-"lo": -11.37,
-"checked": 1792984869,
+"lo": -12.04,
+"checked": 1793200862,
 "done": false
 },
 "coin|bitget|GRVTUSDT|1792603215": {
@@ -13123,6 +13133,78 @@
 "hi": 16.42,
 "lo": -14.64,
 "checked": 1793164795,
+"done": false
+},
+"coin|binance|HAEDALUSDT|1793107194": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "HAEDALUSDT",
+"name": "HAEDAL",
+"ts": 1793107194.0,
+"price": 0.02567,
+"note": "거래량 폭증",
+"repeats": 7,
+"res": {
+"h24": {
+"r": 18.35,
+"hi": 32.26,
+"lo": -0.78
+}
+},
+"cur": 8.18,
+"cur_ts": 1793203200,
+"hi": 32.26,
+"lo": -0.78,
+"checked": 1793200862,
+"done": false
+},
+"coin|bitget|EVAAUSDT|1793114361": {
+"asset": "coin",
+"kind": "pump",
+"market": "bitget",
+"symbol": "EVAAUSDT",
+"name": "EVAA",
+"ts": 1793114361.0,
+"price": 0.6796,
+"note": "거래량 폭증",
+"repeats": 4,
+"res": {
+"h24": {
+"r": 104.65,
+"hi": 110.27,
+"lo": -2.74
+}
+},
+"cur": 104.65,
+"cur_ts": 1793199600,
+"hi": 110.27,
+"lo": -2.74,
+"checked": 1793200862,
+"done": false
+},
+"coin|binance|BREVUSDT|1793114367": {
+"asset": "coin",
+"kind": "trend",
+"market": "binance",
+"symbol": "BREVUSDT",
+"name": "BREV",
+"ts": 1793114367.0,
+"price": 0.0928,
+"note": "우상향 점수 73.3",
+"repeats": 2,
+"res": {
+"h24": {
+"r": -9.05,
+"hi": 6.25,
+"lo": -12.39
+}
+},
+"cur": -9.27,
+"cur_ts": 1793203200,
+"hi": 6.25,
+"lo": -12.39,
+"checked": 1793200862,
 "done": false
 }
 }
