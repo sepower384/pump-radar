@@ -867,3 +867,5 @@
 {"t": "trend", "ts": 1793251203, "symbol": "HAEDALUSDT", "base": "HAEDAL", "price": 0.02562, "score": 80.5, "rs7": 44.4, "rs30": 34.1, "new": true}
 {"t": "trend", "ts": 1793251203, "symbol": "SKHYBUSDT", "base": "SKHYB", "price": 163.75, "score": 66.4, "rs7": 21.8, "rs30": -7.3, "new": true}
 {"t": "trend", "ts": 1793251203, "symbol": "TSLABUSDT", "base": "TSLAB", "price": 402.51, "score": 65.0, "rs7": 11.8, "rs30": 17.3, "new": true}
+{"t": "pump", "ts": 1793265533, "market": "binance", "symbol": "INITUSDT", "base": "INIT", "price": 0.22152, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 4.84, "chg2h": 6.22, "chg24h": 20.04, "qvol": 24490944.00045, "vol_x": 1.0, "off_high": -2.41, "direction": "up", "tag": "뉴스", "tags": ["뉴스", "해킹/보안사고"], "conf": "높음", "headline": "Initia 급등 — 뉴스 재료", "news": "TokenPost.ai Initia (INIT) jumps 41.95% amid ri... (Pluang)"}
+{"t": "trend", "ts": 1793265539, "symbol": "INITUSDT", "base": "INIT", "price": 0.22199, "score": 96.7, "rs7": 79.2, "rs30": 108.3, "new": true}
