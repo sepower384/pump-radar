@@ -6702,7 +6702,7 @@
 "cur_ts": 1793073600,
 "hi": 97.61,
 "lo": -19.64,
-"checked": 1793287198,
+"checked": 1793294398,
 "done": false
 },
 "coin|binance|GLMRUSDT|1790486333": {
@@ -6853,7 +6853,7 @@
 "cur_ts": 1793088000,
 "hi": 26.63,
 "lo": -85.9,
-"checked": 1793287198,
+"checked": 1793294398,
 "done": false
 },
 "coin|binance|AUDIOUSDT|1790515140": {
@@ -7466,14 +7466,19 @@
 "r": 8.43,
 "hi": 10.04,
 "lo": -5.79
+},
+"h720": {
+"r": -19.44,
+"hi": 10.56,
+"lo": -36.72
 }
 },
-"cur": -34.83,
-"cur_ts": 1792785600,
+"cur": -22.7,
+"cur_ts": 1793304000,
 "hi": 10.56,
 "lo": -36.72,
-"checked": 1792984869,
-"done": false
+"checked": 1793294398,
+"done": true
 },
 "stock|US|MU|1790695256": {
 "asset": "stock",
@@ -7500,14 +7505,19 @@
 "r": -0.55,
 "hi": 3.56,
 "lo": -4.39
+},
+"h720": {
+"r": -8.1,
+"hi": 3.56,
+"lo": -20.62
 }
 },
-"cur": -17.98,
-"cur_ts": 1792785600,
+"cur": -12.34,
+"cur_ts": 1793304000,
 "hi": 3.56,
 "lo": -20.62,
-"checked": 1792984869,
-"done": false
+"checked": 1793294398,
+"done": true
 },
 "coin|binance|PUMPUSDT|1790702385": {
 "asset": "coin",
@@ -7534,14 +7544,19 @@
 "r": 8.74,
 "hi": 20.37,
 "lo": -9.85
+},
+"h720": {
+"r": -18.85,
+"hi": 20.37,
+"lo": -32.22
 }
 },
-"cur": -26.23,
-"cur_ts": 1792987200,
+"cur": -20.2,
+"cur_ts": 1793296800,
 "hi": 20.37,
 "lo": -32.22,
-"checked": 1792984869,
-"done": false
+"checked": 1793294398,
+"done": true
 },
 "coin|binance|HUMAUSDT|1790723992": {
 "asset": "coin",
@@ -8963,7 +8978,7 @@
 "cur_ts": 1793255400,
 "hi": 11.25,
 "lo": -30.8,
-"checked": 1793287198,
+"checked": 1793294398,
 "done": false
 },
 "coin|binance|RLCUSDT|1791199065": {
@@ -9349,7 +9364,7 @@
 "ts": 1791307057.0,
 "price": 0.033,
 "note": "우상향 점수 78.3",
-"repeats": 5,
+"repeats": 7,
 "res": {
 "h24": {
 "r": 1.82,
@@ -12578,7 +12593,7 @@
 "ts": 1792739966.0,
 "price": 4.61e-06,
 "note": "우상향 점수 65.2",
-"repeats": 2,
+"repeats": 3,
 "res": {
 "h24": {
 "r": -3.25,
@@ -13579,6 +13594,30 @@
 "hi": -0.67,
 "lo": -2.96,
 "checked": 1793287198,
+"done": false
+},
+"stock|US|VRT|1793200862": {
+"asset": "stock",
+"kind": "stock",
+"market": "US",
+"symbol": "VRT",
+"name": "Vertiv Holdings, LLC",
+"ts": 1793200862.0,
+"price": 238.66,
+"note": "전력 인프라 대장주",
+"repeats": 1,
+"res": {
+"h24": {
+"r": 1.79,
+"hi": 2.79,
+"lo": -4.13
+}
+},
+"cur": 4.87,
+"cur_ts": 1793304000,
+"hi": 6.73,
+"lo": -4.13,
+"checked": 1793294398,
 "done": false
 }
 }
