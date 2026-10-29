@@ -881,3 +881,4 @@
 {"t": "trend", "ts": 1793301613, "symbol": "SKHYBUSDT", "base": "SKHYB", "price": 160.47, "score": 67.6, "rs7": 22.6, "rs30": -11.2, "new": true}
 {"t": "pump", "ts": 1793308782, "market": "bitget", "symbol": "IDOLUSDT", "base": "IDOL", "price": 0.01418, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 5.19, "chg2h": 8.41, "chg24h": 22.24, "qvol": 4485559.2416631, "vol_x": 0.4, "off_high": -9.8, "direction": "up", "tag": "원인 미확인", "tags": ["원인 미확인"], "conf": "낮음", "headline": "MEET48 급등 — 이유 불명 · 큰손 주도 의심", "news": ""}
 {"t": "trend", "ts": 1793308802, "symbol": "INITUSDT", "base": "INIT", "price": 0.21975, "score": 93.9, "rs7": 72.7, "rs30": 123.9, "new": true}
+{"t": "trend", "ts": 1793315997, "symbol": "TSLABUSDT", "base": "TSLAB", "price": 397.12, "score": 65.2, "rs7": 9.7, "rs30": 18.4, "new": true}
