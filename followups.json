@@ -6702,7 +6702,7 @@
 "cur_ts": 1793073600,
 "hi": 97.61,
 "lo": -19.64,
-"checked": 1793272658,
+"checked": 1793279875,
 "done": false
 },
 "coin|binance|GLMRUSDT|1790486333": {
@@ -6853,7 +6853,7 @@
 "cur_ts": 1793088000,
 "hi": 26.63,
 "lo": -85.9,
-"checked": 1793272658,
+"checked": 1793279875,
 "done": false
 },
 "coin|binance|AUDIOUSDT|1790515140": {
@@ -7427,14 +7427,19 @@
 "r": -9.21,
 "hi": 1.08,
 "lo": -17.1
+},
+"h720": {
+"r": -29.33,
+"hi": 1.08,
+"lo": -34.22
 }
 },
-"cur": -33.2,
-"cur_ts": 1792987200,
+"cur": -28.99,
+"cur_ts": 1793282400,
 "hi": 1.08,
 "lo": -34.22,
-"checked": 1792984869,
-"done": false
+"checked": 1793279875,
+"done": true
 },
 "stock|US|AXTI|1790695256": {
 "asset": "stock",
@@ -8958,7 +8963,7 @@
 "cur_ts": 1793255400,
 "hi": 11.25,
 "lo": -30.8,
-"checked": 1793272658,
+"checked": 1793279875,
 "done": false
 },
 "coin|binance|RLCUSDT|1791199065": {
@@ -13502,6 +13507,30 @@
 "hi": 24.27,
 "lo": -18.7,
 "checked": 1793272658,
+"done": false
+},
+"coin|bitget|PWTUSDT|1793186387": {
+"asset": "coin",
+"kind": "pump",
+"market": "bitget",
+"symbol": "PWTUSDT",
+"name": "PWT",
+"ts": 1793186387.0,
+"price": 0.530814,
+"note": "원인 미확인",
+"repeats": 2,
+"res": {
+"h24": {
+"r": -42.17,
+"hi": 3.61,
+"lo": -51.92
+}
+},
+"cur": -43.15,
+"cur_ts": 1793278800,
+"hi": 3.61,
+"lo": -51.92,
+"checked": 1793279875,
 "done": false
 }
 }
