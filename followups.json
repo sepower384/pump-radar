@@ -6702,7 +6702,7 @@
 "cur_ts": 1793073600,
 "hi": 97.61,
 "lo": -19.64,
-"checked": 1793294398,
+"checked": 1793301614,
 "done": false
 },
 "coin|binance|GLMRUSDT|1790486333": {
@@ -6853,7 +6853,7 @@
 "cur_ts": 1793088000,
 "hi": 26.63,
 "lo": -85.9,
-"checked": 1793294398,
+"checked": 1793301614,
 "done": false
 },
 "coin|binance|AUDIOUSDT|1790515140": {
@@ -8978,7 +8978,7 @@
 "cur_ts": 1793255400,
 "hi": 11.25,
 "lo": -30.8,
-"checked": 1793294398,
+"checked": 1793301614,
 "done": false
 },
 "coin|binance|RLCUSDT|1791199065": {
@@ -12401,13 +12401,18 @@
 "r": 2.41,
 "hi": 5.82,
 "lo": -6.95
+},
+"h168": {
+"r": 15.27,
+"hi": 16.69,
+"lo": -6.95
 }
 },
-"cur": 2.41,
-"cur_ts": 1792785600,
-"hi": 5.82,
+"cur": 26.71,
+"cur_ts": 1793304000,
+"hi": 29.83,
 "lo": -6.95,
-"checked": 1792955989,
+"checked": 1793301614,
 "done": false
 },
 "stock|KR|013810|1792718423": {
@@ -13269,7 +13274,7 @@
 "ts": 1793107194.0,
 "price": 0.02567,
 "note": "거래량 폭증",
-"repeats": 8,
+"repeats": 9,
 "res": {
 "h24": {
 "r": 18.35,
@@ -13618,6 +13623,30 @@
 "hi": 6.73,
 "lo": -4.13,
 "checked": 1793294398,
+"done": false
+},
+"coin|bitget|NAORISUSDT|1793215199": {
+"asset": "coin",
+"kind": "pump",
+"market": "bitget",
+"symbol": "NAORISUSDT",
+"name": "NAORIS",
+"ts": 1793215199.0,
+"price": 0.03551,
+"note": "거래소 상장",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -4.48,
+"hi": 4.67,
+"lo": -9.04
+}
+},
+"cur": -4.48,
+"cur_ts": 1793300400,
+"hi": 4.67,
+"lo": -9.04,
+"checked": 1793301614,
 "done": false
 }
 }

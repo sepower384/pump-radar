@@ -877,3 +877,5 @@
 {"t": "trend", "ts": 1793294397, "symbol": "PARTIUSDT", "base": "PARTI", "price": 0.0489, "score": 94.1, "rs7": 49.4, "rs30": 94.8, "new": true}
 {"t": "trend", "ts": 1793294397, "symbol": "PEPEUSDT", "base": "PEPE", "price": 5.43e-06, "score": 68.9, "rs7": 24.3, "rs30": 31.8, "new": true}
 {"t": "trend", "ts": 1793294397, "symbol": "HYPEUSDT", "base": "HYPE", "price": 95.21, "score": 67.5, "rs7": 23.4, "rs30": 14.2, "new": true}
+{"t": "trend", "ts": 1793301613, "symbol": "HAEDALUSDT", "base": "HAEDAL", "price": 0.02309, "score": 72.4, "rs7": 31.8, "rs30": 24.5, "new": true}
+{"t": "trend", "ts": 1793301613, "symbol": "SKHYBUSDT", "base": "SKHYB", "price": 160.47, "score": 67.6, "rs7": 22.6, "rs30": -11.2, "new": true}
