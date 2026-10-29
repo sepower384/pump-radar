@@ -784,12 +784,12 @@
 "ref_price": 279000.0,
 "target_pct": 2.0,
 "deadline": 1793255400,
-"status": "pending",
+"status": "miss",
 "best_price": 279000.0,
-"last_price": 268000.0,
-"result_pct": -3.94,
-"resolved_ts": null,
-"reported": 0
+"last_price": 263500.0,
+"result_pct": -5.56,
+"resolved_ts": 1793258356,
+"reported": 1
 },
 {
 "id": 46,

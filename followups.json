@@ -6702,7 +6702,7 @@
 "cur_ts": 1793073600,
 "hi": 97.61,
 "lo": -19.64,
-"checked": 1793251212,
+"checked": 1793258358,
 "done": false
 },
 "coin|binance|GLMRUSDT|1790486333": {
@@ -6853,7 +6853,7 @@
 "cur_ts": 1793088000,
 "hi": 26.63,
 "lo": -85.9,
-"checked": 1793251212,
+"checked": 1793258358,
 "done": false
 },
 "coin|binance|AUDIOUSDT|1790515140": {
@@ -8954,11 +8954,11 @@
 "lo": -6.22
 }
 },
-"cur": -15.4,
+"cur": -16.35,
 "cur_ts": 1793255400,
 "hi": 11.25,
 "lo": -30.8,
-"checked": 1793251212,
+"checked": 1793258358,
 "done": false
 },
 "coin|binance|RLCUSDT|1791199065": {
