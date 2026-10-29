@@ -6702,7 +6702,7 @@
 "cur_ts": 1793073600,
 "hi": 97.61,
 "lo": -19.64,
-"checked": 1793265540,
+"checked": 1793272658,
 "done": false
 },
 "coin|binance|GLMRUSDT|1790486333": {
@@ -6853,7 +6853,7 @@
 "cur_ts": 1793088000,
 "hi": 26.63,
 "lo": -85.9,
-"checked": 1793265540,
+"checked": 1793272658,
 "done": false
 },
 "coin|binance|AUDIOUSDT|1790515140": {
@@ -8954,11 +8954,11 @@
 "lo": -6.22
 }
 },
-"cur": -16.24,
+"cur": -15.85,
 "cur_ts": 1793255400,
 "hi": 11.25,
 "lo": -30.8,
-"checked": 1793265540,
+"checked": 1793272658,
 "done": false
 },
 "coin|binance|RLCUSDT|1791199065": {
@@ -13478,6 +13478,30 @@
 "hi": 2.02,
 "lo": -16.4,
 "checked": 1793251212,
+"done": false
+},
+"coin|bitget|BLESSUSDT|1793179176": {
+"asset": "coin",
+"kind": "pump",
+"market": "bitget",
+"symbol": "BLESSUSDT",
+"name": "BLESS",
+"ts": 1793179176.0,
+"price": 0.0115386,
+"note": "원인 미확인",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -13.26,
+"hi": 24.27,
+"lo": -15.94
+}
+},
+"cur": -16.14,
+"cur_ts": 1793271600,
+"hi": 24.27,
+"lo": -18.7,
+"checked": 1793272658,
 "done": false
 }
 }
