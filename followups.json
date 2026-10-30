@@ -6702,7 +6702,7 @@
 "cur_ts": 1793073600,
 "hi": 97.61,
 "lo": -19.64,
-"checked": 1793373571,
+"checked": 1793380799,
 "done": false
 },
 "coin|binance|GLMRUSDT|1790486333": {
@@ -6853,7 +6853,7 @@
 "cur_ts": 1793088000,
 "hi": 26.63,
 "lo": -85.9,
-"checked": 1793373571,
+"checked": 1793380799,
 "done": false
 },
 "coin|binance|AUDIOUSDT|1790515140": {
@@ -8865,7 +8865,7 @@
 "ts": 1791105480.0,
 "price": 0.002857,
 "note": "거래량 폭증",
-"repeats": 17,
+"repeats": 19,
 "res": {
 "h24": {
 "r": -11.2,
@@ -9018,7 +9018,7 @@
 "cur_ts": 1793341800,
 "hi": 11.25,
 "lo": -30.8,
-"checked": 1793373571,
+"checked": 1793380799,
 "done": false
 },
 "coin|binance|RLCUSDT|1791199065": {
@@ -12781,13 +12781,18 @@
 "r": -14.88,
 "hi": 76.3,
 "lo": -18.34
+},
+"h168": {
+"r": -14.51,
+"hi": 76.3,
+"lo": -22.85
 }
 },
-"cur": -14.88,
-"cur_ts": 1793034000,
+"cur": -14.51,
+"cur_ts": 1793379600,
 "hi": 76.3,
-"lo": -18.34,
-"checked": 1793035222,
+"lo": -22.85,
+"checked": 1793380799,
 "done": false
 },
 "stock|US|EAF|1792783239": {
@@ -13887,6 +13892,54 @@
 "hi": 0.64,
 "lo": -9.35,
 "checked": 1793344798,
+"done": false
+},
+"coin|binance|LSKUSDT|1793287193": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "LSKUSDT",
+"name": "LSK",
+"ts": 1793287193.0,
+"price": 0.2038,
+"note": "거래량 폭증",
+"repeats": 2,
+"res": {
+"h24": {
+"r": 2.21,
+"hi": 9.72,
+"lo": -17.86
+}
+},
+"cur": 1.82,
+"cur_ts": 1793383200,
+"hi": 9.72,
+"lo": -17.86,
+"checked": 1793380799,
+"done": false
+},
+"coin|binance|HYPEUSDT|1793294397": {
+"asset": "coin",
+"kind": "trend",
+"market": "binance",
+"symbol": "HYPEUSDT",
+"name": "HYPE",
+"ts": 1793294397.0,
+"price": 95.21,
+"note": "우상향 점수 67.5",
+"repeats": 2,
+"res": {
+"h24": {
+"r": -3.76,
+"hi": 0.48,
+"lo": -6.96
+}
+},
+"cur": -3.79,
+"cur_ts": 1793383200,
+"hi": 0.48,
+"lo": -6.96,
+"checked": 1793380799,
 "done": false
 }
 }
