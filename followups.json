@@ -6702,7 +6702,7 @@
 "cur_ts": 1793073600,
 "hi": 97.61,
 "lo": -19.64,
-"checked": 1793315998,
+"checked": 1793323162,
 "done": false
 },
 "coin|binance|GLMRUSDT|1790486333": {
@@ -6853,7 +6853,7 @@
 "cur_ts": 1793088000,
 "hi": 26.63,
 "lo": -85.9,
-"checked": 1793315998,
+"checked": 1793323162,
 "done": false
 },
 "coin|binance|AUDIOUSDT|1790515140": {
@@ -8979,11 +8979,11 @@
 "lo": -6.22
 }
 },
-"cur": -15.85,
-"cur_ts": 1793255400,
+"cur": -21.61,
+"cur_ts": 1793341800,
 "hi": 11.25,
 "lo": -30.8,
-"checked": 1793315998,
+"checked": 1793323162,
 "done": false
 },
 "coin|binance|RLCUSDT|1791199065": {
@@ -13447,7 +13447,7 @@
 "ts": 1793157579.0,
 "price": 27300.0,
 "note": "보안주(정보) 대장주",
-"repeats": 1,
+"repeats": 2,
 "res": {
 "h24": {
 "r": 0.0,
