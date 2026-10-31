@@ -6702,7 +6702,7 @@
 "cur_ts": 1793073600,
 "hi": 97.61,
 "lo": -19.64,
-"checked": 1793438393,
+"checked": 1793445582,
 "done": false
 },
 "coin|binance|GLMRUSDT|1790486333": {
@@ -6853,7 +6853,7 @@
 "cur_ts": 1793088000,
 "hi": 26.63,
 "lo": -85.9,
-"checked": 1793438393,
+"checked": 1793445582,
 "done": false
 },
 "coin|binance|AUDIOUSDT|1790515140": {
@@ -9063,7 +9063,7 @@
 "cur_ts": 1793341800,
 "hi": 11.25,
 "lo": -30.8,
-"checked": 1793438393,
+"checked": 1793445582,
 "done": false
 },
 "coin|binance|RLCUSDT|1791199065": {
@@ -14079,6 +14079,30 @@
 "hi": 103.39,
 "lo": -5.35,
 "checked": 1793409585,
+"done": false
+},
+"coin|binance|ALPINEUSDT|1793352001": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "ALPINEUSDT",
+"name": "ALPINE",
+"ts": 1793352001.0,
+"price": 0.354,
+"note": "원인 미확인",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -14.69,
+"hi": 4.24,
+"lo": -16.95
+}
+},
+"cur": -14.69,
+"cur_ts": 1793448000,
+"hi": 4.24,
+"lo": -16.95,
+"checked": 1793445582,
 "done": false
 }
 }
