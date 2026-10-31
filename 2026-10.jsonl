@@ -924,3 +924,4 @@
 {"t": "trend", "ts": 1793438393, "symbol": "PARTIUSDT", "base": "PARTI", "price": 0.0483, "score": 80.8, "rs7": 42.4, "rs30": 100.4, "new": true}
 {"t": "trend", "ts": 1793438393, "symbol": "HYPEUSDT", "base": "HYPE", "price": 87.45, "score": 75.9, "rs7": 20.3, "rs30": 8.6, "new": true}
 {"t": "trend", "ts": 1793438393, "symbol": "LSKUSDT", "base": "LSK", "price": 0.2398, "score": 65.3, "rs7": 44.1, "rs30": -8.2, "new": true}
+{"t": "trend", "ts": 1793452787, "symbol": "INITUSDT", "base": "INIT", "price": 0.17431, "score": 74.4, "rs7": 21.4, "rs30": 82.6, "new": true}
