@@ -6702,7 +6702,7 @@
 "cur_ts": 1793073600,
 "hi": 97.61,
 "lo": -19.64,
-"checked": 1793546253,
+"checked": 1793553449,
 "done": false
 },
 "coin|binance|GLMRUSDT|1790486333": {
@@ -6853,7 +6853,7 @@
 "cur_ts": 1793088000,
 "hi": 26.63,
 "lo": -85.9,
-"checked": 1793546253,
+"checked": 1793553449,
 "done": false
 },
 "coin|binance|AUDIOUSDT|1790515140": {
@@ -8714,14 +8714,19 @@
 "r": 32.87,
 "hi": 36.12,
 "lo": -13.02
+},
+"h720": {
+"r": 26.67,
+"hi": 154.11,
+"lo": -13.02
 }
 },
-"cur": 26.05,
-"cur_ts": 1792987200,
+"cur": 26.2,
+"cur_ts": 1793556000,
 "hi": 154.11,
 "lo": -13.02,
-"checked": 1792984869,
-"done": false
+"checked": 1793553449,
+"done": true
 },
 "stock|US|SYNA|1790954272": {
 "asset": "stock",
@@ -8748,14 +8753,19 @@
 "r": -1.79,
 "hi": 0.6,
 "lo": -2.43
+},
+"h720": {
+"r": -2.8,
+"hi": 0.6,
+"lo": -3.63
 }
 },
-"cur": -3.29,
-"cur_ts": 1792785600,
+"cur": -2.8,
+"cur_ts": 1793390400,
 "hi": 0.6,
 "lo": -3.63,
-"checked": 1792984869,
-"done": false
+"checked": 1793553449,
+"done": true
 },
 "coin|bitget|VELVETUSDT|1790975851": {
 "asset": "coin",
@@ -9123,7 +9133,7 @@
 "cur_ts": 1793341800,
 "hi": 11.25,
 "lo": -30.8,
-"checked": 1793546253,
+"checked": 1793553449,
 "done": false
 },
 "coin|binance|RLCUSDT|1791199065": {
@@ -14159,13 +14169,18 @@
 "r": 2.21,
 "hi": 9.72,
 "lo": -17.86
+},
+"h72": {
+"r": 4.51,
+"hi": 56.48,
+"lo": -17.86
 }
 },
-"cur": 1.82,
-"cur_ts": 1793383200,
-"hi": 9.72,
+"cur": 1.67,
+"cur_ts": 1793556000,
+"hi": 56.48,
 "lo": -17.86,
-"checked": 1793380799,
+"checked": 1793553449,
 "done": false
 },
 "coin|binance|HYPEUSDT|1793294397": {
@@ -14286,6 +14301,30 @@
 "hi": -7.48,
 "lo": -21.03,
 "checked": 1793488790,
+"done": false
+},
+"coin|binance|COWUSDT|1793460002": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "COWUSDT",
+"name": "COW",
+"ts": 1793460002.0,
+"price": 0.143,
+"note": "국내 매수세",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -18.32,
+"hi": -0.7,
+"lo": -19.93
+}
+},
+"cur": -19.02,
+"cur_ts": 1793556000,
+"hi": -0.7,
+"lo": -19.93,
+"checked": 1793553449,
 "done": false
 }
 }
