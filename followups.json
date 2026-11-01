@@ -6702,7 +6702,7 @@
 "cur_ts": 1793073600,
 "hi": 97.61,
 "lo": -19.64,
-"checked": 1793517491,
+"checked": 1793524662,
 "done": false
 },
 "coin|binance|GLMRUSDT|1790486333": {
@@ -6853,7 +6853,7 @@
 "cur_ts": 1793088000,
 "hi": 26.63,
 "lo": -85.9,
-"checked": 1793517491,
+"checked": 1793524662,
 "done": false
 },
 "coin|binance|AUDIOUSDT|1790515140": {
@@ -8960,7 +8960,7 @@
 "ts": 1791105480.0,
 "price": 0.002857,
 "note": "거래량 폭증",
-"repeats": 23,
+"repeats": 24,
 "res": {
 "h24": {
 "r": -11.2,
@@ -9113,7 +9113,7 @@
 "cur_ts": 1793341800,
 "hi": 11.25,
 "lo": -30.8,
-"checked": 1793517491,
+"checked": 1793524662,
 "done": false
 },
 "coin|binance|RLCUSDT|1791199065": {
