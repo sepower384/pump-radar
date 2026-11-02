@@ -808,5 +808,23 @@
 "result_pct": 4.62,
 "resolved_ts": 1793186393,
 "reported": 1
+},
+{
+"id": 47,
+"ts": 1793589494,
+"market": "KR",
+"symbol": "004020",
+"name": "현대제철",
+"theme": "철강 주요종목",
+"leader": "한국철강",
+"ref_price": 28600.0,
+"target_pct": 2.0,
+"deadline": 1793687400,
+"status": "pending",
+"best_price": 28600.0,
+"last_price": null,
+"result_pct": null,
+"resolved_ts": null,
+"reported": 0
 }
 ]
