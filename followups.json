@@ -8954,7 +8954,7 @@
 "cur_ts": 1793692800,
 "hi": 27.07,
 "lo": -18.59,
-"checked": 1793726266,
+"checked": 1793733524,
 "done": false
 },
 "coin|bitget|ATHUSDT|1791098253": {
@@ -8988,7 +8988,7 @@
 "cur_ts": 1793692800,
 "hi": 2.12,
 "lo": -42.06,
-"checked": 1793726266,
+"checked": 1793733524,
 "done": false
 },
 "coin|binance|BEAMXUSDT|1791105480": {
@@ -9055,14 +9055,19 @@
 "r": -0.94,
 "hi": 7.12,
 "lo": -10.61
+},
+"h720": {
+"r": -10.61,
+"hi": 20.13,
+"lo": -15.92
 }
 },
-"cur": -10.1,
-"cur_ts": 1793584800,
+"cur": -10.47,
+"cur_ts": 1793736000,
 "hi": 20.13,
 "lo": -15.92,
-"checked": 1793582278,
-"done": false
+"checked": 1793733524,
+"done": true
 },
 "coin|binance|SKYUSDT|1791148655": {
 "asset": "coin",
@@ -9158,7 +9163,7 @@
 "cur_ts": 1793687400,
 "hi": 11.25,
 "lo": -30.8,
-"checked": 1793726266,
+"checked": 1793733524,
 "done": false
 },
 "coin|binance|RLCUSDT|1791199065": {
