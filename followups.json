@@ -6853,7 +6853,7 @@
 "cur_ts": 1793088000,
 "hi": 26.63,
 "lo": -85.9,
-"checked": 1793675861,
+"checked": 1793683061,
 "done": false
 },
 "coin|binance|AUDIOUSDT|1790515140": {
@@ -9149,11 +9149,11 @@
 "lo": -6.22
 }
 },
-"cur": -23.4,
+"cur": -25.08,
 "cur_ts": 1793687400,
 "hi": 11.25,
 "lo": -30.8,
-"checked": 1793675861,
+"checked": 1793683061,
 "done": false
 },
 "coin|binance|RLCUSDT|1791199065": {
@@ -13562,13 +13562,18 @@
 "r": -22.61,
 "hi": 3.89,
 "lo": -23.18
+},
+"h168": {
+"r": -24.21,
+"hi": 3.89,
+"lo": -24.36
 }
 },
-"cur": -19.38,
-"cur_ts": 1793584800,
+"cur": -23.07,
+"cur_ts": 1793685600,
 "hi": 3.89,
-"lo": -23.55,
-"checked": 1793582278,
+"lo": -24.39,
+"checked": 1793683061,
 "done": false
 },
 "coin|bitget|TAGUSDT|1793078364": {
@@ -14363,7 +14368,7 @@
 "ts": 1793395181.0,
 "price": 0.000428,
 "note": "거래량 폭증",
-"repeats": 3,
+"repeats": 4,
 "res": {
 "h24": {
 "r": -18.93,
@@ -14525,6 +14530,78 @@
 "hi": 1.08,
 "lo": -10.22,
 "checked": 1793668693,
+"done": false
+},
+"stock|KR|104700|1793589494": {
+"asset": "stock",
+"kind": "stock",
+"market": "KR",
+"symbol": "104700",
+"name": "한국철강",
+"ts": 1793589494.0,
+"price": 12910.0,
+"note": "철강 주요종목 대장주",
+"repeats": 1,
+"res": {
+"h24": {
+"r": 0.0,
+"hi": 0.7,
+"lo": -0.15
+}
+},
+"cur": 0.0,
+"cur_ts": 1793687400,
+"hi": 0.7,
+"lo": -0.15,
+"checked": 1793683061,
+"done": false
+},
+"stock|KR|004020|1793589494": {
+"asset": "stock",
+"kind": "stock",
+"market": "KR",
+"symbol": "004020",
+"name": "현대제철",
+"ts": 1793589494.0,
+"price": 28600.0,
+"note": "철강 주요종목 관찰 콜",
+"repeats": 1,
+"res": {
+"h24": {
+"r": 0.87,
+"hi": 3.32,
+"lo": -10.84
+}
+},
+"cur": -0.35,
+"cur_ts": 1793687400,
+"hi": 3.32,
+"lo": -10.84,
+"checked": 1793683061,
+"done": false
+},
+"coin|binance|SOLVUSDT|1793596659": {
+"asset": "coin",
+"kind": "trend",
+"market": "binance",
+"symbol": "SOLVUSDT",
+"name": "SOLV",
+"ts": 1793596659.0,
+"price": 0.005061,
+"note": "우상향 점수 73.6",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -8.52,
+"hi": 5.83,
+"lo": -11.08
+}
+},
+"cur": -8.97,
+"cur_ts": 1793685600,
+"hi": 5.83,
+"lo": -11.08,
+"checked": 1793683061,
 "done": false
 }
 }
