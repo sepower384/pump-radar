@@ -8954,7 +8954,7 @@
 "cur_ts": 1793692800,
 "hi": 27.07,
 "lo": -18.59,
-"checked": 1793704660,
+"checked": 1793711895,
 "done": false
 },
 "coin|bitget|ATHUSDT|1791098253": {
@@ -8988,7 +8988,7 @@
 "cur_ts": 1793692800,
 "hi": 2.12,
 "lo": -42.06,
-"checked": 1793704660,
+"checked": 1793711895,
 "done": false
 },
 "coin|binance|BEAMXUSDT|1791105480": {
@@ -9000,7 +9000,7 @@
 "ts": 1791105480.0,
 "price": 0.002857,
 "note": "거래량 폭증",
-"repeats": 27,
+"repeats": 28,
 "res": {
 "h24": {
 "r": -11.2,
@@ -9158,7 +9158,7 @@
 "cur_ts": 1793687400,
 "hi": 11.25,
 "lo": -30.8,
-"checked": 1793704660,
+"checked": 1793711895,
 "done": false
 },
 "coin|binance|RLCUSDT|1791199065": {
@@ -11924,7 +11924,7 @@
 "ts": 1792502255.0,
 "price": 0.0201,
 "note": "거래량 폭증",
-"repeats": 17,
+"repeats": 18,
 "res": {
 "h24": {
 "r": 23.33,
@@ -14636,6 +14636,30 @@
 "hi": 1.01,
 "lo": -23.54,
 "checked": 1793704660,
+"done": false
+},
+"coin|binance|MITOUSDT|1793625455": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "MITOUSDT",
+"name": "MITO",
+"ts": 1793625455.0,
+"price": 0.00899,
+"note": "거래량 폭증",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -17.58,
+"hi": 0.0,
+"lo": -21.91
+}
+},
+"cur": -16.8,
+"cur_ts": 1793714400,
+"hi": 0.0,
+"lo": -21.91,
+"checked": 1793711895,
 "done": false
 }
 }
