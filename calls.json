@@ -840,8 +840,8 @@
 "deadline": 1793773800,
 "status": "pending",
 "best_price": 29950.0,
-"last_price": 29300.0,
-"result_pct": -2.17,
+"last_price": 28950.0,
+"result_pct": -3.34,
 "resolved_ts": null,
 "reported": 0
 },
@@ -858,8 +858,8 @@
 "deadline": 1793773800,
 "status": "pending",
 "best_price": 8090.0,
-"last_price": 7940.0,
-"result_pct": -1.85,
+"last_price": 7720.0,
+"result_pct": -4.57,
 "resolved_ts": null,
 "reported": 0
 },
@@ -876,8 +876,8 @@
 "deadline": 1793773800,
 "status": "pending",
 "best_price": 31150.0,
-"last_price": 28950.0,
-"result_pct": -7.06,
+"last_price": 29100.0,
+"result_pct": -6.58,
 "resolved_ts": null,
 "reported": 0
 }
