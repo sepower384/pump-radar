@@ -8954,7 +8954,7 @@
 "cur_ts": 1793692800,
 "hi": 27.07,
 "lo": -18.59,
-"checked": 1793697456,
+"checked": 1793704660,
 "done": false
 },
 "coin|bitget|ATHUSDT|1791098253": {
@@ -8988,7 +8988,7 @@
 "cur_ts": 1793692800,
 "hi": 2.12,
 "lo": -42.06,
-"checked": 1793697456,
+"checked": 1793704660,
 "done": false
 },
 "coin|binance|BEAMXUSDT|1791105480": {
@@ -9016,14 +9016,19 @@
 "r": -7.14,
 "hi": 5.71,
 "lo": -17.47
+},
+"h720": {
+"r": 43.4,
+"hi": 123.21,
+"lo": -17.47
 }
 },
-"cur": 91.88,
-"cur_ts": 1793584800,
+"cur": 38.43,
+"cur_ts": 1793707200,
 "hi": 123.21,
 "lo": -17.47,
-"checked": 1793582278,
-"done": false
+"checked": 1793704660,
+"done": true
 },
 "coin|binance|ATUSDT|1791141497": {
 "asset": "coin",
@@ -9149,11 +9154,11 @@
 "lo": -6.22
 }
 },
-"cur": -25.59,
+"cur": -24.86,
 "cur_ts": 1793687400,
 "hi": 11.25,
 "lo": -30.8,
-"checked": 1793697456,
+"checked": 1793704660,
 "done": false
 },
 "coin|binance|RLCUSDT|1791199065": {
@@ -10083,7 +10088,7 @@
 "ts": 1791494284.0,
 "price": 0.002048,
 "note": "원인 미확인",
-"repeats": 14,
+"repeats": 15,
 "res": {
 "h24": {
 "r": 13.77,
@@ -14373,7 +14378,7 @@
 "ts": 1793395181.0,
 "price": 0.000428,
 "note": "거래량 폭증",
-"repeats": 4,
+"repeats": 5,
 "res": {
 "h24": {
 "r": -18.93,
@@ -14607,6 +14612,30 @@
 "hi": 5.83,
 "lo": -11.08,
 "checked": 1793683061,
+"done": false
+},
+"coin|binance|1000CATUSDT|1793611109": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "1000CATUSDT",
+"name": "1000CAT",
+"ts": 1793611109.0,
+"price": 0.001975,
+"note": "거래량 폭증",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -22.38,
+"hi": 1.01,
+"lo": -23.54
+}
+},
+"cur": -19.8,
+"cur_ts": 1793707200,
+"hi": 1.01,
+"lo": -23.54,
+"checked": 1793704660,
 "done": false
 }
 }
