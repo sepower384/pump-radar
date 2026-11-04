@@ -840,8 +840,8 @@
 "deadline": 1793773800,
 "status": "pending",
 "best_price": 30100.0,
-"last_price": 29150.0,
-"result_pct": -2.67,
+"last_price": 29000.0,
+"result_pct": -3.17,
 "resolved_ts": null,
 "reported": 0
 },
@@ -858,8 +858,8 @@
 "deadline": 1793773800,
 "status": "pending",
 "best_price": 8090.0,
-"last_price": 7760.0,
-"result_pct": -4.08,
+"last_price": 7850.0,
+"result_pct": -2.97,
 "resolved_ts": null,
 "reported": 0
 },
@@ -876,8 +876,8 @@
 "deadline": 1793773800,
 "status": "pending",
 "best_price": 31150.0,
-"last_price": 25650.0,
-"result_pct": -17.66,
+"last_price": 24850.0,
+"result_pct": -20.22,
 "resolved_ts": null,
 "reported": 0
 },
@@ -948,8 +948,8 @@
 "deadline": 1793860200,
 "status": "pending",
 "best_price": 7320.0,
-"last_price": null,
-"result_pct": null,
+"last_price": 7090.0,
+"result_pct": -3.14,
 "resolved_ts": null,
 "reported": 0
 },
@@ -966,8 +966,8 @@
 "deadline": 1793860200,
 "status": "pending",
 "best_price": 6130.0,
-"last_price": null,
-"result_pct": null,
+"last_price": 6110.0,
+"result_pct": -0.33,
 "resolved_ts": null,
 "reported": 0
 }
