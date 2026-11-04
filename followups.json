@@ -8954,7 +8954,7 @@
 "cur_ts": 1793692800,
 "hi": 27.07,
 "lo": -18.59,
-"checked": 1793798287,
+"checked": 1793812659,
 "done": false
 },
 "coin|bitget|ATHUSDT|1791098253": {
@@ -8988,7 +8988,7 @@
 "cur_ts": 1793692800,
 "hi": 2.12,
 "lo": -42.06,
-"checked": 1793798287,
+"checked": 1793812659,
 "done": false
 },
 "coin|binance|BEAMXUSDT|1791105480": {
@@ -9178,7 +9178,7 @@
 "cur_ts": 1793773800,
 "hi": 11.25,
 "lo": -30.8,
-"checked": 1793798287,
+"checked": 1793812659,
 "done": false
 },
 "coin|binance|RLCUSDT|1791199065": {
@@ -10113,7 +10113,7 @@
 "ts": 1791494284.0,
 "price": 0.002048,
 "note": "원인 미확인",
-"repeats": 15,
+"repeats": 16,
 "res": {
 "h24": {
 "r": 13.77,
@@ -14068,13 +14068,18 @@
 "r": -5.54,
 "hi": 8.08,
 "lo": -16.15
+},
+"h168": {
+"r": -14.45,
+"hi": 8.08,
+"lo": -16.15
 }
 },
-"cur": -10.92,
-"cur_ts": 1793584800,
+"cur": -14.03,
+"cur_ts": 1793815200,
 "hi": 8.08,
 "lo": -16.15,
-"checked": 1793582278,
+"checked": 1793812659,
 "done": false
 },
 "coin|binance|TSLABUSDT|1793193590": {
@@ -14097,13 +14102,18 @@
 "r": -2.49,
 "hi": -0.67,
 "lo": -5.32
+},
+"h168": {
+"r": -8.21,
+"hi": 1.22,
+"lo": -8.72
 }
 },
-"cur": -1.96,
-"cur_ts": 1793584800,
-"hi": -0.67,
-"lo": -5.32,
-"checked": 1793582278,
+"cur": -5.75,
+"cur_ts": 1793815200,
+"hi": 1.22,
+"lo": -8.72,
+"checked": 1793812659,
 "done": false
 },
 "stock|US|VRT|1793200862": {
@@ -14126,13 +14136,18 @@
 "r": -2.58,
 "hi": 6.73,
 "lo": -4.94
+},
+"h168": {
+"r": -1.13,
+"hi": 6.73,
+"lo": -6.29
 }
 },
-"cur": -2.58,
-"cur_ts": 1793390400,
+"cur": -13.75,
+"cur_ts": 1793826000,
 "hi": 6.73,
-"lo": -4.94,
-"checked": 1793582278,
+"lo": -14.78,
+"checked": 1793812659,
 "done": false
 },
 "coin|bitget|NAORISUSDT|1793215199": {
@@ -14909,6 +14924,102 @@
 "hi": 0.0,
 "lo": -4.82,
 "checked": 1793762305,
+"done": false
+},
+"stock|US|AEHR|1793719070": {
+"asset": "stock",
+"kind": "stock",
+"market": "US",
+"symbol": "AEHR",
+"name": "Aehr Test Systems",
+"ts": 1793719070.0,
+"price": 65.405,
+"note": "AI 반도체 대장주",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -0.45,
+"hi": 1.23,
+"lo": -17.42
+}
+},
+"cur": -8.84,
+"cur_ts": 1793826000,
+"hi": 1.23,
+"lo": -17.42,
+"checked": 1793812659,
+"done": false
+},
+"stock|US|BETA|1793719070": {
+"asset": "stock",
+"kind": "stock",
+"market": "US",
+"symbol": "BETA",
+"name": "Beta Technologies, Inc.",
+"ts": 1793719070.0,
+"price": 23.62,
+"note": "드론·방산 대장주",
+"repeats": 1,
+"res": {
+"h24": {
+"r": 0.08,
+"hi": 3.18,
+"lo": -5.88
+}
+},
+"cur": 6.27,
+"cur_ts": 1793826000,
+"hi": 7.11,
+"lo": -5.88,
+"checked": 1793812659,
+"done": false
+},
+"stock|US|LSCC|1793719070": {
+"asset": "stock",
+"kind": "stock",
+"market": "US",
+"symbol": "LSCC",
+"name": "Lattice Semiconductor Corpor",
+"ts": 1793719070.0,
+"price": 107.05,
+"note": "AI 반도체 관찰 콜",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -1.06,
+"hi": 3.88,
+"lo": -4.92
+}
+},
+"cur": -5.74,
+"cur_ts": 1793826000,
+"hi": 3.88,
+"lo": -7.32,
+"checked": 1793812659,
+"done": false
+},
+"stock|US|ONDS|1793719070": {
+"asset": "stock",
+"kind": "stock",
+"market": "US",
+"symbol": "ONDS",
+"name": "Ondas Inc",
+"ts": 1793719070.0,
+"price": 6.002,
+"note": "드론·방산 관찰 콜",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -3.53,
+"hi": 1.47,
+"lo": -3.87
+}
+},
+"cur": -11.78,
+"cur_ts": 1793826000,
+"hi": 1.47,
+"lo": -12.95,
+"checked": 1793812659,
 "done": false
 }
 }
