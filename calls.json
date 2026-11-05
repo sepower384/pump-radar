@@ -1024,5 +1024,41 @@
 "result_pct": -0.55,
 "resolved_ts": null,
 "reported": 0
+},
+{
+"id": 59,
+"ts": 1793855888,
+"market": "KR",
+"symbol": "124500",
+"name": "아이티센글로벌",
+"theme": "귀금속(금/은)",
+"leader": "고려아연",
+"ref_price": 20750.0,
+"target_pct": 2.0,
+"deadline": 1793946600,
+"status": "pending",
+"best_price": 20750.0,
+"last_price": null,
+"result_pct": null,
+"resolved_ts": null,
+"reported": 0
+},
+{
+"id": 60,
+"ts": 1793855888,
+"market": "KR",
+"symbol": "000670",
+"name": "영풍",
+"theme": "귀금속(금/은)",
+"leader": "고려아연",
+"ref_price": 30850.0,
+"target_pct": 2.0,
+"deadline": 1793946600,
+"status": "pending",
+"best_price": 30850.0,
+"last_price": null,
+"result_pct": null,
+"resolved_ts": null,
+"reported": 0
 }
 ]
