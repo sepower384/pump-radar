@@ -8954,7 +8954,7 @@
 "cur_ts": 1793692800,
 "hi": 27.07,
 "lo": -18.59,
-"checked": 1793899090,
+"checked": 1793906256,
 "done": false
 },
 "coin|bitget|ATHUSDT|1791098253": {
@@ -8988,7 +8988,7 @@
 "cur_ts": 1793692800,
 "hi": 2.12,
 "lo": -42.06,
-"checked": 1793899090,
+"checked": 1793906256,
 "done": false
 },
 "coin|binance|BEAMXUSDT|1791105480": {
@@ -9178,7 +9178,7 @@
 "cur_ts": 1793860200,
 "hi": 11.25,
 "lo": -36.17,
-"checked": 1793899090,
+"checked": 1793906256,
 "done": false
 },
 "coin|binance|RLCUSDT|1791199065": {
@@ -9524,7 +9524,7 @@
 "cur_ts": 1793894400,
 "hi": 11.06,
 "lo": -50.83,
-"checked": 1793899090,
+"checked": 1793906256,
 "done": false
 },
 "stock|US|CEG|1791299905": {
@@ -14458,13 +14458,18 @@
 "r": -7.36,
 "hi": 0.48,
 "lo": -9.3
+},
+"h168": {
+"r": -16.76,
+"hi": 0.48,
+"lo": -18.36
 }
 },
-"cur": -8.53,
-"cur_ts": 1793563200,
+"cur": -17.24,
+"cur_ts": 1793908800,
 "hi": 0.48,
-"lo": -9.3,
-"checked": 1793560653,
+"lo": -18.69,
+"checked": 1793906256,
 "done": false
 },
 "stock|KR|420610|1793323162": {
@@ -15366,6 +15371,30 @@
 "hi": 38.51,
 "lo": -21.3,
 "checked": 1793899090,
+"done": false
+},
+"coin|bitget|DGAIUSDT|1793819850": {
+"asset": "coin",
+"kind": "pump",
+"market": "bitget",
+"symbol": "DGAIUSDT",
+"name": "DGAI",
+"ts": 1793819850.0,
+"price": 0.782823,
+"note": "원인 미확인",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -4.59,
+"hi": 9.68,
+"lo": -9.56
+}
+},
+"cur": -4.59,
+"cur_ts": 1793905200,
+"hi": 9.68,
+"lo": -9.56,
+"checked": 1793906256,
 "done": false
 }
 }
