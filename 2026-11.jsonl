@@ -126,3 +126,5 @@
 {"t": "trend", "ts": 1793999854, "symbol": "ACTUSDT", "base": "ACT", "price": 0.01034, "score": 75.2, "rs7": 24.4, "rs30": 9.5, "new": true}
 {"t": "trend", "ts": 1793999854, "symbol": "CYBERUSDT", "base": "CYBER", "price": 0.359, "score": 66.6, "rs7": 30.2, "rs30": 25.1, "new": true}
 {"t": "trend", "ts": 1794014283, "symbol": "INJUSDT", "base": "INJ", "price": 8.373, "score": 75.4, "rs7": 19.3, "rs30": 24.6, "new": true}
+{"t": "pump", "ts": 1794028651, "market": "binance", "symbol": "ONEUSDT", "base": "ONE", "price": 0.001939, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 3.8, "chg2h": 11.05, "chg24h": 74.21, "qvol": 26869644.9787596, "vol_x": 2.2, "off_high": -2.32, "direction": "up", "tag": "검색 급증", "tags": ["검색 급증"], "conf": "낮음", "headline": "ONEchain 급등 — 관심 급증", "news": ""}
+{"t": "trend", "ts": 1794028656, "symbol": "ONEUSDT", "base": "ONE", "price": 0.001941, "score": 65.1, "rs7": 72.5, "rs30": 0.6, "new": true}
