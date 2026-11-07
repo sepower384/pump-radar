@@ -8954,7 +8954,7 @@
 "cur_ts": 1793692800,
 "hi": 27.07,
 "lo": -18.59,
-"checked": 1794014285,
+"checked": 1794021450,
 "done": false
 },
 "coin|bitget|ATHUSDT|1791098253": {
@@ -8988,7 +8988,7 @@
 "cur_ts": 1793692800,
 "hi": 2.12,
 "lo": -42.06,
-"checked": 1794014285,
+"checked": 1794021450,
 "done": false
 },
 "coin|binance|BEAMXUSDT|1791105480": {
@@ -9178,7 +9178,7 @@
 "cur_ts": 1793860200,
 "hi": 11.25,
 "lo": -36.17,
-"checked": 1794014285,
+"checked": 1794021450,
 "done": false
 },
 "coin|binance|RLCUSDT|1791199065": {
@@ -9524,7 +9524,7 @@
 "cur_ts": 1793894400,
 "hi": 11.06,
 "lo": -50.83,
-"checked": 1794014285,
+"checked": 1794021450,
 "done": false
 },
 "stock|US|CEG|1791299905": {
@@ -15770,6 +15770,54 @@
 "hi": 21.09,
 "lo": -8.74,
 "checked": 1793985493,
+"done": false
+},
+"stock|KR|089860|1793927904": {
+"asset": "stock",
+"kind": "stock",
+"market": "KR",
+"symbol": "089860",
+"name": "롯데렌탈",
+"ts": 1793927904.0,
+"price": 58400.0,
+"note": "렌터카 대장주",
+"repeats": 1,
+"res": {
+"h24": {
+"r": 0.17,
+"hi": 0.17,
+"lo": 0.0
+}
+},
+"cur": 0.17,
+"cur_ts": 1793946600,
+"hi": 0.17,
+"lo": 0.0,
+"checked": 1794021450,
+"done": false
+},
+"stock|KR|004540|1793927904": {
+"asset": "stock",
+"kind": "stock",
+"market": "KR",
+"symbol": "004540",
+"name": "깨끗한나라",
+"ts": 1793927904.0,
+"price": 1891.0,
+"note": "제지 대장주",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -18.03,
+"hi": 6.82,
+"lo": -19.88
+}
+},
+"cur": -18.03,
+"cur_ts": 1793946600,
+"hi": 6.82,
+"lo": -19.88,
+"checked": 1794021450,
 "done": false
 }
 }
