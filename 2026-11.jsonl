@@ -136,3 +136,5 @@
 {"t": "pump", "ts": 1794057452, "market": "bitget", "symbol": "ICNTUSDT", "base": "ICNT", "price": 0.3338, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 5.3, "chg2h": 8.17, "chg24h": 20.33, "qvol": 6436880.077133, "vol_x": 0.2, "off_high": -8.15, "direction": "up", "tag": "원인 미확인", "tags": ["원인 미확인"], "conf": "낮음", "headline": "Impossible Cloud Network Token 급등 — 이유 불명 · 큰손 주도 의심", "news": ""}
 {"t": "trend", "ts": 1794064684, "symbol": "INJUSDT", "base": "INJ", "price": 8.16, "score": 71.7, "rs7": 11.4, "rs30": 30.1, "new": true}
 {"t": "trend", "ts": 1794079054, "symbol": "ONEUSDT", "base": "ONE", "price": 0.00233, "score": 75.2, "rs7": 104.7, "rs30": 14.6, "new": true}
+{"t": "pump", "ts": 1794093485, "market": "binance", "symbol": "MITOUSDT", "base": "MITO", "price": 0.00842, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 6.18, "chg2h": 4.47, "chg24h": 26.05, "qvol": 4516487.483502, "vol_x": 6.9, "off_high": -2.09, "direction": "up", "tag": "거래량 폭증", "tags": ["거래량 폭증"], "conf": "낮음", "headline": "MITO 급등 — 매수세 몰림", "news": ""}
+{"t": "trend", "ts": 1794093490, "symbol": "ACTUSDT", "base": "ACT", "price": 0.01164, "score": 87.0, "rs7": 43.4, "rs30": 27.9, "new": true}
