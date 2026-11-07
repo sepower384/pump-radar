@@ -125,3 +125,4 @@
 {"t": "trend", "ts": 1793992659, "symbol": "SOXSBUSDT", "base": "SOXSB", "price": 71.12, "score": 83.4, "rs7": 38.9, "rs30": 157.8, "new": true}
 {"t": "trend", "ts": 1793999854, "symbol": "ACTUSDT", "base": "ACT", "price": 0.01034, "score": 75.2, "rs7": 24.4, "rs30": 9.5, "new": true}
 {"t": "trend", "ts": 1793999854, "symbol": "CYBERUSDT", "base": "CYBER", "price": 0.359, "score": 66.6, "rs7": 30.2, "rs30": 25.1, "new": true}
+{"t": "trend", "ts": 1794014283, "symbol": "INJUSDT", "base": "INJ", "price": 8.373, "score": 75.4, "rs7": 19.3, "rs30": 24.6, "new": true}
