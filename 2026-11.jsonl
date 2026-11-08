@@ -138,3 +138,4 @@
 {"t": "trend", "ts": 1794079054, "symbol": "ONEUSDT", "base": "ONE", "price": 0.00233, "score": 75.2, "rs7": 104.7, "rs30": 14.6, "new": true}
 {"t": "pump", "ts": 1794093485, "market": "binance", "symbol": "MITOUSDT", "base": "MITO", "price": 0.00842, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 6.18, "chg2h": 4.47, "chg24h": 26.05, "qvol": 4516487.483502, "vol_x": 6.9, "off_high": -2.09, "direction": "up", "tag": "거래량 폭증", "tags": ["거래량 폭증"], "conf": "낮음", "headline": "MITO 급등 — 매수세 몰림", "news": ""}
 {"t": "trend", "ts": 1794093490, "symbol": "ACTUSDT", "base": "ACT", "price": 0.01164, "score": 87.0, "rs7": 43.4, "rs30": 27.9, "new": true}
+{"t": "trend", "ts": 1794115053, "symbol": "INJUSDT", "base": "INJ", "price": 8.115, "score": 75.5, "rs7": 14.7, "rs30": 25.6, "new": true}
