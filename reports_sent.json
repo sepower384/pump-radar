@@ -98,5 +98,15 @@
    "status": "ok",
    "message_id": 1009
   }
+ },
+ "W-2026-45": {
+  "at": 1794187108,
+  "file": "급등탐정_주간리포트_2026-45.pdf",
+  "ups": 54,
+  "scored": 51,
+  "telegram": {
+   "status": "ok",
+   "message_id": 1127
+  }
  }
 }
