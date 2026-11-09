@@ -1074,8 +1074,8 @@
 "deadline": 1794205800,
 "status": "pending",
 "best_price": 193000.0,
-"last_price": 189600.0,
-"result_pct": -1.35,
+"last_price": 189900.0,
+"result_pct": -1.2,
 "resolved_ts": null,
 "reported": 0
 },
@@ -1092,8 +1092,8 @@
 "deadline": 1794205800,
 "status": "pending",
 "best_price": 226500.0,
-"last_price": 222000.0,
-"result_pct": -0.45,
+"last_price": 220500.0,
+"result_pct": -1.12,
 "resolved_ts": null,
 "reported": 0
 },
