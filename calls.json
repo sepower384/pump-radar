@@ -1074,8 +1074,8 @@
 "deadline": 1794205800,
 "status": "pending",
 "best_price": 193000.0,
-"last_price": 189900.0,
-"result_pct": -1.2,
+"last_price": 187300.0,
+"result_pct": -2.55,
 "resolved_ts": null,
 "reported": 0
 },
@@ -1092,8 +1092,8 @@
 "deadline": 1794205800,
 "status": "pending",
 "best_price": 226500.0,
-"last_price": 220500.0,
-"result_pct": -1.12,
+"last_price": 216000.0,
+"result_pct": -3.14,
 "resolved_ts": null,
 "reported": 0
 },
@@ -1148,6 +1148,24 @@
 "best_price": 191.505,
 "last_price": 186.64,
 "result_pct": -2.54,
+"resolved_ts": null,
+"reported": 0
+},
+{
+"id": 66,
+"ts": 1794201496,
+"market": "KR",
+"symbol": "356680",
+"name": "엑스게이트",
+"theme": "양자암호/양자컴퓨팅",
+"leader": "큐에스아이",
+"ref_price": 12800.0,
+"target_pct": 2.0,
+"deadline": 1794292200,
+"status": "pending",
+"best_price": 12800.0,
+"last_price": null,
+"result_pct": null,
 "resolved_ts": null,
 "reported": 0
 }
