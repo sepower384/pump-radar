@@ -1162,12 +1162,12 @@
 "ref_price": 12800.0,
 "target_pct": 2.0,
 "deadline": 1794292200,
-"status": "pending",
-"best_price": 12800.0,
-"last_price": 12690.0,
-"result_pct": -0.86,
-"resolved_ts": null,
-"reported": 0
+"status": "hit",
+"best_price": 13410.0,
+"last_price": 13070.0,
+"result_pct": 4.77,
+"resolved_ts": 1794273493,
+"reported": 1
 },
 {
 "id": 67,
