@@ -9178,7 +9178,7 @@
 "cur_ts": 1793860200,
 "hi": 11.25,
 "lo": -36.17,
-"checked": 1794338261,
+"checked": 1794345457,
 "done": false
 },
 "coin|binance|RLCUSDT|1791199065": {
@@ -9524,7 +9524,7 @@
 "cur_ts": 1793894400,
 "hi": 11.06,
 "lo": -50.83,
-"checked": 1794338261,
+"checked": 1794345457,
 "done": false
 },
 "stock|US|CEG|1791299905": {
@@ -10065,7 +10065,7 @@
 "cur_ts": 1794024000,
 "hi": 11.26,
 "lo": -39.74,
-"checked": 1794338261,
+"checked": 1794345457,
 "done": false
 },
 "stock|KR|141000|1791429485": {
@@ -16656,6 +16656,30 @@
 "hi": 3.81,
 "lo": -9.34,
 "checked": 1794338261,
+"done": false
+},
+"stock|US|OKLO|1794251870": {
+"asset": "stock",
+"kind": "stock",
+"market": "US",
+"symbol": "OKLO",
+"name": "Oklo Inc.",
+"ts": 1794251870.0,
+"price": 27.33,
+"note": "원전·SMR 대장주",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -1.79,
+"hi": 1.45,
+"lo": -16.82
+}
+},
+"cur": -8.2,
+"cur_ts": 1794344400,
+"hi": 1.45,
+"lo": -16.82,
+"checked": 1794345457,
 "done": false
 }
 }
