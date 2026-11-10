@@ -9178,7 +9178,7 @@
 "cur_ts": 1793860200,
 "hi": 11.25,
 "lo": -36.17,
-"checked": 1794331089,
+"checked": 1794338261,
 "done": false
 },
 "coin|binance|RLCUSDT|1791199065": {
@@ -9524,7 +9524,7 @@
 "cur_ts": 1793894400,
 "hi": 11.06,
 "lo": -50.83,
-"checked": 1794331089,
+"checked": 1794338261,
 "done": false
 },
 "stock|US|CEG|1791299905": {
@@ -10065,7 +10065,7 @@
 "cur_ts": 1794024000,
 "hi": 11.26,
 "lo": -39.74,
-"checked": 1794331089,
+"checked": 1794338261,
 "done": false
 },
 "stock|KR|141000|1791429485": {
@@ -11735,7 +11735,7 @@
 "ts": 1792127858.0,
 "price": 0.14071,
 "note": "우상향 점수 91.5",
-"repeats": 25,
+"repeats": 26,
 "res": {
 "h24": {
 "r": -11.0,
@@ -16608,6 +16608,54 @@
 "hi": 1.93,
 "lo": -12.11,
 "checked": 1794331089,
+"done": false
+},
+"stock|US|ASTS|1794244699": {
+"asset": "stock",
+"kind": "stock",
+"market": "US",
+"symbol": "ASTS",
+"name": "AST SpaceMobile, Inc.",
+"ts": 1794244699.0,
+"price": 37.175,
+"note": "우주항공 대장주",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -0.77,
+"hi": 2.76,
+"lo": -13.22
+}
+},
+"cur": -12.89,
+"cur_ts": 1794344400,
+"hi": 2.76,
+"lo": -14.03,
+"checked": 1794338261,
+"done": false
+},
+"stock|US|RKLB|1794244699": {
+"asset": "stock",
+"kind": "stock",
+"market": "US",
+"symbol": "RKLB",
+"name": "Rocket Lab Corporation",
+"ts": 1794244699.0,
+"price": 58.47,
+"note": "우주항공 관찰 콜",
+"repeats": 1,
+"res": {
+"h24": {
+"r": 0.67,
+"hi": 2.09,
+"lo": -9.34
+}
+},
+"cur": 2.69,
+"cur_ts": 1794344400,
+"hi": 3.81,
+"lo": -9.34,
+"checked": 1794338261,
 "done": false
 }
 }
