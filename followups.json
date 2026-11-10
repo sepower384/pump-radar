@@ -9178,7 +9178,7 @@
 "cur_ts": 1793860200,
 "hi": 11.25,
 "lo": -36.17,
-"checked": 1794345457,
+"checked": 1794352686,
 "done": false
 },
 "coin|binance|RLCUSDT|1791199065": {
@@ -9524,7 +9524,7 @@
 "cur_ts": 1793894400,
 "hi": 11.06,
 "lo": -50.83,
-"checked": 1794345457,
+"checked": 1794352686,
 "done": false
 },
 "stock|US|CEG|1791299905": {
@@ -10065,7 +10065,7 @@
 "cur_ts": 1794024000,
 "hi": 11.26,
 "lo": -39.74,
-"checked": 1794345457,
+"checked": 1794352686,
 "done": false
 },
 "stock|KR|141000|1791429485": {
@@ -10561,14 +10561,19 @@
 "r": -21.85,
 "hi": 3.41,
 "lo": -25.27
+},
+"h720": {
+"r": -21.79,
+"hi": 3.41,
+"lo": -25.27
 }
 },
-"cur": -20.06,
-"cur_ts": 1794189600,
+"cur": -22.19,
+"cur_ts": 1794355200,
 "hi": 3.41,
 "lo": -25.27,
-"checked": 1794187062,
-"done": false
+"checked": 1794352686,
+"done": true
 },
 "stock|KR|079650|1791767888": {
 "asset": "stock",
@@ -16680,6 +16685,30 @@
 "hi": 1.45,
 "lo": -16.82,
 "checked": 1794345457,
+"done": false
+},
+"stock|US|MPWR|1794259062": {
+"asset": "stock",
+"kind": "stock",
+"market": "US",
+"symbol": "MPWR",
+"name": "Monolithic Power Systems, In",
+"ts": 1794259062.0,
+"price": 1388.05,
+"note": "AI 반도체 대장주",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -2.19,
+"hi": -0.02,
+"lo": -7.06
+}
+},
+"cur": -2.19,
+"cur_ts": 1794344400,
+"hi": -0.02,
+"lo": -7.06,
+"checked": 1794352686,
 "done": false
 }
 }
