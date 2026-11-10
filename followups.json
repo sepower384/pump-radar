@@ -9178,7 +9178,7 @@
 "cur_ts": 1793860200,
 "hi": 11.25,
 "lo": -36.17,
-"checked": 1794309457,
+"checked": 1794316651,
 "done": false
 },
 "coin|binance|RLCUSDT|1791199065": {
@@ -9524,7 +9524,7 @@
 "cur_ts": 1793894400,
 "hi": 11.06,
 "lo": -50.83,
-"checked": 1794309457,
+"checked": 1794316651,
 "done": false
 },
 "stock|US|CEG|1791299905": {
@@ -10065,7 +10065,7 @@
 "cur_ts": 1794024000,
 "hi": 11.26,
 "lo": -39.74,
-"checked": 1794309457,
+"checked": 1794316651,
 "done": false
 },
 "stock|KR|141000|1791429485": {
@@ -16458,6 +16458,54 @@
 "hi": 11.46,
 "lo": -23.17,
 "checked": 1794295055,
+"done": false
+},
+"coin|bitget|B2USDT|1794223084": {
+"asset": "coin",
+"kind": "pump",
+"market": "bitget",
+"symbol": "B2USDT",
+"name": "B2",
+"ts": 1794223084.0,
+"price": 0.47776,
+"note": "원인 미확인",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -7.02,
+"hi": 1.33,
+"lo": -10.4
+}
+},
+"cur": -6.52,
+"cur_ts": 1794315600,
+"hi": 1.33,
+"lo": -10.4,
+"checked": 1794316651,
+"done": false
+},
+"coin|binance|ARBUSDT|1794223090": {
+"asset": "coin",
+"kind": "trend",
+"market": "binance",
+"symbol": "ARBUSDT",
+"name": "ARB",
+"ts": 1794223090.0,
+"price": 0.1796,
+"note": "우상향 점수 66.5",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -8.18,
+"hi": 4.68,
+"lo": -8.35
+}
+},
+"cur": -8.02,
+"cur_ts": 1794319200,
+"hi": 4.68,
+"lo": -10.24,
+"checked": 1794316651,
 "done": false
 }
 }
