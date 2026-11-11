@@ -228,3 +228,4 @@
 {"t": "pump", "ts": 1794431856, "market": "binance", "symbol": "CRWVBUSDT", "base": "CRWVB", "price": 61.74, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 3.05, "chg2h": 2.56, "chg24h": 20.54, "qvol": 1919768.9131, "vol_x": 0.2, "off_high": -0.44, "direction": "up", "tag": "원인 미확인", "tags": ["원인 미확인"], "conf": "낮음", "headline": "CRWVB 급등 — 이유 불명 · 큰손 주도 의심", "news": ""}
 {"t": "trend", "ts": 1794431862, "symbol": "ERAUSDT", "base": "ERA", "price": 0.0859, "score": 91.3, "rs7": 35.0, "rs30": 47.0, "new": true}
 {"t": "trend", "ts": 1794431862, "symbol": "AMDBUSDT", "base": "AMDB", "price": 553.28, "score": 77.7, "rs7": 22.6, "rs30": 5.0, "new": true}
+{"t": "trend", "ts": 1794439092, "symbol": "AVGOBUSDT", "base": "AVGOB", "price": 352.51, "score": 71.0, "rs7": 18.2, "rs30": 13.3, "new": true}
