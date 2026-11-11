@@ -211,3 +211,6 @@
 {"t": "pump", "ts": 1794381486, "market": "binance", "symbol": "ERAUSDT", "base": "ERA", "price": 0.0902, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 3.33, "chg2h": 8.16, "chg24h": 22.89, "qvol": 8690565.95801, "vol_x": 1.1, "off_high": -2.8, "direction": "up", "tag": "원인 미확인", "tags": ["원인 미확인"], "conf": "낮음", "headline": "Caldera 급등 — 이유 불명 · 큰손 주도 의심", "news": ""}
 {"t": "trend", "ts": 1794381491, "symbol": "ERAUSDT", "base": "ERA", "price": 0.0902, "score": 90.6, "rs7": 49.0, "rs30": 43.6, "new": true}
 {"t": "trend", "ts": 1794381491, "symbol": "INITUSDT", "base": "INIT", "price": 0.2553, "score": 65.0, "rs7": 111.2, "rs30": 147.6, "new": true}
+{"t": "pump", "ts": 1794388654, "market": "bitget", "symbol": "ARIAUSDT", "base": "ARIA", "price": 0.25107, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 1.48, "chg2h": 8.32, "chg24h": 26.01, "qvol": 1498524.437937, "vol_x": 1.5, "off_high": -2.29, "direction": "up", "tag": "원인 미확인", "tags": ["원인 미확인"], "conf": "낮음", "headline": "Aria.AI 급등 — 이유 불명 · 큰손 주도 의심", "news": ""}
+{"t": "trend", "ts": 1794388659, "symbol": "AMDBUSDT", "base": "AMDB", "price": 539.36, "score": 68.0, "rs7": 13.6, "rs30": 2.1, "new": true}
+{"t": "trend", "ts": 1794388659, "symbol": "ETHFIUSDT", "base": "ETHFI", "price": 0.6296, "score": 67.3, "rs7": 13.0, "rs30": 0.9, "new": true}
