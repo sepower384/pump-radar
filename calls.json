@@ -1240,5 +1240,23 @@
 "result_pct": -2.32,
 "resolved_ts": 1794345455,
 "reported": 1
+},
+{
+"id": 71,
+"ts": 1794367064,
+"market": "KR",
+"symbol": "036930",
+"name": "주성엔지니어링",
+"theme": "LED장비",
+"leader": "티에스이",
+"ref_price": 172300.0,
+"target_pct": 2.0,
+"deadline": 1794465000,
+"status": "pending",
+"best_price": 172300.0,
+"last_price": null,
+"result_pct": null,
+"resolved_ts": null,
+"reported": 0
 }
 ]
