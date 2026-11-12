@@ -2634,7 +2634,7 @@
 "ts": 1789766341.0,
 "price": 0.26555,
 "note": "거래량 폭증",
-"repeats": 10,
+"repeats": 11,
 "res": {
 "h24": {
 "r": -12.77,
@@ -10065,7 +10065,7 @@
 "cur_ts": 1794024000,
 "hi": 11.26,
 "lo": -39.74,
-"checked": 1794496663,
+"checked": 1794503877,
 "done": false
 },
 "stock|KR|141000|1791429485": {
@@ -10990,14 +10990,19 @@
 "r": -2.29,
 "hi": 63.74,
 "lo": -26.53
+},
+"h720": {
+"r": -30.92,
+"hi": 63.74,
+"lo": -41.79
 }
 },
-"cur": -12.21,
-"cur_ts": 1794189600,
+"cur": -33.21,
+"cur_ts": 1794506400,
 "hi": 63.74,
 "lo": -41.79,
-"checked": 1794187062,
-"done": false
+"checked": 1794503877,
+"done": true
 },
 "coin|binance|OPUSDT|1791919060": {
 "asset": "coin",
@@ -12946,7 +12951,7 @@
 "ts": 1792732768.0,
 "price": 0.006928,
 "note": "원인 미확인",
-"repeats": 9,
+"repeats": 10,
 "res": {
 "h24": {
 "r": -12.34,
@@ -13558,7 +13563,7 @@
 "ts": 1792963198.0,
 "price": 0.02476,
 "note": "우상향 점수 72.1",
-"repeats": 2,
+"repeats": 3,
 "res": {
 "h24": {
 "r": -3.07,
@@ -14306,7 +14311,7 @@
 "ts": 1793193590.0,
 "price": 409.94,
 "note": "우상향 점수 65.7",
-"repeats": 6,
+"repeats": 7,
 "res": {
 "h24": {
 "r": -1.18,
@@ -16153,13 +16158,18 @@
 "r": 26.81,
 "hi": 26.81,
 "lo": -8.74
+},
+"h168": {
+"r": 29.94,
+"hi": 34.72,
+"lo": -8.74
 }
 },
-"cur": 26.81,
-"cur_ts": 1793998800,
-"hi": 26.81,
+"cur": 25.36,
+"cur_ts": 1794517200,
+"hi": 34.72,
 "lo": -8.74,
-"checked": 1794158623,
+"checked": 1794503877,
 "done": false
 },
 "stock|KR|089860|1793927904": {
@@ -17044,7 +17054,7 @@
 "ts": 1794345455.0,
 "price": 0.6388,
 "note": "우상향 점수 66.2",
-"repeats": 3,
+"repeats": 4,
 "res": {
 "h24": {
 "r": 1.69,
@@ -17201,6 +17211,198 @@
 "hi": 8.22,
 "lo": -3.0,
 "checked": 1794482254,
+"done": false
+},
+"coin|bitget|MTXUSDT|1794410288": {
+"asset": "coin",
+"kind": "pump",
+"market": "bitget",
+"symbol": "MTXUSDT",
+"name": "MTX",
+"ts": 1794410288.0,
+"price": 2.49,
+"note": "거래소 상장",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -35.27,
+"hi": 120.88,
+"lo": -51.33
+}
+},
+"cur": -33.02,
+"cur_ts": 1794502800,
+"hi": 120.88,
+"lo": -51.33,
+"checked": 1794503877,
+"done": false
+},
+"coin|binance|OPGUSDT|1794410295": {
+"asset": "coin",
+"kind": "trend",
+"market": "binance",
+"symbol": "OPGUSDT",
+"name": "OPG",
+"ts": 1794410295.0,
+"price": 0.1533,
+"note": "우상향 점수 81.7",
+"repeats": 3,
+"res": {
+"h24": {
+"r": -8.09,
+"hi": 7.05,
+"lo": -14.35
+}
+},
+"cur": -9.39,
+"cur_ts": 1794506400,
+"hi": 7.05,
+"lo": -14.35,
+"checked": 1794503877,
+"done": false
+},
+"coin|binance|SOXLBUSDT|1794417469": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "SOXLBUSDT",
+"name": "SOXLB",
+"ts": 1794417469.0,
+"price": 68.69,
+"note": "뉴스",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -3.41,
+"hi": 1.14,
+"lo": -14.95
+}
+},
+"cur": -5.18,
+"cur_ts": 1794506400,
+"hi": 1.14,
+"lo": -14.95,
+"checked": 1794503877,
+"done": false
+},
+"coin|binance|AAOIBUSDT|1794417469": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "AAOIBUSDT",
+"name": "AAOIB",
+"ts": 1794417469.0,
+"price": 57.28,
+"note": "뉴스",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -4.56,
+"hi": 0.87,
+"lo": -11.57
+}
+},
+"cur": -5.8,
+"cur_ts": 1794506400,
+"hi": 0.87,
+"lo": -11.57,
+"checked": 1794503877,
+"done": false
+},
+"coin|binance|MUUBUSDT|1794417469": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "MUUBUSDT",
+"name": "MUUB",
+"ts": 1794417469.0,
+"price": 19.11,
+"note": "원인 미확인",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -7.69,
+"hi": 1.31,
+"lo": -14.18
+}
+},
+"cur": -8.58,
+"cur_ts": 1794506400,
+"hi": 1.31,
+"lo": -14.18,
+"checked": 1794503877,
+"done": false
+},
+"coin|binance|KORUBUSDT|1794417469": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "KORUBUSDT",
+"name": "KORUB",
+"ts": 1794417469.0,
+"price": 8.83,
+"note": "원인 미확인",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -8.04,
+"hi": 0.23,
+"lo": -13.7
+}
+},
+"cur": -9.06,
+"cur_ts": 1794506400,
+"hi": 0.23,
+"lo": -13.7,
+"checked": 1794503877,
+"done": false
+},
+"coin|binance|SNXXBUSDT|1794417469": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "SNXXBUSDT",
+"name": "SNXXB",
+"ts": 1794417469.0,
+"price": 4.55,
+"note": "ETF",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -10.11,
+"hi": 1.98,
+"lo": -24.4
+}
+},
+"cur": -11.65,
+"cur_ts": 1794506400,
+"hi": 1.98,
+"lo": -24.4,
+"checked": 1794503877,
+"done": false
+},
+"coin|binance|NIGHTUSDT|1794417475": {
+"asset": "coin",
+"kind": "trend",
+"market": "binance",
+"symbol": "NIGHTUSDT",
+"name": "NIGHT",
+"ts": 1794417475.0,
+"price": 0.04797,
+"note": "우상향 점수 70.6",
+"repeats": 2,
+"res": {
+"h24": {
+"r": -3.56,
+"hi": 0.63,
+"lo": -5.19
+}
+},
+"cur": -3.54,
+"cur_ts": 1794506400,
+"hi": 0.63,
+"lo": -5.19,
+"checked": 1794503877,
 "done": false
 }
 }
