@@ -251,3 +251,5 @@
 {"t": "trend", "ts": 1794503875, "symbol": "OPGUSDT", "base": "OPG", "price": 0.1388, "score": 81.2, "rs7": 26.9, "rs30": 18.7, "new": true}
 {"t": "trend", "ts": 1794503875, "symbol": "TSLABUSDT", "base": "TSLAB", "price": 391.12, "score": 77.3, "rs7": 20.7, "rs30": 20.9, "new": true}
 {"t": "trend", "ts": 1794503875, "symbol": "ETHFIUSDT", "base": "ETHFI", "price": 0.62, "score": 76.9, "rs7": 23.1, "rs30": 6.8, "new": true}
+{"t": "pump", "ts": 1794518289, "market": "binance", "symbol": "DODOUSDT", "base": "DODO", "price": 0.0287, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 3.2, "chg2h": 5.13, "chg24h": 23.76, "qvol": 5839581.420646, "vol_x": 0.5, "off_high": -0.62, "direction": "up", "tag": "뉴스", "tags": ["뉴스", "뉴스"], "conf": "높음", "headline": "DODO 급등 — 뉴스 재료", "news": "DODO token jumps 11.08% in an hour, extending 2... (Pluang)"}
+{"t": "trend", "ts": 1794518295, "symbol": "NIGHTUSDT", "base": "NIGHT", "price": 0.04528, "score": 82.8, "rs7": 23.9, "rs30": 18.7, "new": true}
