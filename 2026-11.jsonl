@@ -240,3 +240,4 @@
 {"t": "trend", "ts": 1794482254, "symbol": "ERAUSDT", "base": "ERA", "price": 0.095, "score": 95.3, "rs7": 53.1, "rs30": 69.9, "new": true}
 {"t": "trend", "ts": 1794482254, "symbol": "AMDBUSDT", "base": "AMDB", "price": 571.85, "score": 83.9, "rs7": 32.1, "rs30": 9.9, "new": true}
 {"t": "trend", "ts": 1794482254, "symbol": "KITEUSDT", "base": "KITE", "price": 0.1278, "score": 67.0, "rs7": 15.9, "rs30": 14.3, "new": true}
+{"t": "trend", "ts": 1794489482, "symbol": "AVGOBUSDT", "base": "AVGOB", "price": 346.09, "score": 79.7, "rs7": 22.7, "rs30": 11.1, "new": true}
