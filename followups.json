@@ -9524,7 +9524,7 @@
 "cur_ts": 1793894400,
 "hi": 11.06,
 "lo": -50.83,
-"checked": 1794475052,
+"checked": 1794482254,
 "done": false
 },
 "stock|US|CEG|1791299905": {
@@ -10065,7 +10065,7 @@
 "cur_ts": 1794024000,
 "hi": 11.26,
 "lo": -39.74,
-"checked": 1794475052,
+"checked": 1794482254,
 "done": false
 },
 "stock|KR|141000|1791429485": {
@@ -10155,7 +10155,7 @@
 "ts": 1791458257.0,
 "price": 0.0761,
 "note": "역프",
-"repeats": 23,
+"repeats": 24,
 "res": {
 "h24": {
 "r": -18.79,
@@ -17147,6 +17147,30 @@
 "hi": 2.42,
 "lo": -5.6,
 "checked": 1794467881,
+"done": false
+},
+"coin|binance|AMDBUSDT|1794388659": {
+"asset": "coin",
+"kind": "trend",
+"market": "binance",
+"symbol": "AMDBUSDT",
+"name": "AMDB",
+"ts": 1794388659.0,
+"price": 539.36,
+"note": "우상향 점수 68.0",
+"repeats": 3,
+"res": {
+"h24": {
+"r": 5.86,
+"hi": 8.22,
+"lo": -3.0
+}
+},
+"cur": 6.11,
+"cur_ts": 1794484800,
+"hi": 8.22,
+"lo": -3.0,
+"checked": 1794482254,
 "done": false
 }
 }

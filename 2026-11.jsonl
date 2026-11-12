@@ -237,3 +237,6 @@
 {"t": "trend", "ts": 1794460653, "symbol": "TSLABUSDT", "base": "TSLAB", "price": 386.04, "score": 65.9, "rs7": 11.7, "rs30": 16.6, "new": true}
 {"t": "stock", "ts": 1794460662, "market": "KR", "theme": "유리 기판", "leader": {"symbol": "452190", "name": "한빛레이저", "chg": 14.65, "price": 4500.0, "trade_value": 236.9, "mcap": 1076.0}, "catalyst": ["특징주, 한빛레이저-유리 기판 테마 상승세에 21.78% ↑"], "peers": [{"symbol": "204270", "name": "제이앤티씨", "chg": 13.11, "verdict": "overheated", "blocker": "대장주 무효 조건"}, {"symbol": "009150", "name": "삼성전기", "chg": -4.44, "verdict": "lagging", "blocker": "대장주 무효 조건"}], "calls": []}
 {"t": "trend", "ts": 1794467880, "symbol": "NIGHTUSDT", "base": "NIGHT", "price": 0.0468, "score": 77.8, "rs7": 20.8, "rs30": 18.1, "new": true}
+{"t": "trend", "ts": 1794482254, "symbol": "ERAUSDT", "base": "ERA", "price": 0.095, "score": 95.3, "rs7": 53.1, "rs30": 69.9, "new": true}
+{"t": "trend", "ts": 1794482254, "symbol": "AMDBUSDT", "base": "AMDB", "price": 571.85, "score": 83.9, "rs7": 32.1, "rs30": 9.9, "new": true}
+{"t": "trend", "ts": 1794482254, "symbol": "KITEUSDT", "base": "KITE", "price": 0.1278, "score": 67.0, "rs7": 15.9, "rs30": 14.3, "new": true}
