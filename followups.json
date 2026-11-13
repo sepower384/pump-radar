@@ -10065,7 +10065,7 @@
 "cur_ts": 1794024000,
 "hi": 11.26,
 "lo": -39.74,
-"checked": 1794525451,
+"checked": 1794532670,
 "done": false
 },
 "stock|KR|141000|1791429485": {
@@ -10155,7 +10155,7 @@
 "ts": 1791458257.0,
 "price": 0.0761,
 "note": "역프",
-"repeats": 24,
+"repeats": 25,
 "res": {
 "h24": {
 "r": -18.79,
@@ -15982,7 +15982,7 @@
 "ts": 1793855888.0,
 "price": 20750.0,
 "note": "귀금속(금/은) 관찰 콜",
-"repeats": 1,
+"repeats": 2,
 "res": {
 "h24": {
 "r": 1.69,
@@ -17228,7 +17228,7 @@
 "ts": 1794388659.0,
 "price": 539.36,
 "note": "우상향 점수 68.0",
-"repeats": 3,
+"repeats": 4,
 "res": {
 "h24": {
 "r": 5.86,
@@ -17457,6 +17457,54 @@
 "hi": -1.07,
 "lo": -18.97,
 "checked": 1794518297,
+"done": false
+},
+"coin|binance|AVGOBUSDT|1794439092": {
+"asset": "coin",
+"kind": "trend",
+"market": "binance",
+"symbol": "AVGOBUSDT",
+"name": "AVGOB",
+"ts": 1794439092.0,
+"price": 352.51,
+"note": "우상향 점수 71.0",
+"repeats": 2,
+"res": {
+"h24": {
+"r": 3.37,
+"hi": 4.96,
+"lo": -2.06
+}
+},
+"cur": 4.19,
+"cur_ts": 1794535200,
+"hi": 4.96,
+"lo": -2.06,
+"checked": 1794532670,
+"done": false
+},
+"stock|KR|035900|1794446258": {
+"asset": "stock",
+"kind": "stock",
+"market": "KR",
+"symbol": "035900",
+"name": "JYP Ent.",
+"ts": 1794446258.0,
+"price": 46300.0,
+"note": "음원/음반 대장주",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -2.7,
+"hi": 2.81,
+"lo": -6.91
+}
+},
+"cur": -2.16,
+"cur_ts": 1794551400,
+"hi": 2.81,
+"lo": -6.91,
+"checked": 1794532670,
 "done": false
 }
 }

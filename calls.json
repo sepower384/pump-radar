@@ -1276,5 +1276,23 @@
 "result_pct": 3.29,
 "resolved_ts": 1794417475,
 "reported": 1
+},
+{
+"id": 73,
+"ts": 1794532670,
+"market": "KR",
+"symbol": "124500",
+"name": "아이티센글로벌",
+"theme": "퓨리오사AI",
+"leader": "DSC인베스트먼트",
+"ref_price": 19030.0,
+"target_pct": 2.0,
+"deadline": 1794810600,
+"status": "pending",
+"best_price": 19030.0,
+"last_price": null,
+"result_pct": null,
+"resolved_ts": null,
+"reported": 0
 }
 ]
