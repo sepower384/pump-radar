@@ -290,3 +290,4 @@
 {"t": "trend", "ts": 1794597489, "symbol": "CBRSBUSDT", "base": "CBRSB", "price": 109.95, "score": 75.3, "rs7": 34.4, "rs30": -4.9, "new": true}
 {"t": "trend", "ts": 1794597489, "symbol": "牛来USDT", "base": "牛来", "price": 0.06386, "score": 72.7, "rs7": 29.6, "rs30": 8.5, "new": true}
 {"t": "trend", "ts": 1794597489, "symbol": "SHELLUSDT", "base": "SHELL", "price": 0.03496, "score": 70.3, "rs7": 80.5, "rs30": 92.7, "new": true}
+{"t": "trend", "ts": 1794611854, "symbol": "BEBUSDT", "base": "BEB", "price": 187.39, "score": 70.5, "rs7": 20.1, "rs30": -3.3, "new": true}
