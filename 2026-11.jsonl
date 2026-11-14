@@ -293,3 +293,6 @@
 {"t": "trend", "ts": 1794611854, "symbol": "BEBUSDT", "base": "BEB", "price": 187.39, "score": 70.5, "rs7": 20.1, "rs30": -3.3, "new": true}
 {"t": "pump", "ts": 1794619051, "market": "binance", "symbol": "BERAUSDT", "base": "BERA", "price": 0.1313, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 7.8, "chg2h": 12.22, "chg24h": 29.61, "qvol": 7605208.4949006, "vol_x": 1.7, "off_high": -2.31, "direction": "up", "tag": "뉴스", "tags": ["뉴스"], "conf": "높음", "headline": "Berachain 급등 — 뉴스 재료", "news": "StakeStone Berachain Vault Token price today, BERASTONE to USD live price, market cap and chart (The Block)"}
 {"t": "trend", "ts": 1794619058, "symbol": "NIGHTUSDT", "base": "NIGHT", "price": 0.0468, "score": 91.7, "rs7": 33.3, "rs30": 33.2, "new": true}
+{"t": "trend", "ts": 1794626283, "symbol": "MUBUSDT", "base": "MUB", "price": 761.83, "score": 77.9, "rs7": 24.2, "rs30": 5.2, "new": true}
+{"t": "trend", "ts": 1794626283, "symbol": "QQQBUSDT", "base": "QQQB", "price": 674.9, "score": 72.4, "rs7": 15.7, "rs30": 13.3, "new": true}
+{"t": "trend", "ts": 1794626283, "symbol": "TQQQBUSDT", "base": "TQQQB", "price": 56.3, "score": 72.1, "rs7": 20.9, "rs30": -4.9, "new": true}
