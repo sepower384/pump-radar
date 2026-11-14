@@ -304,3 +304,7 @@
 {"t": "trend", "ts": 1794647887, "symbol": "DODOUSDT", "base": "DODO", "price": 0.03241, "score": 92.9, "rs7": 65.4, "rs30": 90.5, "new": true}
 {"t": "trend", "ts": 1794647887, "symbol": "SHELLUSDT", "base": "SHELL", "price": 0.03388, "score": 76.3, "rs7": 82.6, "rs30": 88.3, "new": true}
 {"t": "pump", "ts": 1794655056, "market": "binance", "symbol": "DODOUSDT", "base": "DODO", "price": 0.03508, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 1.89, "chg2h": 9.69, "chg24h": 20.14, "qvol": 7249267.870194, "vol_x": 0.6, "off_high": -1.32, "direction": "up", "tag": "뉴스", "tags": ["뉴스", "뉴스"], "conf": "높음", "headline": "DODO 급등 — 뉴스 재료", "news": "DODO token jumps 10.33% in one hour, up 31.58% in 24 hours amid mixed crypto market. (Pluang)"}
+{"t": "pump", "ts": 1794662258, "market": "binance", "symbol": "SOPHUSDT", "base": "SOPH", "price": 0.00259, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 13.04, "chg2h": 35.42, "chg24h": 43.89, "qvol": 16751093.22147, "vol_x": 1.3, "off_high": -0.38, "direction": "up", "tag": "국내 매수세", "tags": ["국내 매수세"], "conf": "낮음", "headline": "Sophon 급등 — 한국에서 먼저 매수", "news": ""}
+{"t": "trend", "ts": 1794662263, "symbol": "NIGHTUSDT", "base": "NIGHT", "price": 0.04826, "score": 93.7, "rs7": 37.4, "rs30": 39.6, "new": true}
+{"t": "trend", "ts": 1794662263, "symbol": "SOPHUSDT", "base": "SOPH", "price": 0.00258, "score": 81.8, "rs7": 121.9, "rs30": 28.9, "new": true}
+{"t": "trend", "ts": 1794662263, "symbol": "WLFIUSDT", "base": "WLFI", "price": 0.0479, "score": 71.1, "rs7": 17.7, "rs30": 3.7, "new": true}

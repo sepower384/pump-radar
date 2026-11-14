@@ -13147,7 +13147,7 @@
 "ts": 1792754367.0,
 "price": 0.00215,
 "note": "국내 매수세",
-"repeats": 5,
+"repeats": 7,
 "res": {
 "h24": {
 "r": -27.44,
@@ -17605,7 +17605,7 @@
 "ts": 1794417475.0,
 "price": 0.04797,
 "note": "우상향 점수 70.6",
-"repeats": 5,
+"repeats": 6,
 "res": {
 "h24": {
 "r": -3.56,
@@ -17954,6 +17954,30 @@
 "hi": 3.07,
 "lo": -13.26,
 "checked": 1794647888,
+"done": false
+},
+"coin|binance|TQQQBUSDT|1794568686": {
+"asset": "coin",
+"kind": "trend",
+"market": "binance",
+"symbol": "TQQQBUSDT",
+"name": "TQQQB",
+"ts": 1794568686.0,
+"price": 60.16,
+"note": "우상향 점수 75.7",
+"repeats": 2,
+"res": {
+"h24": {
+"r": -6.0,
+"hi": 1.73,
+"lo": -7.61
+}
+},
+"cur": -6.42,
+"cur_ts": 1794664800,
+"hi": 1.73,
+"lo": -7.61,
+"checked": 1794662264,
 "done": false
 }
 }
