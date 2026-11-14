@@ -314,3 +314,5 @@
 {"t": "trend", "ts": 1794669487, "symbol": "UUSDT", "base": "U", "price": 1.0002, "score": 72.1, "rs7": 15.4, "rs30": 25.5, "new": true}
 {"t": "trend", "ts": 1794669487, "symbol": "RWUSDUSDT", "base": "RWUSD", "price": 0.9999, "score": 72.1, "rs7": 15.4, "rs30": 25.5, "new": true}
 {"t": "trend", "ts": 1794683852, "symbol": "GOOGLBUSDT", "base": "GOOGLB", "price": 290.17, "score": 74.7, "rs7": 17.7, "rs30": 4.4, "new": true}
+{"t": "trend", "ts": 1794691192, "symbol": "DODOUSDT", "base": "DODO", "price": 0.03134, "score": 91.7, "rs7": 67.9, "rs30": 91.2, "new": true}
+{"t": "trend", "ts": 1794691192, "symbol": "SPCXBUSDT", "base": "SPCXB", "price": 133.75, "score": 71.3, "rs7": 16.6, "rs30": 11.4, "new": true}
