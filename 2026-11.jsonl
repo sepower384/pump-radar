@@ -298,3 +298,5 @@
 {"t": "trend", "ts": 1794626283, "symbol": "TQQQBUSDT", "base": "TQQQB", "price": 56.3, "score": 72.1, "rs7": 20.9, "rs30": -4.9, "new": true}
 {"t": "trend", "ts": 1794633453, "symbol": "ERAUSDT", "base": "ERA", "price": 0.0767, "score": 75.8, "rs7": 20.6, "rs30": 61.3, "new": true}
 {"t": "trend", "ts": 1794633453, "symbol": "GOOGLBUSDT", "base": "GOOGLB", "price": 293.18, "score": 70.9, "rs7": 16.1, "rs30": 2.5, "new": true}
+{"t": "pump", "ts": 1794640651, "market": "bitget", "symbol": "MTXUSDT", "base": "MTX", "price": 1.8826, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 25.23, "chg2h": 10.74, "chg24h": 69.62, "qvol": 6712161.555559, "vol_x": 922.0, "off_high": -4.92, "direction": "up", "tag": "거래량 폭증", "tags": ["거래량 폭증"], "conf": "낮음", "headline": "Matrix 급등 — 매수세 몰림", "news": ""}
+{"t": "trend", "ts": 1794640657, "symbol": "SPCXBUSDT", "base": "SPCXB", "price": 136.31, "score": 68.2, "rs7": 14.1, "rs30": 10.4, "new": true}
