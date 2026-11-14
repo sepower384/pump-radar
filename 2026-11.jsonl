@@ -296,3 +296,5 @@
 {"t": "trend", "ts": 1794626283, "symbol": "MUBUSDT", "base": "MUB", "price": 761.83, "score": 77.9, "rs7": 24.2, "rs30": 5.2, "new": true}
 {"t": "trend", "ts": 1794626283, "symbol": "QQQBUSDT", "base": "QQQB", "price": 674.9, "score": 72.4, "rs7": 15.7, "rs30": 13.3, "new": true}
 {"t": "trend", "ts": 1794626283, "symbol": "TQQQBUSDT", "base": "TQQQB", "price": 56.3, "score": 72.1, "rs7": 20.9, "rs30": -4.9, "new": true}
+{"t": "trend", "ts": 1794633453, "symbol": "ERAUSDT", "base": "ERA", "price": 0.0767, "score": 75.8, "rs7": 20.6, "rs30": 61.3, "new": true}
+{"t": "trend", "ts": 1794633453, "symbol": "GOOGLBUSDT", "base": "GOOGLB", "price": 293.18, "score": 70.9, "rs7": 16.1, "rs30": 2.5, "new": true}
