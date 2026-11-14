@@ -10065,7 +10065,7 @@
 "cur_ts": 1794024000,
 "hi": 11.26,
 "lo": -39.74,
-"checked": 1794611858,
+"checked": 1794619060,
 "done": false
 },
 "stock|KR|141000|1791429485": {
@@ -17565,7 +17565,7 @@
 "ts": 1794417475.0,
 "price": 0.04797,
 "note": "우상향 점수 70.6",
-"repeats": 4,
+"repeats": 5,
 "res": {
 "h24": {
 "r": -3.56,
@@ -17770,6 +17770,30 @@
 "hi": 33.56,
 "lo": -13.66,
 "checked": 1794597492,
+"done": false
+},
+"coin|binance|MUBUSDT|1794532659": {
+"asset": "coin",
+"kind": "trend",
+"market": "binance",
+"symbol": "MUBUSDT",
+"name": "MUB",
+"ts": 1794532659.0,
+"price": 818.6,
+"note": "우상향 점수 76.5",
+"repeats": 2,
+"res": {
+"h24": {
+"r": -6.91,
+"hi": -0.2,
+"lo": -8.25
+}
+},
+"cur": -6.68,
+"cur_ts": 1794621600,
+"hi": -0.2,
+"lo": -8.25,
+"checked": 1794619060,
 "done": false
 }
 }

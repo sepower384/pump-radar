@@ -291,3 +291,5 @@
 {"t": "trend", "ts": 1794597489, "symbol": "牛来USDT", "base": "牛来", "price": 0.06386, "score": 72.7, "rs7": 29.6, "rs30": 8.5, "new": true}
 {"t": "trend", "ts": 1794597489, "symbol": "SHELLUSDT", "base": "SHELL", "price": 0.03496, "score": 70.3, "rs7": 80.5, "rs30": 92.7, "new": true}
 {"t": "trend", "ts": 1794611854, "symbol": "BEBUSDT", "base": "BEB", "price": 187.39, "score": 70.5, "rs7": 20.1, "rs30": -3.3, "new": true}
+{"t": "pump", "ts": 1794619051, "market": "binance", "symbol": "BERAUSDT", "base": "BERA", "price": 0.1313, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 7.8, "chg2h": 12.22, "chg24h": 29.61, "qvol": 7605208.4949006, "vol_x": 1.7, "off_high": -2.31, "direction": "up", "tag": "뉴스", "tags": ["뉴스"], "conf": "높음", "headline": "Berachain 급등 — 뉴스 재료", "news": "StakeStone Berachain Vault Token price today, BERASTONE to USD live price, market cap and chart (The Block)"}
+{"t": "trend", "ts": 1794619058, "symbol": "NIGHTUSDT", "base": "NIGHT", "price": 0.0468, "score": 91.7, "rs7": 33.3, "rs30": 33.2, "new": true}
