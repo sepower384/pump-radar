@@ -308,3 +308,8 @@
 {"t": "trend", "ts": 1794662263, "symbol": "NIGHTUSDT", "base": "NIGHT", "price": 0.04826, "score": 93.7, "rs7": 37.4, "rs30": 39.6, "new": true}
 {"t": "trend", "ts": 1794662263, "symbol": "SOPHUSDT", "base": "SOPH", "price": 0.00258, "score": 81.8, "rs7": 121.9, "rs30": 28.9, "new": true}
 {"t": "trend", "ts": 1794662263, "symbol": "WLFIUSDT", "base": "WLFI", "price": 0.0479, "score": 71.1, "rs7": 17.7, "rs30": 3.7, "new": true}
+{"t": "pump", "ts": 1794669482, "market": "bitget", "symbol": "EVAAUSDT", "base": "EVAA", "price": 1.7929, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 38.93, "chg2h": 60.72, "chg24h": 66.39, "qvol": 2796135.911, "vol_x": 1.9, "off_high": -10.73, "direction": "up", "tag": "원인 미확인", "tags": ["원인 미확인"], "conf": "낮음", "headline": "EVAA 급등 — 이유 불명 · 큰손 주도 의심", "news": ""}
+{"t": "trend", "ts": 1794669487, "symbol": "MUBUSDT", "base": "MUB", "price": 762.78, "score": 80.5, "rs7": 27.9, "rs30": 2.7, "new": true}
+{"t": "trend", "ts": 1794669487, "symbol": "QQQBUSDT", "base": "QQQB", "price": 673.5, "score": 77.1, "rs7": 18.4, "rs30": 16.0, "new": true}
+{"t": "trend", "ts": 1794669487, "symbol": "UUSDT", "base": "U", "price": 1.0002, "score": 72.1, "rs7": 15.4, "rs30": 25.5, "new": true}
+{"t": "trend", "ts": 1794669487, "symbol": "RWUSDUSDT", "base": "RWUSD", "price": 0.9999, "score": 72.1, "rs7": 15.4, "rs30": 25.5, "new": true}

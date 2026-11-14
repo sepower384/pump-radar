@@ -11499,11 +11499,11 @@
 "lo": -36.82
 }
 },
-"cur": -53.98,
-"cur_ts": 1794182400,
+"cur": -58.41,
+"cur_ts": 1794657600,
 "hi": 1.89,
-"lo": -54.53,
-"checked": 1794187062,
+"lo": -60.71,
+"checked": 1794669489,
 "done": false
 },
 "stock|US|DNN|1792077492": {
@@ -13963,7 +13963,7 @@
 "ts": 1793114361.0,
 "price": 0.6796,
 "note": "거래량 폭증",
-"repeats": 8,
+"repeats": 9,
 "res": {
 "h24": {
 "r": 104.65,
@@ -17443,13 +17443,18 @@
 "r": -35.27,
 "hi": 120.88,
 "lo": -51.33
+},
+"h72": {
+"r": -38.09,
+"hi": 120.88,
+"lo": -59.84
 }
 },
-"cur": -33.02,
-"cur_ts": 1794502800,
+"cur": -38.09,
+"cur_ts": 1794668400,
 "hi": 120.88,
-"lo": -51.33,
-"checked": 1794503877,
+"lo": -59.84,
+"checked": 1794669489,
 "done": false
 },
 "coin|binance|OPGUSDT|1794410295": {
@@ -17821,7 +17826,7 @@
 "ts": 1794532659.0,
 "price": 818.6,
 "note": "우상향 점수 76.5",
-"repeats": 3,
+"repeats": 4,
 "res": {
 "h24": {
 "r": -6.91,
@@ -17978,6 +17983,78 @@
 "hi": 1.73,
 "lo": -7.61,
 "checked": 1794662264,
+"done": false
+},
+"coin|binance|ICPUSDT|1794583073": {
+"asset": "coin",
+"kind": "trend",
+"market": "binance",
+"symbol": "ICPUSDT",
+"name": "ICP",
+"ts": 1794583073.0,
+"price": 2.63,
+"note": "우상향 점수 68.4",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -11.52,
+"hi": 0.23,
+"lo": -11.94
+}
+},
+"cur": -11.67,
+"cur_ts": 1794672000,
+"hi": 0.23,
+"lo": -11.94,
+"checked": 1794669489,
+"done": false
+},
+"stock|US|HAWK|1794583083": {
+"asset": "stock",
+"kind": "stock",
+"market": "US",
+"symbol": "HAWK",
+"name": "HawkEye 360, Inc.",
+"ts": 1794583083.0,
+"price": 17.15,
+"note": "드론·방산 대장주",
+"repeats": 1,
+"res": {
+"h24": {
+"r": 5.89,
+"hi": 6.3,
+"lo": -6.36
+}
+},
+"cur": 5.89,
+"cur_ts": 1794603600,
+"hi": 6.3,
+"lo": -6.36,
+"checked": 1794669489,
+"done": false
+},
+"stock|US|CBRS|1794583083": {
+"asset": "stock",
+"kind": "stock",
+"market": "US",
+"symbol": "CBRS",
+"name": "Cerebras Systems Inc.",
+"ts": 1794583083.0,
+"price": 107.95,
+"note": "AI 반도체 대장주",
+"repeats": 1,
+"res": {
+"h24": {
+"r": 0.71,
+"hi": 11.57,
+"lo": -6.27
+}
+},
+"cur": 0.71,
+"cur_ts": 1794603600,
+"hi": 11.57,
+"lo": -6.27,
+"checked": 1794669489,
 "done": false
 }
 }
