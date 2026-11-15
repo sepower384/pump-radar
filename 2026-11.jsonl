@@ -339,3 +339,4 @@
 {"t": "trend", "ts": 1794756002, "symbol": "JSTUSDT", "base": "JST", "price": 0.14417, "score": 82.5, "rs7": 18.7, "rs30": 34.0, "new": true}
 {"t": "trend", "ts": 1794756002, "symbol": "QQQBUSDT", "base": "QQQB", "price": 670.59, "score": 80.3, "rs7": 19.9, "rs30": 18.8, "new": true}
 {"t": "trend", "ts": 1794756002, "symbol": "RWUSDUSDT", "base": "RWUSD", "price": 1.0, "score": 77.5, "rs7": 17.4, "rs30": 26.0, "new": true}
+{"t": "trend", "ts": 1794763214, "symbol": "FFUSDT", "base": "FF", "price": 0.1034, "score": 86.4, "rs7": 41.2, "rs30": 21.3, "new": true}
