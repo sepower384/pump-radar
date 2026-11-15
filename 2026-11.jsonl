@@ -342,3 +342,7 @@
 {"t": "trend", "ts": 1794763214, "symbol": "FFUSDT", "base": "FF", "price": 0.1034, "score": 86.4, "rs7": 41.2, "rs30": 21.3, "new": true}
 {"t": "pump", "ts": 1794770372, "market": "binance", "symbol": "RAREUSDT", "base": "RARE", "price": 0.01239, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 47.27, "chg2h": 46.92, "chg24h": 45.77, "qvol": 1726889.357686, "vol_x": 521.9, "off_high": -4.62, "direction": "up", "tag": "거래량 폭증", "tags": ["거래량 폭증"], "conf": "낮음", "headline": "RARE 급등 — 매수세 몰림", "news": ""}
 {"t": "trend", "ts": 1794770391, "symbol": "KITEUSDT", "base": "KITE", "price": 0.1403, "score": 96.1, "rs7": 52.6, "rs30": 44.9, "new": true}
+{"t": "pump", "ts": 1794777595, "market": "bitget", "symbol": "EVAAUSDT", "base": "EVAA", "price": 2.7247, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 1.31, "chg2h": 4.66, "chg24h": 78.82, "qvol": 7086268.787779, "vol_x": 0.4, "off_high": -4.4, "direction": "up", "tag": "원인 미확인", "tags": ["원인 미확인"], "conf": "낮음", "headline": "EVAA Protocol 급등 — 이유 불명 · 큰손 주도 의심", "news": ""}
+{"t": "trend", "ts": 1794777601, "symbol": "GOOGLBUSDT", "base": "GOOGLB", "price": 292.33, "score": 77.5, "rs7": 19.0, "rs30": 8.0, "new": true}
+{"t": "trend", "ts": 1794777601, "symbol": "UUSDT", "base": "U", "price": 1.0001, "score": 76.2, "rs7": 15.1, "rs30": 25.5, "new": true}
+{"t": "trend", "ts": 1794777601, "symbol": "SPCXBUSDT", "base": "SPCXB", "price": 139.21, "score": 75.0, "rs7": 18.8, "rs30": 19.7, "new": true}
