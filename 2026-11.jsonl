@@ -346,3 +346,5 @@
 {"t": "trend", "ts": 1794777601, "symbol": "GOOGLBUSDT", "base": "GOOGLB", "price": 292.33, "score": 77.5, "rs7": 19.0, "rs30": 8.0, "new": true}
 {"t": "trend", "ts": 1794777601, "symbol": "UUSDT", "base": "U", "price": 1.0001, "score": 76.2, "rs7": 15.1, "rs30": 25.5, "new": true}
 {"t": "trend", "ts": 1794777601, "symbol": "SPCXBUSDT", "base": "SPCXB", "price": 139.21, "score": 75.0, "rs7": 18.8, "rs30": 19.7, "new": true}
+{"t": "trend", "ts": 1794792004, "symbol": "TQQQBUSDT", "base": "TQQQB", "price": 57.32, "score": 77.7, "rs7": 24.9, "rs30": 5.7, "new": true}
+{"t": "stock", "ts": 1794792013, "market": "KR", "theme": "스마트카(SMART CAR)", "leader": {"symbol": "053450", "name": "세코닉스", "chg": 29.83, "price": 3460.0, "trade_value": 53.3, "mcap": 512.0}, "catalyst": ["'AI 컨닝' 방지 대책에 지슨 '上'…세코닉스·나무가도 급등"], "peers": [{"symbol": "012330", "name": "현대모비스", "chg": 0.56, "verdict": "lagging", "blocker": "대장주보다 덩치가 너무 큼"}, {"symbol": "011070", "name": "LG이노텍", "chg": -1.39, "verdict": "lagging", "blocker": "흐름 이탈(하락)"}], "calls": []}
