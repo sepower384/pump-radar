@@ -361,3 +361,5 @@
 {"t": "trend", "ts": 1794820808, "symbol": "KITEUSDT", "base": "KITE", "price": 0.1323, "score": 91.4, "rs7": 37.0, "rs30": 43.2, "new": true}
 {"t": "trend", "ts": 1794820808, "symbol": "UUSDT", "base": "U", "price": 1.0002, "score": 79.2, "rs7": 15.7, "rs30": 26.6, "new": true}
 {"t": "trend", "ts": 1794820808, "symbol": "GOOGLBUSDT", "base": "GOOGLB", "price": 294.63, "score": 78.3, "rs7": 17.6, "rs30": 9.9, "new": true}
+{"t": "pump", "ts": 1794835193, "market": "binance", "symbol": "RAREUSDT", "base": "RARE", "price": 0.01701, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 8.07, "chg2h": 12.2, "chg24h": 96.42, "qvol": 22297972.577631, "vol_x": 2.5, "off_high": -2.69, "direction": "up", "tag": "원인 미확인", "tags": ["원인 미확인"], "conf": "낮음", "headline": "RARE 급등 — 이유 불명 · 큰손 주도 의심", "news": ""}
+{"t": "trend", "ts": 1794835200, "symbol": "RAREUSDT", "base": "RARE", "price": 0.01709, "score": 80.4, "rs7": 79.3, "rs30": 55.9, "new": true}
