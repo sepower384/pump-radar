@@ -409,3 +409,5 @@
 {"t": "trend", "ts": 1794943227, "symbol": "NIGHTUSDT", "base": "NIGHT", "price": 0.04481, "score": 82.8, "rs7": 24.4, "rs30": 44.9, "new": true}
 {"t": "trend", "ts": 1794943227, "symbol": "RWUSDUSDT", "base": "RWUSD", "price": 0.9998, "score": 77.7, "rs7": 15.2, "rs30": 28.6, "new": true}
 {"t": "trend", "ts": 1794943227, "symbol": "TRXUSDT", "base": "TRX", "price": 0.3072, "score": 67.3, "rs7": 11.3, "rs30": 18.8, "new": true}
+{"t": "trend", "ts": 1794950399, "symbol": "SPCXBUSDT", "base": "SPCXB", "price": 141.66, "score": 71.1, "rs7": 13.5, "rs30": 22.9, "new": true}
+{"t": "trend", "ts": 1794950399, "symbol": "LUNCUSDT", "base": "LUNC", "price": 4.105e-05, "score": 68.7, "rs7": 21.1, "rs30": 14.3, "new": true}
