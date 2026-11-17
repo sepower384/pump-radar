@@ -393,3 +393,5 @@
 {"t": "trend", "ts": 1794892826, "symbol": "QQQBUSDT", "base": "QQQB", "price": 664.45, "score": 69.6, "rs7": 12.9, "rs30": 18.5, "new": true}
 {"t": "trend", "ts": 1794892826, "symbol": "TRXUSDT", "base": "TRX", "price": 0.3064, "score": 65.3, "rs7": 10.7, "rs30": 16.3, "new": true}
 {"t": "stock", "ts": 1794892837, "market": "KR", "theme": "보안주(물리)", "leader": {"symbol": "446840", "name": "지슨", "chg": 29.96, "price": 6030.0, "trade_value": 292.3, "mcap": 664.0}, "catalyst": ["지슨 20% 폭등·나무가 8% 급락…AI 부정행위 수혜주 희비", "AI 부정행위 논란에 지슨 연이틀 ‘급등’…카메라株는 급락[이런국장 저런주식]"], "peers": [{"symbol": "340810", "name": "시선AI", "chg": 12.03, "verdict": "following", "blocker": "테마 힘 약함"}, {"symbol": "012750", "name": "에스원", "chg": 1.19, "verdict": "lagging", "blocker": "테마 힘 약함"}], "calls": []}
+{"t": "trend", "ts": 1794900012, "symbol": "RAREUSDT", "base": "RARE", "price": 0.01498, "score": 74.3, "rs7": 60.9, "rs30": 40.6, "new": true}
+{"t": "trend", "ts": 1794900012, "symbol": "SPCXBUSDT", "base": "SPCXB", "price": 137.84, "score": 67.8, "rs7": 12.7, "rs30": 21.0, "new": true}
