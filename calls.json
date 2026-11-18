@@ -1330,5 +1330,23 @@
 "result_pct": 7.74,
 "resolved_ts": 1794892826,
 "reported": 1
+},
+{
+"id": 76,
+"ts": 1794964796,
+"market": "KR",
+"symbol": "218410",
+"name": "RFHIC",
+"theme": "광통신(광케이블/광섬유 등)",
+"leader": "성호전자",
+"ref_price": 56700.0,
+"target_pct": 2.0,
+"deadline": 1795069800,
+"status": "pending",
+"best_price": 56700.0,
+"last_price": null,
+"result_pct": null,
+"resolved_ts": null,
+"reported": 0
 }
 ]
