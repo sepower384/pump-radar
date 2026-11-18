@@ -448,3 +448,6 @@
 {"t": "trend", "ts": 1795036794, "symbol": "MEGAUSDT", "base": "MEGA", "price": 0.05427, "score": 98.1, "rs7": 42.4, "rs30": 62.8, "new": true}
 {"t": "trend", "ts": 1795036794, "symbol": "MMTUSDT", "base": "MMT", "price": 0.2411, "score": 86.8, "rs7": 139.2, "rs30": 133.4, "new": true}
 {"t": "trend", "ts": 1795036794, "symbol": "ZKCUSDT", "base": "ZKC", "price": 0.0319, "score": 71.7, "rs7": 43.9, "rs30": 24.9, "new": true}
+{"t": "trend", "ts": 1795043977, "symbol": "SENTUSDT", "base": "SENT", "price": 0.02053, "score": 89.9, "rs7": 51.9, "rs30": 21.9, "new": true}
+{"t": "trend", "ts": 1795043977, "symbol": "SPCXBUSDT", "base": "SPCXB", "price": 144.18, "score": 83.0, "rs7": 24.0, "rs30": 27.9, "new": true}
+{"t": "trend", "ts": 1795043977, "symbol": "RWUSDUSDT", "base": "RWUSD", "price": 1.0001, "score": 76.0, "rs7": 18.4, "rs30": 31.3, "new": true}
