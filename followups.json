@@ -11503,7 +11503,7 @@
 "cur_ts": 1794672000,
 "hi": 1.89,
 "lo": -60.71,
-"checked": 1794979185,
+"checked": 1794986390,
 "done": false
 },
 "stock|US|DNN|1792077492": {
@@ -11966,7 +11966,7 @@
 "cur_ts": 1794758400,
 "hi": 14.08,
 "lo": -47.67,
-"checked": 1794979185,
+"checked": 1794986390,
 "done": false
 },
 "stock|KR|010580|1792372662": {
@@ -18658,13 +18658,18 @@
 "r": 9.83,
 "hi": 10.92,
 "lo": -8.57
+},
+"h72": {
+"r": 33.49,
+"hi": 35.07,
+"lo": -8.57
 }
 },
-"cur": 9.83,
-"cur_ts": 1794805200,
-"hi": 10.92,
+"cur": 44.34,
+"cur_ts": 1794985200,
+"hi": 52.15,
 "lo": -8.57,
-"checked": 1794806412,
+"checked": 1794986390,
 "done": false
 },
 "coin|binance|GLMRUSDT|1794755996": {
@@ -18929,6 +18934,78 @@
 "hi": 19.77,
 "lo": -8.31,
 "checked": 1794972054,
+"done": false
+},
+"coin|bitget|CROSSUSDT|1794892808": {
+"asset": "coin",
+"kind": "pump",
+"market": "bitget",
+"symbol": "CROSSUSDT",
+"name": "CROSS",
+"ts": 1794892808.0,
+"price": 0.153047,
+"note": "뉴스",
+"repeats": 1,
+"res": {
+"h24": {
+"r": 2.04,
+"hi": 6.84,
+"lo": -8.39
+}
+},
+"cur": 5.19,
+"cur_ts": 1794985200,
+"hi": 10.33,
+"lo": -8.39,
+"checked": 1794986390,
+"done": false
+},
+"coin|binance|TRXUSDT|1794892826": {
+"asset": "coin",
+"kind": "trend",
+"market": "binance",
+"symbol": "TRXUSDT",
+"name": "TRX",
+"ts": 1794892826.0,
+"price": 0.3064,
+"note": "우상향 점수 65.3",
+"repeats": 2,
+"res": {
+"h24": {
+"r": 0.62,
+"hi": 0.75,
+"lo": -0.33
+}
+},
+"cur": 1.24,
+"cur_ts": 1794988800,
+"hi": 1.24,
+"lo": -0.33,
+"checked": 1794986390,
+"done": false
+},
+"stock|KR|446840|1794892837": {
+"asset": "stock",
+"kind": "stock",
+"market": "KR",
+"symbol": "446840",
+"name": "지슨",
+"ts": 1794892837.0,
+"price": 6030.0,
+"note": "보안주(물리) 대장주",
+"repeats": 1,
+"res": {
+"h24": {
+"r": 0.0,
+"hi": 0.0,
+"lo": -12.77
+}
+},
+"cur": -8.96,
+"cur_ts": 1794983400,
+"hi": 5.31,
+"lo": -16.75,
+"checked": 1794986390,
 "done": false
 }
 }
