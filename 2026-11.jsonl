@@ -438,3 +438,5 @@
 {"t": "trend", "ts": 1795000776, "symbol": "TRXUSDT", "base": "TRX", "price": 0.3097, "score": 66.5, "rs7": 12.5, "rs30": 19.4, "new": true}
 {"t": "trend", "ts": 1795007997, "symbol": "UUSDT", "base": "U", "price": 1.0, "score": 73.2, "rs7": 15.4, "rs30": 27.8, "new": true}
 {"t": "trend", "ts": 1795007997, "symbol": "SOXSBUSDT", "base": "SOXSB", "price": 56.13, "score": 70.1, "rs7": 47.3, "rs30": 53.8, "new": true}
+{"t": "pump", "ts": 1795015178, "market": "binance", "symbol": "ZILUSDT", "base": "ZIL", "price": 0.001212, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 15.8, "chg2h": 16.25, "chg24h": 35.12, "qvol": 6161884.1906385, "vol_x": 5.6, "off_high": -7.36, "direction": "up", "tag": "뉴스", "tags": ["뉴스", "거래량 폭증"], "conf": "높음", "headline": "Zilliqa 급등 — 뉴스 재료", "news": "ZIL Jumps 10.03% in 60 Minutes Amid Crypto Market Shift (Coinfomania)"}
+{"t": "trend", "ts": 1795015184, "symbol": "SHELLUSDT", "base": "SHELL", "price": 0.02755, "score": 71.2, "rs7": 59.3, "rs30": 66.5, "new": true}
