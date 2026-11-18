@@ -436,3 +436,5 @@
 {"t": "pump", "ts": 1795000770, "market": "bitget", "symbol": "NESUSDT", "base": "NES", "price": 0.23364, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 3.36, "chg2h": 1.02, "chg24h": 24.05, "qvol": 1631085.0988324, "vol_x": 0.2, "off_high": -8.71, "direction": "up", "tag": "원인 미확인", "tags": ["원인 미확인"], "conf": "낮음", "headline": "Nesa 급등 — 이유 불명 · 큰손 주도 의심", "news": ""}
 {"t": "trend", "ts": 1795000776, "symbol": "NIGHTUSDT", "base": "NIGHT", "price": 0.04526, "score": 66.7, "rs7": 18.5, "rs30": 47.4, "new": true}
 {"t": "trend", "ts": 1795000776, "symbol": "TRXUSDT", "base": "TRX", "price": 0.3097, "score": 66.5, "rs7": 12.5, "rs30": 19.4, "new": true}
+{"t": "trend", "ts": 1795007997, "symbol": "UUSDT", "base": "U", "price": 1.0, "score": 73.2, "rs7": 15.4, "rs30": 27.8, "new": true}
+{"t": "trend", "ts": 1795007997, "symbol": "SOXSBUSDT", "base": "SOXSB", "price": 56.13, "score": 70.1, "rs7": 47.3, "rs30": 53.8, "new": true}
