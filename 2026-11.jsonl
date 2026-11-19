@@ -486,3 +486,5 @@
 {"t": "trend", "ts": 1795108784, "symbol": "LUNCUSDT", "base": "LUNC", "price": 4.55e-05, "score": 86.9, "rs7": 39.0, "rs30": 29.3, "new": true}
 {"t": "trend", "ts": 1795108784, "symbol": "SOXSBUSDT", "base": "SOXSB", "price": 62.79, "score": 79.2, "rs7": 58.1, "rs30": 91.9, "new": true}
 {"t": "trend", "ts": 1795108784, "symbol": "UUSDT", "base": "U", "price": 1.0002, "score": 69.7, "rs7": 15.1, "rs30": 33.3, "new": true}
+{"t": "pump", "ts": 1795115976, "market": "bitget", "symbol": "ICNTUSDT", "base": "ICNT", "price": 0.4386, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 3.32, "chg2h": 6.85, "chg24h": 34.58, "qvol": 7702403.418504, "vol_x": 2.8, "off_high": -2.62, "direction": "up", "tag": "뉴스", "tags": ["뉴스", "검색 급증"], "conf": "높음", "headline": "Impossible Cloud Network Token 급등 — 뉴스 재료", "news": "ICNT surged over 30% temporarily within 24 hours! This rally (KuCoin)"}
+{"t": "trend", "ts": 1795115982, "symbol": "TRXUSDT", "base": "TRX", "price": 0.3105, "score": 65.4, "rs7": 12.4, "rs30": 24.1, "new": true}
