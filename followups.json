@@ -11503,7 +11503,7 @@
 "cur_ts": 1794672000,
 "hi": 1.89,
 "lo": -60.71,
-"checked": 1795072659,
+"checked": 1795079875,
 "done": false
 },
 "stock|US|DNN|1792077492": {
@@ -11966,7 +11966,7 @@
 "cur_ts": 1794758400,
 "hi": 14.08,
 "lo": -47.67,
-"checked": 1795072659,
+"checked": 1795079875,
 "done": false
 },
 "stock|KR|010580|1792372662": {
@@ -17973,7 +17973,7 @@
 "ts": 1794439092.0,
 "price": 352.51,
 "note": "우상향 점수 71.0",
-"repeats": 4,
+"repeats": 5,
 "res": {
 "h24": {
 "r": 3.37,
@@ -19270,6 +19270,30 @@
 "hi": 17.57,
 "lo": -8.24,
 "checked": 1795072659,
+"done": false
+},
+"coin|binance|ZKPUSDT|1794986373": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "ZKPUSDT",
+"name": "ZKP",
+"ts": 1794986373.0,
+"price": 0.039,
+"note": "원인 미확인",
+"repeats": 2,
+"res": {
+"h24": {
+"r": -21.03,
+"hi": 13.59,
+"lo": -21.79
+}
+},
+"cur": -19.74,
+"cur_ts": 1795082400,
+"hi": 13.59,
+"lo": -21.79,
+"checked": 1795079875,
 "done": false
 }
 }
