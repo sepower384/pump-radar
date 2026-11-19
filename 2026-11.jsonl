@@ -475,3 +475,6 @@
 {"t": "trend", "ts": 1795087189, "symbol": "SPCXBUSDT", "base": "SPCXB", "price": 146.93, "score": 80.2, "rs7": 20.6, "rs30": 29.3, "new": true}
 {"t": "trend", "ts": 1795087189, "symbol": "MMTUSDT", "base": "MMT", "price": 0.2004, "score": 75.9, "rs7": 95.2, "rs30": 86.6, "new": true}
 {"t": "trend", "ts": 1795087189, "symbol": "RWUSDUSDT", "base": "RWUSD", "price": 1.0001, "score": 68.3, "rs7": 14.5, "rs30": 29.6, "new": true}
+{"t": "pump", "ts": 1795094400, "market": "binance", "symbol": "HUMAUSDT", "base": "HUMA", "price": 0.00908, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 9.28, "chg2h": 11.7, "chg24h": 23.87, "qvol": 10628180.27067, "vol_x": 17.4, "off_high": -0.33, "direction": "up", "tag": "거래량 폭증", "tags": ["거래량 폭증"], "conf": "낮음", "headline": "Huma Finance 급등 — 매수세 몰림", "news": ""}
+{"t": "pump", "ts": 1795094400, "market": "bitget", "symbol": "IRYSUSDT", "base": "IRYS", "price": 0.02336, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 3.36, "chg2h": 4.38, "chg24h": 36.45, "qvol": 1255860.180621, "vol_x": 0.4, "off_high": -7.92, "direction": "up", "tag": "뉴스", "tags": ["뉴스", "뉴스"], "conf": "높음", "headline": "Irys 급등 — 뉴스 재료", "news": "아이리스(IRYS) 28.22% 급등…업비트 비트코인·리플·이더리움은 1% 안팎 상승 (코인리더스)"}
+{"t": "trend", "ts": 1795094407, "symbol": "BREVUSDT", "base": "BREV", "price": 0.082, "score": 67.1, "rs7": 43.9, "rs30": 41.0, "new": true}
