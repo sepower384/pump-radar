@@ -1343,9 +1343,9 @@
 "target_pct": 2.0,
 "deadline": 1795069800,
 "status": "pending",
-"best_price": 56800.0,
-"last_price": 55700.0,
-"result_pct": -1.76,
+"best_price": 57200.0,
+"last_price": 56100.0,
+"result_pct": -1.06,
 "resolved_ts": null,
 "reported": 0
 },
@@ -1366,5 +1366,23 @@
 "result_pct": 7.1,
 "resolved_ts": 1794993613,
 "reported": 1
+},
+{
+"id": 78,
+"ts": 1795051186,
+"market": "KR",
+"symbol": "035900",
+"name": "JYP Ent.",
+"theme": "영상콘텐츠",
+"leader": "스튜디오드래곤",
+"ref_price": 47800.0,
+"target_pct": 2.0,
+"deadline": 1795156200,
+"status": "pending",
+"best_price": 47800.0,
+"last_price": null,
+"result_pct": null,
+"resolved_ts": null,
+"reported": 0
 }
 ]
