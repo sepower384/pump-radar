@@ -1402,5 +1402,41 @@
 "result_pct": 3.2,
 "resolved_ts": 1795137579,
 "reported": 1
+},
+{
+"id": 80,
+"ts": 1795144810,
+"market": "KR",
+"symbol": "004170",
+"name": "신세계",
+"theme": "면세점",
+"leader": "글로벌텍스프리",
+"ref_price": 295000.0,
+"target_pct": 2.0,
+"deadline": 1795415400,
+"status": "pending",
+"best_price": 295000.0,
+"last_price": null,
+"result_pct": null,
+"resolved_ts": null,
+"reported": 0
+},
+{
+"id": 81,
+"ts": 1795144810,
+"market": "KR",
+"symbol": "069960",
+"name": "현대백화점",
+"theme": "면세점",
+"leader": "글로벌텍스프리",
+"ref_price": 100600.0,
+"target_pct": 2.0,
+"deadline": 1795415400,
+"status": "pending",
+"best_price": 100600.0,
+"last_price": null,
+"result_pct": null,
+"resolved_ts": null,
+"reported": 0
 }
 ]
