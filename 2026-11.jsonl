@@ -523,3 +523,7 @@
 {"t": "trend", "ts": 1795187991, "symbol": "MEGAUSDT", "base": "MEGA", "price": 0.04941, "score": 81.9, "rs7": 22.3, "rs30": 50.7, "new": true}
 {"t": "pump", "ts": 1795195185, "market": "binance", "symbol": "SOXSBUSDT", "base": "SOXSB", "price": 79.72, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 4.44, "chg2h": 8.27, "chg24h": 26.96, "qvol": 6425096.6745, "vol_x": 1.5, "off_high": -1.17, "direction": "up", "tag": "원인 미확인", "tags": ["원인 미확인"], "conf": "낮음", "headline": "SOXSB 급등 — 이유 불명 · 큰손 주도 의심", "news": ""}
 {"t": "trend", "ts": 1795195191, "symbol": "RWUSDUSDT", "base": "RWUSD", "price": 1.0001, "score": 72.0, "rs7": 16.4, "rs30": 41.8, "new": true}
+{"t": "trend", "ts": 1795202380, "symbol": "LUNCUSDT", "base": "LUNC", "price": 4.164e-05, "score": 85.7, "rs7": 32.4, "rs30": 28.9, "new": true}
+{"t": "trend", "ts": 1795202380, "symbol": "SOXSBUSDT", "base": "SOXSB", "price": 80.33, "score": 84.6, "rs7": 87.7, "rs30": 150.5, "new": true}
+{"t": "trend", "ts": 1795202380, "symbol": "BLURUSDT", "base": "BLUR", "price": 0.00742, "score": 81.6, "rs7": 32.4, "rs30": 16.7, "new": true}
+{"t": "trend", "ts": 1795202380, "symbol": "UUSDT", "base": "U", "price": 1.0007, "score": 74.6, "rs7": 19.1, "rs30": 44.9, "new": true}
