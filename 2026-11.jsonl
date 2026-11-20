@@ -515,3 +515,9 @@
 {"t": "pump", "ts": 1795173553, "market": "binance", "symbol": "KERNELUSDT", "base": "KERNEL", "price": 0.0532, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 23.65, "chg2h": 25.42, "chg24h": 36.41, "qvol": 1674725.54223, "vol_x": 12.1, "off_high": -2.04, "direction": "up", "tag": "거래량 폭증", "tags": ["거래량 폭증"], "conf": "낮음", "headline": "KernelDAO 급등 — 매수세 몰림", "news": ""}
 {"t": "trend", "ts": 1795180760, "symbol": "KERNELUSDT", "base": "KERNEL", "price": 0.0614, "score": 72.8, "rs7": 55.3, "rs30": 76.8, "new": true}
 {"t": "trend", "ts": 1795180760, "symbol": "HMSTRUSDT", "base": "HMSTR", "price": 0.0001495, "score": 72.3, "rs7": 18.3, "rs30": 35.6, "new": true}
+{"t": "pump", "ts": 1795187985, "market": "binance", "symbol": "RAREUSDT", "base": "RARE", "price": 0.0134, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 10.2, "chg2h": 11.11, "chg24h": 21.38, "qvol": 8094670.207555, "vol_x": 2.0, "off_high": -10.13, "direction": "up", "tag": "원인 미확인", "tags": ["원인 미확인"], "conf": "낮음", "headline": "RARE 급등 — 이유 불명 · 큰손 주도 의심", "news": ""}
+{"t": "pump", "ts": 1795187985, "market": "binance", "symbol": "HUMAUSDT", "base": "HUMA", "price": 0.01032, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 3.93, "chg2h": 8.99, "chg24h": 21.99, "qvol": 8630731.20959, "vol_x": 3.4, "off_high": -5.76, "direction": "up", "tag": "거래량 폭증", "tags": ["거래량 폭증"], "conf": "낮음", "headline": "Huma Finance 급등 — 매수세 몰림", "news": ""}
+{"t": "trend", "ts": 1795187991, "symbol": "SENTUSDT", "base": "SENT", "price": 0.02116, "score": 88.8, "rs7": 43.4, "rs30": 29.9, "new": true}
+{"t": "trend", "ts": 1795187991, "symbol": "PROMUSDT", "base": "PROM", "price": 5.425, "score": 88.6, "rs7": 23.5, "rs30": 31.9, "new": true}
+{"t": "trend", "ts": 1795187991, "symbol": "MMTUSDT", "base": "MMT", "price": 0.2445, "score": 87.4, "rs7": 138.2, "rs30": 136.0, "new": true}
+{"t": "trend", "ts": 1795187991, "symbol": "MEGAUSDT", "base": "MEGA", "price": 0.04941, "score": 81.9, "rs7": 22.3, "rs30": 50.7, "new": true}
