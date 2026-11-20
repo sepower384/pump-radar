@@ -521,3 +521,5 @@
 {"t": "trend", "ts": 1795187991, "symbol": "PROMUSDT", "base": "PROM", "price": 5.425, "score": 88.6, "rs7": 23.5, "rs30": 31.9, "new": true}
 {"t": "trend", "ts": 1795187991, "symbol": "MMTUSDT", "base": "MMT", "price": 0.2445, "score": 87.4, "rs7": 138.2, "rs30": 136.0, "new": true}
 {"t": "trend", "ts": 1795187991, "symbol": "MEGAUSDT", "base": "MEGA", "price": 0.04941, "score": 81.9, "rs7": 22.3, "rs30": 50.7, "new": true}
+{"t": "pump", "ts": 1795195185, "market": "binance", "symbol": "SOXSBUSDT", "base": "SOXSB", "price": 79.72, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 4.44, "chg2h": 8.27, "chg24h": 26.96, "qvol": 6425096.6745, "vol_x": 1.5, "off_high": -1.17, "direction": "up", "tag": "원인 미확인", "tags": ["원인 미확인"], "conf": "낮음", "headline": "SOXSB 급등 — 이유 불명 · 큰손 주도 의심", "news": ""}
+{"t": "trend", "ts": 1795195191, "symbol": "RWUSDUSDT", "base": "RWUSD", "price": 1.0001, "score": 72.0, "rs7": 16.4, "rs30": 41.8, "new": true}
