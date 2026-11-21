@@ -529,3 +529,6 @@
 {"t": "trend", "ts": 1795202380, "symbol": "UUSDT", "base": "U", "price": 1.0007, "score": 74.6, "rs7": 19.1, "rs30": 44.9, "new": true}
 {"t": "trend", "ts": 1795209582, "symbol": "RAREUSDT", "base": "RARE", "price": 0.01324, "score": 72.7, "rs7": 62.2, "rs30": 40.2, "new": true}
 {"t": "trend", "ts": 1795216789, "symbol": "AIGENSYNUSDT", "base": "AIGENSYN", "price": 0.01435, "score": 73.5, "rs7": 19.7, "rs30": 13.1, "new": true}
+{"t": "pump", "ts": 1795224019, "market": "binance", "symbol": "KERNELUSDT", "base": "KERNEL", "price": 0.0492, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 3.8, "chg2h": 3.58, "chg24h": 22.39, "qvol": 13430170.71777, "vol_x": 2.2, "off_high": -9.89, "direction": "up", "tag": "원인 미확인", "tags": ["원인 미확인"], "conf": "낮음", "headline": "KernelDAO 급등 — 이유 불명 · 큰손 주도 의심", "news": ""}
+{"t": "trend", "ts": 1795224031, "symbol": "KERNELUSDT", "base": "KERNEL", "price": 0.0495, "score": 79.5, "rs7": 27.9, "rs30": 48.7, "new": true}
+{"t": "trend", "ts": 1795224031, "symbol": "HMSTRUSDT", "base": "HMSTR", "price": 0.0001463, "score": 75.6, "rs7": 17.1, "rs30": 41.1, "new": true}
