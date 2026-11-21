@@ -532,3 +532,8 @@
 {"t": "pump", "ts": 1795224019, "market": "binance", "symbol": "KERNELUSDT", "base": "KERNEL", "price": 0.0492, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 3.8, "chg2h": 3.58, "chg24h": 22.39, "qvol": 13430170.71777, "vol_x": 2.2, "off_high": -9.89, "direction": "up", "tag": "원인 미확인", "tags": ["원인 미확인"], "conf": "낮음", "headline": "KernelDAO 급등 — 이유 불명 · 큰손 주도 의심", "news": ""}
 {"t": "trend", "ts": 1795224031, "symbol": "KERNELUSDT", "base": "KERNEL", "price": 0.0495, "score": 79.5, "rs7": 27.9, "rs30": 48.7, "new": true}
 {"t": "trend", "ts": 1795224031, "symbol": "HMSTRUSDT", "base": "HMSTR", "price": 0.0001463, "score": 75.6, "rs7": 17.1, "rs30": 41.1, "new": true}
+{"t": "pump", "ts": 1795231236, "market": "binance", "symbol": "ENSOUSDT", "base": "ENSO", "price": 0.501, "chg5m": 0.0, "chg15m": 0.0, "chg1h": -6.0, "chg2h": 14.65, "chg24h": 24.63, "qvol": 6149483.92183, "vol_x": 1.6, "off_high": -7.39, "direction": "up", "tag": "원인 미확인", "tags": ["원인 미확인"], "conf": "낮음", "headline": "ENSO 급등 — 이유 불명 · 큰손 주도 의심", "news": ""}
+{"t": "trend", "ts": 1795231242, "symbol": "MMTUSDT", "base": "MMT", "price": 0.2603, "score": 94.1, "rs7": 163.3, "rs30": 157.6, "new": true}
+{"t": "trend", "ts": 1795231242, "symbol": "SENTUSDT", "base": "SENT", "price": 0.01969, "score": 84.7, "rs7": 35.4, "rs30": 24.3, "new": true}
+{"t": "trend", "ts": 1795231242, "symbol": "ENSOUSDT", "base": "ENSO", "price": 0.499, "score": 78.0, "rs7": 39.2, "rs30": 6.1, "new": true}
+{"t": "trend", "ts": 1795231242, "symbol": "DODOUSDT", "base": "DODO", "price": 0.03451, "score": 75.7, "rs7": 30.8, "rs30": 125.5, "new": true}
