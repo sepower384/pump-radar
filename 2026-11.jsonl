@@ -552,3 +552,7 @@
 {"t": "pump", "ts": 1795267203, "market": "bitget", "symbol": "SKYAIUSDT", "base": "SKYAI", "price": 0.03703, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 4.75, "chg2h": 8.31, "chg24h": 25.87, "qvol": 3215581.4459829, "vol_x": 0.2, "off_high": -6.3, "direction": "up", "tag": "원인 미확인", "tags": ["원인 미확인"], "conf": "낮음", "headline": "SkyAI 급등 — 이유 불명 · 큰손 주도 의심", "news": ""}
 {"t": "trend", "ts": 1795274404, "symbol": "USUALUSDT", "base": "USUAL", "price": 0.01195, "score": 85.0, "rs7": 21.4, "rs30": 60.6, "new": true}
 {"t": "trend", "ts": 1795274404, "symbol": "ZAMAUSDT", "base": "ZAMA", "price": 0.06052, "score": 76.3, "rs7": 18.9, "rs30": 12.0, "new": true}
+{"t": "pump", "ts": 1795281588, "market": "binance", "symbol": "DODOUSDT", "base": "DODO", "price": 0.04004, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 7.98, "chg2h": 8.01, "chg24h": 23.92, "qvol": 11782942.706303, "vol_x": 1.7, "off_high": -8.29, "direction": "up", "tag": "뉴스", "tags": ["뉴스"], "conf": "높음", "headline": "DODO 급등 — 뉴스 재료", "news": "DODO Coin Jumps 10.2% as Community Sentiment Shifts (Coinfomania)"}
+{"t": "trend", "ts": 1795281594, "symbol": "SENTUSDT", "base": "SENT", "price": 0.02063, "score": 86.5, "rs7": 41.8, "rs30": 27.8, "new": true}
+{"t": "trend", "ts": 1795281594, "symbol": "DODOUSDT", "base": "DODO", "price": 0.04006, "score": 81.9, "rs7": 34.7, "rs30": 142.2, "new": true}
+{"t": "trend", "ts": 1795281594, "symbol": "MMTUSDT", "base": "MMT", "price": 0.2205, "score": 80.9, "rs7": 138.1, "rs30": 114.6, "new": true}
