@@ -559,3 +559,5 @@
 {"t": "trend", "ts": 1795288811, "symbol": "SOXSBUSDT", "base": "SOXSB", "price": 77.94, "score": 79.9, "rs7": 57.3, "rs30": 92.7, "new": true}
 {"t": "trend", "ts": 1795288811, "symbol": "YBUSDT", "base": "YB", "price": 0.0545, "score": 77.3, "rs7": 38.4, "rs30": 14.7, "new": true}
 {"t": "trend", "ts": 1795288811, "symbol": "ENSOUSDT", "base": "ENSO", "price": 0.485, "score": 77.0, "rs7": 40.2, "rs30": -1.9, "new": true}
+{"t": "pump", "ts": 1795296010, "market": "bitget", "symbol": "IDOLUSDT", "base": "IDOL", "price": 0.04365, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 14.39, "chg2h": 26.63, "chg24h": 82.56, "qvol": 4562736.9656689, "vol_x": 1.8, "off_high": -0.8, "direction": "up", "tag": "원인 미확인", "tags": ["원인 미확인"], "conf": "낮음", "headline": "MEET48 급등 — 이유 불명 · 큰손 주도 의심", "news": ""}
+{"t": "pump", "ts": 1795296010, "market": "bitget", "symbol": "SKYAIUSDT", "base": "SKYAI", "price": 0.03819, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 2.61, "chg2h": 4.46, "chg24h": 34.24, "qvol": 3637307.7243799, "vol_x": 0.5, "off_high": -3.66, "direction": "up", "tag": "원인 미확인", "tags": ["원인 미확인"], "conf": "낮음", "headline": "SkyAI 급등 — 이유 불명 · 큰손 주도 의심", "news": ""}
