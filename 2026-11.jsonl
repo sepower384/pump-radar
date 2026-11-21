@@ -538,3 +538,7 @@
 {"t": "trend", "ts": 1795231242, "symbol": "ENSOUSDT", "base": "ENSO", "price": 0.499, "score": 78.0, "rs7": 39.2, "rs30": 6.1, "new": true}
 {"t": "trend", "ts": 1795231242, "symbol": "DODOUSDT", "base": "DODO", "price": 0.03451, "score": 75.7, "rs7": 30.8, "rs30": 125.5, "new": true}
 {"t": "pump", "ts": 1795238409, "market": "bitget", "symbol": "BLESSUSDT", "base": "BLESS", "price": 0.0149409, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 5.41, "chg2h": 6.64, "chg24h": 21.14, "qvol": 2037056.188122162, "vol_x": 2.6, "off_high": -4.99, "direction": "up", "tag": "원인 미확인", "tags": ["원인 미확인"], "conf": "낮음", "headline": "Bless 급등 — 이유 불명 · 큰손 주도 의심", "news": ""}
+{"t": "trend", "ts": 1795245593, "symbol": "BLURUSDT", "base": "BLUR", "price": 0.00739, "score": 85.7, "rs7": 32.5, "rs30": 18.6, "new": true}
+{"t": "trend", "ts": 1795245593, "symbol": "SOXSBUSDT", "base": "SOXSB", "price": 79.64, "score": 84.1, "rs7": 74.0, "rs30": 127.0, "new": true}
+{"t": "trend", "ts": 1795245593, "symbol": "LUNCUSDT", "base": "LUNC", "price": 4.062e-05, "score": 83.2, "rs7": 29.3, "rs30": 25.4, "new": true}
+{"t": "trend", "ts": 1795245593, "symbol": "YBUSDT", "base": "YB", "price": 0.0565, "score": 82.8, "rs7": 39.8, "rs30": 23.3, "new": true}
