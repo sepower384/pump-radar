@@ -556,3 +556,6 @@
 {"t": "trend", "ts": 1795281594, "symbol": "SENTUSDT", "base": "SENT", "price": 0.02063, "score": 86.5, "rs7": 41.8, "rs30": 27.8, "new": true}
 {"t": "trend", "ts": 1795281594, "symbol": "DODOUSDT", "base": "DODO", "price": 0.04006, "score": 81.9, "rs7": 34.7, "rs30": 142.2, "new": true}
 {"t": "trend", "ts": 1795281594, "symbol": "MMTUSDT", "base": "MMT", "price": 0.2205, "score": 80.9, "rs7": 138.1, "rs30": 114.6, "new": true}
+{"t": "trend", "ts": 1795288811, "symbol": "SOXSBUSDT", "base": "SOXSB", "price": 77.94, "score": 79.9, "rs7": 57.3, "rs30": 92.7, "new": true}
+{"t": "trend", "ts": 1795288811, "symbol": "YBUSDT", "base": "YB", "price": 0.0545, "score": 77.3, "rs7": 38.4, "rs30": 14.7, "new": true}
+{"t": "trend", "ts": 1795288811, "symbol": "ENSOUSDT", "base": "ENSO", "price": 0.485, "score": 77.0, "rs7": 40.2, "rs30": -1.9, "new": true}
