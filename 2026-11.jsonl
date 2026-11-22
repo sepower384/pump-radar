@@ -564,3 +564,4 @@
 {"t": "trend", "ts": 1795303188, "symbol": "JSTUSDT", "base": "JST", "price": 0.14652, "score": 67.0, "rs7": 9.1, "rs30": 42.0, "new": true}
 {"t": "pump", "ts": 1795310399, "market": "binance", "symbol": "ENSOUSDT", "base": "ENSO", "price": 0.528, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 3.33, "chg2h": 6.67, "chg24h": 21.38, "qvol": 8642983.83673, "vol_x": 6.3, "off_high": -2.94, "direction": "up", "tag": "거래량 폭증", "tags": ["거래량 폭증"], "conf": "낮음", "headline": "ENSO 급등 — 매수세 몰림", "news": ""}
 {"t": "trend", "ts": 1795310422, "symbol": "RAREUSDT", "base": "RARE", "price": 0.01372, "score": 72.4, "rs7": 75.8, "rs30": 41.3, "new": true}
+{"t": "trend", "ts": 1795317580, "symbol": "UUSDT", "base": "U", "price": 1.0015, "score": 65.0, "rs7": 9.4, "rs30": 37.7, "new": true}
