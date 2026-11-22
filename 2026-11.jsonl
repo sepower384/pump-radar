@@ -574,3 +574,5 @@
 {"t": "pump", "ts": 1795339197, "market": "bitget", "symbol": "MAGMAUSDT", "base": "MAGMA", "price": 0.25198, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 2.25, "chg2h": 2.22, "chg24h": 22.92, "qvol": 953312.475552, "vol_x": 3.9, "off_high": -0.9, "direction": "up", "tag": "거래량 폭증", "tags": ["거래량 폭증"], "conf": "낮음", "headline": "Magma Finance 급등 — 매수세 몰림", "news": ""}
 {"t": "trend", "ts": 1795339202, "symbol": "AIGENSYNUSDT", "base": "AIGENSYN", "price": 0.01599, "score": 82.9, "rs7": 44.1, "rs30": 21.5, "new": true}
 {"t": "trend", "ts": 1795339202, "symbol": "ENSOUSDT", "base": "ENSO", "price": 0.496, "score": 80.8, "rs7": 42.5, "rs30": 1.1, "new": true}
+{"t": "pump", "ts": 1795346400, "market": "bitget", "symbol": "DGAIUSDT", "base": "DGAI", "price": 0.883371, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 4.06, "chg2h": 6.87, "chg24h": 26.87, "qvol": 4860792.27520694, "vol_x": 0.8, "off_high": 0.0, "direction": "up", "tag": "원인 미확인", "tags": ["원인 미확인"], "conf": "낮음", "headline": "DGrid AI 급등 — 이유 불명 · 큰손 주도 의심", "news": ""}
+{"t": "trend", "ts": 1795346421, "symbol": "JSTUSDT", "base": "JST", "price": 0.14649, "score": 66.7, "rs7": 8.0, "rs30": 40.3, "new": true}
