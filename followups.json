@@ -12936,7 +12936,7 @@
 "cur_ts": 1795219200,
 "hi": 2.54,
 "lo": -49.23,
-"checked": 1795353593,
+"checked": 1795360768,
 "done": false
 },
 "coin|bitget|AXISUSDT|1792631982": {
@@ -13438,7 +13438,7 @@
 "cur_ts": 1795348800,
 "hi": 182.83,
 "lo": -23.94,
-"checked": 1795353593,
+"checked": 1795360768,
 "done": false
 },
 "coin|bitget|INUSDT|1792775967": {
@@ -19084,7 +19084,7 @@
 "ts": 1794770372.0,
 "price": 0.01239,
 "note": "거래량 폭증",
-"repeats": 11,
+"repeats": 12,
 "res": {
 "h24": {
 "r": 19.21,
@@ -19931,13 +19931,18 @@
 "r": -30.92,
 "hi": -8.22,
 "lo": -31.75
+},
+"h72": {
+"r": -26.04,
+"hi": -8.22,
+"lo": -34.68
 }
 },
-"cur": -33.01,
-"cur_ts": 1795190400,
+"cur": -26.04,
+"cur_ts": 1795363200,
 "hi": -8.22,
-"lo": -33.15,
-"checked": 1795187993,
+"lo": -34.68,
+"checked": 1795360768,
 "done": false
 },
 "stock|US|AMBA|1795101573": {
@@ -20154,6 +20159,54 @@
 "hi": 8.58,
 "lo": -11.38,
 "checked": 1795324793,
+"done": false
+},
+"coin|binance|SCUSDT|1795267203": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "SCUSDT",
+"name": "SC",
+"ts": 1795267203.0,
+"price": 0.000708,
+"note": "거래량 폭증",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -18.08,
+"hi": -8.19,
+"lo": -18.5
+}
+},
+"cur": -19.63,
+"cur_ts": 1795363200,
+"hi": -8.19,
+"lo": -21.89,
+"checked": 1795360768,
+"done": false
+},
+"coin|bitget|SKYAIUSDT|1795267203": {
+"asset": "coin",
+"kind": "pump",
+"market": "bitget",
+"symbol": "SKYAIUSDT",
+"name": "SKYAI",
+"ts": 1795267203.0,
+"price": 0.03703,
+"note": "원인 미확인",
+"repeats": 3,
+"res": {
+"h24": {
+"r": 1.11,
+"hi": 20.96,
+"lo": -10.05
+}
+},
+"cur": -0.86,
+"cur_ts": 1795359600,
+"hi": 20.96,
+"lo": -10.05,
+"checked": 1795360768,
 "done": false
 }
 }
