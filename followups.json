@@ -12936,7 +12936,7 @@
 "cur_ts": 1795219200,
 "hi": 2.54,
 "lo": -49.23,
-"checked": 1795360768,
+"checked": 1795367984,
 "done": false
 },
 "coin|bitget|AXISUSDT|1792631982": {
@@ -13438,7 +13438,7 @@
 "cur_ts": 1795348800,
 "hi": 182.83,
 "lo": -23.94,
-"checked": 1795360768,
+"checked": 1795367984,
 "done": false
 },
 "coin|bitget|INUSDT|1792775967": {
@@ -13466,14 +13466,19 @@
 "r": -14.51,
 "hi": 76.3,
 "lo": -22.85
+},
+"h720": {
+"r": -28.91,
+"hi": 76.3,
+"lo": -38.93
 }
 },
-"cur": -34.72,
-"cur_ts": 1794787200,
+"cur": -28.91,
+"cur_ts": 1795363200,
 "hi": 76.3,
 "lo": -38.93,
-"checked": 1794792013,
-"done": false
+"checked": 1795367984,
+"done": true
 },
 "stock|US|EAF|1792783239": {
 "asset": "stock",
@@ -19037,13 +19042,18 @@
 "r": -18.68,
 "hi": 3.57,
 "lo": -24.8
+},
+"h168": {
+"r": -20.07,
+"hi": 3.57,
+"lo": -24.8
 }
 },
-"cur": -18.48,
-"cur_ts": 1795024800,
+"cur": -20.9,
+"cur_ts": 1795370400,
 "hi": 3.57,
 "lo": -24.8,
-"checked": 1795022390,
+"checked": 1795367984,
 "done": false
 },
 "coin|binance|FFUSDT|1794763214": {
@@ -19960,13 +19970,18 @@
 "r": -2.95,
 "hi": 2.52,
 "lo": -3.75
+},
+"h72": {
+"r": -12.6,
+"hi": 2.52,
+"lo": -13.64
 }
 },
-"cur": -6.11,
+"cur": -12.6,
 "cur_ts": 1795208400,
 "hi": 2.52,
-"lo": -7.44,
-"checked": 1795187993,
+"lo": -13.64,
+"checked": 1795367984,
 "done": false
 },
 "stock|KR|271160|1795137591": {
@@ -20207,6 +20222,54 @@
 "hi": 20.96,
 "lo": -10.05,
 "checked": 1795360768,
+"done": false
+},
+"coin|binance|USUALUSDT|1795274404": {
+"asset": "coin",
+"kind": "trend",
+"market": "binance",
+"symbol": "USUALUSDT",
+"name": "USUAL",
+"ts": 1795274404.0,
+"price": 0.01195,
+"note": "우상향 점수 85.0",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -7.53,
+"hi": 0.17,
+"lo": -9.87
+}
+},
+"cur": -7.95,
+"cur_ts": 1795370400,
+"hi": 0.17,
+"lo": -9.87,
+"checked": 1795367984,
+"done": false
+},
+"coin|binance|ZAMAUSDT|1795274404": {
+"asset": "coin",
+"kind": "trend",
+"market": "binance",
+"symbol": "ZAMAUSDT",
+"name": "ZAMA",
+"ts": 1795274404.0,
+"price": 0.06052,
+"note": "우상향 점수 76.3",
+"repeats": 1,
+"res": {
+"h24": {
+"r": 1.8,
+"hi": 4.71,
+"lo": -1.87
+}
+},
+"cur": 1.83,
+"cur_ts": 1795370400,
+"hi": 4.71,
+"lo": -1.87,
+"checked": 1795367984,
 "done": false
 }
 }
