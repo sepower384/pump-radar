@@ -593,3 +593,5 @@
 {"t": "pump", "ts": 1795411183, "market": "bitget", "symbol": "ARIAUSDT", "base": "ARIA", "price": 0.28876, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 1.71, "chg2h": 5.27, "chg24h": 22.57, "qvol": 1047900.309824, "vol_x": 3.2, "off_high": -3.76, "direction": "up", "tag": "거래량 폭증", "tags": ["거래량 폭증"], "conf": "낮음", "headline": "Aria.AI 급등 — 매수세 몰림", "news": ""}
 {"t": "trend", "ts": 1795411189, "symbol": "NIGHTUSDT", "base": "NIGHT", "price": 0.04976, "score": 71.2, "rs7": 19.1, "rs30": 73.6, "new": true}
 {"t": "trend", "ts": 1795425593, "symbol": "MMTUSDT", "base": "MMT", "price": 0.2118, "score": 73.9, "rs7": 115.7, "rs30": 99.4, "new": true}
+{"t": "pump", "ts": 1795432805, "market": "bitget", "symbol": "ARIAUSDT", "base": "ARIA", "price": 0.35198, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 2.81, "chg2h": 8.18, "chg24h": 42.94, "qvol": 1784816.737051, "vol_x": 1.0, "off_high": -0.8, "direction": "up", "tag": "원인 미확인", "tags": ["원인 미확인"], "conf": "낮음", "headline": "Aria.AI 급등 — 이유 불명 · 큰손 주도 의심", "news": ""}
+{"t": "trend", "ts": 1795432824, "symbol": "AIGENSYNUSDT", "base": "AIGENSYN", "price": 0.01584, "score": 79.1, "rs7": 35.1, "rs30": 10.1, "new": true}
