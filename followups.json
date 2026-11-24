@@ -12936,7 +12936,7 @@
 "cur_ts": 1795219200,
 "hi": 2.54,
 "lo": -49.23,
-"checked": 1795519234,
+"checked": 1795526398,
 "done": false
 },
 "coin|bitget|AXISUSDT|1792631982": {
@@ -13438,7 +13438,7 @@
 "cur_ts": 1795348800,
 "hi": 182.83,
 "lo": -23.94,
-"checked": 1795519234,
+"checked": 1795526398,
 "done": false
 },
 "coin|bitget|INUSDT|1792775967": {
@@ -13895,14 +13895,19 @@
 "r": -11.74,
 "hi": 9.65,
 "lo": -15.12
+},
+"h720": {
+"r": -38.95,
+"hi": 9.65,
+"lo": -47.8
 }
 },
-"cur": -44.64,
-"cur_ts": 1795399200,
+"cur": -39.09,
+"cur_ts": 1795528800,
 "hi": 9.65,
 "lo": -47.8,
-"checked": 1795396833,
-"done": false
+"checked": 1795526398,
+"done": true
 },
 "coin|binance|DODOUSDT|1792963198": {
 "asset": "coin",
@@ -17857,7 +17862,7 @@
 "ts": 1794410288.0,
 "price": 2.49,
 "note": "거래소 상장",
-"repeats": 5,
+"repeats": 6,
 "res": {
 "h24": {
 "r": -35.27,
@@ -20460,7 +20465,7 @@
 "ts": 1795396820.0,
 "price": 0.0795,
 "note": "우상향 점수 80.1",
-"repeats": 5,
+"repeats": 6,
 "res": {
 "h24": {
 "r": 23.27,
@@ -20497,6 +20502,30 @@
 "hi": 20.65,
 "lo": -21.57,
 "checked": 1795490402,
+"done": false
+},
+"coin|bitget|BGSCUSDT|1795439989": {
+"asset": "coin",
+"kind": "pump",
+"market": "bitget",
+"symbol": "BGSCUSDT",
+"name": "BGSC",
+"ts": 1795439989.0,
+"price": 0.0010879,
+"note": "원인 미확인",
+"repeats": 2,
+"res": {
+"h24": {
+"r": 2.77,
+"hi": 24.3,
+"lo": -29.96
+}
+},
+"cur": 2.77,
+"cur_ts": 1795525200,
+"hi": 24.3,
+"lo": -29.96,
+"checked": 1795526398,
 "done": false
 }
 }
