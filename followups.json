@@ -12936,7 +12936,7 @@
 "cur_ts": 1795219200,
 "hi": 2.54,
 "lo": -49.23,
-"checked": 1795533602,
+"checked": 1795540813,
 "done": false
 },
 "coin|bitget|AXISUSDT|1792631982": {
@@ -13438,7 +13438,7 @@
 "cur_ts": 1795348800,
 "hi": 182.83,
 "lo": -23.94,
-"checked": 1795533602,
+"checked": 1795540813,
 "done": false
 },
 "coin|bitget|INUSDT|1792775967": {
@@ -20287,7 +20287,7 @@
 "ts": 1795216789.0,
 "price": 0.01435,
 "note": "우상향 점수 73.5",
-"repeats": 5,
+"repeats": 6,
 "res": {
 "h24": {
 "r": -2.44,
@@ -20409,13 +20409,18 @@
 "r": -7.53,
 "hi": 0.17,
 "lo": -9.87
+},
+"h72": {
+"r": -5.02,
+"hi": 0.17,
+"lo": -10.21
 }
 },
-"cur": -7.95,
-"cur_ts": 1795370400,
+"cur": -7.03,
+"cur_ts": 1795543200,
 "hi": 0.17,
-"lo": -9.87,
-"checked": 1795367984,
+"lo": -10.21,
+"checked": 1795540813,
 "done": false
 },
 "coin|binance|ZAMAUSDT|1795274404": {
@@ -20433,13 +20438,18 @@
 "r": 1.8,
 "hi": 4.71,
 "lo": -1.87
+},
+"h72": {
+"r": -5.17,
+"hi": 4.71,
+"lo": -6.71
 }
 },
-"cur": 1.83,
-"cur_ts": 1795370400,
+"cur": -7.45,
+"cur_ts": 1795543200,
 "hi": 4.71,
-"lo": -1.87,
-"checked": 1795367984,
+"lo": -7.82,
+"checked": 1795540813,
 "done": false
 },
 "stock|KR|090710|1795396833": {
@@ -20536,6 +20546,78 @@
 "hi": 24.3,
 "lo": -29.96,
 "checked": 1795526398,
+"done": false
+},
+"coin|binance|IRENBUSDT|1795447209": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "IRENBUSDT",
+"name": "IRENB",
+"ts": 1795447209.0,
+"price": 15.7,
+"note": "뉴스",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -15.73,
+"hi": -2.1,
+"lo": -15.86
+}
+},
+"cur": -19.43,
+"cur_ts": 1795543200,
+"hi": -2.1,
+"lo": -21.97,
+"checked": 1795540813,
+"done": false
+},
+"coin|binance|NVDABUSDT|1795447209": {
+"asset": "coin",
+"kind": "pump",
+"market": "binance",
+"symbol": "NVDABUSDT",
+"name": "NVDAB",
+"ts": 1795447209.0,
+"price": 167.31,
+"note": "뉴스",
+"repeats": 1,
+"res": {
+"h24": {
+"r": -6.54,
+"hi": 1.03,
+"lo": -8.07
+}
+},
+"cur": -8.49,
+"cur_ts": 1795543200,
+"hi": 1.03,
+"lo": -9.93,
+"checked": 1795540813,
+"done": false
+},
+"coin|bitget|CYSUSDT|1795454408": {
+"asset": "coin",
+"kind": "pump",
+"market": "bitget",
+"symbol": "CYSUSDT",
+"name": "CYS",
+"ts": 1795454408.0,
+"price": 0.05617,
+"note": "뉴스",
+"repeats": 2,
+"res": {
+"h24": {
+"r": 1.1,
+"hi": 11.14,
+"lo": -9.67
+}
+},
+"cur": 1.1,
+"cur_ts": 1795539600,
+"hi": 11.14,
+"lo": -9.67,
+"checked": 1795540813,
 "done": false
 }
 }
