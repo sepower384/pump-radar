@@ -1492,5 +1492,41 @@
 "result_pct": -5.1,
 "resolved_ts": null,
 "reported": 0
+},
+{
+"id": 85,
+"ts": 1795634415,
+"market": "US",
+"symbol": "RKLB",
+"name": "Rocket Lab Corporation",
+"theme": "우주항공",
+"leader": "AST SpaceMobile, Inc.",
+"ref_price": 47.225,
+"target_pct": 2.0,
+"deadline": 1795813200,
+"status": "pending",
+"best_price": 47.225,
+"last_price": null,
+"result_pct": null,
+"resolved_ts": null,
+"reported": 0
+},
+{
+"id": 86,
+"ts": 1795634415,
+"market": "US",
+"symbol": "LUNR",
+"name": "Intuitive Machines, Inc.",
+"theme": "우주항공",
+"leader": "AST SpaceMobile, Inc.",
+"ref_price": 9.235,
+"target_pct": 2.0,
+"deadline": 1795813200,
+"status": "pending",
+"best_price": 9.235,
+"last_price": null,
+"result_pct": null,
+"resolved_ts": null,
+"reported": 0
 }
 ]
