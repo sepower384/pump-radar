@@ -1470,8 +1470,26 @@
 "deadline": 1795674600,
 "status": "pending",
 "best_price": 9400.0,
-"last_price": 8680.0,
-"result_pct": -7.66,
+"last_price": 8790.0,
+"result_pct": -6.49,
+"resolved_ts": null,
+"reported": 0
+},
+{
+"id": 84,
+"ts": 1795584008,
+"market": "KR",
+"symbol": "356680",
+"name": "엑스게이트",
+"theme": "보안주(정보)",
+"leader": "안랩",
+"ref_price": 13720.0,
+"target_pct": 2.0,
+"deadline": 1795674600,
+"status": "pending",
+"best_price": 13720.0,
+"last_price": null,
+"result_pct": null,
 "resolved_ts": null,
 "reported": 0
 }
