@@ -12936,7 +12936,7 @@
 "cur_ts": 1795219200,
 "hi": 2.54,
 "lo": -49.23,
-"checked": 1795634415,
+"checked": 1795641580,
 "done": false
 },
 "coin|bitget|AXISUSDT|1792631982": {
@@ -13438,7 +13438,7 @@
 "cur_ts": 1795348800,
 "hi": 182.83,
 "lo": -23.94,
-"checked": 1795634415,
+"checked": 1795641580,
 "done": false
 },
 "coin|bitget|INUSDT|1792775967": {
@@ -14057,7 +14057,7 @@
 "cur_ts": 1795579200,
 "hi": 13.9,
 "lo": -62.24,
-"checked": 1795634415,
+"checked": 1795641580,
 "done": false
 },
 "stock|KR|039860|1792991998": {
@@ -20856,6 +20856,30 @@
 "hi": 20.05,
 "lo": -0.64,
 "checked": 1795620013,
+"done": false
+},
+"stock|US|FLNC|1795548032": {
+"asset": "stock",
+"kind": "stock",
+"market": "US",
+"symbol": "FLNC",
+"name": "Fluence Energy, Inc.",
+"ts": 1795548032.0,
+"price": 4.22,
+"note": "전력 인프라 대장주",
+"repeats": 2,
+"res": {
+"h24": {
+"r": -2.84,
+"hi": 6.4,
+"lo": -10.66
+}
+},
+"cur": 11.85,
+"cur_ts": 1795640400,
+"hi": 15.28,
+"lo": -10.66,
+"checked": 1795641580,
 "done": false
 }
 }
