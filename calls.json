@@ -1456,5 +1456,23 @@
 "result_pct": 9.76,
 "resolved_ts": 1795476015,
 "reported": 1
+},
+{
+"id": 83,
+"ts": 1795569607,
+"market": "KR",
+"symbol": "036630",
+"name": "세종텔레콤",
+"theme": "마이데이터",
+"leader": "파수AI",
+"ref_price": 9400.0,
+"target_pct": 2.0,
+"deadline": 1795674600,
+"status": "pending",
+"best_price": 9400.0,
+"last_price": null,
+"result_pct": null,
+"resolved_ts": null,
+"reported": 0
 }
 ]
