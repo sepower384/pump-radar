@@ -653,3 +653,5 @@
 {"t": "trend", "ts": 1795598406, "symbol": "AIGENSYNUSDT", "base": "AIGENSYN", "price": 0.01724, "score": 90.5, "rs7": 40.3, "rs30": 29.3, "new": true}
 {"t": "trend", "ts": 1795598406, "symbol": "LISTAUSDT", "base": "LISTA", "price": 0.0969, "score": 84.6, "rs7": 50.7, "rs30": 65.2, "new": true}
 {"t": "trend", "ts": 1795598406, "symbol": "BIGTIMEUSDT", "base": "BIGTIME", "price": 0.00759, "score": 68.7, "rs7": 86.7, "rs30": 52.0, "new": true}
+{"t": "pump", "ts": 1795605585, "market": "bitget", "symbol": "EVAAUSDT", "base": "EVAA", "price": 2.8338, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 9.9, "chg2h": 24.83, "chg24h": 26.68, "qvol": 8236992.088408, "vol_x": 2.0, "off_high": -0.8, "direction": "up", "tag": "원인 미확인", "tags": ["원인 미확인"], "conf": "낮음", "headline": "EVAA Protocol 급등 — 이유 불명 · 큰손 주도 의심", "news": ""}
+{"t": "trend", "ts": 1795605600, "symbol": "OPGUSDT", "base": "OPG", "price": 0.174, "score": 87.5, "rs7": 34.8, "rs30": 107.3, "new": true}
