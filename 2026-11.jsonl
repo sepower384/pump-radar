@@ -691,3 +691,6 @@
 {"t": "trend", "ts": 1795670402, "symbol": "NIGHTUSDT", "base": "NIGHT", "price": 0.04854, "score": 77.4, "rs7": 12.1, "rs30": 60.7, "new": true}
 {"t": "trend", "ts": 1795670402, "symbol": "SSVUSDT", "base": "SSV", "price": 2.489, "score": 70.9, "rs7": 40.9, "rs30": 37.6, "new": true}
 {"t": "pump", "ts": 1795677577, "market": "bitget", "symbol": "EVAAUSDT", "base": "EVAA", "price": 3.0005, "chg5m": 0.0, "chg15m": 0.0, "chg1h": -2.07, "chg2h": 5.23, "chg24h": 36.93, "qvol": 4393630.950282, "vol_x": 2.2, "off_high": -4.33, "direction": "up", "tag": "원인 미확인", "tags": ["원인 미확인"], "conf": "낮음", "headline": "EVAA Protocol 급등 — 이유 불명 · 큰손 주도 의심", "news": ""}
+{"t": "pump", "ts": 1795684784, "market": "binance", "symbol": "INITUSDT", "base": "INIT", "price": 0.1134, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 22.88, "chg2h": 26.09, "chg24h": 31.02, "qvol": 4653942.59761, "vol_x": 4.8, "off_high": -1.05, "direction": "up", "tag": "검색 급증", "tags": ["검색 급증", "거래량 폭증"], "conf": "낮음", "headline": "Initia 급등 — 관심 급증", "news": ""}
+{"t": "trend", "ts": 1795684789, "symbol": "KITEUSDT", "base": "KITE", "price": 0.1433, "score": 66.7, "rs7": 12.8, "rs30": 59.6, "new": true}
+{"t": "trend", "ts": 1795684789, "symbol": "MOVEUSDT", "base": "MOVE", "price": 0.006133, "score": 65.3, "rs7": 30.3, "rs30": 20.0, "new": true}
