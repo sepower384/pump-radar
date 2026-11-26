@@ -1468,12 +1468,12 @@
 "ref_price": 9400.0,
 "target_pct": 2.0,
 "deadline": 1795674600,
-"status": "pending",
-"best_price": 9470.0,
-"last_price": 9200.0,
-"result_pct": -2.13,
-"resolved_ts": null,
-"reported": 0
+"status": "hit",
+"best_price": 9600.0,
+"last_price": 9330.0,
+"result_pct": 2.13,
+"resolved_ts": 1795663205,
+"reported": 1
 },
 {
 "id": 84,
@@ -1526,6 +1526,24 @@
 "best_price": 9.235,
 "last_price": 9.14,
 "result_pct": -1.03,
+"resolved_ts": null,
+"reported": 0
+},
+{
+"id": 87,
+"ts": 1795663215,
+"market": "KR",
+"symbol": "347700",
+"name": "스피어",
+"theme": "스페이스X(SpaceX)",
+"leader": "나노팀",
+"ref_price": 21950.0,
+"target_pct": 2.0,
+"deadline": 1795761000,
+"status": "pending",
+"best_price": 21950.0,
+"last_price": null,
+"result_pct": null,
 "resolved_ts": null,
 "reported": 0
 }
