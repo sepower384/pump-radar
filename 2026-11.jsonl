@@ -694,3 +694,5 @@
 {"t": "pump", "ts": 1795684784, "market": "binance", "symbol": "INITUSDT", "base": "INIT", "price": 0.1134, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 22.88, "chg2h": 26.09, "chg24h": 31.02, "qvol": 4653942.59761, "vol_x": 4.8, "off_high": -1.05, "direction": "up", "tag": "검색 급증", "tags": ["검색 급증", "거래량 폭증"], "conf": "낮음", "headline": "Initia 급등 — 관심 급증", "news": ""}
 {"t": "trend", "ts": 1795684789, "symbol": "KITEUSDT", "base": "KITE", "price": 0.1433, "score": 66.7, "rs7": 12.8, "rs30": 59.6, "new": true}
 {"t": "trend", "ts": 1795684789, "symbol": "MOVEUSDT", "base": "MOVE", "price": 0.006133, "score": 65.3, "rs7": 30.3, "rs30": 20.0, "new": true}
+{"t": "pump", "ts": 1795692013, "market": "binance", "symbol": "SSVUSDT", "base": "SSV", "price": 2.629, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 4.91, "chg2h": 3.38, "chg24h": 42.73, "qvol": 8197304.864286, "vol_x": 1.4, "off_high": -0.94, "direction": "up", "tag": "원인 미확인", "tags": ["원인 미확인"], "conf": "낮음", "headline": "SSV Network 급등 — 이유 불명 · 큰손 주도 의심", "news": ""}
+{"t": "trend", "ts": 1795692031, "symbol": "LISTAUSDT", "base": "LISTA", "price": 0.0894, "score": 78.4, "rs7": 31.1, "rs30": 49.5, "new": true}
