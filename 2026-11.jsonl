@@ -736,3 +736,7 @@
 {"t": "pump", "ts": 1795807193, "market": "binance", "symbol": "MITOUSDT", "base": "MITO", "price": 0.00547, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 17.63, "chg2h": 16.38, "chg24h": 24.6, "qvol": 1002153.321277, "vol_x": 12.1, "off_high": 0.0, "direction": "up", "tag": "거래량 폭증", "tags": ["거래량 폭증"], "conf": "낮음", "headline": "MITO 급등 — 매수세 몰림", "news": ""}
 {"t": "trend", "ts": 1795814408, "symbol": "LISTAUSDT", "base": "LISTA", "price": 0.0912, "score": 68.9, "rs7": 35.0, "rs30": 54.4, "new": true}
 {"t": "trend", "ts": 1795814408, "symbol": "牛来USDT", "base": "牛来", "price": 0.04766, "score": 67.1, "rs7": 36.0, "rs30": 14.2, "new": true}
+{"t": "pump", "ts": 1795821579, "market": "binance", "symbol": "ACEUSDT", "base": "ACE", "price": 0.1087, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 46.5, "chg2h": 49.72, "chg24h": 48.09, "qvol": 3047412.72638, "vol_x": 34.3, "off_high": -5.48, "direction": "up", "tag": "거래소 상장", "tags": ["거래소 상장", "거래량 폭증"], "conf": "높음", "headline": "Fusionist 급등 — 거래소 상장 재료", "news": "Yes Group Management Berhad Marks New Chapter with Successful ACE Market Listing (Yahoo Finance)"}
+{"t": "trend", "ts": 1795821585, "symbol": "SSVUSDT", "base": "SSV", "price": 2.65, "score": 85.2, "rs7": 62.0, "rs30": 45.0, "new": true}
+{"t": "trend", "ts": 1795821585, "symbol": "NIGHTUSDT", "base": "NIGHT", "price": 0.05016, "score": 73.3, "rs7": 16.8, "rs30": 69.0, "new": true}
+{"t": "trend", "ts": 1795821585, "symbol": "HAEDALUSDT", "base": "HAEDAL", "price": 0.02363, "score": 69.5, "rs7": 29.5, "rs30": 23.0, "new": true}
