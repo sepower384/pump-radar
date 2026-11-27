@@ -718,3 +718,6 @@
 {"t": "trend", "ts": 1795756811, "symbol": "BLURUSDT", "base": "BLUR", "price": 0.00931, "score": 81.7, "rs7": 36.2, "rs30": 49.7, "new": true}
 {"t": "stock", "ts": 1795756822, "market": "KR", "theme": "피지컬 AI/휴머노이드 로봇", "leader": {"symbol": "466100", "name": "클로봇", "chg": 29.87, "price": 23650.0, "trade_value": 676.6, "mcap": 7374.0}, "catalyst": ["[장중수급포착] 클로봇, 기관 5일 연속 순매수행진... 주가 +21.64%", "[특징주] 클로봇, 뚜렷한 공시 없이 장중 22%대 급등세 : 기업주식정보"], "peers": [{"symbol": "005930", "name": "삼성전자", "chg": 4.26, "verdict": "lagging", "blocker": "대장주보다 덩치가 너무 큼"}, {"symbol": "277810", "name": "레인보우로보틱스", "chg": 13.06, "verdict": "following", "blocker": ""}], "calls": ["277810"]}
 {"t": "trend", "ts": 1795764008, "symbol": "LISTAUSDT", "base": "LISTA", "price": 0.0992, "score": 73.3, "rs7": 39.6, "rs30": 66.1, "new": true}
+{"t": "trend", "ts": 1795771211, "symbol": "SSVUSDT", "base": "SSV", "price": 2.558, "score": 75.9, "rs7": 51.2, "rs30": 34.9, "new": true}
+{"t": "trend", "ts": 1795771211, "symbol": "NIGHTUSDT", "base": "NIGHT", "price": 0.05005, "score": 74.2, "rs7": 14.9, "rs30": 62.4, "new": true}
+{"t": "trend", "ts": 1795771211, "symbol": "HAEDALUSDT", "base": "HAEDAL", "price": 0.02736, "score": 67.2, "rs7": 40.3, "rs30": 33.7, "new": true}
