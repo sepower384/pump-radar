@@ -1564,5 +1564,23 @@
 "result_pct": 0.76,
 "resolved_ts": null,
 "reported": 0
+},
+{
+"id": 89,
+"ts": 1795800015,
+"market": "US",
+"symbol": "MU",
+"name": "Micron Technology, Inc.",
+"theme": "AI 반도체",
+"leader": "SEALSQ Corp",
+"ref_price": 640.51,
+"target_pct": 2.0,
+"deadline": 1796072400,
+"status": "pending",
+"best_price": 640.51,
+"last_price": null,
+"result_pct": null,
+"resolved_ts": null,
+"reported": 0
 }
 ]
