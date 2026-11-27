@@ -721,3 +721,5 @@
 {"t": "trend", "ts": 1795771211, "symbol": "SSVUSDT", "base": "SSV", "price": 2.558, "score": 75.9, "rs7": 51.2, "rs30": 34.9, "new": true}
 {"t": "trend", "ts": 1795771211, "symbol": "NIGHTUSDT", "base": "NIGHT", "price": 0.05005, "score": 74.2, "rs7": 14.9, "rs30": 62.4, "new": true}
 {"t": "trend", "ts": 1795771211, "symbol": "HAEDALUSDT", "base": "HAEDAL", "price": 0.02736, "score": 67.2, "rs7": 40.3, "rs30": 33.7, "new": true}
+{"t": "pump", "ts": 1795778393, "market": "binance", "symbol": "PORTALUSDT", "base": "PORTAL", "price": 0.02126, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 9.47, "chg2h": 70.49, "chg24h": 67.93, "qvol": 9969515.951465, "vol_x": 1.8, "off_high": -5.51, "direction": "up", "tag": "검색 급증", "tags": ["검색 급증"], "conf": "낮음", "headline": "PORTAL 급등 — 관심 급증", "news": ""}
+{"t": "trend", "ts": 1795778419, "symbol": "PORTALUSDT", "base": "PORTAL", "price": 0.02131, "score": 74.5, "rs7": 73.1, "rs30": 106.4, "new": true}
