@@ -751,3 +751,4 @@
 {"t": "trend", "ts": 1795864788, "symbol": "SSVUSDT", "base": "SSV", "price": 2.695, "score": 89.1, "rs7": 68.2, "rs30": 46.6, "new": true}
 {"t": "trend", "ts": 1795864788, "symbol": "NIGHTUSDT", "base": "NIGHT", "price": 0.0533, "score": 78.9, "rs7": 31.4, "rs30": 82.4, "new": true}
 {"t": "trend", "ts": 1795864788, "symbol": "牛来USDT", "base": "牛来", "price": 0.04671, "score": 67.0, "rs7": 30.1, "rs30": 3.2, "new": true}
+{"t": "trend", "ts": 1795872000, "symbol": "SKYUSDT", "base": "SKY", "price": 0.05192, "score": 65.7, "rs7": 19.8, "rs30": 6.6, "new": true}
