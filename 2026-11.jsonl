@@ -744,3 +744,4 @@
 {"t": "trend", "ts": 1795828808, "symbol": "PORTALUSDT", "base": "PORTAL", "price": 0.03941, "score": 84.4, "rs7": 219.4, "rs30": 301.9, "new": true}
 {"t": "trend", "ts": 1795828808, "symbol": "SENTUSDT", "base": "SENT", "price": 0.02433, "score": 70.5, "rs7": 17.9, "rs30": 53.5, "new": true}
 {"t": "trend", "ts": 1795828808, "symbol": "BIGTIMEUSDT", "base": "BIGTIME", "price": 0.00585, "score": 65.7, "rs7": 40.9, "rs30": 16.4, "new": true}
+{"t": "pump", "ts": 1795843177, "market": "bitget", "symbol": "BTWUSDT", "base": "BTW", "price": 1.250353, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 4.31, "chg2h": 6.32, "chg24h": 27.42, "qvol": 2752297.0453588, "vol_x": 0.7, "off_high": -1.4, "direction": "up", "tag": "뉴스", "tags": ["뉴스", "거래소 상장"], "conf": "높음", "headline": "Bitway 급등 — 뉴스 재료", "news": "Bitway (BTW) 가격, 차트, 시가총액 | 코인마켓캡 (CoinMarketCap)"}
