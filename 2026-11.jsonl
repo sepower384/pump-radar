@@ -752,3 +752,6 @@
 {"t": "trend", "ts": 1795864788, "symbol": "NIGHTUSDT", "base": "NIGHT", "price": 0.0533, "score": 78.9, "rs7": 31.4, "rs30": 82.4, "new": true}
 {"t": "trend", "ts": 1795864788, "symbol": "牛来USDT", "base": "牛来", "price": 0.04671, "score": 67.0, "rs7": 30.1, "rs30": 3.2, "new": true}
 {"t": "trend", "ts": 1795872000, "symbol": "SKYUSDT", "base": "SKY", "price": 0.05192, "score": 65.7, "rs7": 19.8, "rs30": 6.6, "new": true}
+{"t": "pump", "ts": 1795879204, "market": "bitget", "symbol": "OUSDT", "base": "O", "price": 1.20795, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 17.12, "chg2h": 42.07, "chg24h": 78.01, "qvol": 2592343.7516598, "vol_x": 1.9, "off_high": -1.85, "direction": "up", "tag": "검색 급증", "tags": ["검색 급증"], "conf": "낮음", "headline": "o1.exchange 급등 — 관심 급증", "news": ""}
+{"t": "pump", "ts": 1795879204, "market": "bitget", "symbol": "LABUSDT", "base": "LAB", "price": 0.04087, "chg5m": 0.0, "chg15m": 0.0, "chg1h": 4.26, "chg2h": 11.06, "chg24h": 33.82, "qvol": 1548834.5606639, "vol_x": 1.0, "off_high": -1.52, "direction": "up", "tag": "원인 미확인", "tags": ["원인 미확인"], "conf": "낮음", "headline": "LAB 급등 — 이유 불명 · 큰손 주도 의심", "news": ""}
+{"t": "trend", "ts": 1795879221, "symbol": "SENTUSDT", "base": "SENT", "price": 0.02426, "score": 81.5, "rs7": 17.8, "rs30": 62.2, "new": true}
